@@ -1,504 +1,4270 @@
 {
-  "updated_utc": "2026-11-04T09:56:27.092351+00:00",
+  "updated_utc": "2026-11-04T12:26:26.131600+00:00",
   "universe": "15 隻預選觀察股票，並非全美股",
   "rows": [
     {
-      "close": 14.02,
-      "rv20": 110.3,
-      "z20": -0.27,
-      "dollar_m": 284.7,
-      "atr14": 1.36,
-      "cycle_days": 21.5,
-      "cycle_cv": 0.53,
-      "cycles": 12,
-      "cycle_score": 47,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2016-03-31",
-      "last_confirmation": "2026-11-03",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2402,
-          "liquidity_volatility_pass": 1504,
-          "zscore_pass": 190,
-          "cycles_pass": 190,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2017-03-30",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "RIOT"
-    },
-    {
-      "close": 7.16,
-      "rv20": 80.7,
-      "z20": -0.65,
-      "dollar_m": 286.3,
-      "atr14": 0.65,
-      "cycle_days": 27.0,
-      "cycle_cv": 0.53,
-      "cycles": 12,
-      "cycle_score": 47,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2016-01-04",
-      "last_confirmation": "2026-09-28",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2462,
-          "liquidity_volatility_pass": 1467,
-          "zscore_pass": 176,
-          "cycles_pass": 176,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2017-01-03",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "MARA"
-    },
-    {
-      "close": 31.39,
-      "rv20": 80.2,
-      "z20": -1.01,
-      "dollar_m": 1327.5,
-      "atr14": 2.41,
-      "cycle_days": 22.0,
-      "cycle_cv": 0.46,
-      "cycles": 12,
-      "cycle_score": 54,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2016-01-04",
-      "last_confirmation": "2026-11-02",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2462,
-          "liquidity_volatility_pass": 1004,
-          "zscore_pass": 104,
-          "cycles_pass": 104,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2017-01-03",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "SMCI"
-    },
-    {
-      "close": 135.63,
-      "rv20": 74.7,
-      "z20": -1.12,
-      "dollar_m": 2629.3,
-      "atr14": 9.26,
-      "cycle_days": 24.0,
-      "cycle_cv": 0.66,
-      "cycles": 12,
-      "cycle_score": 34,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2016-01-04",
-      "last_confirmation": "2026-10-30",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2462,
-          "liquidity_volatility_pass": 1433,
-          "zscore_pass": 195,
-          "cycles_pass": 195,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2017-01-03",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "MSTR"
-    },
-    {
-      "close": 483.9,
-      "rv20": 73.4,
-      "z20": -1.5,
-      "dollar_m": 11966.0,
-      "atr14": 30.67,
-      "cycle_days": 16.0,
-      "cycle_cv": 0.47,
-      "cycles": 12,
-      "cycle_score": 53,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2016-01-04",
-      "last_confirmation": "2026-10-30",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2462,
-          "liquidity_volatility_pass": 1179,
-          "zscore_pass": 117,
-          "cycles_pass": 117,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2017-01-03",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "AMD"
-    },
-    {
-      "close": 145.45,
-      "rv20": 68.2,
-      "z20": -1.67,
-      "dollar_m": 1417.4,
-      "atr14": 10.44,
-      "cycle_days": 21.0,
-      "cycle_cv": 0.54,
-      "cycles": 12,
-      "cycle_score": 46,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2021-04-14",
-      "last_confirmation": "2026-10-07",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 1134,
-          "liquidity_volatility_pass": 1051,
-          "zscore_pass": 154,
-          "cycles_pass": 154,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2022-04-12",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "COIN"
-    },
-    {
-      "close": 16.77,
-      "rv20": 66.8,
-      "z20": 1.21,
-      "dollar_m": 875.7,
-      "atr14": 0.77,
-      "cycle_days": 32.0,
-      "cycle_cv": 0.62,
-      "cycles": 12,
-      "cycle_score": 38,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2021-01-04",
-      "last_confirmation": "2026-10-27",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 1203,
-          "liquidity_volatility_pass": 826,
-          "zscore_pass": 92,
-          "cycles_pass": 92,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2022-01-03",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "SOFI"
-    },
-    {
-      "close": 21.37,
-      "rv20": 59.8,
-      "z20": -2.37,
-      "dollar_m": 100.0,
-      "atr14": 1.24,
-      "cycle_days": 26.0,
-      "cycle_cv": 0.4,
-      "cycles": 12,
-      "cycle_score": 60,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2020-12-16",
-      "last_confirmation": "2026-11-02",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 1214,
-          "liquidity_volatility_pass": 1138,
-          "zscore_pass": 158,
-          "cycles_pass": 158,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2021-12-16",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "UPST"
-    },
-    {
-      "close": 71.97,
-      "rv20": 57.1,
-      "z20": -0.74,
-      "dollar_m": 270.8,
-      "atr14": 3.57,
-      "cycle_days": 21.5,
-      "cycle_cv": 0.6,
-      "cycles": 12,
-      "cycle_score": 40,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2021-01-13",
-      "last_confirmation": "2026-10-29",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 1196,
-          "liquidity_volatility_pass": 1106,
-          "zscore_pass": 153,
-          "cycles_pass": 153,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2022-01-12",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "AFRM"
-    },
-    {
-      "close": 85.68,
-      "rv20": 55.2,
-      "z20": -1.48,
-      "dollar_m": 1877.4,
-      "atr14": 5.17,
-      "cycle_days": 23.0,
-      "cycle_cv": 0.34,
-      "cycles": 12,
-      "cycle_score": 66,
-      "signal": "無訊號",
-      "last_price_date": "2026-11-03",
-      "data_start_date": "2021-07-29",
-      "last_confirmation": "2026-09-30",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 1060,
-          "liquidity_volatility_pass": 705,
-          "zscore_pass": 51,
-          "cycles_pass": 51,
-          "score_pass": 0,
-          "trade_entries": 0
-        },
-        "period_start": "2022-07-29",
-        "period_end": "2026-10-19"
-      },
-      "ticker": "HOOD"
-    },
-    {
+      "ticker": "PLTR",
       "close": 175.4,
-      "rv20": 51.9,
-      "z20": -2.23,
-      "dollar_m": 5009.6,
-      "atr14": 8.7,
-      "cycle_days": 22.0,
-      "cycle_cv": 0.43,
-      "cycles": 12,
-      "cycle_score": 57,
-      "signal": "無訊號",
       "last_price_date": "2026-11-03",
       "data_start_date": "2020-09-30",
-      "last_confirmation": "2026-10-30",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 1268,
-          "liquidity_volatility_pass": 853,
-          "zscore_pass": 86,
-          "cycles_pass": 86,
-          "score_pass": 0,
-          "trade_entries": 0
+      "rv20": 51.9,
+      "z20": -2.23,
+      "atr14": 8.7,
+      "dollar_m": 5009.6,
+      "rsi14": 35.8,
+      "matched": 3,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 35.79,
+          "observed": false,
+          "unit": "RSI"
         },
-        "period_start": "2021-09-30",
-        "period_end": "2026-10-19"
+        "布林通道下軌收復": {
+          "value": 177.52,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 4939894700.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 22.23,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 194.32,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -5.5,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
       },
-      "ticker": "PLTR"
+      "composite_score_11": 36.4,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": true,
+        "成交量 ≥ 1.3倍": true,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 17,
+              "wins": 6,
+              "prob_pct": 35.3,
+              "ci95_pct": [
+                17.3,
+                58.7
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 6,
+              "wins": 2,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                9.7,
+                70.0
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 19,
+              "wins": 4,
+              "prob_pct": 21.1,
+              "ci95_pct": [
+                8.5,
+                43.3
+              ],
+              "stop_first_pct": 57.9,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 6,
+                "wins": 2,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  9.7,
+                  70.0
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 6,
+              "wins": 2,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                9.7,
+                70.0
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 19,
+              "wins": 5,
+              "prob_pct": 26.3,
+              "ci95_pct": [
+                11.8,
+                48.8
+              ],
+              "stop_first_pct": 57.9,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 6,
+                "wins": 2,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  9.7,
+                  70.0
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 6,
+              "wins": 2,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                9.7,
+                70.0
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 19,
+              "wins": 7,
+              "prob_pct": 36.8,
+              "ci95_pct": [
+                19.1,
+                59.0
+              ],
+              "stop_first_pct": 63.2,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 6,
+                "wins": 2,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  9.7,
+                  70.0
+                ],
+                "stop_first_pct": 66.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2025-01-02",
+        "test_start": "2025-01-03",
+        "signal_events": 23,
+        "baseline_events": 50,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 33.3
     },
     {
-      "close": 24.27,
-      "rv20": 39.3,
-      "z20": -0.83,
-      "dollar_m": 241.6,
-      "atr14": 1.0,
-      "cycle_days": 20.5,
-      "cycle_cv": 0.48,
-      "cycles": 12,
-      "cycle_score": 52,
-      "signal": "無訊號",
+      "ticker": "COIN",
+      "close": 145.45,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2021-04-14",
+      "rv20": 68.2,
+      "z20": -1.67,
+      "atr14": 10.44,
+      "dollar_m": 1417.4,
+      "rsi14": 36.1,
+      "matched": 3,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 36.06,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 141.11,
+          "observed": true,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": -62947400.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 26.6,
+          "observed": false,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 164.91,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -18.52,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 36.4,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": true,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": true
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 22,
+              "wins": 7,
+              "prob_pct": 31.8,
+              "ci95_pct": [
+                16.4,
+                52.7
+              ],
+              "stop_first_pct": 68.2,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 12,
+              "wins": 2,
+              "prob_pct": 16.7,
+              "ci95_pct": [
+                4.7,
+                44.8
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 5,
+              "prob_pct": 27.8,
+              "ci95_pct": [
+                12.5,
+                50.9
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 12,
+                "wins": 2,
+                "prob_pct": 16.7,
+                "ci95_pct": [
+                  4.7,
+                  44.8
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 21,
+              "wins": 7,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                17.2,
+                54.6
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 12,
+              "wins": 4,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                13.8,
+                60.9
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 61.1,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 12,
+                "wins": 4,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  13.8,
+                  60.9
+                ],
+                "stop_first_pct": 66.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 21,
+              "wins": 7,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                17.2,
+                54.6
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 12,
+              "wins": 4,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                13.8,
+                60.9
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 61.1,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 12,
+                "wins": 4,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  13.8,
+                  60.9
+                ],
+                "stop_first_pct": 66.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2025-03-04",
+        "test_start": "2025-03-05",
+        "signal_events": 34,
+        "baseline_events": 54,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 33.3
+    },
+    {
+      "ticker": "MARA",
+      "close": 7.16,
       "last_price_date": "2026-11-03",
       "data_start_date": "2016-01-04",
-      "last_confirmation": "2026-10-22",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2462,
-          "liquidity_volatility_pass": 955,
-          "zscore_pass": 137,
-          "cycles_pass": 137,
-          "score_pass": 0,
-          "trade_entries": 0
+      "rv20": 80.7,
+      "z20": -0.65,
+      "atr14": 0.65,
+      "dollar_m": 286.3,
+      "rsi14": 36.2,
+      "matched": 3,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 36.17,
+          "observed": true,
+          "unit": "RSI"
         },
-        "period_start": "2017-01-03",
-        "period_end": "2026-10-19"
+        "布林通道下軌收復": {
+          "value": 5.59,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 2659981197.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 36.52,
+          "observed": false,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 7.93,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -31.56,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
       },
-      "ticker": "GME"
+      "composite_score_11": 36.4,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": true,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": true
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 23,
+              "wins": 8,
+              "prob_pct": 34.8,
+              "ci95_pct": [
+                18.8,
+                55.1
+              ],
+              "stop_first_pct": 65.2,
+              "ambiguous_bars": 2
+            },
+            "test": {
+              "n": 22,
+              "wins": 7,
+              "prob_pct": 31.8,
+              "ci95_pct": [
+                16.4,
+                52.7
+              ],
+              "stop_first_pct": 68.2,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 40,
+              "wins": 19,
+              "prob_pct": 47.5,
+              "ci95_pct": [
+                32.9,
+                62.5
+              ],
+              "stop_first_pct": 47.5,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 22,
+                "wins": 7,
+                "prob_pct": 31.8,
+                "ci95_pct": [
+                  16.4,
+                  52.7
+                ],
+                "stop_first_pct": 68.2,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 23,
+              "wins": 8,
+              "prob_pct": 34.8,
+              "ci95_pct": [
+                18.8,
+                55.1
+              ],
+              "stop_first_pct": 65.2,
+              "ambiguous_bars": 2
+            },
+            "test": {
+              "n": 22,
+              "wins": 7,
+              "prob_pct": 31.8,
+              "ci95_pct": [
+                16.4,
+                52.7
+              ],
+              "stop_first_pct": 68.2,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 40,
+              "wins": 19,
+              "prob_pct": 47.5,
+              "ci95_pct": [
+                32.9,
+                62.5
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 22,
+                "wins": 7,
+                "prob_pct": 31.8,
+                "ci95_pct": [
+                  16.4,
+                  52.7
+                ],
+                "stop_first_pct": 68.2,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 23,
+              "wins": 8,
+              "prob_pct": 34.8,
+              "ci95_pct": [
+                18.8,
+                55.1
+              ],
+              "stop_first_pct": 65.2,
+              "ambiguous_bars": 2
+            },
+            "test": {
+              "n": 22,
+              "wins": 7,
+              "prob_pct": 31.8,
+              "ci95_pct": [
+                16.4,
+                52.7
+              ],
+              "stop_first_pct": 68.2,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 40,
+              "wins": 19,
+              "prob_pct": 47.5,
+              "ci95_pct": [
+                32.9,
+                62.5
+              ],
+              "stop_first_pct": 52.5,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 22,
+                "wins": 7,
+                "prob_pct": 31.8,
+                "ci95_pct": [
+                  16.4,
+                  52.7
+                ],
+                "stop_first_pct": 68.2,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-01",
+        "test_start": "2023-08-02",
+        "signal_events": 45,
+        "baseline_events": 76,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 33.3
     },
     {
-      "close": 398.5,
-      "rv20": 36.5,
-      "z20": 1.0,
-      "dollar_m": 13887.2,
-      "atr14": 13.4,
-      "cycle_days": 15.0,
-      "cycle_cv": 0.58,
-      "cycles": 12,
-      "cycle_score": 42,
-      "signal": "無訊號",
+      "ticker": "RIOT",
+      "close": 14.02,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2016-03-31",
+      "rv20": 110.3,
+      "z20": -0.27,
+      "atr14": 1.36,
+      "dollar_m": 284.7,
+      "rsi14": 42.8,
+      "matched": 3,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 42.77,
+          "observed": true,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 10.92,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 2196925400.0,
+          "observed": true,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 38.11,
+          "observed": false,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 14.46,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -22.76,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 45.5,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": true,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": true
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 21,
+              "wins": 9,
+              "prob_pct": 42.9,
+              "ci95_pct": [
+                24.5,
+                63.5
+              ],
+              "stop_first_pct": 57.1,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 22,
+              "wins": 12,
+              "prob_pct": 54.5,
+              "ci95_pct": [
+                34.7,
+                73.1
+              ],
+              "stop_first_pct": 40.9,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 39,
+              "wins": 15,
+              "prob_pct": 38.5,
+              "ci95_pct": [
+                24.9,
+                54.1
+              ],
+              "stop_first_pct": 59.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 22,
+                "wins": 12,
+                "prob_pct": 54.5,
+                "ci95_pct": [
+                  34.7,
+                  73.1
+                ],
+                "stop_first_pct": 40.9,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 21,
+              "wins": 9,
+              "prob_pct": 42.9,
+              "ci95_pct": [
+                24.5,
+                63.5
+              ],
+              "stop_first_pct": 57.1,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 22,
+              "wins": 12,
+              "prob_pct": 54.5,
+              "ci95_pct": [
+                34.7,
+                73.1
+              ],
+              "stop_first_pct": 45.5,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 39,
+              "wins": 16,
+              "prob_pct": 41.0,
+              "ci95_pct": [
+                27.1,
+                56.6
+              ],
+              "stop_first_pct": 59.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 22,
+                "wins": 12,
+                "prob_pct": 54.5,
+                "ci95_pct": [
+                  34.7,
+                  73.1
+                ],
+                "stop_first_pct": 45.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 21,
+              "wins": 9,
+              "prob_pct": 42.9,
+              "ci95_pct": [
+                24.5,
+                63.5
+              ],
+              "stop_first_pct": 57.1,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 22,
+              "wins": 12,
+              "prob_pct": 54.5,
+              "ci95_pct": [
+                34.7,
+                73.1
+              ],
+              "stop_first_pct": 45.5,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 39,
+              "wins": 16,
+              "prob_pct": 41.0,
+              "ci95_pct": [
+                27.1,
+                56.6
+              ],
+              "stop_first_pct": 59.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 22,
+                "wins": 12,
+                "prob_pct": 54.5,
+                "ci95_pct": [
+                  34.7,
+                  73.1
+                ],
+                "stop_first_pct": 45.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-25",
+        "test_start": "2023-08-28",
+        "signal_events": 44,
+        "baseline_events": 77,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 41.7
+    },
+    {
+      "ticker": "UPST",
+      "close": 21.37,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2020-12-16",
+      "rv20": 59.8,
+      "z20": -2.37,
+      "atr14": 1.24,
+      "dollar_m": 100.0,
+      "rsi14": 36.2,
+      "matched": 3,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 36.17,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 21.7,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": -152400500.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 12.41,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 23.16,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -7.26,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 36.4,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": true,
+        "成交量 ≥ 1.3倍": true,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 21,
+              "wins": 13,
+              "prob_pct": 61.9,
+              "ci95_pct": [
+                40.9,
+                79.2
+              ],
+              "stop_first_pct": 38.1,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 11,
+              "wins": 3,
+              "prob_pct": 27.3,
+              "ci95_pct": [
+                9.7,
+                56.6
+              ],
+              "stop_first_pct": 54.5,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 20,
+              "wins": 4,
+              "prob_pct": 20.0,
+              "ci95_pct": [
+                8.1,
+                41.6
+              ],
+              "stop_first_pct": 65.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 11,
+                "wins": 3,
+                "prob_pct": 27.3,
+                "ci95_pct": [
+                  9.7,
+                  56.6
+                ],
+                "stop_first_pct": 54.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 21,
+              "wins": 13,
+              "prob_pct": 61.9,
+              "ci95_pct": [
+                40.9,
+                79.2
+              ],
+              "stop_first_pct": 38.1,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 11,
+              "wins": 3,
+              "prob_pct": 27.3,
+              "ci95_pct": [
+                9.7,
+                56.6
+              ],
+              "stop_first_pct": 72.7,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 20,
+              "wins": 6,
+              "prob_pct": 30.0,
+              "ci95_pct": [
+                14.5,
+                51.9
+              ],
+              "stop_first_pct": 70.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 11,
+                "wins": 3,
+                "prob_pct": 27.3,
+                "ci95_pct": [
+                  9.7,
+                  56.6
+                ],
+                "stop_first_pct": 72.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 21,
+              "wins": 13,
+              "prob_pct": 61.9,
+              "ci95_pct": [
+                40.9,
+                79.2
+              ],
+              "stop_first_pct": 38.1,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 11,
+              "wins": 3,
+              "prob_pct": 27.3,
+              "ci95_pct": [
+                9.7,
+                56.6
+              ],
+              "stop_first_pct": 72.7,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 20,
+              "wins": 6,
+              "prob_pct": 30.0,
+              "ci95_pct": [
+                14.5,
+                51.9
+              ],
+              "stop_first_pct": 70.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 11,
+                "wins": 3,
+                "prob_pct": 27.3,
+                "ci95_pct": [
+                  9.7,
+                  56.6
+                ],
+                "stop_first_pct": 72.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2025-01-28",
+        "test_start": "2025-01-29",
+        "signal_events": 32,
+        "baseline_events": 59,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 33.3
+    },
+    {
+      "ticker": "AMD",
+      "close": 483.9,
       "last_price_date": "2026-11-03",
       "data_start_date": "2016-01-04",
-      "last_confirmation": "2026-10-20",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2462,
-          "liquidity_volatility_pass": 1293,
-          "zscore_pass": 162,
-          "cycles_pass": 162,
-          "score_pass": 0,
-          "trade_entries": 0
+      "rv20": 73.4,
+      "z20": -1.5,
+      "atr14": 30.67,
+      "dollar_m": 11966.0,
+      "rsi14": 38.4,
+      "matched": 2,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 38.41,
+          "observed": false,
+          "unit": "RSI"
         },
-        "period_start": "2017-01-03",
-        "period_end": "2026-10-19"
+        "布林通道下軌收復": {
+          "value": 460.51,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 7786499100.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 22.29,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 545.73,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -22.31,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
       },
-      "ticker": "TSLA"
+      "composite_score_11": 27.3,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": true,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 24,
+              "wins": 4,
+              "prob_pct": 16.7,
+              "ci95_pct": [
+                6.7,
+                35.9
+              ],
+              "stop_first_pct": 54.2,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 13,
+              "wins": 2,
+              "prob_pct": 15.4,
+              "ci95_pct": [
+                4.3,
+                42.2
+              ],
+              "stop_first_pct": 61.5,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 25,
+              "wins": 6,
+              "prob_pct": 24.0,
+              "ci95_pct": [
+                11.5,
+                43.4
+              ],
+              "stop_first_pct": 36.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 2,
+                "prob_pct": 15.4,
+                "ci95_pct": [
+                  4.3,
+                  42.2
+                ],
+                "stop_first_pct": 61.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 24,
+              "wins": 7,
+              "prob_pct": 29.2,
+              "ci95_pct": [
+                14.9,
+                49.2
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 13,
+              "wins": 3,
+              "prob_pct": 23.1,
+              "ci95_pct": [
+                8.2,
+                50.3
+              ],
+              "stop_first_pct": 61.5,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 25,
+              "wins": 11,
+              "prob_pct": 44.0,
+              "ci95_pct": [
+                26.7,
+                62.9
+              ],
+              "stop_first_pct": 48.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 3,
+                "prob_pct": 23.1,
+                "ci95_pct": [
+                  8.2,
+                  50.3
+                ],
+                "stop_first_pct": 61.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 24,
+              "wins": 7,
+              "prob_pct": 29.2,
+              "ci95_pct": [
+                14.9,
+                49.2
+              ],
+              "stop_first_pct": 70.8,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 13,
+              "wins": 4,
+              "prob_pct": 30.8,
+              "ci95_pct": [
+                12.7,
+                57.6
+              ],
+              "stop_first_pct": 69.2,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 25,
+              "wins": 12,
+              "prob_pct": 48.0,
+              "ci95_pct": [
+                30.0,
+                66.5
+              ],
+              "stop_first_pct": 52.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 4,
+                "prob_pct": 30.8,
+                "ci95_pct": [
+                  12.7,
+                  57.6
+                ],
+                "stop_first_pct": 69.2,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-01",
+        "test_start": "2023-08-02",
+        "signal_events": 37,
+        "baseline_events": 77,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 25.0
     },
     {
-      "close": 206.69,
-      "rv20": 32.6,
-      "z20": -1.25,
-      "dollar_m": 21739.1,
-      "atr14": 6.42,
-      "cycle_days": 17.0,
-      "cycle_cv": 0.43,
-      "cycles": 12,
-      "cycle_score": 57,
-      "signal": "無訊號",
+      "ticker": "HOOD",
+      "close": 85.68,
       "last_price_date": "2026-11-03",
-      "data_start_date": "2016-01-04",
-      "last_confirmation": "2026-10-12",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2462,
-          "liquidity_volatility_pass": 690,
-          "zscore_pass": 83,
-          "cycles_pass": 83,
-          "score_pass": 0,
-          "trade_entries": 0
+      "data_start_date": "2021-07-29",
+      "rv20": 55.2,
+      "z20": -1.48,
+      "atr14": 5.17,
+      "dollar_m": 1877.4,
+      "rsi14": 31.8,
+      "matched": 2,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 31.81,
+          "observed": false,
+          "unit": "RSI"
         },
-        "period_start": "2017-01-03",
-        "period_end": "2026-10-19"
+        "布林通道下軌收復": {
+          "value": 81.35,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 1713571200.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 28.25,
+          "observed": false,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 97.3,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -20.32,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
       },
-      "ticker": "NVDA"
+      "composite_score_11": 18.2,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": true,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 14,
+              "wins": 5,
+              "prob_pct": 35.7,
+              "ci95_pct": [
+                16.3,
+                61.2
+              ],
+              "stop_first_pct": 35.7,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 8,
+              "wins": 2,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                7.1,
+                59.1
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 5,
+              "prob_pct": 27.8,
+              "ci95_pct": [
+                12.5,
+                50.9
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 8,
+                "wins": 2,
+                "prob_pct": 25.0,
+                "ci95_pct": [
+                  7.1,
+                  59.1
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 14,
+              "wins": 8,
+              "prob_pct": 57.1,
+              "ci95_pct": [
+                32.6,
+                78.6
+              ],
+              "stop_first_pct": 35.7,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 8,
+              "wins": 3,
+              "prob_pct": 37.5,
+              "ci95_pct": [
+                13.7,
+                69.4
+              ],
+              "stop_first_pct": 62.5,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 61.1,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 8,
+                "wins": 3,
+                "prob_pct": 37.5,
+                "ci95_pct": [
+                  13.7,
+                  69.4
+                ],
+                "stop_first_pct": 62.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 13,
+              "wins": 7,
+              "prob_pct": 53.8,
+              "ci95_pct": [
+                29.1,
+                76.8
+              ],
+              "stop_first_pct": 46.2,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 8,
+              "wins": 3,
+              "prob_pct": 37.5,
+              "ci95_pct": [
+                13.7,
+                69.4
+              ],
+              "stop_first_pct": 62.5,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 61.1,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 8,
+                "wins": 3,
+                "prob_pct": 37.5,
+                "ci95_pct": [
+                  13.7,
+                  69.4
+                ],
+                "stop_first_pct": 62.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2025-04-04",
+        "test_start": "2025-04-07",
+        "signal_events": 22,
+        "baseline_events": 43,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 16.7
     },
     {
+      "ticker": "ROKU",
       "close": 160.36,
-      "rv20": 15.7,
-      "z20": 1.95,
-      "dollar_m": 393.3,
-      "atr14": 2.46,
-      "cycle_days": 28.5,
-      "cycle_cv": 0.6,
-      "cycles": 12,
-      "cycle_score": 40,
-      "signal": "無訊號",
       "last_price_date": "2026-11-03",
       "data_start_date": "2017-09-28",
-      "last_confirmation": "2026-10-22",
-      "backtest": {
-        "trades": 0,
-        "avg_net_pct": null,
-        "win_net_pct": null,
-        "cost_bps_per_side": 15,
-        "recent_trades": [],
-        "diagnostics": {
-          "evaluated_days": 2024,
-          "liquidity_volatility_pass": 1335,
-          "zscore_pass": 197,
-          "cycles_pass": 193,
-          "score_pass": 0,
-          "trade_entries": 0
+      "rv20": 15.7,
+      "z20": 1.95,
+      "atr14": 2.46,
+      "dollar_m": 393.3,
+      "rsi14": 64.5,
+      "matched": 2,
+      "eligible": false,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 64.54,
+          "observed": false,
+          "unit": "RSI"
         },
-        "period_start": "2018-09-28",
-        "period_end": "2026-10-19"
+        "布林通道下軌收復": {
+          "value": 150.8,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 873642900.0,
+          "observed": true,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 18.6,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 156.61,
+          "observed": true,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": 8.63,
+          "observed": true,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
       },
-      "ticker": "ROKU"
+      "composite_score_11": 45.5,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": true,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": false,
+        "收盤突破前日高點": true
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 32,
+              "wins": 13,
+              "prob_pct": 40.6,
+              "ci95_pct": [
+                25.5,
+                57.7
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 10,
+              "wins": 4,
+              "prob_pct": 40.0,
+              "ci95_pct": [
+                16.8,
+                68.7
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 4,
+              "prob_pct": 22.2,
+              "ci95_pct": [
+                9.0,
+                45.2
+              ],
+              "stop_first_pct": 38.9,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 10,
+                "wins": 4,
+                "prob_pct": 40.0,
+                "ci95_pct": [
+                  16.8,
+                  68.7
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 32,
+              "wins": 13,
+              "prob_pct": 40.6,
+              "ci95_pct": [
+                25.5,
+                57.7
+              ],
+              "stop_first_pct": 53.1,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 10,
+              "wins": 4,
+              "prob_pct": 40.0,
+              "ci95_pct": [
+                16.8,
+                68.7
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 10,
+                "wins": 4,
+                "prob_pct": 40.0,
+                "ci95_pct": [
+                  16.8,
+                  68.7
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 32,
+              "wins": 13,
+              "prob_pct": 40.6,
+              "ci95_pct": [
+                25.5,
+                57.7
+              ],
+              "stop_first_pct": 59.4,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 10,
+              "wins": 4,
+              "prob_pct": 40.0,
+              "ci95_pct": [
+                16.8,
+                68.7
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 8,
+              "prob_pct": 44.4,
+              "ci95_pct": [
+                24.6,
+                66.3
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 10,
+                "wins": 4,
+                "prob_pct": 40.0,
+                "ci95_pct": [
+                  16.8,
+                  68.7
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2024-02-07",
+        "test_start": "2024-02-08",
+        "signal_events": 42,
+        "baseline_events": 77,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 50.0
+    },
+    {
+      "ticker": "SMCI",
+      "close": 31.39,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
+      "rv20": 80.2,
+      "z20": -1.01,
+      "atr14": 2.41,
+      "dollar_m": 1327.5,
+      "rsi14": 38.5,
+      "matched": 2,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 38.47,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 27.34,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 2021206000.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 20.66,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 35.27,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -24.6,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 27.3,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": true,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 5,
+              "wins": 2,
+              "prob_pct": 40.0,
+              "ci95_pct": [
+                11.8,
+                76.9
+              ],
+              "stop_first_pct": 20.0,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 38,
+              "wins": 17,
+              "prob_pct": 44.7,
+              "ci95_pct": [
+                30.1,
+                60.3
+              ],
+              "stop_first_pct": 52.6,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 18,
+                "wins": 7,
+                "prob_pct": 38.9,
+                "ci95_pct": [
+                  20.3,
+                  61.4
+                ],
+                "stop_first_pct": 55.6,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 5,
+              "wins": 3,
+              "prob_pct": 60.0,
+              "ci95_pct": [
+                23.1,
+                88.2
+              ],
+              "stop_first_pct": 40.0,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 61.1,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 38,
+              "wins": 17,
+              "prob_pct": 44.7,
+              "ci95_pct": [
+                30.1,
+                60.3
+              ],
+              "stop_first_pct": 55.3,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 18,
+                "wins": 7,
+                "prob_pct": 38.9,
+                "ci95_pct": [
+                  20.3,
+                  61.4
+                ],
+                "stop_first_pct": 61.1,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 5,
+              "wins": 3,
+              "prob_pct": 60.0,
+              "ci95_pct": [
+                23.1,
+                88.2
+              ],
+              "stop_first_pct": 40.0,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 18,
+              "wins": 7,
+              "prob_pct": 38.9,
+              "ci95_pct": [
+                20.3,
+                61.4
+              ],
+              "stop_first_pct": 61.1,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 38,
+              "wins": 17,
+              "prob_pct": 44.7,
+              "ci95_pct": [
+                30.1,
+                60.3
+              ],
+              "stop_first_pct": 55.3,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 18,
+                "wins": 7,
+                "prob_pct": 38.9,
+                "ci95_pct": [
+                  20.3,
+                  61.4
+                ],
+                "stop_first_pct": 61.1,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-01",
+        "test_start": "2023-08-02",
+        "signal_events": 23,
+        "baseline_events": 53,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 25.0
+    },
+    {
+      "ticker": "GME",
+      "close": 24.27,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
+      "rv20": 39.3,
+      "z20": -0.83,
+      "atr14": 1.0,
+      "dollar_m": 241.6,
+      "rsi14": 48.0,
+      "matched": 2,
+      "eligible": false,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 48.0,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 22.55,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 6338853000.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 32.27,
+          "observed": false,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 25.85,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": 1.2,
+          "observed": true,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 18.2,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": true,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 3
+            },
+            "test": {
+              "n": 13,
+              "wins": 2,
+              "prob_pct": 15.4,
+              "ci95_pct": [
+                4.3,
+                42.2
+              ],
+              "stop_first_pct": 53.8,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 24,
+              "wins": 6,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                12.0,
+                44.9
+              ],
+              "stop_first_pct": 54.2,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 2,
+                "prob_pct": 15.4,
+                "ci95_pct": [
+                  4.3,
+                  42.2
+                ],
+                "stop_first_pct": 53.8,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 3
+            },
+            "test": {
+              "n": 13,
+              "wins": 2,
+              "prob_pct": 15.4,
+              "ci95_pct": [
+                4.3,
+                42.2
+              ],
+              "stop_first_pct": 76.9,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 24,
+              "wins": 6,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                12.0,
+                44.9
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 2,
+                "prob_pct": 15.4,
+                "ci95_pct": [
+                  4.3,
+                  42.2
+                ],
+                "stop_first_pct": 76.9,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 3
+            },
+            "test": {
+              "n": 13,
+              "wins": 2,
+              "prob_pct": 15.4,
+              "ci95_pct": [
+                4.3,
+                42.2
+              ],
+              "stop_first_pct": 84.6,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 24,
+              "wins": 6,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                12.0,
+                44.9
+              ],
+              "stop_first_pct": 70.8,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 2,
+                "prob_pct": 15.4,
+                "ci95_pct": [
+                  4.3,
+                  42.2
+                ],
+                "stop_first_pct": 84.6,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-01",
+        "test_start": "2023-08-02",
+        "signal_events": 30,
+        "baseline_events": 55,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 25.0
+    },
+    {
+      "ticker": "NVDA",
+      "close": 206.69,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
+      "rv20": 32.6,
+      "z20": -1.25,
+      "atr14": 6.42,
+      "dollar_m": 21739.1,
+      "rsi14": 39.2,
+      "matched": 1,
+      "eligible": false,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 39.19,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 199.86,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 105111035900.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 22.07,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 217.11,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -10.43,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 18.2,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 12,
+              "wins": 2,
+              "prob_pct": 16.7,
+              "ci95_pct": [
+                4.7,
+                44.8
+              ],
+              "stop_first_pct": 33.3,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 8,
+              "wins": 2,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                7.1,
+                59.1
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 11,
+              "wins": 2,
+              "prob_pct": 18.2,
+              "ci95_pct": [
+                5.1,
+                47.7
+              ],
+              "stop_first_pct": 54.5,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 8,
+                "wins": 2,
+                "prob_pct": 25.0,
+                "ci95_pct": [
+                  7.1,
+                  59.1
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 12,
+              "wins": 5,
+              "prob_pct": 41.7,
+              "ci95_pct": [
+                19.3,
+                68.0
+              ],
+              "stop_first_pct": 58.3,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 8,
+              "wins": 3,
+              "prob_pct": 37.5,
+              "ci95_pct": [
+                13.7,
+                69.4
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 11,
+              "wins": 4,
+              "prob_pct": 36.4,
+              "ci95_pct": [
+                15.2,
+                64.6
+              ],
+              "stop_first_pct": 63.6,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 8,
+                "wins": 3,
+                "prob_pct": 37.5,
+                "ci95_pct": [
+                  13.7,
+                  69.4
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 12,
+              "wins": 5,
+              "prob_pct": 41.7,
+              "ci95_pct": [
+                19.3,
+                68.0
+              ],
+              "stop_first_pct": 58.3,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 8,
+              "wins": 4,
+              "prob_pct": 50.0,
+              "ci95_pct": [
+                21.5,
+                78.5
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 11,
+              "wins": 4,
+              "prob_pct": 36.4,
+              "ci95_pct": [
+                15.2,
+                64.6
+              ],
+              "stop_first_pct": 63.6,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 8,
+                "wins": 4,
+                "prob_pct": 50.0,
+                "ci95_pct": [
+                  21.5,
+                  78.5
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-01",
+        "test_start": "2023-08-02",
+        "signal_events": 20,
+        "baseline_events": 41,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 16.7
+    },
+    {
+      "ticker": "TSLA",
+      "close": 398.5,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
+      "rv20": 36.5,
+      "z20": 1.0,
+      "atr14": 13.4,
+      "dollar_m": 13887.2,
+      "rsi14": 59.0,
+      "matched": 1,
+      "eligible": false,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 59.02,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 351.56,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 19273640100.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 15.95,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 382.81,
+          "observed": true,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": 7.86,
+          "observed": true,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 27.3,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 26,
+              "wins": 7,
+              "prob_pct": 26.9,
+              "ci95_pct": [
+                13.7,
+                46.1
+              ],
+              "stop_first_pct": 61.5,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 12,
+              "wins": 3,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                8.9,
+                53.2
+              ],
+              "stop_first_pct": 58.3,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 30,
+              "wins": 8,
+              "prob_pct": 26.7,
+              "ci95_pct": [
+                14.2,
+                44.4
+              ],
+              "stop_first_pct": 43.3,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 11,
+                "wins": 3,
+                "prob_pct": 27.3,
+                "ci95_pct": [
+                  9.7,
+                  56.6
+                ],
+                "stop_first_pct": 54.5,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 1,
+                "wins": 0,
+                "prob_pct": 0.0,
+                "ci95_pct": [
+                  0.0,
+                  79.3
+                ],
+                "stop_first_pct": 100.0,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 26,
+              "wins": 8,
+              "prob_pct": 30.8,
+              "ci95_pct": [
+                16.5,
+                50.0
+              ],
+              "stop_first_pct": 61.5,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 12,
+              "wins": 3,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                8.9,
+                53.2
+              ],
+              "stop_first_pct": 75.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 30,
+              "wins": 12,
+              "prob_pct": 40.0,
+              "ci95_pct": [
+                24.6,
+                57.7
+              ],
+              "stop_first_pct": 56.7,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 11,
+                "wins": 3,
+                "prob_pct": 27.3,
+                "ci95_pct": [
+                  9.7,
+                  56.6
+                ],
+                "stop_first_pct": 72.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 1,
+                "wins": 0,
+                "prob_pct": 0.0,
+                "ci95_pct": [
+                  0.0,
+                  79.3
+                ],
+                "stop_first_pct": 100.0,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 26,
+              "wins": 9,
+              "prob_pct": 34.6,
+              "ci95_pct": [
+                19.4,
+                53.8
+              ],
+              "stop_first_pct": 61.5,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 12,
+              "wins": 3,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                8.9,
+                53.2
+              ],
+              "stop_first_pct": 75.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 30,
+              "wins": 12,
+              "prob_pct": 40.0,
+              "ci95_pct": [
+                24.6,
+                57.7
+              ],
+              "stop_first_pct": 56.7,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 11,
+                "wins": 3,
+                "prob_pct": 27.3,
+                "ci95_pct": [
+                  9.7,
+                  56.6
+                ],
+                "stop_first_pct": 72.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 1,
+                "wins": 0,
+                "prob_pct": 0.0,
+                "ci95_pct": [
+                  0.0,
+                  79.3
+                ],
+                "stop_first_pct": 100.0,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-01",
+        "test_start": "2023-08-02",
+        "signal_events": 38,
+        "baseline_events": 82,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 33.3
+    },
+    {
+      "ticker": "MSTR",
+      "close": 135.63,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
+      "rv20": 74.7,
+      "z20": -1.12,
+      "atr14": 9.26,
+      "dollar_m": 2629.3,
+      "rsi14": 44.4,
+      "matched": 1,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 44.44,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 128.87,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 270215500.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 17.23,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 144.02,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -14.4,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 18.2,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 22,
+              "wins": 7,
+              "prob_pct": 31.8,
+              "ci95_pct": [
+                16.4,
+                52.7
+              ],
+              "stop_first_pct": 54.5,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 20,
+              "wins": 8,
+              "prob_pct": 40.0,
+              "ci95_pct": [
+                21.9,
+                61.3
+              ],
+              "stop_first_pct": 45.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 39,
+              "wins": 14,
+              "prob_pct": 35.9,
+              "ci95_pct": [
+                22.7,
+                51.6
+              ],
+              "stop_first_pct": 48.7,
+              "ambiguous_bars": 1
+            },
+            "test_by_score": {
+              "4": {
+                "n": 20,
+                "wins": 8,
+                "prob_pct": 40.0,
+                "ci95_pct": [
+                  21.9,
+                  61.3
+                ],
+                "stop_first_pct": 45.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 22,
+              "wins": 7,
+              "prob_pct": 31.8,
+              "ci95_pct": [
+                16.4,
+                52.7
+              ],
+              "stop_first_pct": 63.6,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 20,
+              "wins": 9,
+              "prob_pct": 45.0,
+              "ci95_pct": [
+                25.8,
+                65.8
+              ],
+              "stop_first_pct": 45.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 39,
+              "wins": 19,
+              "prob_pct": 48.7,
+              "ci95_pct": [
+                33.9,
+                63.8
+              ],
+              "stop_first_pct": 48.7,
+              "ambiguous_bars": 1
+            },
+            "test_by_score": {
+              "4": {
+                "n": 20,
+                "wins": 9,
+                "prob_pct": 45.0,
+                "ci95_pct": [
+                  25.8,
+                  65.8
+                ],
+                "stop_first_pct": 45.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 22,
+              "wins": 7,
+              "prob_pct": 31.8,
+              "ci95_pct": [
+                16.4,
+                52.7
+              ],
+              "stop_first_pct": 63.6,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 20,
+              "wins": 10,
+              "prob_pct": 50.0,
+              "ci95_pct": [
+                29.9,
+                70.1
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 39,
+              "wins": 19,
+              "prob_pct": 48.7,
+              "ci95_pct": [
+                33.9,
+                63.8
+              ],
+              "stop_first_pct": 48.7,
+              "ambiguous_bars": 1
+            },
+            "test_by_score": {
+              "4": {
+                "n": 20,
+                "wins": 10,
+                "prob_pct": 50.0,
+                "ci95_pct": [
+                  29.9,
+                  70.1
+                ],
+                "stop_first_pct": 50.0,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-01",
+        "test_start": "2023-08-02",
+        "signal_events": 42,
+        "baseline_events": 76,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 16.7
+    },
+    {
+      "ticker": "SOFI",
+      "close": 16.77,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2021-01-04",
+      "rv20": 66.8,
+      "z20": 1.21,
+      "atr14": 0.77,
+      "dollar_m": 875.7,
+      "rsi14": 56.8,
+      "matched": 1,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 56.78,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 13.46,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 144015300.0,
+          "observed": true,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 25.5,
+          "observed": false,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 15.68,
+          "observed": true,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": 9.58,
+          "observed": true,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 27.3,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 16,
+              "wins": 4,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                10.2,
+                49.5
+              ],
+              "stop_first_pct": 68.8,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 9,
+              "wins": 3,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                12.1,
+                64.6
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 14,
+              "wins": 5,
+              "prob_pct": 35.7,
+              "ci95_pct": [
+                16.3,
+                61.2
+              ],
+              "stop_first_pct": 35.7,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 9,
+                "wins": 3,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  12.1,
+                  64.6
+                ],
+                "stop_first_pct": 55.6,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 15,
+              "wins": 5,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                15.2,
+                58.3
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 9,
+              "wins": 3,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                12.1,
+                64.6
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 14,
+              "wins": 6,
+              "prob_pct": 42.9,
+              "ci95_pct": [
+                21.4,
+                67.4
+              ],
+              "stop_first_pct": 50.0,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 9,
+                "wins": 3,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  12.1,
+                  64.6
+                ],
+                "stop_first_pct": 66.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 15,
+              "wins": 5,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                15.2,
+                58.3
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 1
+            },
+            "test": {
+              "n": 9,
+              "wins": 3,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                12.1,
+                64.6
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 14,
+              "wins": 6,
+              "prob_pct": 42.9,
+              "ci95_pct": [
+                21.4,
+                67.4
+              ],
+              "stop_first_pct": 57.1,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 9,
+                "wins": 3,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  12.1,
+                  64.6
+                ],
+                "stop_first_pct": 66.7,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2025-02-03",
+        "test_start": "2025-02-04",
+        "signal_events": 25,
+        "baseline_events": 48,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 33.3
+    },
+    {
+      "ticker": "AFRM",
+      "close": 71.97,
+      "last_price_date": "2026-11-03",
+      "data_start_date": "2021-01-13",
+      "rv20": 57.1,
+      "z20": -0.74,
+      "atr14": 3.57,
+      "dollar_m": 270.8,
+      "rsi14": 47.3,
+      "matched": 1,
+      "eligible": true,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 47.29,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 68.37,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 751055400.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 10.61,
+          "observed": true,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 74.28,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": -0.71,
+          "observed": false,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 18.2,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": false,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 22,
+              "wins": 6,
+              "prob_pct": 27.3,
+              "ci95_pct": [
+                13.2,
+                48.2
+              ],
+              "stop_first_pct": 72.7,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 9,
+              "wins": 3,
+              "prob_pct": 33.3,
+              "ci95_pct": [
+                12.1,
+                64.6
+              ],
+              "stop_first_pct": 44.4,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 3,
+              "prob_pct": 16.7,
+              "ci95_pct": [
+                5.8,
+                39.2
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 9,
+                "wins": 3,
+                "prob_pct": 33.3,
+                "ci95_pct": [
+                  12.1,
+                  64.6
+                ],
+                "stop_first_pct": 44.4,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 22,
+              "wins": 6,
+              "prob_pct": 27.3,
+              "ci95_pct": [
+                13.2,
+                48.2
+              ],
+              "stop_first_pct": 72.7,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 9,
+              "wins": 4,
+              "prob_pct": 44.4,
+              "ci95_pct": [
+                18.9,
+                73.3
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 5,
+              "prob_pct": 27.8,
+              "ci95_pct": [
+                12.5,
+                50.9
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 9,
+                "wins": 4,
+                "prob_pct": 44.4,
+                "ci95_pct": [
+                  18.9,
+                  73.3
+                ],
+                "stop_first_pct": 55.6,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 21,
+              "wins": 6,
+              "prob_pct": 28.6,
+              "ci95_pct": [
+                13.8,
+                50.0
+              ],
+              "stop_first_pct": 71.4,
+              "ambiguous_bars": 0
+            },
+            "test": {
+              "n": 9,
+              "wins": 4,
+              "prob_pct": 44.4,
+              "ci95_pct": [
+                18.9,
+                73.3
+              ],
+              "stop_first_pct": 55.6,
+              "ambiguous_bars": 0
+            },
+            "baseline_test": {
+              "n": 18,
+              "wins": 5,
+              "prob_pct": 27.8,
+              "ci95_pct": [
+                12.5,
+                50.9
+              ],
+              "stop_first_pct": 72.2,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 9,
+                "wins": 4,
+                "prob_pct": 44.4,
+                "ci95_pct": [
+                  18.9,
+                  73.3
+                ],
+                "stop_first_pct": 55.6,
+                "ambiguous_bars": 0
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2025-02-05",
+        "test_start": "2025-02-06",
+        "signal_events": 31,
+        "baseline_events": 57,
+        "latest_signal_date": "2026-11-03",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "composite_score_12": 16.7
     }
   ],
   "errors": {},
-  "method": "ATR14 動態 ZigZag（max(5%,1.5×ATR/價格)），僅使用確認日；週期穩定分數≥75；Z20≤-1.5；下一交易日開盤入場；10日時間出場或1.5 ATR 停損；每邊15bps假設成本。研究回測，非已驗證實盤策略。",
-  "model_version": "HVCR-10 research v2"
+  "method": "六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。",
+  "model_version": "HVCR-10 rebound v3",
+  "model_revision": "v3.2 reliability"
 }
