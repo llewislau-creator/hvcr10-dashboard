@@ -80,7 +80,7 @@ def analyze_frame(df):
     comparisons={}
     for days in HORIZONS:
         comparisons[str(days)]={
-            "train":stats([i for i in events if i<split],days),
+            "train":stats([i for i in events if i+days+1<split],days),
             "test":stats([i for i in events if i>=split],days),
             "baseline_test":stats([i for i in baseline if i>=split],days),
             "test_by_score":{str(k):stats([i for i in events if i>=split and int(count.iloc[i])==k],days) for k in (4,5,6)}
