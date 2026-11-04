@@ -17,7 +17,9 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - name: Verify v3 model (offline smoke tests)
-        run: python tests/test_rebound_v3.py
+        run: |
+          python tests/test_execution_v4.py
+          python tests/test_rebound_v3.py
       - run: python scripts/update.py
       - name: Commit report
         run: |
