@@ -26,10 +26,9 @@ def confirmed_pivots(close, atr):
                 out.append(("low",extreme_idx,i,anchor));direction=1;extreme=p;extreme_idx=i
             elif p<=anchor*(1-threshold):
                 out.append(("high",extreme_idx,i,anchor));direction=-1;extreme=p;extreme_idx=i
-            elif p<extreme:
-                extreme=p;extreme_idx=i;anchor=p
-            elif p>extreme and extreme_idx==i-1:
-                pass
+            else:
+                # Track an initial candidate extreme without using future bars.
+                if p<anchor:anchor=p;extreme=p;extreme_idx=i
         elif direction==1:
             if p>extreme:extreme=p;extreme_idx=i
             elif p<=extreme*(1-threshold):
