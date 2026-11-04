@@ -27,3 +27,10 @@ jobs:
             git pull --rebase -X ours origin main
             git push origin HEAD:main
           fi
+      - name: Send Telegram daily report (optional)
+        if: ${{ success() }}
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/telegram_notify.py
