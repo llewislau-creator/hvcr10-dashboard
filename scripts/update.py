@@ -21,6 +21,8 @@ def analyze(ticker, spy_close=None):
     else:
         relative=None
     result["extra_indicators"]["相對 SPY 20日強弱"]={"value":relative,"observed":relative is not None and relative>0,"unit":"百分點；正值代表跑贏 SPY"}
+    result["composite_score_12"]=round(100*(sum(result["conditions"].values())+sum(bool(x["observed"]) for x in result["extra_indicators"].values()))/12,1) if relative is not None else None
+    result["composite_note"]="12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數"
     result["ticker"]=ticker
     return result
 
