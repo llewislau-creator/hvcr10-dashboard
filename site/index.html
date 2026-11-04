@@ -16,7 +16,17 @@ const esc=x=>String(x??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>'
 const pct=x=>x==null?'樣本不足':esc(x)+'%';
 const ci=x=>x&&x[0]!=null?esc(x[0])+'%–'+esc(x[1])+'%':'—';
 fetch('./data/report.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('報告尚未產生');return r.json()}).then(d=>{
-if(d.model_version!=='HVCR-10 rebound v3')throw Error('網站仍在等待 v3 每日報告，請先執行 GitHub Actions');
+if(d.model_version!=='HVCR-10 rebound v3'){
+ const oldRows=d.rows||[];
+ document.getElementById('status').innerHTML='<span class="warn">目前仍是 '+esc(d.model_version||'未知版本')+' 報告；新版反彈機率尚未產生。以下先顯示舊版股票資料，並非新版預測。</span>｜更新 UTC：'+esc(d.updated_utc);
+ document.getElementById('metrics').innerHTML=[['舊版股票資料',oldRows.length],['新版機率','待更新'],['資料失敗',Object.keys(d.errors||{}).length]].map(x=>'<div class="metric"><span class="muted">'+esc(x[0])+'</span><strong>'+esc(x[1])+'</strong></div>').join('');
+ document.getElementById('rows').innerHTML=oldRows.map(r=>'<tr><td><b>'+esc(r.ticker)+'</b></td><td>'+esc(r.close)+'</td><td>—</td><td>—</td><td>'+esc(r.signal||'舊版')+'</td><td>待新版回測</td><td>—</td><td>—</td><td>—</td><td>'+esc(r.last_price_date)+'</td></tr>').join('');
+ document.getElementById('ticker').innerHTML='<option>等待新版資料</option>';
+ document.getElementById('detail').textContent='目前只有舊版報告，尚無 12 項指標及個股機率資料。請到 GitHub Actions 執行 HVCR-10 Daily Update，完成後重新整理。';
+ document.getElementById('extra').textContent='等待新版報告。';
+ document.getElementById('method').textContent=d.method||'';
+ return;
+}
 const rows=d.rows||[],active=rows.filter(r=>r.signal==='反彈觀察');const dates=rows.map(r=>r.last_price_date).filter(Boolean).sort();const latest=dates.at(-1);const daysOld=latest?Math.floor((Date.now()-new Date(latest+'T23:59:59Z').getTime())/86400000):null;
 document.getElementById('status').textContent='模型：'+d.model_version+' ('+(d.model_revision||'')+')｜更新 UTC：'+d.updated_utc+'｜最新股價：'+(latest||'未知')+'｜成功分析：'+rows.length+' 隻'+(daysOld!=null&&daysOld>3?'｜⚠ 股價可能過期，請檢查 GitHub Actions':'');
 document.getElementById('metrics').innerHTML=[['觀察股票',rows.length],['反彈觀察',active.length],['主目標','10日 +8%'],['資料失敗',Object.keys(d.errors||{}).length]].map(x=>'<div class="metric"><span class="muted">'+esc(x[0])+'</span><strong>'+esc(x[1])+'</strong></div>').join('');
