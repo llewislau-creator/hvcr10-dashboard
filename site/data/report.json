@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-04T09:44:54.567778+00:00",
+  "updated_utc": "2026-11-04T09:56:27.092351+00:00",
   "universe": "15 隻預選觀察股票，並非全美股",
   "rows": [
     {
@@ -14,13 +14,24 @@
       "cycle_score": 47,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-03-31",
       "last_confirmation": "2026-11-03",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2402,
+          "liquidity_volatility_pass": 1504,
+          "zscore_pass": 190,
+          "cycles_pass": 190,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-03-30",
+        "period_end": "2026-10-19"
       },
       "ticker": "RIOT"
     },
@@ -36,13 +47,24 @@
       "cycle_score": 47,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
       "last_confirmation": "2026-09-28",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2462,
+          "liquidity_volatility_pass": 1467,
+          "zscore_pass": 176,
+          "cycles_pass": 176,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "MARA"
     },
@@ -58,13 +80,24 @@
       "cycle_score": 54,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
       "last_confirmation": "2026-11-02",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2462,
+          "liquidity_volatility_pass": 1004,
+          "zscore_pass": 104,
+          "cycles_pass": 104,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "SMCI"
     },
@@ -80,13 +113,24 @@
       "cycle_score": 34,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
       "last_confirmation": "2026-10-30",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2462,
+          "liquidity_volatility_pass": 1433,
+          "zscore_pass": 195,
+          "cycles_pass": 195,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "MSTR"
     },
@@ -102,13 +146,24 @@
       "cycle_score": 53,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
       "last_confirmation": "2026-10-30",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2462,
+          "liquidity_volatility_pass": 1179,
+          "zscore_pass": 117,
+          "cycles_pass": 117,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "AMD"
     },
@@ -124,13 +179,24 @@
       "cycle_score": 46,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2021-04-14",
       "last_confirmation": "2026-10-07",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 1134,
+          "liquidity_volatility_pass": 1051,
+          "zscore_pass": 154,
+          "cycles_pass": 154,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2022-04-12",
+        "period_end": "2026-10-19"
       },
       "ticker": "COIN"
     },
@@ -146,13 +212,24 @@
       "cycle_score": 38,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2021-01-04",
       "last_confirmation": "2026-10-27",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 1203,
+          "liquidity_volatility_pass": 826,
+          "zscore_pass": 92,
+          "cycles_pass": 92,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2022-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "SOFI"
     },
@@ -168,13 +245,24 @@
       "cycle_score": 60,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2020-12-16",
       "last_confirmation": "2026-11-02",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 1214,
+          "liquidity_volatility_pass": 1138,
+          "zscore_pass": 158,
+          "cycles_pass": 158,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2021-12-16",
+        "period_end": "2026-10-19"
       },
       "ticker": "UPST"
     },
@@ -190,13 +278,24 @@
       "cycle_score": 40,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2021-01-13",
       "last_confirmation": "2026-10-29",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 1196,
+          "liquidity_volatility_pass": 1106,
+          "zscore_pass": 153,
+          "cycles_pass": 153,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2022-01-12",
+        "period_end": "2026-10-19"
       },
       "ticker": "AFRM"
     },
@@ -212,13 +311,24 @@
       "cycle_score": 66,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2021-07-29",
       "last_confirmation": "2026-09-30",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 1060,
+          "liquidity_volatility_pass": 705,
+          "zscore_pass": 51,
+          "cycles_pass": 51,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2022-07-29",
+        "period_end": "2026-10-19"
       },
       "ticker": "HOOD"
     },
@@ -234,13 +344,24 @@
       "cycle_score": 57,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2020-09-30",
       "last_confirmation": "2026-10-30",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 1268,
+          "liquidity_volatility_pass": 853,
+          "zscore_pass": 86,
+          "cycles_pass": 86,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2021-09-30",
+        "period_end": "2026-10-19"
       },
       "ticker": "PLTR"
     },
@@ -256,13 +377,24 @@
       "cycle_score": 52,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
       "last_confirmation": "2026-10-22",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2462,
+          "liquidity_volatility_pass": 955,
+          "zscore_pass": 137,
+          "cycles_pass": 137,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "GME"
     },
@@ -278,13 +410,24 @@
       "cycle_score": 42,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
       "last_confirmation": "2026-10-20",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2462,
+          "liquidity_volatility_pass": 1293,
+          "zscore_pass": 162,
+          "cycles_pass": 162,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "TSLA"
     },
@@ -300,13 +443,24 @@
       "cycle_score": 57,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2016-01-04",
       "last_confirmation": "2026-10-12",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2462,
+          "liquidity_volatility_pass": 690,
+          "zscore_pass": 83,
+          "cycles_pass": 83,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2017-01-03",
+        "period_end": "2026-10-19"
       },
       "ticker": "NVDA"
     },
@@ -322,13 +476,24 @@
       "cycle_score": 40,
       "signal": "無訊號",
       "last_price_date": "2026-11-03",
+      "data_start_date": "2017-09-28",
       "last_confirmation": "2026-10-22",
       "backtest": {
         "trades": 0,
         "avg_net_pct": null,
         "win_net_pct": null,
         "cost_bps_per_side": 15,
-        "recent_trades": []
+        "recent_trades": [],
+        "diagnostics": {
+          "evaluated_days": 2024,
+          "liquidity_volatility_pass": 1335,
+          "zscore_pass": 197,
+          "cycles_pass": 193,
+          "score_pass": 0,
+          "trade_entries": 0
+        },
+        "period_start": "2018-09-28",
+        "period_end": "2026-10-19"
       },
       "ticker": "ROKU"
     }
