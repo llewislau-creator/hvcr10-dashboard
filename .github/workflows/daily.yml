@@ -25,7 +25,20 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'Update daily HVCR-10 report'
             git pull --rebase -X ours origin main
-            git push origin HEAD:main
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                echo "Report pushed successfully on attempt $attempt"
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "::error::GitHub rejected report push after 3 attempts"
+                exit 1
+              fi
+              echo "Push failed; waiting before retry $((attempt + 1))"
+              sleep $((attempt * 15))
+              git fetch origin main
+              git rebase -X ours origin/main
+            done
           fi
       - name: Send Telegram daily report (optional)
         if: ${{ success() }}
