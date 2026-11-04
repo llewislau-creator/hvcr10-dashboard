@@ -85,6 +85,36 @@ def analyze_frame(df):
             "baseline_test":stats([i for i in baseline if i>=split],days),
             "test_by_score":{str(k):stats([i for i in events if i>=split and int(count.iloc[i])==k],days) for k in (4,5,6)}
         }
+    # Additional research indicators: display only; do not alter v3 signal gates.
+    bb_mid=c.rolling(20).mean()
+    bb_std=c.rolling(20).std()
+    bb_lower=bb_mid-2*bb_std
+    bb_reclaim=(c>bb_lower)&(c.shift(1)<=(bb_mid.shift(1)-2*bb_std.shift(1)))
+    obv=(np.sign(c.diff()).fillna(0)*v).cumsum()
+    obv_ema=obv.ewm(span=10,adjust=False).mean()
+    obv_improve=(obv>obv_ema)&(obv.diff(5)>0)
+    plus_dm=h.diff().where((h.diff()>-l.diff())&(h.diff()>0),0)
+    minus_dm=(-l.diff()).where((-l.diff()>h.diff())&(-l.diff()>0),0)
+    atr_safe=atr.replace(0,np.nan)
+    plus_di=100*plus_dm.ewm(alpha=1/14,adjust=False,min_periods=14).mean()/atr_safe
+    minus_di=100*minus_dm.ewm(alpha=1/14,adjust=False,min_periods=14).mean()/atr_safe
+    dx=100*(plus_di-minus_di).abs()/(plus_di+minus_di).replace(0,np.nan)
+    adx=dx.ewm(alpha=1/14,adjust=False,min_periods=14).mean()
+    vwap20=(c*v).rolling(20).sum()/v.rolling(20).sum().replace(0,np.nan)
+    # RSI bullish divergence: current 5-day low versus preceding 5-day window.
+    prior_price_low=c.shift(5).rolling(5).min()
+    prior_rsi_low=rsi.shift(5).rolling(5).min()
+    bullish_divergence=(c.rolling(5).min()<prior_price_low)&(rsi.rolling(5).min()>prior_rsi_low)
+    def val(s):
+        x=s.iloc[-1]
+        return round(float(x),2) if pd.notna(x) and np.isfinite(x) else None
+    extra={
+        "RSI 多頭背離（5日窗口）":{"value":val(rsi),"observed":bool(bullish_divergence.iloc[-1]),"unit":"RSI"},
+        "布林通道下軌收復":{"value":val(bb_lower),"observed":bool(bb_reclaim.iloc[-1]),"unit":"美元"},
+        "OBV 資金量能改善":{"value":val(obv),"observed":bool(obv_improve.iloc[-1]),"unit":"累計量"},
+        "ADX 趨勢強度":{"value":val(adx),"observed":bool(pd.notna(adx.iloc[-1]) and adx.iloc[-1]<25),"unit":"ADX（低於25視為趨勢較弱）"},
+        "20日成交量加權均價":{"value":val(vwap20),"observed":bool(c.iloc[-1]>vwap20.iloc[-1]),"unit":"美元"}
+    }
     latest_count=int(count.iloc[-1])
     latest_eligible=bool(eligible.iloc[-1])
     test=comparisons["10"]["test"];base=comparisons["10"]["baseline_test"]
@@ -94,7 +124,7 @@ def analyze_frame(df):
             "rv20":round(float(rv.iloc[-1])*100,1),"z20":round(float(z.iloc[-1]),2),
             "atr14":round(float(atr.iloc[-1]),2),"dollar_m":round(float(dollar.iloc[-1])/1e6,1),
             "rsi14":round(float(rsi.iloc[-1]),1) if pd.notna(rsi.iloc[-1]) else None,
-            "matched":latest_count,"eligible":latest_eligible,
+            "matched":latest_count,"eligible":latest_eligible,"extra_indicators":extra,
             "conditions":{k:bool(val) for k,val in conditions.iloc[-1].items()},
             "signal":"反彈觀察" if latest_eligible and latest_count>=4 else "未達條件",
             "probability":test["prob_pct"] if test["n"]>=30 else None,
