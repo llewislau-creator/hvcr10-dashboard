@@ -57,11 +57,19 @@ def backtest(df, atr, rv, z, liquid, events, cost_bps=15, max_days=10):
     confirmed_by_bar={}
     for e in events:confirmed_by_bar.setdefault(e[2],[]).append(e)
     trades=[];last_exit=-1
+    counts={"evaluated_days":0,"liquidity_volatility_pass":0,"zscore_pass":0,"cycles_pass":0,"score_pass":0,"trade_entries":0}
     for i in range(252,len(df)-max_days-1):
         if i<=last_exit:continue
-        if not (closes[i]>=5 and rv.iloc[i]>=.5 and liquid.iloc[i]>=20e6 and z.iloc[i]<=-1.5):continue
+        counts["evaluated_days"]+=1
+        if not (closes[i]>=5 and rv.iloc[i]>=.5 and liquid.iloc[i]>=20e6):continue
+        counts["liquidity_volatility_pass"]+=1
+        if not (pd.notna(z.iloc[i]) and z.iloc[i]<=-1.5):continue
+        counts["zscore_pass"]+=1
         n,med,cv,score=cycle_features(events,i)
-        if n<6 or score<75:continue
+        if n<6:continue
+        counts["cycles_pass"]+=1
+        if score<75:continue
+        counts["score_pass"]+=1
         entry_idx=i+1;entry=opens[entry_idx]
         if not np.isfinite(entry) or entry<=0 or not np.isfinite(atr.iloc[i]):continue
         stop=entry-1.5*float(atr.iloc[i])
@@ -76,8 +84,9 @@ def backtest(df, atr, rv, z, liquid, events, cost_bps=15, max_days=10):
         net=gross-2*cost_bps/100
         trades.append({"entry_date":str(df.index[entry_idx].date()),"exit_date":str(df.index[exit_idx].date()),"gross_pct":round(gross,2),"net_pct":round(net,2),"exit_reason":reason})
         last_exit=exit_idx
+        counts["trade_entries"]+=1
     nets=[t["net_pct"] for t in trades]
-    return {"trades":len(trades),"avg_net_pct":round(float(np.mean(nets)),2) if nets else None,"win_net_pct":round(float(np.mean(np.array(nets)>0)*100),1) if nets else None,"cost_bps_per_side":cost_bps,"recent_trades":trades[-10:]}
+    return {"trades":len(trades),"avg_net_pct":round(float(np.mean(nets)),2) if nets else None,"win_net_pct":round(float(np.mean(np.array(nets)>0)*100),1) if nets else None,"cost_bps_per_side":cost_bps,"recent_trades":trades[-10:],"diagnostics":counts,"period_start":str(df.index[252].date()) if len(df)>252 else None,"period_end":str(df.index[-max_days-2].date()) if len(df)>max_days+2 else None}
 
 def analyze_frame(df):
     df=df[["Open","High","Low","Close","Volume"]].dropna().copy()
@@ -89,4 +98,4 @@ def analyze_frame(df):
     eligible=bool(df["Close"].iloc[i]>=5 and rv.iloc[i]>=.5 and liquid.iloc[i]>=20e6)
     signal=bool(eligible and pd.notna(z.iloc[i]) and z.iloc[i]<=-1.5 and n>=6 and score>=75)
     bt=backtest(df,atr,rv,z,liquid,events)
-    return {"close":round(float(df["Close"].iloc[-1]),2),"rv20":round(float(rv.iloc[-1])*100,1),"z20":round(float(z.iloc[-1]),2) if pd.notna(z.iloc[-1]) else None,"dollar_m":round(float(liquid.iloc[-1])/1e6,1),"atr14":round(float(atr.iloc[-1]),2),"cycle_days":round(med,1) if med is not None else None,"cycle_cv":round(cv,2) if cv is not None else None,"cycles":n,"cycle_score":score,"signal":"反轉觀察" if signal else "無訊號","last_price_date":str(df.index[-1].date()),"last_confirmation":str(df.index[events[-1][2]].date()) if events else None,"backtest":bt}
+    return {"close":round(float(df["Close"].iloc[-1]),2),"rv20":round(float(rv.iloc[-1])*100,1),"z20":round(float(z.iloc[-1]),2) if pd.notna(z.iloc[-1]) else None,"dollar_m":round(float(liquid.iloc[-1])/1e6,1),"atr14":round(float(atr.iloc[-1]),2),"cycle_days":round(med,1) if med is not None else None,"cycle_cv":round(cv,2) if cv is not None else None,"cycles":n,"cycle_score":score,"signal":"反轉觀察" if signal else "無訊號","last_price_date":str(df.index[-1].date()),"data_start_date":str(df.index[0].date()),"last_confirmation":str(df.index[events[-1][2]].date()) if events else None,"backtest":bt}
