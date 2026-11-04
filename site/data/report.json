@@ -1,0 +1,593 @@
+{
+  "updated_utc": "2026-11-04T08:23:00.659560+00:00",
+  "universe": "15 隻預選觀察股票，並非全美股",
+  "rows": [
+    {
+      "ticker": "COIN",
+      "close": 145.45,
+      "rv20": 68.2,
+      "z20": -1.67,
+      "dollar_m": 1417.4,
+      "cycle_days": 9.0,
+      "cycle_cv": 0.68,
+      "cycles": 142,
+      "signal": "反轉觀察",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 191,
+          "mean_pct": -0.01,
+          "win_pct": 47.1
+        },
+        {
+          "days": 3,
+          "count": 189,
+          "mean_pct": -0.5,
+          "win_pct": 45.5
+        },
+        {
+          "days": 5,
+          "count": 189,
+          "mean_pct": -0.8,
+          "win_pct": 44.4
+        },
+        {
+          "days": 10,
+          "count": 186,
+          "mean_pct": -0.99,
+          "win_pct": 47.3
+        }
+      ],
+      "last_confirmation": "2026-11-03"
+    },
+    {
+      "ticker": "UPST",
+      "close": 21.37,
+      "rv20": 59.8,
+      "z20": -2.37,
+      "dollar_m": 100.0,
+      "cycle_days": 8.0,
+      "cycle_cv": 0.63,
+      "cycles": 164,
+      "signal": "反轉觀察",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 187,
+          "mean_pct": 0.32,
+          "win_pct": 46.0
+        },
+        {
+          "days": 3,
+          "count": 186,
+          "mean_pct": 1.23,
+          "win_pct": 52.7
+        },
+        {
+          "days": 5,
+          "count": 186,
+          "mean_pct": 2.85,
+          "win_pct": 48.4
+        },
+        {
+          "days": 10,
+          "count": 186,
+          "mean_pct": 5.8,
+          "win_pct": 48.9
+        }
+      ],
+      "last_confirmation": "2026-10-30"
+    },
+    {
+      "ticker": "PLTR",
+      "close": 175.4,
+      "rv20": 51.9,
+      "z20": -2.23,
+      "dollar_m": 5009.6,
+      "cycle_days": 11.0,
+      "cycle_cv": 0.66,
+      "cycles": 108,
+      "signal": "反轉觀察",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 105,
+          "mean_pct": 0.24,
+          "win_pct": 49.5
+        },
+        {
+          "days": 3,
+          "count": 103,
+          "mean_pct": 1.85,
+          "win_pct": 57.3
+        },
+        {
+          "days": 5,
+          "count": 103,
+          "mean_pct": 3.27,
+          "win_pct": 57.3
+        },
+        {
+          "days": 10,
+          "count": 103,
+          "mean_pct": 4.11,
+          "win_pct": 63.1
+        }
+      ],
+      "last_confirmation": "2026-10-30"
+    },
+    {
+      "ticker": "RIOT",
+      "close": 14.02,
+      "rv20": 110.3,
+      "z20": -0.27,
+      "dollar_m": 284.7,
+      "cycle_days": 8.0,
+      "cycle_cv": 0.62,
+      "cycles": 284,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 192,
+          "mean_pct": -0.4,
+          "win_pct": 42.2
+        },
+        {
+          "days": 3,
+          "count": 192,
+          "mean_pct": -0.64,
+          "win_pct": 38.5
+        },
+        {
+          "days": 5,
+          "count": 192,
+          "mean_pct": -0.63,
+          "win_pct": 41.1
+        },
+        {
+          "days": 10,
+          "count": 190,
+          "mean_pct": 0.95,
+          "win_pct": 48.9
+        }
+      ],
+      "last_confirmation": "2026-11-03"
+    },
+    {
+      "ticker": "MARA",
+      "close": 7.16,
+      "rv20": 80.7,
+      "z20": -0.65,
+      "dollar_m": 286.3,
+      "cycle_days": 7.0,
+      "cycle_cv": 0.68,
+      "cycles": 310,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 176,
+          "mean_pct": -0.2,
+          "win_pct": 44.9
+        },
+        {
+          "days": 3,
+          "count": 176,
+          "mean_pct": -0.51,
+          "win_pct": 41.5
+        },
+        {
+          "days": 5,
+          "count": 176,
+          "mean_pct": 0.48,
+          "win_pct": 46.6
+        },
+        {
+          "days": 10,
+          "count": 176,
+          "mean_pct": 1.08,
+          "win_pct": 52.3
+        }
+      ],
+      "last_confirmation": "2026-11-03"
+    },
+    {
+      "ticker": "SMCI",
+      "close": 31.39,
+      "rv20": 80.2,
+      "z20": -1.01,
+      "dollar_m": 1327.5,
+      "cycle_days": 12.0,
+      "cycle_cv": 0.91,
+      "cycles": 173,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 105,
+          "mean_pct": 0.02,
+          "win_pct": 49.5
+        },
+        {
+          "days": 3,
+          "count": 105,
+          "mean_pct": 0.28,
+          "win_pct": 46.7
+        },
+        {
+          "days": 5,
+          "count": 105,
+          "mean_pct": 0.39,
+          "win_pct": 48.6
+        },
+        {
+          "days": 10,
+          "count": 105,
+          "mean_pct": 3.47,
+          "win_pct": 60.0
+        }
+      ],
+      "last_confirmation": "2026-10-30"
+    },
+    {
+      "ticker": "MSTR",
+      "close": 135.63,
+      "rv20": 74.7,
+      "z20": -1.12,
+      "dollar_m": 2629.3,
+      "cycle_days": 10.0,
+      "cycle_cv": 1.04,
+      "cycles": 184,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 197,
+          "mean_pct": 0.32,
+          "win_pct": 49.7
+        },
+        {
+          "days": 3,
+          "count": 195,
+          "mean_pct": 0.01,
+          "win_pct": 46.2
+        },
+        {
+          "days": 5,
+          "count": 195,
+          "mean_pct": 0.28,
+          "win_pct": 47.7
+        },
+        {
+          "days": 10,
+          "count": 195,
+          "mean_pct": 1.26,
+          "win_pct": 47.7
+        }
+      ],
+      "last_confirmation": "2026-10-22"
+    },
+    {
+      "ticker": "AMD",
+      "close": 483.9,
+      "rv20": 73.4,
+      "z20": -1.5,
+      "dollar_m": 11966.0,
+      "cycle_days": 11.0,
+      "cycle_cv": 0.65,
+      "cycles": 180,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 125,
+          "mean_pct": 0.41,
+          "win_pct": 54.4
+        },
+        {
+          "days": 3,
+          "count": 124,
+          "mean_pct": 1.81,
+          "win_pct": 61.3
+        },
+        {
+          "days": 5,
+          "count": 124,
+          "mean_pct": 2.27,
+          "win_pct": 58.9
+        },
+        {
+          "days": 10,
+          "count": 122,
+          "mean_pct": 2.23,
+          "win_pct": 57.4
+        }
+      ],
+      "last_confirmation": "2026-10-30"
+    },
+    {
+      "ticker": "SOFI",
+      "close": 16.77,
+      "rv20": 66.8,
+      "z20": 1.21,
+      "dollar_m": 875.7,
+      "cycle_days": 11.0,
+      "cycle_cv": 0.56,
+      "cycles": 116,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 124,
+          "mean_pct": 0.17,
+          "win_pct": 50.8
+        },
+        {
+          "days": 3,
+          "count": 124,
+          "mean_pct": 1.38,
+          "win_pct": 49.2
+        },
+        {
+          "days": 5,
+          "count": 124,
+          "mean_pct": 1.16,
+          "win_pct": 50.0
+        },
+        {
+          "days": 10,
+          "count": 124,
+          "mean_pct": 0.73,
+          "win_pct": 50.0
+        }
+      ],
+      "last_confirmation": "2026-11-02"
+    },
+    {
+      "ticker": "AFRM",
+      "close": 71.97,
+      "rv20": 57.1,
+      "z20": -0.74,
+      "dollar_m": 270.8,
+      "cycle_days": 8.0,
+      "cycle_cv": 0.6,
+      "cycles": 158,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 188,
+          "mean_pct": 0.48,
+          "win_pct": 50.0
+        },
+        {
+          "days": 3,
+          "count": 188,
+          "mean_pct": 1.88,
+          "win_pct": 54.8
+        },
+        {
+          "days": 5,
+          "count": 188,
+          "mean_pct": 3.2,
+          "win_pct": 54.8
+        },
+        {
+          "days": 10,
+          "count": 188,
+          "mean_pct": 2.66,
+          "win_pct": 51.1
+        }
+      ],
+      "last_confirmation": "2026-10-28"
+    },
+    {
+      "ticker": "HOOD",
+      "close": 85.68,
+      "rv20": 55.2,
+      "z20": -1.48,
+      "dollar_m": 1877.4,
+      "cycle_days": 10.0,
+      "cycle_cv": 0.66,
+      "cycles": 101,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 98,
+          "mean_pct": 0.4,
+          "win_pct": 51.0
+        },
+        {
+          "days": 3,
+          "count": 96,
+          "mean_pct": 1.15,
+          "win_pct": 51.0
+        },
+        {
+          "days": 5,
+          "count": 95,
+          "mean_pct": 1.6,
+          "win_pct": 55.8
+        },
+        {
+          "days": 10,
+          "count": 95,
+          "mean_pct": 2.32,
+          "win_pct": 57.9
+        }
+      ],
+      "last_confirmation": "2026-10-22"
+    },
+    {
+      "ticker": "GME",
+      "close": 24.27,
+      "rv20": 39.3,
+      "z20": -0.83,
+      "dollar_m": 241.6,
+      "cycle_days": 11.0,
+      "cycle_cv": 0.81,
+      "cycles": 196,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 137,
+          "mean_pct": -0.41,
+          "win_pct": 45.3
+        },
+        {
+          "days": 3,
+          "count": 137,
+          "mean_pct": -1.45,
+          "win_pct": 36.5
+        },
+        {
+          "days": 5,
+          "count": 137,
+          "mean_pct": -1.41,
+          "win_pct": 38.0
+        },
+        {
+          "days": 10,
+          "count": 137,
+          "mean_pct": 1.16,
+          "win_pct": 37.2
+        }
+      ],
+      "last_confirmation": "2026-10-19"
+    },
+    {
+      "ticker": "TSLA",
+      "close": 398.5,
+      "rv20": 36.5,
+      "z20": 1.0,
+      "dollar_m": 13887.2,
+      "cycle_days": 13.0,
+      "cycle_cv": 0.69,
+      "cycles": 161,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 169,
+          "mean_pct": 0.61,
+          "win_pct": 53.3
+        },
+        {
+          "days": 3,
+          "count": 169,
+          "mean_pct": 0.61,
+          "win_pct": 47.3
+        },
+        {
+          "days": 5,
+          "count": 169,
+          "mean_pct": 1.09,
+          "win_pct": 50.9
+        },
+        {
+          "days": 10,
+          "count": 169,
+          "mean_pct": 3.01,
+          "win_pct": 62.7
+        }
+      ],
+      "last_confirmation": "2026-10-20"
+    },
+    {
+      "ticker": "NVDA",
+      "close": 206.69,
+      "rv20": 32.6,
+      "z20": -1.25,
+      "dollar_m": 21739.1,
+      "cycle_days": 16.0,
+      "cycle_cv": 0.74,
+      "cycles": 144,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 83,
+          "mean_pct": 0.98,
+          "win_pct": 61.4
+        },
+        {
+          "days": 3,
+          "count": 83,
+          "mean_pct": 1.12,
+          "win_pct": 60.2
+        },
+        {
+          "days": 5,
+          "count": 83,
+          "mean_pct": 2.03,
+          "win_pct": 59.0
+        },
+        {
+          "days": 10,
+          "count": 83,
+          "mean_pct": 2.97,
+          "win_pct": 57.8
+        }
+      ],
+      "last_confirmation": "2026-10-12"
+    },
+    {
+      "ticker": "ROKU",
+      "close": 160.36,
+      "rv20": 15.7,
+      "z20": 1.95,
+      "dollar_m": 393.3,
+      "cycle_days": 11.0,
+      "cycle_cv": 0.71,
+      "cycles": 156,
+      "signal": "無訊號",
+      "last_price_date": "2026-11-03",
+      "conditional": [
+        {
+          "days": 1,
+          "count": 210,
+          "mean_pct": 0.21,
+          "win_pct": 48.1
+        },
+        {
+          "days": 3,
+          "count": 210,
+          "mean_pct": 0.62,
+          "win_pct": 47.1
+        },
+        {
+          "days": 5,
+          "count": 210,
+          "mean_pct": 1.66,
+          "win_pct": 47.1
+        },
+        {
+          "days": 10,
+          "count": 210,
+          "mean_pct": 3.59,
+          "win_pct": 51.4
+        }
+      ],
+      "last_confirmation": "2026-10-22"
+    }
+  ],
+  "errors": {},
+  "method": "收盤價確認 ZigZag 5%；RV20 年化；Z20；歷史收盤至未來收盤條件報酬（非交易回測）"
+}
