@@ -115,6 +115,11 @@ def analyze_frame(df):
         "ADX 趨勢強度":{"value":val(adx),"observed":bool(pd.notna(adx.iloc[-1]) and adx.iloc[-1]<25),"unit":"ADX（低於25視為趨勢較弱）"},
         "20日成交量加權均價":{"value":val(vwap20),"observed":bool(c.iloc[-1]>vwap20.iloc[-1]),"unit":"美元"}
     }
+    # v3.1: transparent 12-condition score, not itself a probability.
+    extra_flags=[bool(x["observed"]) for x in extra.values()]
+    # SPY relative strength is attached by update.py; missing SPY is explicitly unavailable.
+    extra_count=sum(extra_flags)
+    composite_score=round(100*(int(count.iloc[-1])+extra_count)/11,1)
     latest_count=int(count.iloc[-1])
     latest_eligible=bool(eligible.iloc[-1])
     test=comparisons["10"]["test"];base=comparisons["10"]["baseline_test"]
@@ -124,7 +129,7 @@ def analyze_frame(df):
             "rv20":round(float(rv.iloc[-1])*100,1),"z20":round(float(z.iloc[-1]),2),
             "atr14":round(float(atr.iloc[-1]),2),"dollar_m":round(float(dollar.iloc[-1])/1e6,1),
             "rsi14":round(float(rsi.iloc[-1]),1) if pd.notna(rsi.iloc[-1]) else None,
-            "matched":latest_count,"eligible":latest_eligible,"extra_indicators":extra,
+            "matched":latest_count,"eligible":latest_eligible,"extra_indicators":extra,\n            "composite_score_11":composite_score,"composite_note":"11項等權觀察分數（6核心+5輔助）；SPY另列，不等於機率",
             "conditions":{k:bool(val) for k,val in conditions.iloc[-1].items()},
             "signal":"反彈觀察" if latest_eligible and latest_count>=4 else "未達條件",
             "probability":test["prob_pct"] if test["n"]>=30 else None,
