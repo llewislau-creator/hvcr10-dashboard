@@ -23,7 +23,7 @@ def analyze_frame(df):
     delta=c.diff();up=delta.clip(lower=0).ewm(alpha=1/14,adjust=False,min_periods=14).mean()
     down=(-delta.clip(upper=0)).ewm(alpha=1/14,adjust=False,min_periods=14).mean()
     rsi=100-100/(1+up/down.replace(0,np.nan))
-    rsi=rsi.where(down.ne(0),100)
+    rsi=rsi.mask((down==0)&(up>0),100).mask((down==0)&(up==0),50)
     z=(c-c.rolling(20).mean())/c.rolling(20).std().replace(0,np.nan)
     vol_ratio=v/v.rolling(20).mean().shift(1).replace(0,np.nan)
     ema12=c.ewm(span=12,adjust=False).mean();ema26=c.ewm(span=26,adjust=False).mean()
@@ -113,7 +113,7 @@ def analyze_frame(df):
         "布林通道下軌收復":{"value":val(bb_lower),"observed":bool(bb_reclaim.iloc[-1]),"unit":"美元"},
         "OBV 資金量能改善":{"value":val(obv),"observed":bool(obv_improve.iloc[-1]),"unit":"累計量"},
         "ADX 趨勢強度":{"value":val(adx),"observed":bool(pd.notna(adx.iloc[-1]) and adx.iloc[-1]<25),"unit":"ADX（低於25視為趨勢較弱）"},
-        "20日成交量加權均價":{"value":val(vwap20),"observed":bool(c.iloc[-1]>vwap20.iloc[-1]),"unit":"美元"}
+        "20日收盤價成交量加權均價（非盤中VWAP）":{"value":val(vwap20),"observed":bool(c.iloc[-1]>vwap20.iloc[-1]),"unit":"美元"}
     }
     # v3.1: transparent 12-condition score, not itself a probability.
     extra_flags=[bool(x["observed"]) for x in extra.values()]
