@@ -41,8 +41,10 @@ def main():
         except Exception as e:
             errors[t]=str(e);print("ERROR",t,e)
     if not rows: raise RuntimeError("No successful downloads; existing report preserved")
+    if len(rows)!=len(TICKERS):
+        raise RuntimeError(f"Partial download ({len(rows)}/{len(TICKERS)}); preserve previous complete report. Errors: {errors}")
     rows.sort(key=lambda r:(r["signal"]!="反彈觀察", -(r["probability"] if r["probability"] is not None else -1),-r["matched"]))
-    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"15 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3"}
+    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"15 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v3.2 reliability"}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     tmp=OUT.with_suffix(".tmp");tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8");tmp.replace(OUT)
 if __name__=="__main__":main()
