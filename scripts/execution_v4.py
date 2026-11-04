@@ -1,14 +1,6 @@
 """Daily-bar, next-open execution research; conservative intrabar tie handling."""
 import math
 
-def simulate_trade(open_, high, low, entry_index, horizon=10, target_pct=.08,
-                   stop_pct=.05, cost_bps_per_side=15, slippage_bps_per_side=10):
-    """Arrays must be chronological; signal is entry_index-1 close.
-    Returns realized net return including both-side costs; no future data used for entry.
-    On the last bar, time exit uses close-equivalent approximation (caller passes closes).
-    """
-    raise NotImplementedError("Use simulate_ohlc_trade with complete OHLC data")
-
 def simulate_ohlc_trade(o,h,l,c,entry_index,horizon=10,target_pct=.08,stop_pct=.05,
                         cost_bps_per_side=15,slippage_bps_per_side=10):
     n=len(o)
