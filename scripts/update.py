@@ -8,19 +8,34 @@ from rebound_v3 import analyze_frame
 TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME"]
 OUT = Path(__file__).resolve().parents[1] / "site" / "data" / "report.json"
 
-def analyze(ticker):
+def analyze(ticker, spy_close=None):
     df=yf.download(ticker,start="2016-01-01",auto_adjust=True,progress=False,threads=False)
     if df.empty: raise ValueError("no data")
     if isinstance(df.columns,pd.MultiIndex): df.columns=df.columns.get_level_values(0)
     result=analyze_frame(df)
+    if spy_close is not None:
+        aligned=spy_close.reindex(df.index).ffill()
+        stock_return=float(df["Close"].iloc[-1]/df["Close"].iloc[-21]-1) if len(df)>21 else None
+        spy_return=float(aligned.iloc[-1]/aligned.iloc[-21]-1) if len(df)>21 and pd.notna(aligned.iloc[-21]) and aligned.iloc[-21]>0 else None
+        relative=round(100*(stock_return-spy_return),2) if stock_return is not None and spy_return is not None else None
+    else:
+        relative=None
+    result["extra_indicators"]["相對 SPY 20日強弱"]={"value":relative,"observed":relative is not None and relative>0,"unit":"百分點；正值代表跑贏 SPY"}
     result["ticker"]=ticker
     return result
 
 def main():
     rows=[];errors={}
+    try:
+        spy=yf.download("SPY",start="2016-01-01",auto_adjust=True,progress=False,threads=False)
+        if isinstance(spy.columns,pd.MultiIndex):spy.columns=spy.columns.get_level_values(0)
+        spy_close=spy["Close"] if not spy.empty else None
+    except Exception as exc:
+        spy_close=None
+        errors["SPY benchmark"]=str(exc)
     for t in TICKERS:
         try:
-            rows.append(analyze(t));print("OK",t)
+            rows.append(analyze(t,spy_close));print("OK",t)
         except Exception as e:
             errors[t]=str(e);print("ERROR",t,e)
     if not rows: raise RuntimeError("No successful downloads; existing report preserved")
