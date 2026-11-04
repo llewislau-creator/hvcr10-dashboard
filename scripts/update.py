@@ -5,6 +5,7 @@ import pandas as pd
 import yfinance as yf
 from rebound_v3 import analyze_frame
 from swing_v5 import swing_research
+from phase1 import validate_prices, market_context, earnings_event, risk_context
 
 TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME","APP","CRWD","IONQ","RKLB","HIMS"]
 OUT = Path(__file__).resolve().parents[1] / "site" / "data" / "report.json"
@@ -13,8 +14,19 @@ def analyze(ticker, spy_close=None):
     df=yf.download(ticker,start="2016-01-01",auto_adjust=True,progress=False,threads=False)
     if df.empty: raise ValueError("no data")
     if isinstance(df.columns,pd.MultiIndex): df.columns=df.columns.get_level_values(0)
+    quality=validate_prices(df,ticker)
+    if quality["status"]=="blocked":raise ValueError("行情品質檢查不通過："+", ".join(quality["issues"]))
     result=analyze_frame(df)
+    result["data_quality"]=quality
     result['swing']=swing_research(df,spy_close)
+    try:
+        calendar=yf.Ticker(ticker).calendar
+        earnings=earnings_event(calendar)
+    except Exception as exc:
+        earnings=earnings_event(None)
+        earnings['note']+='；日曆查詢失敗：'+str(exc)[:120]
+    result['earnings']=earnings
+    result['phase1_risk']=risk_context(quality,earnings)
     if spy_close is not None:
         aligned=spy_close.reindex(df.index).ffill()
         stock_return=float(df["Close"].iloc[-1]/df["Close"].iloc[-21]-1) if len(df)>21 else None
@@ -37,6 +49,15 @@ def main():
     except Exception as exc:
         spy_close=None
         errors["SPY benchmark"]=str(exc)
+    market_data={}
+    for symbol in ('SPY','QQQ','^VIX'):
+        try:
+            market_data[symbol]=spy if symbol=='SPY' else yf.download(symbol,period='2y',auto_adjust=True,progress=False,threads=False)
+            if isinstance(market_data[symbol].columns,pd.MultiIndex):market_data[symbol].columns=market_data[symbol].columns.get_level_values(0)
+        except Exception as exc:
+            market_data[symbol]=None
+            errors[symbol+' market']=str(exc)
+    market=market_context(market_data['SPY'],market_data['QQQ'],market_data['^VIX'])
     for t in TICKERS:
         try:
             rows.append(analyze(t,spy_close));print("OK",t)
@@ -46,7 +67,7 @@ def main():
     if len(rows)!=len(TICKERS):
         raise RuntimeError(f"Partial download ({len(rows)}/{len(TICKERS)}); preserve previous complete report. Errors: {errors}")
     rows.sort(key=lambda r:(not r["swing"]["eligible"],-(r["swing"]["score"] or 0),-r["swing"]["liquidity_dollar_m"],r["ticker"]))
-    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"20 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v5 swing research preview","investment_horizon":"2–4星期（10/15/20交易日）","ranking_basis":"5維波段投資觀察分數，非預測機率；不以高波動率作硬性篩選"}
+    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"20 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v5 swing research preview","investment_horizon":"2–4星期（10/15/20交易日）","ranking_basis":"5維波段投資觀察分數，非預測機率；不以高波動率作硬性篩選","phase1":{"market":market,"earnings_window_days":30,"quality_policy":"blocked資料不寫入報告；缺少財報日期標記unknown"}}}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     tmp=OUT.with_suffix(".tmp");tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8");tmp.replace(OUT)
 if __name__=="__main__":main()
