@@ -2,6 +2,7 @@
 import math
 import numpy as np
 import pandas as pd
+from execution_v4 import simulate_ohlc_trade, summarize
 
 HORIZONS=(5,10,20)
 TARGET=.08
@@ -85,6 +86,13 @@ def analyze_frame(df):
             "baseline_test":stats([i for i in baseline if i>=split],days),
             "test_by_score":{str(k):stats([i for i in events if i>=split and int(count.iloc[i])==k],days) for k in (4,5,6)}
         }
+    # v4 execution diagnostics: held-out signals only; 10-day horizon, next-day open.
+    heldout=[i for i in events if i>=split and i+10<len(df)]
+    trades=[simulate_ohlc_trade(o.to_numpy(),h.to_numpy(),l.to_numpy(),c.to_numpy(),i+1,horizon=10) for i in heldout]
+    execution_summary=summarize([t for t in trades if t is not None])
+    execution_summary["cost_bps_per_side"]=COST_BPS
+    execution_summary["slippage_bps_per_side"]=10
+    execution_summary["research_only"]=True
     # Additional research indicators: display only; do not alter v3 signal gates.
     bb_mid=c.rolling(20).mean()
     bb_std=c.rolling(20).std()
@@ -135,6 +143,7 @@ def analyze_frame(df):
             "signal":"反彈觀察" if latest_eligible and latest_count>=4 else "未達條件",
             "probability":test["prob_pct"] if test["n"]>=30 else None,
             "probability_note":"樣本外事件不足30筆，不提供可用機率" if test["n"]<30 else "樣本外歷史頻率，非校準的個別預測",
+            "execution_v4":execution_summary,
             "backtest":{"model":"v3","target_pct":8,"stop_pct":5,"horizons":comparisons,
                 "train_end":str(df.index[split-1].date()),
                 "test_start":str(df.index[split].date()),
