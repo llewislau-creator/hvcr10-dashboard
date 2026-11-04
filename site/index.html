@@ -9,7 +9,7 @@ body{margin:0;background:#0b1220;color:#edf2ff;font:16px system-ui,-apple-system
 <section class="metrics" id="metrics"></section>
 <section class="panel"><h2>股票反彈觀察排行榜</h2><div class="scroll"><table><thead><tr><th>股票</th><th>收盤價</th><th>符合指標</th><th>訊號</th><th>10日樣本外成功率</th><th>95% 信賴區間</th><th>樣本外筆數</th><th>基準成功率</th><th>股價日期</th></tr></thead><tbody id="rows"></tbody></table></div></section>
 <section class="panel"><h2>個股詳細機率與風險</h2><label for="ticker">選擇股票：</label> <select id="ticker"></select><div id="detail"></div></section>
-<section class="panel"><h2>方法及限制</h2><p id="method"></p><p class="muted">歷史事件以訊號收盤後的下一交易日開盤作為入場基準；計算觸價次序，同日高低點同時觸及目標和停損時保守判定停損。交易事件間至少20個交易日。70%歷史資料作訓練、30%作時間樣本外測試。信賴區間為 Wilson 二項區間，未修正市場制度變化及模型選擇偏差。基準組為符合基本流動性與波動率門檻的非重疊交易日，與訊號組非配對比較。</p><p class="warn">觸價成功率不等於可實現交易淨勝率；15 bps 單邊成本僅為假設，尚未計入個別成交滑價、停牌、退市及盤中成交順序不確定性。15隻預選股票存在選股與存活者偏差，非投資建議。</p></section>
+<section class="panel"><h2>新增六項觀察指標（不影響交易訊號）</h2><p class="muted">這些指標僅供觀察，不計入原本 4/6 的反彈條件，也未經獨立增益驗證。</p><div id="extra"></div></section><section class="panel"><h2>方法及限制</h2><p id="method"></p><p class="muted">歷史事件以訊號收盤後的下一交易日開盤作為入場基準；計算觸價次序，同日高低點同時觸及目標和停損時保守判定停損。交易事件間至少20個交易日。70%歷史資料作訓練、30%作時間樣本外測試。信賴區間為 Wilson 二項區間，未修正市場制度變化及模型選擇偏差。基準組為符合基本流動性與波動率門檻的非重疊交易日，與訊號組非配對比較。</p><p class="warn">觸價成功率不等於可實現交易淨勝率；15 bps 單邊成本僅為假設，尚未計入個別成交滑價、停牌、退市及盤中成交順序不確定性。15隻預選股票存在選股與存活者偏差，非投資建議。</p></section>
 <footer class="muted small">Yahoo Finance / yfinance · GitHub Actions 每日嘗試更新 · Cloudflare Pages 免費託管</footer>
 </main><script>
 const esc=x=>String(x??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -28,7 +28,7 @@ html+='<div class="scroll"><table><thead><tr><th>期限</th><th>訓練成功率 
 for(const days of [5,10,20]){const x=get(r,days),tr=x.train||{},te=x.test||{},ba=x.baseline_test||{};html+='<tr><td>'+days+'日</td><td>'+pct(tr.prob_pct)+' ('+esc(tr.n)+')</td><td>'+pct(te.prob_pct)+' ('+esc(te.n)+')</td><td>'+ci(te.ci95_pct)+'</td><td>'+pct(ba.prob_pct)+' ('+esc(ba.n)+')</td><td>'+pct(te.stop_first_pct)+'</td></tr>'}html+='</tbody></table></div>';
 html+='<p class="muted small">事件總數：'+esc(bt.signal_events)+'｜基準事件：'+esc(bt.baseline_events)+'。下表按 4/6、5/6、6/6 分組，樣本稀少時不可視為可靠預測。</p><div class="scroll"><table><thead><tr><th>10日指標組合</th><th>樣本外成功率</th><th>事件數</th><th>95% CI</th></tr></thead><tbody>';
 for(const k of [4,5,6]){const x=get(r,10).test_by_score?.[String(k)]||{};html+='<tr><td>'+k+'/6</td><td>'+pct(x.n>=30?x.prob_pct:null)+'</td><td>'+esc(x.n)+'</td><td>'+ci(x.ci95_pct)+'</td></tr>'}html+='</tbody></table></div><p class="muted small">'+esc(bt.method_note)+'</p>';
-document.getElementById('detail').innerHTML=html}
+document.getElementById('detail').innerHTML=html;const extra=r.extra_indicators||{};document.getElementById('extra').innerHTML='<div class="scroll"><table><thead><tr><th>指標</th><th>最新數值</th><th>觀察狀態</th><th>說明</th></tr></thead><tbody>'+Object.entries(extra).map(([k,x])=>'<tr><td>'+esc(k)+'</td><td>'+esc(x.value)+'</td><td class="'+(x.observed?'yes':'muted')+'">'+(x.value==null?'資料不足':x.observed?'符合觀察':'未符合')+'</td><td>'+esc(x.unit)+'</td></tr>').join('')+'</tbody></table></div>'}
 sel.onchange=show;if(rows.length)show();
 document.getElementById('method').textContent=d.method||'';
 }).catch(e=>document.getElementById('status').innerHTML='<span class="warn">'+esc(e.message)+'</span>');
