@@ -5,7 +5,7 @@ import pandas as pd
 import yfinance as yf
 from rebound_v3 import analyze_frame
 
-TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME"]
+TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME","APP","CRWD","IONQ","RKLB","HIMS"]
 OUT = Path(__file__).resolve().parents[1] / "site" / "data" / "report.json"
 
 def analyze(ticker, spy_close=None):
@@ -44,7 +44,7 @@ def main():
     if len(rows)!=len(TICKERS):
         raise RuntimeError(f"Partial download ({len(rows)}/{len(TICKERS)}); preserve previous complete report. Errors: {errors}")
     rows.sort(key=lambda r:(r["signal"]!="反彈觀察", -(r["probability"] if r["probability"] is not None else -1),-r["matched"]))
-    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"15 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v3.2 reliability"}
+    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"20 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v3.2 reliability"}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     tmp=OUT.with_suffix(".tmp");tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8");tmp.replace(OUT)
 if __name__=="__main__":main()
