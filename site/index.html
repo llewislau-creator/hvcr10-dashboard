@@ -17,8 +17,8 @@ const pct=x=>x==null?'樣本不足':esc(x)+'%';
 const ci=x=>x&&x[0]!=null?esc(x[0])+'%–'+esc(x[1])+'%':'—';
 fetch('./data/report.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('報告尚未產生');return r.json()}).then(d=>{
 if(d.model_version!=='HVCR-10 rebound v3')throw Error('網站仍在等待 v3 每日報告，請先執行 GitHub Actions');
-const rows=d.rows||[],active=rows.filter(r=>r.signal==='反彈觀察');
-document.getElementById('status').textContent='模型：'+d.model_version+'｜更新 UTC：'+d.updated_utc+'｜成功分析：'+rows.length+' 隻';
+const rows=d.rows||[],active=rows.filter(r=>r.signal==='反彈觀察');const dates=rows.map(r=>r.last_price_date).filter(Boolean).sort();const latest=dates.at(-1);const daysOld=latest?Math.floor((Date.now()-new Date(latest+'T23:59:59Z').getTime())/86400000):null;
+document.getElementById('status').textContent='模型：'+d.model_version+' ('+(d.model_revision||'')+')｜更新 UTC：'+d.updated_utc+'｜最新股價：'+(latest||'未知')+'｜成功分析：'+rows.length+' 隻'+(daysOld!=null&&daysOld>3?'｜⚠ 股價可能過期，請檢查 GitHub Actions':'');
 document.getElementById('metrics').innerHTML=[['觀察股票',rows.length],['反彈觀察',active.length],['主目標','10日 +8%'],['資料失敗',Object.keys(d.errors||{}).length]].map(x=>'<div class="metric"><span class="muted">'+esc(x[0])+'</span><strong>'+esc(x[1])+'</strong></div>').join('');
 const get=(r,k)=>r.backtest?.horizons?.[String(k)]||{};
 document.getElementById('rows').innerHTML=rows.map(r=>{let t=get(r,10),s=t.test||{},b=t.baseline_test||{};return '<tr><td><b>'+esc(r.ticker)+'</b></td><td>'+esc(r.close)+'</td><td>'+esc(r.matched)+'/6</td><td>'+esc(r.composite_score_12==null?'資料不足':r.composite_score_12+'/100')+'</td><td>'+Object.entries({...r.conditions,...Object.fromEntries(Object.entries(r.extra_indicators||{}).map(([k,v])=>[k,v.observed]))}).filter(([k,v])=>v).map(([k])=>'<span class="chip ok">✓ '+esc(k)+'</span>').join('')+'</td><td class="'+(r.signal==='反彈觀察'?'yes':'')+'">'+esc(r.signal)+'</td><td>'+pct(r.probability)+'</td><td>'+ci(s.ci95_pct)+'</td><td>'+esc(s.n)+'</td><td>'+pct(b.prob_pct)+'</td><td>'+esc(r.last_price_date)+'</td></tr>'}).join('');
