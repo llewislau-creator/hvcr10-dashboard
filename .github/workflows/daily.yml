@@ -23,6 +23,8 @@ jobs:
           python tests/test_swing_v5.py
           python tests/test_execution_v4.py
           python tests/test_rebound_v3.py
+      - name: Compile Python sources before downloading market data
+        run: python -m compileall -q scripts tests
       - run: python scripts/update.py
       - name: Commit report
         run: |
