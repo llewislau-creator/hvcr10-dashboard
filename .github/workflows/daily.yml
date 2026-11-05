@@ -18,6 +18,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Verify v3 model (offline smoke tests)
         run: |
+          python tests/test_stage2.py
           python tests/test_phase1.py
           python tests/test_swing_v5.py
           python tests/test_execution_v4.py
