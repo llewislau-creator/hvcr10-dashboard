@@ -61,3 +61,36 @@ def summarize_trades(trades):
             "profit_factor":round(float(wins/losses),2) if losses>0 else None,
             "max_sequential_drawdown_pct":round(float(((equity/peaks)-1).min()*100),2),
             "note":"逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"}
+
+def backtest_plans(df, days=15, benchmark_close=None):
+    """Held-out 30% only; every 'days' trading sessions, no overlapping positions.
+    Signal at close: close > 50d MA, 20d return >0, dollar volume >=10m.
+    Does not optimize rules or select winners using future outcomes.
+    """
+    d=df[["Open","High","Low","Close","Volume"]].dropna()
+    if len(d)<330:raise ValueError("至少需要330個交易日")
+    close=d.Close.astype(float)
+    ma50=close.rolling(50).mean()
+    momentum=close.pct_change(20)
+    liquid=(close*d.Volume).rolling(20).mean()>=1e7
+    start=max(100,int(len(d)*.7))
+    trades=[];excess=[]
+    spy=benchmark_close.reindex(d.index).ffill() if benchmark_close is not None else None
+    for i in range(start,len(d)-days,days):
+        if not (close.iloc[i]>ma50.iloc[i] and momentum.iloc[i]>0 and liquid.iloc[i]):continue
+        plan=make_plan(d.iloc[:i+1])
+        trade=simulate_plan(d,i,plan,days=days)
+        if trade is None:continue
+        trades.append(trade)
+        if spy is not None:
+            entry_spy=spy.iloc[i+1]
+            # Benchmark exits on the same day as the simulated stock exit.
+            exit_loc=d.index.get_loc(pd.Timestamp(trade["exit_date"]))
+            exit_spy=spy.iloc[exit_loc]
+            if pd.notna(entry_spy) and pd.notna(exit_spy) and entry_spy>0:
+                excess.append(trade["net_return_pct"]-(float(exit_spy/entry_spy)-1)*100)
+    out=summarize_trades(trades)
+    out["mean_excess_spy_pct"]=round(float(np.mean(excess)),2) if excess else None
+    out["horizon_days"]=days
+    out["method"]="樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+    return out
