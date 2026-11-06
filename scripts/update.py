@@ -5,7 +5,7 @@ import pandas as pd
 import yfinance as yf
 from rebound_v3 import analyze_frame
 from swing_v5 import swing_research
-from phase1 import validate_prices, market_context, earnings_event, risk_context
+from phase1 import validate_prices, clean_price_history, market_context, earnings_event, risk_context
 
 TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME","APP","CRWD","IONQ","RKLB","HIMS"]
 OUT = Path(__file__).resolve().parents[1] / "site" / "data" / "report.json"
@@ -14,7 +14,13 @@ def analyze(ticker, spy_close=None):
     df=yf.download(ticker,start="2016-01-01",auto_adjust=True,progress=False,threads=False)
     if df.empty: raise ValueError("no data")
     if isinstance(df.columns,pd.MultiIndex): df.columns=df.columns.get_level_values(0)
+    df,cleaning=clean_price_history(df)
     quality=validate_prices(df,ticker)
+    quality["cleaning"]=cleaning
+    removed=cleaning["historical_incomplete_rows_removed"]
+    if removed:
+        quality["issues"].append(f"已移除{removed}個較舊不完整交易日")
+        if quality["status"]=="ok":quality["status"]="warning"
     if quality["status"]=="blocked":raise ValueError("行情品質檢查不通過："+", ".join(quality["issues"]))
     result=analyze_frame(df)
     result["data_quality"]=quality
