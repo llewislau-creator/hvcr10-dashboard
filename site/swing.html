@@ -12,6 +12,24 @@ const fmt=(x,suffix='')=>x==null?'—':esc(x)+suffix;
 const stat=(k,v,n)=>'<div class="stat"><small>'+esc(k)+'</small><b>'+esc(v)+'</b><small>'+esc(n)+'</small></div>';
 function rank(){let s=$('sort').value,rows=[...all];rows.sort((a,b)=>{let x=a.swing||{},y=b.swing||{};if(s==='ticker')return a.ticker.localeCompare(b.ticker);if(s==='mom')return (y.momentum_20d_pct??-999)-(x.momentum_20d_pct??-999);if(s==='relative')return (y.relative_spy_20d_pct??-999)-(x.relative_spy_20d_pct??-999);return Number(y.eligible)-Number(x.eligible)||(y.score??-1)-(x.score??-1)||(y.liquidity_dollar_m??0)-(x.liquidity_dollar_m??0)||a.ticker.localeCompare(b.ticker)});
 $('rows').innerHTML=rows.map((r,i)=>{let s=r.swing||{},h=s.holdout?.['10']||{};return '<tr><td>#'+(i+1)+'</td><td><button data-t="'+esc(r.ticker)+'">'+esc(r.ticker)+'</button></td><td>$'+fmt(r.close)+'</td><td>'+fmt(s.score,'/100')+'</td><td class="'+(s.signal==='優先研究'?'good':'muted')+'">'+esc(s.signal||'待更新')+'</td><td>'+esc(r.phase1_risk||'待更新')+'</td><td>'+esc(r.data_quality?.status||'待更新')+'</td><td>'+fmt(s.momentum_20d_pct,'%')+'</td><td>'+fmt(s.relative_spy_20d_pct,'%')+'</td><td>'+fmt(h.mean_net_pct,'%')+'</td><td>'+fmt(h.n)+'</td><td>'+esc(r.last_price_date)+'</td></tr>'}).join('');document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{$('ticker').value=b.dataset.t;detail()})}
+function researchEvidence(r){
+ const q=r.data_quality||{},bt=r.stage2?.backtests||{};
+ const quality=q.status==='ok'?'完整':q.status==='warning'?'有警告':'未驗證';
+ const detail=[10,15,20].map(n=>{
+  const b=bt[String(n)];
+  if(!b||!Number.isFinite(b.n))return n+'日：未提供';
+  return n+'日：'+b.n+'筆';
+ }).join('；');
+ const sample=[10,15,20].every(n=>Number.isFinite(bt[String(n)]?.n)&&bt[String(n)].n>=30)?'三個持有期均達30筆':'樣本未全數達標';
+ const pass=n=>{const b=bt[String(n)];return b&&Number.isFinite(b.mean_net_pct)&&Number.isFinite(b.profit_factor)&&b.mean_net_pct>0&&b.profit_factor>=1};
+ const complete=[10,15,20].every(n=>{const b=bt[String(n)];return b&&Number.isFinite(b.mean_net_pct)&&Number.isFinite(b.profit_factor)&&Number.isFinite(b.n)&&b.n>=30});
+ const performance=!complete?'證據不足':([10,15,20].every(pass)?'三期均達門檻':'未全數通過');
+ return '<h3>研究證據分項檢視（非買入機率）</h3><div class="grid">'+
+ stat('行情資料完整性',quality,(q.issues||[]).join('；')||'沒有已知品質警告')+
+ stat('樣本充足程度',sample,detail)+
+ stat('樣本外績效門檻',performance,'僅在三期均≥30筆時評估；平均淨報酬>0%、Profit Factor≥1')+
+ '</div><p class="muted">三個維度分開判讀，不合成分數、不作交易訊號、不影響排行榜；門檻是研究篩選規則，不是統計顯著性或未來獲利保證。</p>';
+}
 function riskWarnings(r){
  const bt=r.stage2?.backtests||{},warnings=[];
  if(r.data_quality?.status!=='ok')warnings.push('行情品質警告：'+(r.data_quality?.issues||[]).join('；'));
