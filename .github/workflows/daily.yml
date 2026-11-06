@@ -20,6 +20,7 @@ jobs:
         run: |
           python tests/test_coverage.py
           python tests/test_stage2.py
+          python tests/test_report_artifacts.py
           python tests/test_phase1.py
           python tests/test_swing_v5.py
           python tests/test_execution_v4.py
@@ -27,11 +28,13 @@ jobs:
       - name: Compile Python sources before downloading market data
         run: python -m compileall -q scripts tests
       - run: python scripts/update.py
+      - name: Validate generated report artifacts
+        run: python tests/test_report_artifacts.py
       - name: Commit report
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add site/data/report.json
+          git add site/data/report.json site/data/trade_audit.json site/data/bootstrap_summary.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update daily HVCR-10 report'
             git pull --rebase -X ours origin main
