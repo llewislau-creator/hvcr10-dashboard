@@ -1,5 +1,6 @@
 """Verify generated dashboard, trade audit, and block bootstrap artifacts."""
 import json
+import math
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]/'site'/'data'
 report=json.loads((root/'report.json').read_text(encoding='utf-8'))
@@ -15,6 +16,26 @@ for p in portfolio['portfolios'].values():
     if p['status']!='no_trades':
         assert p['max_exposure_pct']<=100.00001
         assert p['max_concurrent_positions']<=len(report['rows'])
+        days=p['daily_equity']
+        assert days and days==sorted(days,key=lambda d:d['date'])
+        assert len({d['date'] for d in days})==len(days)
+        for d in days:
+            assert all(math.isfinite(float(d[k])) for k in ('equity','cash','holdings_value','exposure_pct'))
+            assert d['equity']>0 and d['cash']>=-0.01 and d['holdings_value']>=-0.01
+            assert abs(d['equity']-d['cash']-d['holdings_value'])<=0.021
+            assert abs(100*d['holdings_value']/d['equity']-d['exposure_pct'])<=0.005
+        fills=p.get('fills',[])
+        assert len([f for f in fills if f['side']=='buy'])==p['trades_executed']
+        assert len([f for f in fills if f['side']=='sell'])==p['trades_executed']
+        assert abs(days[-1]['cash']-100000-sum(f['cash_flow'] for f in fills))<=0.05
+        assert days[-1]['positions']==0 and days[-1]['holdings_value']==0
+        peak=100000.
+        drawdowns=[]
+        for d in days:
+            peak=max(peak,d['equity'])
+            drawdowns.append((d['equity']/peak-1)*100)
+        assert abs(min(drawdowns)-p['max_drawdown_pct'])<=0.002
+        assert abs(max(d['exposure_pct'] for d in days)-p['max_exposure_pct'])<=0.002
 assert 'GME' in diagnostics['excluded_diagnostics']
 keys=set()
 for row in report['rows']:
