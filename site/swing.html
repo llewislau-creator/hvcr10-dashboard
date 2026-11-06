@@ -43,6 +43,22 @@ function riskWarnings(r){
  }
  return warnings;
 }
+function forwardEvidence(s){
+ const bt=s?.backtests||{};
+ const items=[10,15,20].map(n=>{
+  const b=bt[String(n)]||{},wf=b.walk_forward,folds=wf?.folds||[];
+  const foldText=folds.length===3?folds.map(f=>{
+   const ci=f.n>=30?'樣本達標':'樣本不足';
+   return '第'+f.fold+'段：'+f.n+'筆／'+ci+'／平均淨報酬'+fmt(f.mean_net_pct,'%');
+  }).join('；'):'等待新版Walk-forward報告';
+  const bear=b.regime_results?.['SPY下降趨勢']?.n||0;
+  const bearLabel=bear>=30?'熊市樣本數達標（仍需驗證績效）':'熊市穩健性未驗證（'+bear+'/30筆）';
+  const ci=b.mean_net_bootstrap_ci95_pct;
+  const ciLabel=Array.isArray(ci)&&ci[0]>0?'區間支持正報酬（描述性）':'未獲得正報酬區間支持';
+  return '<div class="stat"><small>'+n+'日｜分段研究證據</small><b>'+esc(bearLabel)+'</b><small>'+esc(foldText)+'</small><small>'+esc(ciLabel)+'</small></div>';
+ }).join('');
+ return '<h3>Walk-forward 分段證據（獨立判讀）</h3><div class="grid">'+items+'</div><p class="muted">每段30筆門檻不變；熊市樣本30筆只代表覆蓋門檻，並非績效通過。歷史重疊或相關性不等於獨立新證據。固定規則前向驗證不等於重新訓練最佳化。</p>';
+}
 function robustnessHTML(s){
  if(!s)return '';
  const bt=s.backtests||{};
