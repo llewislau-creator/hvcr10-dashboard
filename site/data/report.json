@@ -6575,7 +6575,7 @@
                     0.0,
                     4.01
                   ],
-                  "bootstrap_mean_pct": 1.9457,
+                  "bootstrap_mean_pct": 1.9456,
                   "original_mean_pct": 1.9777,
                   "center_shift_pct": -0.0321
                 },
@@ -6613,7 +6613,7 @@
                     0.5,
                     3.68
                   ],
-                  "bootstrap_mean_pct": 1.9508,
+                  "bootstrap_mean_pct": 1.9507,
                   "original_mean_pct": 1.9777,
                   "center_shift_pct": -0.027
                 }
