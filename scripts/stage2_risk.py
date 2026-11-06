@@ -123,6 +123,10 @@ def backtest_plans(df, days=15, benchmark_close=None):
     no_overlap=all(pd.Timestamp(a['exit_date'])<pd.Timestamp(b['entry_date']) for a,b in zip(trades,trades[1:]))
     if not unique_trades or not no_overlap:
         raise AssertionError('重複交易或持倉重疊')
+    trade_audit=[{"signal_date":t["signal_date"],"entry_date":t["entry_date"],"exit_date":t["exit_date"],
+                  "fold":next(j+1 for j,(a,b) in enumerate(zip(boundaries[:-1],boundaries[1:]))
+                              if a<=d.index.get_loc(pd.Timestamp(t["signal_date"]))<b)}
+                 for t in trades]
     fold_results=[]
     for j in range(3):
         a,b=boundaries[j:j+2]
@@ -131,7 +135,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
                              "validation_start":str(d.index[a].date()),
                              "validation_end":str(d.index[b-1].date()),
                              **summarize_trades(subset)})
-    out["walk_forward"]={"folds":fold_results,"total_unique_trades":len(trades),
+    out["walk_forward"]={"folds":fold_results,"trade_audit":trade_audit,"total_unique_trades":len(trades),
                          "method":"expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
                          "trade_reuse":not unique_trades,"no_overlapping_positions":no_overlap}
     out["validation_start_fraction"]=0.4
