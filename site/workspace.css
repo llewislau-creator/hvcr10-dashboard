@@ -41,3 +41,17 @@ th{white-space:nowrap}td{vertical-align:top}button{transition:background .15s}
 #portfolio-summary .stat b{font-size:23px}
 @media(max-width:768px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.flex{align-items:flex-start}.stat{padding:12px}.stat b{font-size:21px}}
 @media(max-width:430px){.grid{grid-template-columns:1fr}#portfolio-summary.grid,#quick-overview.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Accessible, illustrated glossary across all six research pages */
+.glossary-term{display:inline;border:0;border-bottom:1px dashed #77bdf7;background:transparent;color:#a5d6ff;font:inherit;font-weight:inherit;line-height:inherit;padding:0 1px;cursor:help;text-align:inherit}
+.glossary-term:hover,.glossary-term:focus-visible{color:#fff;background:#294766;outline:2px solid transparent;border-radius:3px}
+.glossary-modal{width:min(440px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;border:1px solid #587a9e;border-radius:16px;padding:22px;background:#142439;color:#eaf3ff;box-shadow:0 24px 80px #000a}
+.glossary-modal::backdrop{background:#000b}
+.glossary-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.glossary-header h2{font-size:20px;margin:0}
+.glossary-close{width:36px;height:36px;border-radius:8px;border:1px solid #607c99;background:#213c58;color:#fff;font-size:25px;cursor:pointer}
+.glossary-close:focus-visible{outline:2px solid #9cd2ff;outline-offset:2px}
+.glossary-graphic{margin-top:18px}
+.glossary-graphic svg{display:block;width:100%;height:auto;border-radius:12px}
+.glossary-graphic small{display:block;margin-top:6px;color:#aabdd2;font-size:11px}
+.glossary-modal p{font-size:14px;line-height:1.8;margin:16px 0 2px}
