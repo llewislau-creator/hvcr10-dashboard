@@ -38,8 +38,7 @@ def main():
     if report.get("errors"):
         lines.append(f"⚠️ 下載失敗：{len(report['errors'])} 隻")
     lines += ["", f"完整報告：{URL}", "研究分數非獲利機率；回測與風險仍待獨立核對，非買賣建議。"]
-    body = urllib.parse.urlencode({"chat_id": chat_id, "text": "
-".join(lines)}).encode()
+    body = urllib.parse.urlencode({"chat_id": chat_id, "text": "\\n".join(lines)}).encode()
     request = urllib.request.Request(
         f"https://api.telegram.org/bot{token}/sendMessage",
         data=body, method="POST",
