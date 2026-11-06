@@ -18,7 +18,12 @@ def clean_price_history(df, recent_bars=5):
     finite=pd.DataFrame(np.isfinite(d[required].to_numpy()),index=d.index,columns=required)
     complete=finite.all(axis=1)
     if not complete.tail(recent_bars).all():
-        raise ValueError("最近5個交易日存在缺失或非有限OHLCV資料，不可填補")
+        bad=d.loc[~complete].tail(recent_bars)
+        detail=[]
+        for date,row in bad.iterrows():
+            fields=[field for field in required if not np.isfinite(row[field])]
+            detail.append(f"{str(date)[:10]}: {','.join(fields)}")
+        raise ValueError("最近5個交易日存在缺失或非有限OHLCV資料，不可填補；異常欄位="+ " | ".join(detail))
     removed=int((~complete).sum())
     cleaned=d.loc[complete].copy()
     if len(cleaned)<330:raise ValueError("清理後不足330個交易日")
