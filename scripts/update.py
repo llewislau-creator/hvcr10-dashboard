@@ -124,6 +124,16 @@ def main():
                 "audit_key":key})
             wf["audit_file"]="trade_audit.json"
             wf["audit_key"]=key
+    summary["by_horizon"]={}
+    for horizon in (10,15,20):
+        group=[g for g in summary["groups"] if g["horizon_days"]==horizon]
+        summary["by_horizon"][str(horizon)]={
+            "groups":len(group),
+            "iid_positive":sum(g["iid_positive"] for g in group),
+            "block_positive":{str(k):sum(g["block_positive"][str(k)] for g in group) for k in (5,10,20)},
+            "weakened_tickers":[g["ticker"] for g in group if g["weakens_vs_iid"]]
+        }
+    summary["note"]="描述性信賴區間；Block bootstrap 僅保留單一股票交易序列的局部相依，未校正跨股票相關及策略選擇偏誤"
     payload["bootstrap_summary_file"]="bootstrap_summary.json"
     payload["trade_audit_file"]="trade_audit.json"
     OUT.parent.mkdir(parents=True,exist_ok=True)
