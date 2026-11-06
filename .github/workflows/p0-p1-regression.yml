@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'scripts/portfolio_risk.py'
+      - 'scripts/telegram_notify.py'
       - 'site/homepage.js'
       - 'site/research-app.js'
       - 'site/*.html'
