@@ -73,7 +73,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
     ma50=close.rolling(50).mean()
     momentum=close.pct_change(20)
     liquid=(close*d.Volume).rolling(20).mean()>=1e7
-    start=max(100,int(len(d)*.7))
+    start=max(200,int(len(d)*.4))
     trades=[];excess=[];regimes=[];last_exit=-1
     spy=benchmark_close.reindex(d.index).ffill() if benchmark_close is not None else None
     for i in range(start,len(d)-days):
@@ -109,6 +109,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
     out["ci_note"]="固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證"
     out["regime_results"]={name:summarize_trades([t for t,g in zip(trades,regimes) if g==name]) for name in ("SPY上升趨勢","SPY下降趨勢","市場狀態未知")}
     out["regime_note"]="以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣"
+    out["validation_start_fraction"]=0.4
     out["horizon_days"]=days
-    out["method"]="樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+    out["method"]="歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
     return out
