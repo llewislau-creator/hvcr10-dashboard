@@ -132,7 +132,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
         'repeats':2000,'seed':20261106,'block_lengths':[5,10,20],
         'ci95_pct':{str(k):moving_block_bootstrap_ci(vals,k) for k in (5,10,20)},
         'iid_ci95_pct':out['mean_net_bootstrap_ci95_pct'],
-        'note':'按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較'}
+        'note':'按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較'
     }
     out["regime_results"]={name:summarize_trades([t for t,g in zip(trades,regimes) if g==name]) for name in ("SPY上升趨勢","SPY下降趨勢","市場狀態未知")}
     bear_n=out["regime_results"]["SPY下降趨勢"]["n"]
