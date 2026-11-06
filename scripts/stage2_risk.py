@@ -76,6 +76,21 @@ def moving_block_bootstrap_ci(values, block_length, repeats=2000, seed=20261106)
     means=x[idx].mean(axis=1)
     return [round(float(v),2) for v in np.percentile(means,[2.5,97.5])]
 
+def block_bootstrap_diagnostic(values, block_length, circular=False, repeats=2000, seed=20261106):
+    x=np.asarray(values,dtype=float)
+    n=len(x)
+    if n<max(2,block_length):return None
+    rng=np.random.default_rng(seed+block_length+(1000 if circular else 0))
+    count=int(math.ceil(n/block_length))
+    starts=rng.integers(0,n if circular else n-block_length+1,size=(repeats,count))
+    idx=starts[:,:,None]+np.arange(block_length)
+    if circular:idx=idx%n
+    means=x[idx.reshape(repeats,-1)[:,:n]].mean(axis=1)
+    return {"ci95_pct":[round(float(v),2) for v in np.percentile(means,[2.5,97.5])],
+            "bootstrap_mean_pct":round(float(means.mean()),4),
+            "original_mean_pct":round(float(x.mean()),4),
+            "center_shift_pct":round(float(means.mean()-x.mean()),4)}
+
 def backtest_plans(df, days=15, benchmark_close=None):
     """Held-out 30% only; every 'days' trading sessions, no overlapping positions.
     Signal at close: close > 50d MA, 20d return >0, dollar volume >=10m.
