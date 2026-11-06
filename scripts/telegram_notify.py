@@ -17,7 +17,11 @@ def main():
         return 0
     report = json.loads(REPORT.read_text(encoding="utf-8"))
     rows = report.get("rows", [])
-    signals = [r for r in rows if r.get("swing", {}).get("signal") == "優先研究" and r.get("data_quality", {}).get("status") == "ok"]\n    # No signal: no Telegram message. A separate website report remains available.\n    if not signals:\n        print("No validated priority research signals; no alert sent.")\n        return 0
+    signals = [r for r in rows if r.get("swing", {}).get("signal") == "優先研究" and r.get("data_quality", {}).get("status") == "ok"]
+    # No signal: no Telegram message. A separate website report remains available.
+    if not signals:
+        print("No validated priority research signals; no alert sent.")
+        return 0
     date = max((r.get("last_price_date", "") for r in rows), default="未知")
     lines = [
         "🔔 AlphaLens｜自選美股研究提示",
@@ -34,7 +38,8 @@ def main():
     if report.get("errors"):
         lines.append(f"⚠️ 下載失敗：{len(report['errors'])} 隻")
     lines += ["", f"完整報告：{URL}", "研究分數非獲利機率；回測與風險仍待獨立核對，非買賣建議。"]
-    body = urllib.parse.urlencode({"chat_id": chat_id, "text": "\n".join(lines)}).encode()
+    body = urllib.parse.urlencode({"chat_id": chat_id, "text": "
+".join(lines)}).encode()
     request = urllib.request.Request(
         f"https://api.telegram.org/bot{token}/sendMessage",
         data=body, method="POST",
