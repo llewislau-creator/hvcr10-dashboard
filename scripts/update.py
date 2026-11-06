@@ -7,10 +7,12 @@ from rebound_v3 import analyze_frame
 from swing_v5 import swing_research
 from stage2_risk import make_plan, backtest_plans
 from data_diagnostics import diagnose_price_anomalies
+from portfolio_risk import portfolio_risk
 from phase1 import validate_prices, clean_price_history, market_context, earnings_event, risk_context
 
 TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME","APP","CRWD","IONQ","RKLB","HIMS"]
 OUT = Path(__file__).resolve().parents[1] / "site" / "data" / "report.json"
+PRICE_CACHE = {}
 
 def analyze(ticker, spy_close=None):
     df=yf.download(ticker,start="2016-01-01",auto_adjust=True,progress=False,threads=False)
@@ -37,6 +39,7 @@ def analyze(ticker, spy_close=None):
         quality["issues"].append(f"已移除{removed}個較舊不完整交易日")
         if quality["status"]=="ok":quality["status"]="warning"
     if quality["status"]=="blocked":raise ValueError("行情品質檢查不通過："+", ".join(quality["issues"]))
+    PRICE_CACHE[ticker]=df
     result=analyze_frame(df)
     result["data_quality"]=quality
     result['swing']=swing_research(df,spy_close)
@@ -152,11 +155,13 @@ def main():
             "weakened_tickers":[g["ticker"] for g in group if g["weakens_vs_iid"]]
         }
     summary["note"]="描述性信賴區間；Block bootstrap 僅保留單一股票交易序列的局部相依，未校正跨股票相關及策略選擇偏誤"
+    portfolio={"updated_utc":payload["updated_utc"],"portfolios":{str(h):portfolio_risk(audit,PRICE_CACHE,h,spy_close) for h in (10,15,20)}}
+    payload["portfolio_risk_file"]="portfolio_risk.json"
     payload["bootstrap_summary_file"]="bootstrap_summary.json"
     payload["trade_audit_file"]="trade_audit.json"
     payload["price_diagnostics_file"]="price_diagnostics.json"
     OUT.parent.mkdir(parents=True,exist_ok=True)
-    for name,doc in (("trade_audit.json",audit),("bootstrap_summary.json",summary),("price_diagnostics.json",{"updated_utc":payload["updated_utc"],"excluded_diagnostics":diagnostics})):
+    for name,doc in (("trade_audit.json",audit),("portfolio_risk.json",portfolio),("bootstrap_summary.json",summary),("price_diagnostics.json",{"updated_utc":payload["updated_utc"],"excluded_diagnostics":diagnostics})):
         path=OUT.parent/name
         temp=path.with_suffix(".tmp")
         temp.write_text(json.dumps(doc,ensure_ascii=False,separators=(",",":")),encoding="utf-8")
