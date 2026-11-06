@@ -8,6 +8,7 @@ summary=json.loads((root/'bootstrap_summary.json').read_text(encoding='utf-8'))
 diagnostics=json.loads((root/'price_diagnostics.json').read_text(encoding='utf-8'))
 assert report['updated_utc']==audit['updated_utc']==summary['updated_utc']==diagnostics['updated_utc']
 assert len(summary['groups'])==3*len(report['rows'])
+assert 'GME' in diagnostics['excluded_diagnostics']
 keys=set()
 for row in report['rows']:
     for h in (10,15,20):
@@ -33,6 +34,11 @@ for row in report['rows']:
                 if v is not None:
                     assert v['ci95_pct'][0]<=v['ci95_pct'][1]
                     assert abs(v['center_shift_pct']-(v['bootstrap_mean_pct']-v['original_mean_pct']))<.0002
+        assert set(mb['circular_seed_sensitivity'])=={'5','10','20'}
+        for s in mb['circular_seed_sensitivity'].values():
+            if s is not None:
+                assert len(s['seeds'])==len(s['ci_width_pct_by_seed'])==len(s['center_shift_pct_by_seed'])==5
+                assert 0<=s['positive_lower_count']<=5
         assert mb['repeats']==2000 and mb['block_lengths']==[5,10,20]
         assert mb['iid_ci95_pct']==bt['mean_net_bootstrap_ci95_pct']
         for k in (5,10,20):
