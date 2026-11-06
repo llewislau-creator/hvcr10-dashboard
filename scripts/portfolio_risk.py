@@ -17,7 +17,7 @@ def portfolio_risk(audit, prices, horizon, benchmark=None, capital=100000.0):
         if t["ticker"] not in prices:raise ValueError("Missing prices: "+t["ticker"])
     first=min(t["entry_date"] for t in orders)
     last=max(t["exit_date"] for t in orders)
-    dates=sorted(set().union(*(set(p.loc[first:last].index.strftime("%Y-%m-%d")) for p in prices.values())))
+    # Only trading sessions from assets that actually participate in this horizon.\n    traded_tickers={o["ticker"] for o in orders}\n    dates=sorted(set().union(*(set(prices[t].loc[first:last].index.strftime("%Y-%m-%d")) for t in traded_tickers)))\n    if not dates:raise ValueError("No price sessions in audit interval")
     cash=float(capital); positions={}; daily=[]; executed=[]; skipped=[]; fills=[]
     for day in dates:
         opening_equity=cash+sum(pos["shares"]*float(prices[ticker].loc[prices[ticker].index<pd.Timestamp(day),"Close"].iloc[-1]) for ticker,pos in positions.items())
@@ -28,7 +28,7 @@ def portfolio_risk(audit, prices, horizon, benchmark=None, capital=100000.0):
                 skipped.append({"ticker":ticker,"entry_date":day,"reason":"already_held"});continue
             if day not in prices[ticker].index.strftime("%Y-%m-%d"):
                 skipped.append({"ticker":ticker,"entry_date":day,"reason":"missing_entry_bar"});continue
-            entry=float(order["entry_price"])
+            entry=float(order["entry_price"])\n            if not np.isfinite(entry) or entry<=0:raise ValueError("Invalid entry price: "+ticker)
             friction=(order["cost_bps_per_side"]+order["slippage_bps_per_side"])/10000
             shares=int(min(.15*opening_equity, cash)/(entry*(1+friction)))
             if shares<1:
@@ -41,23 +41,23 @@ def portfolio_risk(audit, prices, horizon, benchmark=None, capital=100000.0):
             order=pos["trade"]
             if order["exit_date"]!=day:continue
             friction=(order["cost_bps_per_side"]+order["slippage_bps_per_side"])/10000
-            proceeds=pos["shares"]*float(order["exit_price"])*(1-friction)
+            exit_price=float(order["exit_price"])\n            if not np.isfinite(exit_price) or exit_price<=0:raise ValueError("Invalid exit price: "+ticker)\n            proceeds=pos["shares"]*exit_price*(1-friction)
             cash+=proceeds
             fills.append({"date":day,"ticker":ticker,"side":"sell","shares":pos["shares"],"price":float(order["exit_price"]),"cash_flow":round(proceeds,6)})
             del positions[ticker]
         value=cash
         exposure=0.0
         for ticker,pos in positions.items():
-            history=prices[ticker].loc[:day,"Close"]
+            history=prices[ticker].loc[:day,"Close"].dropna()
             if history.empty:raise ValueError("Missing holding mark: "+ticker)
-            mark=float(history.iloc[-1])
+            mark=float(history.iloc[-1])\n            if not np.isfinite(mark) or mark<=0:raise ValueError("Invalid holding mark: "+ticker)
             value+=pos["shares"]*mark
             exposure+=pos["shares"]*mark
         if value<=0:raise ValueError("Nonpositive NAV")
         daily.append({"date":day,"equity":value,"exposure_pct":100*exposure/value,"positions":len(positions),"cash":cash,"holdings_value":exposure})
         if cash < -1e-6:raise AssertionError("Negative cash")
         if abs(value-cash-exposure)>1e-6:raise AssertionError("NAV reconciliation failed")
-    frame=pd.DataFrame(daily)
+    if positions:raise ValueError("Open positions remain after last audit exit")\n    frame=pd.DataFrame(daily)
     nav=frame.equity.to_numpy()
     returns=np.diff(nav)/nav[:-1]
     peaks=np.maximum.accumulate(np.r_[capital,nav])[1:]
