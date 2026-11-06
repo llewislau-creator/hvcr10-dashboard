@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-06T03:32:34.102349+00:00",
+  "updated_utc": "2026-11-06T03:40:45.982491+00:00",
   "universe": "20 隻預選觀察股票，並非全美股",
   "rows": [
     {
@@ -388,31 +388,31 @@
         "backtests": {
           "10": {
             "n": 76,
-            "mean_net_pct": -1.46,
-            "win_rate_pct": 39.5,
-            "profit_factor": 0.69,
-            "max_sequential_drawdown_pct": -83.56,
+            "mean_net_pct": -1.36,
+            "win_rate_pct": 40.8,
+            "profit_factor": 0.7,
+            "max_sequential_drawdown_pct": -82.13,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -1.75,
+            "mean_excess_spy_pct": -1.62,
             "mean_net_bootstrap_ci95_pct": [
-              -3.51,
-              0.73
+              -3.39,
+              0.81
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 69,
-                "mean_net_pct": -0.88,
+                "mean_net_pct": -0.79,
                 "win_rate_pct": 42.0,
-                "profit_factor": 0.79,
-                "max_sequential_drawdown_pct": -70.91,
+                "profit_factor": 0.81,
+                "max_sequential_drawdown_pct": -69.01,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
                 "n": 7,
-                "mean_net_pct": -7.2,
-                "win_rate_pct": 14.3,
-                "profit_factor": 0.13,
+                "mean_net_pct": -6.91,
+                "win_rate_pct": 28.6,
+                "profit_factor": 0.15,
                 "max_sequential_drawdown_pct": -45.74,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -424,6 +424,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -432,11 +437,11 @@
                   "train_end": "2021-05-18",
                   "validation_start": "2021-05-19",
                   "validation_end": "2023-03-14",
-                  "n": 16,
-                  "mean_net_pct": -4.16,
-                  "win_rate_pct": 31.2,
+                  "n": 15,
+                  "mean_net_pct": -4.41,
+                  "win_rate_pct": 33.3,
                   "profit_factor": 0.32,
-                  "max_sequential_drawdown_pct": -62.85,
+                  "max_sequential_drawdown_pct": -62.68,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -444,10 +449,10 @@
                   "train_end": "2023-03-14",
                   "validation_start": "2023-03-15",
                   "validation_end": "2025-01-08",
-                  "n": 27,
-                  "mean_net_pct": -1.83,
-                  "win_rate_pct": 37.0,
-                  "profit_factor": 0.7,
+                  "n": 28,
+                  "mean_net_pct": -1.49,
+                  "win_rate_pct": 39.3,
+                  "profit_factor": 0.73,
                   "max_sequential_drawdown_pct": -52.89,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -466,39 +471,40 @@
               ],
               "total_unique_trades": 76,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 64,
-            "mean_net_pct": -0.7,
-            "win_rate_pct": 45.3,
+            "n": 63,
+            "mean_net_pct": -0.72,
+            "win_rate_pct": 46.0,
             "profit_factor": 0.86,
-            "max_sequential_drawdown_pct": -74.89,
+            "max_sequential_drawdown_pct": -75.32,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
             "mean_excess_spy_pct": -1.19,
             "mean_net_bootstrap_ci95_pct": [
-              -3.5,
-              2.21
+              -3.64,
+              2.28
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 55,
-                "mean_net_pct": 0.02,
-                "win_rate_pct": 49.1,
-                "profit_factor": 1.01,
-                "max_sequential_drawdown_pct": -53.84,
+                "n": 54,
+                "mean_net_pct": -0.11,
+                "win_rate_pct": 50.0,
+                "profit_factor": 0.98,
+                "max_sequential_drawdown_pct": -57.65,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
                 "n": 9,
-                "mean_net_pct": -5.14,
+                "mean_net_pct": -4.42,
                 "win_rate_pct": 22.2,
-                "profit_factor": 0.52,
+                "profit_factor": 0.56,
                 "max_sequential_drawdown_pct": -53.0,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -510,6 +516,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -519,9 +530,9 @@
                   "validation_start": "2021-05-19",
                   "validation_end": "2023-03-14",
                   "n": 15,
-                  "mean_net_pct": -2.08,
+                  "mean_net_pct": -2.86,
                   "win_rate_pct": 33.3,
-                  "profit_factor": 0.71,
+                  "profit_factor": 0.64,
                   "max_sequential_drawdown_pct": -61.87,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -530,11 +541,11 @@
                   "train_end": "2023-03-14",
                   "validation_start": "2023-03-15",
                   "validation_end": "2025-01-08",
-                  "n": 23,
-                  "mean_net_pct": -1.98,
-                  "win_rate_pct": 43.5,
-                  "profit_factor": 0.68,
-                  "max_sequential_drawdown_pct": -46.13,
+                  "n": 22,
+                  "mean_net_pct": -1.56,
+                  "win_rate_pct": 45.5,
+                  "profit_factor": 0.74,
+                  "max_sequential_drawdown_pct": -44.33,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -550,41 +561,42 @@
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 64,
+              "total_unique_trades": 63,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 49,
-            "mean_net_pct": 0.28,
-            "win_rate_pct": 38.8,
-            "profit_factor": 1.05,
-            "max_sequential_drawdown_pct": -54.76,
+            "n": 50,
+            "mean_net_pct": 0.1,
+            "win_rate_pct": 38.0,
+            "profit_factor": 1.02,
+            "max_sequential_drawdown_pct": -58.6,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.41,
+            "mean_excess_spy_pct": -0.52,
             "mean_net_bootstrap_ci95_pct": [
-              -3.25,
-              3.91
+              -3.29,
+              3.59
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 42,
-                "mean_net_pct": 0.48,
-                "win_rate_pct": 40.5,
-                "profit_factor": 1.1,
-                "max_sequential_drawdown_pct": -47.24,
+                "mean_net_pct": 0.26,
+                "win_rate_pct": 38.1,
+                "profit_factor": 1.05,
+                "max_sequential_drawdown_pct": -52.02,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
-                "n": 7,
-                "mean_net_pct": -0.89,
-                "win_rate_pct": 28.6,
-                "profit_factor": 0.89,
+                "n": 8,
+                "mean_net_pct": -0.7,
+                "win_rate_pct": 37.5,
+                "profit_factor": 0.9,
                 "max_sequential_drawdown_pct": -32.66,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -596,6 +608,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -605,9 +622,9 @@
                   "validation_start": "2021-05-19",
                   "validation_end": "2023-03-14",
                   "n": 13,
-                  "mean_net_pct": 0.45,
-                  "win_rate_pct": 38.5,
-                  "profit_factor": 1.08,
+                  "mean_net_pct": -0.58,
+                  "win_rate_pct": 30.8,
+                  "profit_factor": 0.91,
                   "max_sequential_drawdown_pct": -43.42,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -616,10 +633,10 @@
                   "train_end": "2023-03-14",
                   "validation_start": "2023-03-15",
                   "validation_end": "2025-01-08",
-                  "n": 17,
-                  "mean_net_pct": -1.65,
-                  "win_rate_pct": 35.3,
-                  "profit_factor": 0.76,
+                  "n": 18,
+                  "mean_net_pct": -1.29,
+                  "win_rate_pct": 38.9,
+                  "profit_factor": 0.79,
                   "max_sequential_drawdown_pct": -37.44,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -636,9 +653,10 @@
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 49,
+              "total_unique_trades": 50,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -1039,25 +1057,25 @@
         },
         "backtests": {
           "10": {
-            "n": 59,
-            "mean_net_pct": 2.5,
-            "win_rate_pct": 57.6,
-            "profit_factor": 1.61,
-            "max_sequential_drawdown_pct": -37.84,
+            "n": 58,
+            "mean_net_pct": 2.25,
+            "win_rate_pct": 56.9,
+            "profit_factor": 1.53,
+            "max_sequential_drawdown_pct": -39.34,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.94,
+            "mean_excess_spy_pct": 1.68,
             "mean_net_bootstrap_ci95_pct": [
-              -0.87,
-              5.69
+              -0.86,
+              5.52
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 59,
-                "mean_net_pct": 2.5,
-                "win_rate_pct": 57.6,
-                "profit_factor": 1.61,
-                "max_sequential_drawdown_pct": -37.84,
+                "n": 58,
+                "mean_net_pct": 2.25,
+                "win_rate_pct": 56.9,
+                "profit_factor": 1.53,
+                "max_sequential_drawdown_pct": -39.34,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -1074,6 +1092,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -1095,10 +1118,10 @@
                   "train_end": "2024-08-13",
                   "validation_start": "2024-08-14",
                   "validation_end": "2025-09-25",
-                  "n": 26,
-                  "mean_net_pct": 5.7,
-                  "win_rate_pct": 69.2,
-                  "profit_factor": 2.62,
+                  "n": 25,
+                  "mean_net_pct": 5.33,
+                  "win_rate_pct": 68.0,
+                  "profit_factor": 2.46,
                   "max_sequential_drawdown_pct": -31.15,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -1108,41 +1131,42 @@
                   "validation_start": "2025-09-26",
                   "validation_end": "2026-11-05",
                   "n": 10,
-                  "mean_net_pct": -3.9,
+                  "mean_net_pct": -4.12,
                   "win_rate_pct": 30.0,
-                  "profit_factor": 0.45,
-                  "max_sequential_drawdown_pct": -37.84,
+                  "profit_factor": 0.44,
+                  "max_sequential_drawdown_pct": -39.34,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 59,
+              "total_unique_trades": 58,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 47,
-            "mean_net_pct": 4.13,
-            "win_rate_pct": 53.2,
-            "profit_factor": 1.93,
-            "max_sequential_drawdown_pct": -33.95,
+            "n": 46,
+            "mean_net_pct": 3.85,
+            "win_rate_pct": 52.2,
+            "profit_factor": 1.84,
+            "max_sequential_drawdown_pct": -35.55,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 3.2,
+            "mean_excess_spy_pct": 2.9,
             "mean_net_bootstrap_ci95_pct": [
-              0.07,
-              8.44
+              -0.3,
+              8.13
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 47,
-                "mean_net_pct": 4.13,
-                "win_rate_pct": 53.2,
-                "profit_factor": 1.93,
-                "max_sequential_drawdown_pct": -33.95,
+                "n": 46,
+                "mean_net_pct": 3.85,
+                "win_rate_pct": 52.2,
+                "profit_factor": 1.84,
+                "max_sequential_drawdown_pct": -35.55,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -1159,6 +1183,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -1180,10 +1209,10 @@
                   "train_end": "2024-08-13",
                   "validation_start": "2024-08-14",
                   "validation_end": "2025-09-25",
-                  "n": 19,
-                  "mean_net_pct": 9.17,
-                  "win_rate_pct": 73.7,
-                  "profit_factor": 3.78,
+                  "n": 18,
+                  "mean_net_pct": 8.86,
+                  "win_rate_pct": 72.2,
+                  "profit_factor": 3.55,
                   "max_sequential_drawdown_pct": -31.15,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -1193,41 +1222,42 @@
                   "validation_start": "2025-09-26",
                   "validation_end": "2026-11-05",
                   "n": 9,
-                  "mean_net_pct": -3.86,
+                  "mean_net_pct": -4.1,
                   "win_rate_pct": 22.2,
-                  "profit_factor": 0.49,
-                  "max_sequential_drawdown_pct": -33.95,
+                  "profit_factor": 0.48,
+                  "max_sequential_drawdown_pct": -35.55,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 47,
+              "total_unique_trades": 46,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 42,
-            "mean_net_pct": 5.37,
-            "win_rate_pct": 52.4,
-            "profit_factor": 2.07,
-            "max_sequential_drawdown_pct": -33.7,
+            "n": 41,
+            "mean_net_pct": 5.08,
+            "win_rate_pct": 51.2,
+            "profit_factor": 1.98,
+            "max_sequential_drawdown_pct": -35.3,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 4.49,
+            "mean_excess_spy_pct": 4.18,
             "mean_net_bootstrap_ci95_pct": [
-              0.14,
-              10.15
+              -0.25,
+              10.33
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 42,
-                "mean_net_pct": 5.37,
-                "win_rate_pct": 52.4,
-                "profit_factor": 2.07,
-                "max_sequential_drawdown_pct": -33.7,
+                "n": 41,
+                "mean_net_pct": 5.08,
+                "win_rate_pct": 51.2,
+                "profit_factor": 1.98,
+                "max_sequential_drawdown_pct": -35.3,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -1244,6 +1274,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -1265,10 +1300,10 @@
                   "train_end": "2024-08-13",
                   "validation_start": "2024-08-14",
                   "validation_end": "2025-09-25",
-                  "n": 17,
-                  "mean_net_pct": 11.23,
-                  "win_rate_pct": 64.7,
-                  "profit_factor": 3.75,
+                  "n": 16,
+                  "mean_net_pct": 11.0,
+                  "win_rate_pct": 62.5,
+                  "profit_factor": 3.54,
                   "max_sequential_drawdown_pct": -31.15,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -1278,16 +1313,17 @@
                   "validation_start": "2025-09-26",
                   "validation_end": "2026-11-05",
                   "n": 8,
-                  "mean_net_pct": -4.32,
+                  "mean_net_pct": -4.6,
                   "win_rate_pct": 25.0,
-                  "profit_factor": 0.45,
-                  "max_sequential_drawdown_pct": -33.7,
+                  "profit_factor": 0.43,
+                  "max_sequential_drawdown_pct": -35.3,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 42,
+              "total_unique_trades": 41,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -1304,660 +1340,6 @@
       },
       "phase1_risk": "財報日期待確認",
       "composite_score_12": 58.3
-    },
-    {
-      "ticker": "GME",
-      "close": 24.17,
-      "last_price_date": "2026-11-05",
-      "data_start_date": "2016-01-04",
-      "rv20": 42.4,
-      "z20": -0.86,
-      "atr14": 1.04,
-      "dollar_m": 232.9,
-      "rsi14": 47.4,
-      "matched": 2,
-      "eligible": false,
-      "extra_indicators": {
-        "RSI 多頭背離（5日窗口）": {
-          "value": 47.37,
-          "observed": false,
-          "unit": "RSI"
-        },
-        "布林通道下軌收復": {
-          "value": 22.49,
-          "observed": false,
-          "unit": "美元"
-        },
-        "OBV 資金量能改善": {
-          "value": 6338542300.0,
-          "observed": false,
-          "unit": "累計量"
-        },
-        "ADX 趨勢強度": {
-          "value": 28.45,
-          "observed": false,
-          "unit": "ADX（低於25視為趨勢較弱）"
-        },
-        "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 25.85,
-          "observed": false,
-          "unit": "美元"
-        },
-        "相對 SPY 20日強弱": {
-          "value": 0.9,
-          "observed": true,
-          "unit": "百分點；正值代表跑贏 SPY"
-        }
-      },
-      "composite_score_11": 18.2,
-      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
-      "conditions": {
-        "RSI14 ≤ 35": false,
-        "Z20 ≤ -1.5": false,
-        "成交量 ≥ 1.3倍": false,
-        "MACD動能連續改善": true,
-        "ATR佔股價 ≥ 3%": true,
-        "收盤突破前日高點": false
-      },
-      "signal": "未達條件",
-      "probability": null,
-      "probability_note": "樣本外事件不足30筆，不提供可用機率",
-      "execution_v4": {
-        "n": 13,
-        "avg_net_pct": -3.351,
-        "win_rate_pct": 15.4,
-        "profit_factor": 0.255,
-        "max_drawdown_pct": 36.69,
-        "note": "單一股票逐筆交易複利序列；非多股票投資組合回撤",
-        "cost_bps_per_side": 15,
-        "slippage_bps_per_side": 10,
-        "research_only": true
-      },
-      "backtest": {
-        "model": "v3",
-        "target_pct": 8,
-        "stop_pct": 5,
-        "horizons": {
-          "5": {
-            "train": {
-              "n": 17,
-              "wins": 8,
-              "prob_pct": 47.1,
-              "ci95_pct": [
-                26.2,
-                69.0
-              ],
-              "stop_first_pct": 52.9,
-              "ambiguous_bars": 3
-            },
-            "test": {
-              "n": 13,
-              "wins": 2,
-              "prob_pct": 15.4,
-              "ci95_pct": [
-                4.3,
-                42.2
-              ],
-              "stop_first_pct": 53.8,
-              "ambiguous_bars": 1
-            },
-            "baseline_test": {
-              "n": 24,
-              "wins": 6,
-              "prob_pct": 25.0,
-              "ci95_pct": [
-                12.0,
-                44.9
-              ],
-              "stop_first_pct": 54.2,
-              "ambiguous_bars": 0
-            },
-            "test_by_score": {
-              "4": {
-                "n": 13,
-                "wins": 2,
-                "prob_pct": 15.4,
-                "ci95_pct": [
-                  4.3,
-                  42.2
-                ],
-                "stop_first_pct": 53.8,
-                "ambiguous_bars": 1
-              },
-              "5": {
-                "n": 0,
-                "wins": 0,
-                "prob_pct": null,
-                "ci95_pct": [
-                  null,
-                  null
-                ],
-                "stop_first_pct": null,
-                "ambiguous_bars": 0
-              },
-              "6": {
-                "n": 0,
-                "wins": 0,
-                "prob_pct": null,
-                "ci95_pct": [
-                  null,
-                  null
-                ],
-                "stop_first_pct": null,
-                "ambiguous_bars": 0
-              }
-            }
-          },
-          "10": {
-            "train": {
-              "n": 17,
-              "wins": 8,
-              "prob_pct": 47.1,
-              "ci95_pct": [
-                26.2,
-                69.0
-              ],
-              "stop_first_pct": 52.9,
-              "ambiguous_bars": 3
-            },
-            "test": {
-              "n": 13,
-              "wins": 2,
-              "prob_pct": 15.4,
-              "ci95_pct": [
-                4.3,
-                42.2
-              ],
-              "stop_first_pct": 76.9,
-              "ambiguous_bars": 1
-            },
-            "baseline_test": {
-              "n": 24,
-              "wins": 6,
-              "prob_pct": 25.0,
-              "ci95_pct": [
-                12.0,
-                44.9
-              ],
-              "stop_first_pct": 66.7,
-              "ambiguous_bars": 0
-            },
-            "test_by_score": {
-              "4": {
-                "n": 13,
-                "wins": 2,
-                "prob_pct": 15.4,
-                "ci95_pct": [
-                  4.3,
-                  42.2
-                ],
-                "stop_first_pct": 76.9,
-                "ambiguous_bars": 1
-              },
-              "5": {
-                "n": 0,
-                "wins": 0,
-                "prob_pct": null,
-                "ci95_pct": [
-                  null,
-                  null
-                ],
-                "stop_first_pct": null,
-                "ambiguous_bars": 0
-              },
-              "6": {
-                "n": 0,
-                "wins": 0,
-                "prob_pct": null,
-                "ci95_pct": [
-                  null,
-                  null
-                ],
-                "stop_first_pct": null,
-                "ambiguous_bars": 0
-              }
-            }
-          },
-          "20": {
-            "train": {
-              "n": 17,
-              "wins": 8,
-              "prob_pct": 47.1,
-              "ci95_pct": [
-                26.2,
-                69.0
-              ],
-              "stop_first_pct": 52.9,
-              "ambiguous_bars": 3
-            },
-            "test": {
-              "n": 13,
-              "wins": 2,
-              "prob_pct": 15.4,
-              "ci95_pct": [
-                4.3,
-                42.2
-              ],
-              "stop_first_pct": 84.6,
-              "ambiguous_bars": 1
-            },
-            "baseline_test": {
-              "n": 24,
-              "wins": 6,
-              "prob_pct": 25.0,
-              "ci95_pct": [
-                12.0,
-                44.9
-              ],
-              "stop_first_pct": 70.8,
-              "ambiguous_bars": 0
-            },
-            "test_by_score": {
-              "4": {
-                "n": 13,
-                "wins": 2,
-                "prob_pct": 15.4,
-                "ci95_pct": [
-                  4.3,
-                  42.2
-                ],
-                "stop_first_pct": 84.6,
-                "ambiguous_bars": 1
-              },
-              "5": {
-                "n": 0,
-                "wins": 0,
-                "prob_pct": null,
-                "ci95_pct": [
-                  null,
-                  null
-                ],
-                "stop_first_pct": null,
-                "ambiguous_bars": 0
-              },
-              "6": {
-                "n": 0,
-                "wins": 0,
-                "prob_pct": null,
-                "ci95_pct": [
-                  null,
-                  null
-                ],
-                "stop_first_pct": null,
-                "ambiguous_bars": 0
-              }
-            }
-          }
-        },
-        "train_end": "2023-08-02",
-        "test_start": "2023-08-03",
-        "signal_events": 30,
-        "baseline_events": 55,
-        "latest_signal_date": "2026-11-05",
-        "entry_rule": "訊號後下一交易日開盤",
-        "cost_bps_per_side": 15,
-        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
-      },
-      "data_quality": {
-        "status": "warning",
-        "issues": [
-          "存在單日超過50%價格變動；需核對企業行動"
-        ],
-        "latest_date": "2026-11-05",
-        "age_calendar_days": 1,
-        "ticker": "GME",
-        "cleaning": {
-          "historical_incomplete_rows_removed": 0,
-          "raw_rows": 2727,
-          "validated_rows": 2727,
-          "cleaning": "僅刪除較舊不完整交易日；最近5個交易日必須完整；不前向填補",
-          "source_attempt": "start=2016-01-01"
-        }
-      },
-      "swing": {
-        "strategy": "2–4星期波段投資",
-        "holding_trading_days": [
-          10,
-          15,
-          20
-        ],
-        "score": 60.0,
-        "factors": {
-          "中期趨勢": true,
-          "短期動能": false,
-          "相對市場強度": true,
-          "健康回調": true,
-          "量價確認": false
-        },
-        "factor_count": 5,
-        "eligible": true,
-        "signal": "觀察名單",
-        "liquidity_dollar_m": 232.9,
-        "momentum_20d_pct": -4.39,
-        "momentum_60d_pct": 30.37,
-        "relative_spy_20d_pct": 0.9,
-        "ma20": 25.45,
-        "ma50": 23.42,
-        "rsi14": 47.4,
-        "holdout": {
-          "10": {
-            "n": 16,
-            "mean_net_pct": -1.54,
-            "positive_net_pct": 37.5,
-            "mean_excess_spy_pct": -1.3,
-            "min_net_pct": -21.76,
-            "note": "70/30時間切分；測試期每隔持有期抽取非重疊候選日；訊號分數>=60；下一交易日開盤買入、期限末收盤賣出；雙邊假設成本與滑價；不是校準機率"
-          },
-          "15": {
-            "n": 14,
-            "mean_net_pct": -2.65,
-            "positive_net_pct": 42.9,
-            "mean_excess_spy_pct": -4.57,
-            "min_net_pct": -59.33,
-            "note": "70/30時間切分；測試期每隔持有期抽取非重疊候選日；訊號分數>=60；下一交易日開盤買入、期限末收盤賣出；雙邊假設成本與滑價；不是校準機率"
-          },
-          "20": {
-            "n": 9,
-            "mean_net_pct": 1.88,
-            "positive_net_pct": 66.7,
-            "mean_excess_spy_pct": -1.37,
-            "min_net_pct": -24.29,
-            "note": "70/30時間切分；測試期每隔持有期抽取非重疊候選日；訊號分數>=60；下一交易日開盤買入、期限末收盤賣出；雙邊假設成本與滑價；不是校準機率"
-          }
-        },
-        "cost_bps_per_side": 15,
-        "slippage_bps_per_side": 10,
-        "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
-        "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
-      },
-      "stage2": {
-        "status": "research_only",
-        "plan": {
-          "reference_entry": 24.17,
-          "stop": 22.08,
-          "target": 28.34,
-          "atr14": 1.04,
-          "reward_risk": 2.0,
-          "shares": 23,
-          "max_risk_budget": 50.0,
-          "position_capital": 555.91,
-          "holding_days": [
-            10,
-            15,
-            20
-          ],
-          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
-        },
-        "backtests": {
-          "10": {
-            "n": 101,
-            "mean_net_pct": 1.46,
-            "win_rate_pct": 40.6,
-            "profit_factor": 1.2,
-            "max_sequential_drawdown_pct": -94.32,
-            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.97,
-            "mean_net_bootstrap_ci95_pct": [
-              -2.62,
-              6.1
-            ],
-            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
-            "regime_results": {
-              "SPY上升趨勢": {
-                "n": 88,
-                "mean_net_pct": 2.8,
-                "win_rate_pct": 44.3,
-                "profit_factor": 1.42,
-                "max_sequential_drawdown_pct": -86.31,
-                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-              },
-              "SPY下降趨勢": {
-                "n": 13,
-                "mean_net_pct": -7.61,
-                "win_rate_pct": 15.4,
-                "profit_factor": 0.3,
-                "max_sequential_drawdown_pct": -69.07,
-                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-              },
-              "市場狀態未知": {
-                "n": 0,
-                "mean_net_pct": null,
-                "win_rate_pct": null,
-                "profit_factor": null,
-                "max_sequential_drawdown_pct": null
-              }
-            },
-            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
-            "walk_forward": {
-              "folds": [
-                {
-                  "fold": 1,
-                  "train_end": "2020-05-01",
-                  "validation_start": "2020-05-04",
-                  "validation_end": "2022-07-01",
-                  "n": 42,
-                  "mean_net_pct": 4.86,
-                  "win_rate_pct": 45.2,
-                  "profit_factor": 1.52,
-                  "max_sequential_drawdown_pct": -80.51,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                },
-                {
-                  "fold": 2,
-                  "train_end": "2022-07-01",
-                  "validation_start": "2022-07-05",
-                  "validation_end": "2024-09-03",
-                  "n": 27,
-                  "mean_net_pct": -1.7,
-                  "win_rate_pct": 25.9,
-                  "profit_factor": 0.76,
-                  "max_sequential_drawdown_pct": -79.67,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                },
-                {
-                  "fold": 3,
-                  "train_end": "2024-09-03",
-                  "validation_start": "2024-09-04",
-                  "validation_end": "2026-11-05",
-                  "n": 32,
-                  "mean_net_pct": -0.34,
-                  "win_rate_pct": 46.9,
-                  "profit_factor": 0.92,
-                  "max_sequential_drawdown_pct": -48.63,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                }
-              ],
-              "total_unique_trades": 101,
-              "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
-            },
-            "validation_start_fraction": 0.4,
-            "horizon_days": 10,
-            "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
-          },
-          "15": {
-            "n": 89,
-            "mean_net_pct": 2.68,
-            "win_rate_pct": 39.3,
-            "profit_factor": 1.36,
-            "max_sequential_drawdown_pct": -90.62,
-            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.1,
-            "mean_net_bootstrap_ci95_pct": [
-              -2.22,
-              7.89
-            ],
-            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
-            "regime_results": {
-              "SPY上升趨勢": {
-                "n": 79,
-                "mean_net_pct": 4.21,
-                "win_rate_pct": 41.8,
-                "profit_factor": 1.6,
-                "max_sequential_drawdown_pct": -79.88,
-                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-              },
-              "SPY下降趨勢": {
-                "n": 10,
-                "mean_net_pct": -9.42,
-                "win_rate_pct": 20.0,
-                "profit_factor": 0.11,
-                "max_sequential_drawdown_pct": -65.21,
-                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-              },
-              "市場狀態未知": {
-                "n": 0,
-                "mean_net_pct": null,
-                "win_rate_pct": null,
-                "profit_factor": null,
-                "max_sequential_drawdown_pct": null
-              }
-            },
-            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
-            "walk_forward": {
-              "folds": [
-                {
-                  "fold": 1,
-                  "train_end": "2020-05-01",
-                  "validation_start": "2020-05-04",
-                  "validation_end": "2022-07-01",
-                  "n": 37,
-                  "mean_net_pct": 7.36,
-                  "win_rate_pct": 48.6,
-                  "profit_factor": 1.81,
-                  "max_sequential_drawdown_pct": -55.98,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                },
-                {
-                  "fold": 2,
-                  "train_end": "2022-07-01",
-                  "validation_start": "2022-07-05",
-                  "validation_end": "2024-09-03",
-                  "n": 25,
-                  "mean_net_pct": -1.48,
-                  "win_rate_pct": 28.0,
-                  "profit_factor": 0.82,
-                  "max_sequential_drawdown_pct": -80.78,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                },
-                {
-                  "fold": 3,
-                  "train_end": "2024-09-03",
-                  "validation_start": "2024-09-04",
-                  "validation_end": "2026-11-05",
-                  "n": 27,
-                  "mean_net_pct": 0.1,
-                  "win_rate_pct": 37.0,
-                  "profit_factor": 1.02,
-                  "max_sequential_drawdown_pct": -51.96,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                }
-              ],
-              "total_unique_trades": 89,
-              "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
-            },
-            "validation_start_fraction": 0.4,
-            "horizon_days": 15,
-            "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
-          },
-          "20": {
-            "n": 81,
-            "mean_net_pct": 2.69,
-            "win_rate_pct": 43.2,
-            "profit_factor": 1.33,
-            "max_sequential_drawdown_pct": -89.6,
-            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.1,
-            "mean_net_bootstrap_ci95_pct": [
-              -2.38,
-              8.03
-            ],
-            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
-            "regime_results": {
-              "SPY上升趨勢": {
-                "n": 72,
-                "mean_net_pct": 4.13,
-                "win_rate_pct": 45.8,
-                "profit_factor": 1.54,
-                "max_sequential_drawdown_pct": -79.95,
-                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-              },
-              "SPY下降趨勢": {
-                "n": 9,
-                "mean_net_pct": -8.83,
-                "win_rate_pct": 22.2,
-                "profit_factor": 0.31,
-                "max_sequential_drawdown_pct": -61.31,
-                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-              },
-              "市場狀態未知": {
-                "n": 0,
-                "mean_net_pct": null,
-                "win_rate_pct": null,
-                "profit_factor": null,
-                "max_sequential_drawdown_pct": null
-              }
-            },
-            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
-            "walk_forward": {
-              "folds": [
-                {
-                  "fold": 1,
-                  "train_end": "2020-05-01",
-                  "validation_start": "2020-05-04",
-                  "validation_end": "2022-07-01",
-                  "n": 34,
-                  "mean_net_pct": 6.58,
-                  "win_rate_pct": 50.0,
-                  "profit_factor": 1.66,
-                  "max_sequential_drawdown_pct": -65.51,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                },
-                {
-                  "fold": 2,
-                  "train_end": "2022-07-01",
-                  "validation_start": "2022-07-05",
-                  "validation_end": "2024-09-03",
-                  "n": 21,
-                  "mean_net_pct": -0.41,
-                  "win_rate_pct": 38.1,
-                  "profit_factor": 0.96,
-                  "max_sequential_drawdown_pct": -78.28,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                },
-                {
-                  "fold": 3,
-                  "train_end": "2024-09-03",
-                  "validation_start": "2024-09-04",
-                  "validation_end": "2026-11-05",
-                  "n": 26,
-                  "mean_net_pct": 0.1,
-                  "win_rate_pct": 38.5,
-                  "profit_factor": 1.02,
-                  "max_sequential_drawdown_pct": -52.98,
-                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
-                }
-              ],
-              "total_unique_trades": 81,
-              "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
-            },
-            "validation_start_fraction": 0.4,
-            "horizon_days": 20,
-            "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
-          }
-        },
-        "ranking_influence": false
-      },
-      "earnings": {
-        "status": "unknown",
-        "date": null,
-        "days_until": null,
-        "note": "未取得可確認的未來30日財報日期；不代表期間沒有財報"
-      },
-      "phase1_risk": "財報日期待確認",
-      "composite_score_12": 25.0
     },
     {
       "ticker": "SOFI",
@@ -2345,24 +1727,24 @@
         "backtests": {
           "10": {
             "n": 55,
-            "mean_net_pct": 0.0,
+            "mean_net_pct": -0.1,
             "win_rate_pct": 40.0,
-            "profit_factor": 1.0,
-            "max_sequential_drawdown_pct": -63.49,
+            "profit_factor": 0.98,
+            "max_sequential_drawdown_pct": -65.41,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.25,
+            "mean_excess_spy_pct": -0.33,
             "mean_net_bootstrap_ci95_pct": [
-              -2.87,
-              2.83
+              -3.01,
+              2.73
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 55,
-                "mean_net_pct": 0.0,
+                "mean_net_pct": -0.1,
                 "win_rate_pct": 40.0,
-                "profit_factor": 1.0,
-                "max_sequential_drawdown_pct": -63.49,
+                "profit_factor": 0.98,
+                "max_sequential_drawdown_pct": -65.41,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -2379,6 +1761,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -2400,10 +1787,10 @@
                   "train_end": "2024-07-03",
                   "validation_start": "2024-07-05",
                   "validation_end": "2025-09-05",
-                  "n": 25,
-                  "mean_net_pct": 2.65,
-                  "win_rate_pct": 52.0,
-                  "profit_factor": 1.83,
+                  "n": 24,
+                  "mean_net_pct": 2.24,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.67,
                   "max_sequential_drawdown_pct": -49.72,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -2412,42 +1799,43 @@
                   "train_end": "2025-09-05",
                   "validation_start": "2025-09-08",
                   "validation_end": "2026-11-05",
-                  "n": 13,
-                  "mean_net_pct": -7.1,
-                  "win_rate_pct": 15.4,
-                  "profit_factor": 0.09,
-                  "max_sequential_drawdown_pct": -63.49,
+                  "n": 14,
+                  "mean_net_pct": -6.1,
+                  "win_rate_pct": 21.4,
+                  "profit_factor": 0.22,
+                  "max_sequential_drawdown_pct": -65.41,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 55,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 44,
-            "mean_net_pct": 0.12,
-            "win_rate_pct": 43.2,
+            "n": 43,
+            "mean_net_pct": 0.07,
+            "win_rate_pct": 44.2,
             "profit_factor": 1.02,
-            "max_sequential_drawdown_pct": -56.99,
+            "max_sequential_drawdown_pct": -56.6,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.18,
+            "mean_excess_spy_pct": -0.17,
             "mean_net_bootstrap_ci95_pct": [
-              -3.39,
-              3.47
+              -3.38,
+              3.31
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 44,
-                "mean_net_pct": 0.12,
-                "win_rate_pct": 43.2,
+                "n": 43,
+                "mean_net_pct": 0.07,
+                "win_rate_pct": 44.2,
                 "profit_factor": 1.02,
-                "max_sequential_drawdown_pct": -56.99,
+                "max_sequential_drawdown_pct": -56.6,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -2464,6 +1852,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -2485,10 +1878,10 @@
                   "train_end": "2024-07-03",
                   "validation_start": "2024-07-05",
                   "validation_end": "2025-09-05",
-                  "n": 18,
-                  "mean_net_pct": 5.67,
-                  "win_rate_pct": 66.7,
-                  "profit_factor": 3.6,
+                  "n": 17,
+                  "mean_net_pct": 5.18,
+                  "win_rate_pct": 64.7,
+                  "profit_factor": 3.24,
                   "max_sequential_drawdown_pct": -26.82,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -2498,41 +1891,42 @@
                   "validation_start": "2025-09-08",
                   "validation_end": "2026-11-05",
                   "n": 12,
-                  "mean_net_pct": -6.39,
-                  "win_rate_pct": 25.0,
-                  "profit_factor": 0.22,
-                  "max_sequential_drawdown_pct": -56.99,
+                  "mean_net_pct": -5.38,
+                  "win_rate_pct": 33.3,
+                  "profit_factor": 0.27,
+                  "max_sequential_drawdown_pct": -56.6,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 44,
+              "total_unique_trades": 43,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 40,
-            "mean_net_pct": 0.38,
-            "win_rate_pct": 37.5,
-            "profit_factor": 1.06,
-            "max_sequential_drawdown_pct": -64.75,
+            "n": 39,
+            "mean_net_pct": -0.16,
+            "win_rate_pct": 38.5,
+            "profit_factor": 0.97,
+            "max_sequential_drawdown_pct": -63.81,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.07,
+            "mean_excess_spy_pct": -0.45,
             "mean_net_bootstrap_ci95_pct": [
-              -3.85,
-              4.26
+              -3.99,
+              3.68
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 40,
-                "mean_net_pct": 0.38,
-                "win_rate_pct": 37.5,
-                "profit_factor": 1.06,
-                "max_sequential_drawdown_pct": -64.75,
+                "n": 39,
+                "mean_net_pct": -0.16,
+                "win_rate_pct": 38.5,
+                "profit_factor": 0.97,
+                "max_sequential_drawdown_pct": -63.81,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -2549,6 +1943,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -2570,10 +1969,10 @@
                   "train_end": "2024-07-03",
                   "validation_start": "2024-07-05",
                   "validation_end": "2025-09-05",
-                  "n": 15,
-                  "mean_net_pct": 8.39,
-                  "win_rate_pct": 66.7,
-                  "profit_factor": 4.21,
+                  "n": 14,
+                  "mean_net_pct": 7.58,
+                  "win_rate_pct": 64.3,
+                  "profit_factor": 3.7,
                   "max_sequential_drawdown_pct": -27.91,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -2583,16 +1982,17 @@
                   "validation_start": "2025-09-08",
                   "validation_end": "2026-11-05",
                   "n": 11,
-                  "mean_net_pct": -8.2,
-                  "win_rate_pct": 9.1,
-                  "profit_factor": 0.17,
-                  "max_sequential_drawdown_pct": -64.75,
+                  "mean_net_pct": -8.37,
+                  "win_rate_pct": 18.2,
+                  "profit_factor": 0.04,
+                  "max_sequential_drawdown_pct": -63.81,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 40,
+              "total_unique_trades": 39,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -3030,6 +2430,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -3072,7 +2477,8 @@
               ],
               "total_unique_trades": 129,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -3116,6 +2522,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -3158,7 +2569,8 @@
               ],
               "total_unique_trades": 101,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -3202,6 +2614,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -3244,7 +2661,8 @@
               ],
               "total_unique_trades": 94,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -3645,25 +3063,25 @@
         },
         "backtests": {
           "10": {
-            "n": 110,
-            "mean_net_pct": 0.95,
-            "win_rate_pct": 52.7,
-            "profit_factor": 1.27,
-            "max_sequential_drawdown_pct": -46.54,
+            "n": 109,
+            "mean_net_pct": 0.88,
+            "win_rate_pct": 53.2,
+            "profit_factor": 1.25,
+            "max_sequential_drawdown_pct": -48.5,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.57,
+            "mean_excess_spy_pct": 0.46,
             "mean_net_bootstrap_ci95_pct": [
-              -0.91,
-              2.82
+              -0.88,
+              2.72
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 100,
-                "mean_net_pct": 0.85,
-                "win_rate_pct": 53.0,
-                "profit_factor": 1.23,
-                "max_sequential_drawdown_pct": -50.97,
+                "n": 99,
+                "mean_net_pct": 0.76,
+                "win_rate_pct": 53.5,
+                "profit_factor": 1.21,
+                "max_sequential_drawdown_pct": -55.09,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -3681,6 +3099,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -3702,10 +3125,10 @@
                   "train_end": "2022-07-01",
                   "validation_start": "2022-07-05",
                   "validation_end": "2024-09-03",
-                  "n": 29,
-                  "mean_net_pct": 1.16,
-                  "win_rate_pct": 51.7,
-                  "profit_factor": 1.36,
+                  "n": 28,
+                  "mean_net_pct": 1.12,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.33,
                   "max_sequential_drawdown_pct": -24.96,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -3715,16 +3138,17 @@
                   "validation_start": "2024-09-04",
                   "validation_end": "2026-11-05",
                   "n": 37,
-                  "mean_net_pct": -0.05,
-                  "win_rate_pct": 45.9,
-                  "profit_factor": 0.99,
+                  "mean_net_pct": -0.24,
+                  "win_rate_pct": 48.6,
+                  "profit_factor": 0.94,
                   "max_sequential_drawdown_pct": -46.54,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 110,
+              "total_unique_trades": 109,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -3732,24 +3156,24 @@
           },
           "15": {
             "n": 89,
-            "mean_net_pct": 2.09,
-            "win_rate_pct": 49.4,
-            "profit_factor": 1.54,
-            "max_sequential_drawdown_pct": -45.85,
+            "mean_net_pct": 1.97,
+            "win_rate_pct": 48.3,
+            "profit_factor": 1.49,
+            "max_sequential_drawdown_pct": -51.83,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.31,
+            "mean_excess_spy_pct": 1.14,
             "mean_net_bootstrap_ci95_pct": [
-              -0.12,
-              4.37
+              -0.24,
+              4.25
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 81,
-                "mean_net_pct": 1.99,
-                "win_rate_pct": 48.1,
-                "profit_factor": 1.5,
-                "max_sequential_drawdown_pct": -46.37,
+                "mean_net_pct": 1.85,
+                "win_rate_pct": 46.9,
+                "profit_factor": 1.45,
+                "max_sequential_drawdown_pct": -52.3,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -3767,6 +3191,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -3788,10 +3217,10 @@
                   "train_end": "2022-07-01",
                   "validation_start": "2022-07-05",
                   "validation_end": "2024-09-03",
-                  "n": 25,
-                  "mean_net_pct": 0.49,
-                  "win_rate_pct": 48.0,
-                  "profit_factor": 1.13,
+                  "n": 24,
+                  "mean_net_pct": 0.42,
+                  "win_rate_pct": 45.8,
+                  "profit_factor": 1.1,
                   "max_sequential_drawdown_pct": -40.8,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -3800,17 +3229,18 @@
                   "train_end": "2024-09-03",
                   "validation_start": "2024-09-04",
                   "validation_end": "2026-11-05",
-                  "n": 30,
-                  "mean_net_pct": 0.15,
-                  "win_rate_pct": 40.0,
-                  "profit_factor": 1.03,
+                  "n": 31,
+                  "mean_net_pct": -0.14,
+                  "win_rate_pct": 38.7,
+                  "profit_factor": 0.97,
                   "max_sequential_drawdown_pct": -39.51,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 89,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -3818,24 +3248,24 @@
           },
           "20": {
             "n": 81,
-            "mean_net_pct": 0.72,
+            "mean_net_pct": 0.64,
             "win_rate_pct": 44.4,
-            "profit_factor": 1.15,
-            "max_sequential_drawdown_pct": -61.12,
+            "profit_factor": 1.13,
+            "max_sequential_drawdown_pct": -63.52,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.19,
+            "mean_excess_spy_pct": 0.07,
             "mean_net_bootstrap_ci95_pct": [
-              -1.64,
-              3.27
+              -1.73,
+              3.18
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 74,
-                "mean_net_pct": 0.57,
+                "mean_net_pct": 0.48,
                 "win_rate_pct": 44.6,
-                "profit_factor": 1.12,
-                "max_sequential_drawdown_pct": -60.81,
+                "profit_factor": 1.1,
+                "max_sequential_drawdown_pct": -63.23,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -3853,6 +3283,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -3874,10 +3309,10 @@
                   "train_end": "2022-07-01",
                   "validation_start": "2022-07-05",
                   "validation_end": "2024-09-03",
-                  "n": 22,
-                  "mean_net_pct": -0.0,
-                  "win_rate_pct": 40.9,
-                  "profit_factor": 1.0,
+                  "n": 21,
+                  "mean_net_pct": -0.4,
+                  "win_rate_pct": 38.1,
+                  "profit_factor": 0.93,
                   "max_sequential_drawdown_pct": -42.14,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -3886,17 +3321,18 @@
                   "train_end": "2024-09-03",
                   "validation_start": "2024-09-04",
                   "validation_end": "2026-11-05",
-                  "n": 28,
-                  "mean_net_pct": -0.51,
-                  "win_rate_pct": 35.7,
-                  "profit_factor": 0.89,
+                  "n": 29,
+                  "mean_net_pct": -0.42,
+                  "win_rate_pct": 37.9,
+                  "profit_factor": 0.91,
                   "max_sequential_drawdown_pct": -41.25,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 81,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -4336,6 +3772,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -4378,7 +3819,8 @@
               ],
               "total_unique_trades": 113,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -4422,6 +3864,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -4464,7 +3911,8 @@
               ],
               "total_unique_trades": 92,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -4508,6 +3956,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -4550,7 +4003,8 @@
               ],
               "total_unique_trades": 85,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -4951,25 +4405,25 @@
         },
         "backtests": {
           "10": {
-            "n": 73,
-            "mean_net_pct": 1.86,
-            "win_rate_pct": 50.7,
-            "profit_factor": 1.47,
-            "max_sequential_drawdown_pct": -57.79,
+            "n": 74,
+            "mean_net_pct": 1.76,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.45,
+            "max_sequential_drawdown_pct": -60.05,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.66,
+            "mean_excess_spy_pct": 1.58,
             "mean_net_bootstrap_ci95_pct": [
-              -0.76,
-              4.53
+              -0.78,
+              4.37
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 71,
-                "mean_net_pct": 1.6,
-                "win_rate_pct": 50.7,
-                "profit_factor": 1.4,
-                "max_sequential_drawdown_pct": -64.58,
+                "n": 72,
+                "mean_net_pct": 1.51,
+                "win_rate_pct": 50.0,
+                "profit_factor": 1.37,
+                "max_sequential_drawdown_pct": -66.48,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -4987,6 +4441,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -5009,9 +4468,9 @@
                   "validation_start": "2024-05-28",
                   "validation_end": "2025-08-18",
                   "n": 31,
-                  "mean_net_pct": 5.66,
+                  "mean_net_pct": 5.72,
                   "win_rate_pct": 67.7,
-                  "profit_factor": 3.01,
+                  "profit_factor": 3.08,
                   "max_sequential_drawdown_pct": -36.54,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -5020,42 +4479,43 @@
                   "train_end": "2025-08-18",
                   "validation_start": "2025-08-19",
                   "validation_end": "2026-11-05",
-                  "n": 19,
-                  "mean_net_pct": -3.12,
-                  "win_rate_pct": 31.6,
-                  "profit_factor": 0.4,
-                  "max_sequential_drawdown_pct": -56.66,
+                  "n": 20,
+                  "mean_net_pct": -3.32,
+                  "win_rate_pct": 30.0,
+                  "profit_factor": 0.37,
+                  "max_sequential_drawdown_pct": -56.99,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 73,
+              "total_unique_trades": 74,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 55,
-            "mean_net_pct": 3.06,
-            "win_rate_pct": 56.4,
-            "profit_factor": 1.8,
+            "n": 56,
+            "mean_net_pct": 3.03,
+            "win_rate_pct": 55.4,
+            "profit_factor": 1.78,
             "max_sequential_drawdown_pct": -47.94,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.47,
+            "mean_excess_spy_pct": 2.46,
             "mean_net_bootstrap_ci95_pct": [
-              0.0,
-              6.38
+              -0.02,
+              6.39
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 53,
-                "mean_net_pct": 2.84,
-                "win_rate_pct": 54.7,
-                "profit_factor": 1.71,
-                "max_sequential_drawdown_pct": -51.43,
+                "n": 54,
+                "mean_net_pct": 2.81,
+                "win_rate_pct": 53.7,
+                "profit_factor": 1.7,
+                "max_sequential_drawdown_pct": -51.1,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -5073,6 +4533,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -5095,9 +4560,9 @@
                   "validation_start": "2024-05-28",
                   "validation_end": "2025-08-18",
                   "n": 26,
-                  "mean_net_pct": 6.05,
+                  "mean_net_pct": 6.12,
                   "win_rate_pct": 65.4,
-                  "profit_factor": 2.72,
+                  "profit_factor": 2.77,
                   "max_sequential_drawdown_pct": -34.68,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -5106,42 +4571,43 @@
                   "train_end": "2025-08-18",
                   "validation_start": "2025-08-19",
                   "validation_end": "2026-11-05",
-                  "n": 14,
-                  "mean_net_pct": -2.69,
-                  "win_rate_pct": 42.9,
-                  "profit_factor": 0.49,
+                  "n": 15,
+                  "mean_net_pct": -2.55,
+                  "win_rate_pct": 40.0,
+                  "profit_factor": 0.52,
                   "max_sequential_drawdown_pct": -47.94,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 55,
+              "total_unique_trades": 56,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 44,
-            "mean_net_pct": 4.33,
-            "win_rate_pct": 52.3,
-            "profit_factor": 2.17,
-            "max_sequential_drawdown_pct": -44.44,
+            "n": 45,
+            "mean_net_pct": 4.23,
+            "win_rate_pct": 51.1,
+            "profit_factor": 2.13,
+            "max_sequential_drawdown_pct": -44.5,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 3.8,
+            "mean_excess_spy_pct": 3.71,
             "mean_net_bootstrap_ci95_pct": [
               0.47,
-              8.41
+              8.3
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 42,
-                "mean_net_pct": 3.58,
-                "win_rate_pct": 50.0,
-                "profit_factor": 1.92,
-                "max_sequential_drawdown_pct": -44.44,
+                "n": 43,
+                "mean_net_pct": 3.49,
+                "win_rate_pct": 48.8,
+                "profit_factor": 1.89,
+                "max_sequential_drawdown_pct": -44.5,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -5159,6 +4625,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -5181,9 +4652,9 @@
                   "validation_start": "2024-05-28",
                   "validation_end": "2025-08-18",
                   "n": 20,
-                  "mean_net_pct": 8.42,
+                  "mean_net_pct": 8.49,
                   "win_rate_pct": 65.0,
-                  "profit_factor": 4.44,
+                  "profit_factor": 4.57,
                   "max_sequential_drawdown_pct": -18.83,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -5192,17 +4663,18 @@
                   "train_end": "2025-08-18",
                   "validation_start": "2025-08-19",
                   "validation_end": "2026-11-05",
-                  "n": 11,
-                  "mean_net_pct": -2.45,
-                  "win_rate_pct": 27.3,
-                  "profit_factor": 0.54,
-                  "max_sequential_drawdown_pct": -44.44,
+                  "n": 12,
+                  "mean_net_pct": -2.38,
+                  "win_rate_pct": 25.0,
+                  "profit_factor": 0.56,
+                  "max_sequential_drawdown_pct": -44.5,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 44,
+              "total_unique_trades": 45,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -5640,6 +5112,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -5682,7 +5159,8 @@
               ],
               "total_unique_trades": 99,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -5726,6 +5204,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -5768,7 +5251,8 @@
               ],
               "total_unique_trades": 85,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -5812,6 +5296,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -5854,7 +5343,8 @@
               ],
               "total_unique_trades": 78,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -6255,25 +5745,25 @@
         },
         "backtests": {
           "10": {
-            "n": 77,
-            "mean_net_pct": 1.9,
-            "win_rate_pct": 55.8,
-            "profit_factor": 1.8,
-            "max_sequential_drawdown_pct": -26.72,
+            "n": 75,
+            "mean_net_pct": 1.75,
+            "win_rate_pct": 56.0,
+            "profit_factor": 1.7,
+            "max_sequential_drawdown_pct": -26.75,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.21,
+            "mean_excess_spy_pct": 1.07,
             "mean_net_bootstrap_ci95_pct": [
-              0.22,
-              3.61
+              -0.07,
+              3.5
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 68,
-                "mean_net_pct": 1.81,
-                "win_rate_pct": 57.4,
-                "profit_factor": 1.73,
-                "max_sequential_drawdown_pct": -26.72,
+                "n": 66,
+                "mean_net_pct": 1.63,
+                "win_rate_pct": 57.6,
+                "profit_factor": 1.62,
+                "max_sequential_drawdown_pct": -28.57,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -6292,6 +5782,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -6300,10 +5795,10 @@
                   "train_end": "2022-05-23",
                   "validation_start": "2022-05-24",
                   "validation_end": "2023-11-15",
-                  "n": 21,
-                  "mean_net_pct": 0.94,
-                  "win_rate_pct": 57.1,
-                  "profit_factor": 1.47,
+                  "n": 20,
+                  "mean_net_pct": 0.58,
+                  "win_rate_pct": 55.0,
+                  "profit_factor": 1.28,
                   "max_sequential_drawdown_pct": -23.8,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -6313,9 +5808,9 @@
                   "validation_start": "2023-11-16",
                   "validation_end": "2025-05-13",
                   "n": 28,
-                  "mean_net_pct": 2.98,
+                  "mean_net_pct": 2.85,
                   "win_rate_pct": 60.7,
-                  "profit_factor": 2.65,
+                  "profit_factor": 2.45,
                   "max_sequential_drawdown_pct": -8.43,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -6324,42 +5819,43 @@
                   "train_end": "2025-05-13",
                   "validation_start": "2025-05-14",
                   "validation_end": "2026-11-05",
-                  "n": 28,
-                  "mean_net_pct": 1.54,
-                  "win_rate_pct": 50.0,
-                  "profit_factor": 1.47,
-                  "max_sequential_drawdown_pct": -26.72,
+                  "n": 27,
+                  "mean_net_pct": 1.46,
+                  "win_rate_pct": 51.9,
+                  "profit_factor": 1.43,
+                  "max_sequential_drawdown_pct": -26.75,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 77,
+              "total_unique_trades": 75,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 63,
-            "mean_net_pct": 1.25,
-            "win_rate_pct": 49.2,
-            "profit_factor": 1.34,
-            "max_sequential_drawdown_pct": -28.46,
+            "n": 61,
+            "mean_net_pct": 1.51,
+            "win_rate_pct": 50.8,
+            "profit_factor": 1.42,
+            "max_sequential_drawdown_pct": -26.9,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.66,
+            "mean_excess_spy_pct": 0.92,
             "mean_net_bootstrap_ci95_pct": [
-              -0.92,
-              3.63
+              -0.78,
+              4.05
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 57,
-                "mean_net_pct": 1.56,
-                "win_rate_pct": 49.1,
-                "profit_factor": 1.42,
-                "max_sequential_drawdown_pct": -28.46,
+                "n": 55,
+                "mean_net_pct": 1.85,
+                "win_rate_pct": 50.9,
+                "profit_factor": 1.51,
+                "max_sequential_drawdown_pct": -23.93,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -6378,6 +5874,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -6386,10 +5887,10 @@
                   "train_end": "2022-05-23",
                   "validation_start": "2022-05-24",
                   "validation_end": "2023-11-15",
-                  "n": 18,
-                  "mean_net_pct": 0.25,
-                  "win_rate_pct": 44.4,
-                  "profit_factor": 1.06,
+                  "n": 17,
+                  "mean_net_pct": -0.38,
+                  "win_rate_pct": 41.2,
+                  "profit_factor": 0.91,
                   "max_sequential_drawdown_pct": -26.9,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -6410,17 +5911,18 @@
                   "train_end": "2025-05-13",
                   "validation_start": "2025-05-14",
                   "validation_end": "2026-11-05",
-                  "n": 22,
-                  "mean_net_pct": 0.69,
-                  "win_rate_pct": 40.9,
-                  "profit_factor": 1.15,
-                  "max_sequential_drawdown_pct": -28.46,
+                  "n": 21,
+                  "mean_net_pct": 1.85,
+                  "win_rate_pct": 47.6,
+                  "profit_factor": 1.46,
+                  "max_sequential_drawdown_pct": -23.93,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 63,
+              "total_unique_trades": 61,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -6428,31 +5930,31 @@
           },
           "20": {
             "n": 54,
-            "mean_net_pct": 1.41,
-            "win_rate_pct": 48.1,
-            "profit_factor": 1.35,
+            "mean_net_pct": 1.15,
+            "win_rate_pct": 46.3,
+            "profit_factor": 1.28,
             "max_sequential_drawdown_pct": -29.71,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.53,
+            "mean_excess_spy_pct": 0.46,
             "mean_net_bootstrap_ci95_pct": [
-              -1.36,
-              4.13
+              -1.5,
+              3.89
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 49,
-                "mean_net_pct": 1.08,
-                "win_rate_pct": 46.9,
-                "profit_factor": 1.26,
+                "n": 50,
+                "mean_net_pct": 1.02,
+                "win_rate_pct": 46.0,
+                "profit_factor": 1.24,
                 "max_sequential_drawdown_pct": -29.71,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
-                "n": 5,
-                "mean_net_pct": 4.66,
-                "win_rate_pct": 60.0,
-                "profit_factor": 3.31,
+                "n": 4,
+                "mean_net_pct": 2.74,
+                "win_rate_pct": 50.0,
+                "profit_factor": 2.09,
                 "max_sequential_drawdown_pct": -8.3,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -6464,6 +5966,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -6472,10 +5979,10 @@
                   "train_end": "2022-05-23",
                   "validation_start": "2022-05-24",
                   "validation_end": "2023-11-15",
-                  "n": 18,
-                  "mean_net_pct": 1.07,
-                  "win_rate_pct": 44.4,
-                  "profit_factor": 1.31,
+                  "n": 17,
+                  "mean_net_pct": 0.49,
+                  "win_rate_pct": 41.2,
+                  "profit_factor": 1.13,
                   "max_sequential_drawdown_pct": -23.9,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -6484,10 +5991,10 @@
                   "train_end": "2023-11-15",
                   "validation_start": "2023-11-16",
                   "validation_end": "2025-05-13",
-                  "n": 18,
-                  "mean_net_pct": 1.79,
-                  "win_rate_pct": 55.6,
-                  "profit_factor": 1.48,
+                  "n": 19,
+                  "mean_net_pct": 1.33,
+                  "win_rate_pct": 52.6,
+                  "profit_factor": 1.34,
                   "max_sequential_drawdown_pct": -29.71,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -6497,16 +6004,17 @@
                   "validation_start": "2025-05-14",
                   "validation_end": "2026-11-05",
                   "n": 18,
-                  "mean_net_pct": 1.39,
+                  "mean_net_pct": 1.58,
                   "win_rate_pct": 44.4,
-                  "profit_factor": 1.28,
+                  "profit_factor": 1.32,
                   "max_sequential_drawdown_pct": -28.32,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 54,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -6946,6 +6454,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -6988,31 +6501,32 @@
               ],
               "total_unique_trades": 55,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 45,
-            "mean_net_pct": 4.04,
-            "win_rate_pct": 57.8,
-            "profit_factor": 1.99,
+            "n": 44,
+            "mean_net_pct": 3.98,
+            "win_rate_pct": 56.8,
+            "profit_factor": 1.96,
             "max_sequential_drawdown_pct": -47.3,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 3.4,
+            "mean_excess_spy_pct": 3.37,
             "mean_net_bootstrap_ci95_pct": [
-              0.29,
-              7.78
+              -0.05,
+              7.9
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 44,
-                "mean_net_pct": 3.6,
-                "win_rate_pct": 56.8,
-                "profit_factor": 1.86,
+                "n": 43,
+                "mean_net_pct": 3.53,
+                "win_rate_pct": 55.8,
+                "profit_factor": 1.83,
                 "max_sequential_drawdown_pct": -47.3,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -7032,6 +6546,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -7040,10 +6559,10 @@
                   "train_end": "2023-09-06",
                   "validation_start": "2023-09-07",
                   "validation_end": "2024-09-25",
-                  "n": 14,
-                  "mean_net_pct": 5.12,
-                  "win_rate_pct": 71.4,
-                  "profit_factor": 2.91,
+                  "n": 13,
+                  "mean_net_pct": 4.89,
+                  "win_rate_pct": 69.2,
+                  "profit_factor": 2.7,
                   "max_sequential_drawdown_pct": -17.44,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -7053,9 +6572,9 @@
                   "validation_start": "2024-09-26",
                   "validation_end": "2025-10-16",
                   "n": 20,
-                  "mean_net_pct": 7.72,
+                  "mean_net_pct": 7.79,
                   "win_rate_pct": 65.0,
-                  "profit_factor": 3.06,
+                  "profit_factor": 3.08,
                   "max_sequential_drawdown_pct": -25.03,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -7072,34 +6591,35 @@
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 45,
+              "total_unique_trades": 44,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 39,
-            "mean_net_pct": 5.12,
-            "win_rate_pct": 53.8,
-            "profit_factor": 2.08,
-            "max_sequential_drawdown_pct": -51.24,
+            "n": 38,
+            "mean_net_pct": 5.57,
+            "win_rate_pct": 55.3,
+            "profit_factor": 2.25,
+            "max_sequential_drawdown_pct": -42.24,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 4.4,
+            "mean_excess_spy_pct": 4.86,
             "mean_net_bootstrap_ci95_pct": [
-              0.42,
-              9.95
+              0.85,
+              9.84
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 38,
-                "mean_net_pct": 4.47,
-                "win_rate_pct": 52.6,
-                "profit_factor": 1.92,
-                "max_sequential_drawdown_pct": -51.24,
+                "n": 37,
+                "mean_net_pct": 4.91,
+                "win_rate_pct": 54.1,
+                "profit_factor": 2.07,
+                "max_sequential_drawdown_pct": -42.24,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -7118,6 +6638,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -7126,10 +6651,10 @@
                   "train_end": "2023-09-06",
                   "validation_start": "2023-09-07",
                   "validation_end": "2024-09-25",
-                  "n": 11,
-                  "mean_net_pct": 7.52,
-                  "win_rate_pct": 63.6,
-                  "profit_factor": 3.86,
+                  "n": 10,
+                  "mean_net_pct": 6.53,
+                  "win_rate_pct": 60.0,
+                  "profit_factor": 3.25,
                   "max_sequential_drawdown_pct": -14.25,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -7138,10 +6663,10 @@
                   "train_end": "2024-09-25",
                   "validation_start": "2024-09-26",
                   "validation_end": "2025-10-16",
-                  "n": 18,
-                  "mean_net_pct": 8.26,
-                  "win_rate_pct": 61.1,
-                  "profit_factor": 3.07,
+                  "n": 19,
+                  "mean_net_pct": 8.66,
+                  "win_rate_pct": 63.2,
+                  "profit_factor": 3.33,
                   "max_sequential_drawdown_pct": -25.03,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -7150,17 +6675,18 @@
                   "train_end": "2025-10-16",
                   "validation_start": "2025-10-17",
                   "validation_end": "2026-11-05",
-                  "n": 10,
-                  "mean_net_pct": -3.17,
-                  "win_rate_pct": 30.0,
-                  "profit_factor": 0.62,
-                  "max_sequential_drawdown_pct": -44.84,
+                  "n": 9,
+                  "mean_net_pct": -2.01,
+                  "win_rate_pct": 33.3,
+                  "profit_factor": 0.74,
+                  "max_sequential_drawdown_pct": -36.03,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 39,
+              "total_unique_trades": 38,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -7598,6 +7124,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -7640,7 +7171,8 @@
               ],
               "total_unique_trades": 50,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -7684,6 +7216,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -7726,7 +7263,8 @@
               ],
               "total_unique_trades": 44,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -7770,6 +7308,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -7812,7 +7355,8 @@
               ],
               "total_unique_trades": 38,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -8250,6 +7794,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -8292,7 +7841,8 @@
               ],
               "total_unique_trades": 95,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -8336,6 +7886,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -8378,7 +7933,8 @@
               ],
               "total_unique_trades": 82,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -8422,6 +7978,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -8464,7 +8025,8 @@
               ],
               "total_unique_trades": 76,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -8866,24 +8428,24 @@
         "backtests": {
           "10": {
             "n": 62,
-            "mean_net_pct": 4.51,
-            "win_rate_pct": 56.5,
-            "profit_factor": 2.08,
-            "max_sequential_drawdown_pct": -35.81,
+            "mean_net_pct": 4.55,
+            "win_rate_pct": 58.1,
+            "profit_factor": 2.1,
+            "max_sequential_drawdown_pct": -38.26,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 3.73,
+            "mean_excess_spy_pct": 3.66,
             "mean_net_bootstrap_ci95_pct": [
-              1.16,
-              8.28
+              1.25,
+              8.29
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 61,
-                "mean_net_pct": 4.51,
-                "win_rate_pct": 55.7,
-                "profit_factor": 2.06,
-                "max_sequential_drawdown_pct": -35.81,
+                "mean_net_pct": 4.56,
+                "win_rate_pct": 57.4,
+                "profit_factor": 2.08,
+                "max_sequential_drawdown_pct": -38.26,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -8902,6 +8464,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -8911,10 +8478,10 @@
                   "validation_start": "2023-04-12",
                   "validation_end": "2024-06-18",
                   "n": 17,
-                  "mean_net_pct": 2.31,
-                  "win_rate_pct": 58.8,
-                  "profit_factor": 1.62,
-                  "max_sequential_drawdown_pct": -35.81,
+                  "mean_net_pct": 1.47,
+                  "win_rate_pct": 52.9,
+                  "profit_factor": 1.34,
+                  "max_sequential_drawdown_pct": -37.57,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -8922,11 +8489,11 @@
                   "train_end": "2024-06-18",
                   "validation_start": "2024-06-20",
                   "validation_end": "2025-08-28",
-                  "n": 29,
-                  "mean_net_pct": 7.42,
-                  "win_rate_pct": 62.1,
-                  "profit_factor": 3.11,
-                  "max_sequential_drawdown_pct": -28.87,
+                  "n": 28,
+                  "mean_net_pct": 8.06,
+                  "win_rate_pct": 67.9,
+                  "profit_factor": 3.55,
+                  "max_sequential_drawdown_pct": -27.45,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -8934,42 +8501,43 @@
                   "train_end": "2025-08-28",
                   "validation_start": "2025-08-29",
                   "validation_end": "2026-11-05",
-                  "n": 16,
-                  "mean_net_pct": 1.58,
-                  "win_rate_pct": 43.8,
-                  "profit_factor": 1.27,
+                  "n": 17,
+                  "mean_net_pct": 1.86,
+                  "win_rate_pct": 47.1,
+                  "profit_factor": 1.33,
                   "max_sequential_drawdown_pct": -30.4,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 62,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 48,
-            "mean_net_pct": 6.34,
-            "win_rate_pct": 58.3,
-            "profit_factor": 2.34,
-            "max_sequential_drawdown_pct": -45.78,
+            "n": 50,
+            "mean_net_pct": 5.18,
+            "win_rate_pct": 56.0,
+            "profit_factor": 2.0,
+            "max_sequential_drawdown_pct": -47.85,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 5.19,
+            "mean_excess_spy_pct": 4.22,
             "mean_net_bootstrap_ci95_pct": [
-              1.6,
-              11.24
+              0.76,
+              9.95
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 47,
-                "mean_net_pct": 6.17,
-                "win_rate_pct": 57.4,
-                "profit_factor": 2.28,
-                "max_sequential_drawdown_pct": -45.78,
+                "n": 49,
+                "mean_net_pct": 5.0,
+                "win_rate_pct": 55.1,
+                "profit_factor": 1.94,
+                "max_sequential_drawdown_pct": -47.85,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -8988,6 +8556,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -8997,10 +8570,10 @@
                   "validation_start": "2023-04-12",
                   "validation_end": "2024-06-18",
                   "n": 14,
-                  "mean_net_pct": 2.44,
-                  "win_rate_pct": 57.1,
-                  "profit_factor": 1.47,
-                  "max_sequential_drawdown_pct": -39.56,
+                  "mean_net_pct": 1.02,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.17,
+                  "max_sequential_drawdown_pct": -43.58,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -9009,10 +8582,10 @@
                   "validation_start": "2024-06-20",
                   "validation_end": "2025-08-28",
                   "n": 20,
-                  "mean_net_pct": 12.92,
+                  "mean_net_pct": 12.08,
                   "win_rate_pct": 70.0,
-                  "profit_factor": 6.46,
-                  "max_sequential_drawdown_pct": -26.42,
+                  "profit_factor": 5.23,
+                  "max_sequential_drawdown_pct": -25.29,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -9020,17 +8593,18 @@
                   "train_end": "2025-08-28",
                   "validation_start": "2025-08-29",
                   "validation_end": "2026-11-05",
-                  "n": 14,
-                  "mean_net_pct": 0.83,
-                  "win_rate_pct": 42.9,
-                  "profit_factor": 1.11,
+                  "n": 16,
+                  "mean_net_pct": 0.2,
+                  "win_rate_pct": 43.8,
+                  "profit_factor": 1.03,
                   "max_sequential_drawdown_pct": -45.78,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 48,
+              "total_unique_trades": 50,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -9038,24 +8612,24 @@
           },
           "20": {
             "n": 44,
-            "mean_net_pct": 6.42,
+            "mean_net_pct": 6.39,
             "win_rate_pct": 59.1,
-            "profit_factor": 2.1,
-            "max_sequential_drawdown_pct": -39.56,
+            "profit_factor": 2.15,
+            "max_sequential_drawdown_pct": -43.06,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 5.38,
+            "mean_excess_spy_pct": 5.33,
             "mean_net_bootstrap_ci95_pct": [
-              1.0,
-              11.73
+              1.11,
+              11.56
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 43,
-                "mean_net_pct": 6.18,
+                "mean_net_pct": 6.14,
                 "win_rate_pct": 58.1,
-                "profit_factor": 2.03,
-                "max_sequential_drawdown_pct": -39.56,
+                "profit_factor": 2.08,
+                "max_sequential_drawdown_pct": -43.06,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -9074,6 +8648,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -9083,10 +8662,10 @@
                   "validation_start": "2023-04-12",
                   "validation_end": "2024-06-18",
                   "n": 12,
-                  "mean_net_pct": 4.63,
-                  "win_rate_pct": 58.3,
-                  "profit_factor": 1.92,
-                  "max_sequential_drawdown_pct": -39.56,
+                  "mean_net_pct": 2.47,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.42,
+                  "max_sequential_drawdown_pct": -43.06,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -9095,9 +8674,9 @@
                   "validation_start": "2024-06-20",
                   "validation_end": "2025-08-28",
                   "n": 20,
-                  "mean_net_pct": 10.03,
+                  "mean_net_pct": 10.55,
                   "win_rate_pct": 70.0,
-                  "profit_factor": 3.25,
+                  "profit_factor": 3.37,
                   "max_sequential_drawdown_pct": -29.51,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -9107,16 +8686,17 @@
                   "validation_start": "2025-08-29",
                   "validation_end": "2026-11-05",
                   "n": 12,
-                  "mean_net_pct": 2.18,
-                  "win_rate_pct": 41.7,
-                  "profit_factor": 1.24,
+                  "mean_net_pct": 3.37,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.48,
                   "max_sequential_drawdown_pct": -38.52,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 44,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -9518,23 +9098,23 @@
         "backtests": {
           "10": {
             "n": 53,
-            "mean_net_pct": 2.87,
+            "mean_net_pct": 2.79,
             "win_rate_pct": 45.3,
-            "profit_factor": 1.48,
+            "profit_factor": 1.46,
             "max_sequential_drawdown_pct": -56.41,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.35,
+            "mean_excess_spy_pct": 2.31,
             "mean_net_bootstrap_ci95_pct": [
-              -1.66,
-              7.56
+              -1.72,
+              7.41
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 52,
-                "mean_net_pct": 2.78,
+                "mean_net_pct": 2.7,
                 "win_rate_pct": 44.2,
-                "profit_factor": 1.45,
+                "profit_factor": 1.44,
                 "max_sequential_drawdown_pct": -56.41,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -9553,6 +9133,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -9574,10 +9159,10 @@
                   "train_end": "2024-07-03",
                   "validation_start": "2024-07-05",
                   "validation_end": "2025-09-05",
-                  "n": 23,
-                  "mean_net_pct": 5.01,
-                  "win_rate_pct": 52.2,
-                  "profit_factor": 1.95,
+                  "n": 22,
+                  "mean_net_pct": 4.14,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.75,
                   "max_sequential_drawdown_pct": -34.83,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -9586,17 +9171,18 @@
                   "train_end": "2025-09-05",
                   "validation_start": "2025-09-08",
                   "validation_end": "2026-11-05",
-                  "n": 14,
-                  "mean_net_pct": -0.99,
-                  "win_rate_pct": 35.7,
-                  "profit_factor": 0.87,
+                  "n": 15,
+                  "mean_net_pct": 0.43,
+                  "win_rate_pct": 40.0,
+                  "profit_factor": 1.06,
                   "max_sequential_drawdown_pct": -38.82,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 53,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -9604,23 +9190,23 @@
           },
           "15": {
             "n": 49,
-            "mean_net_pct": 3.88,
+            "mean_net_pct": 3.8,
             "win_rate_pct": 46.9,
-            "profit_factor": 1.55,
+            "profit_factor": 1.54,
             "max_sequential_drawdown_pct": -57.62,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 3.29,
+            "mean_excess_spy_pct": 3.25,
             "mean_net_bootstrap_ci95_pct": [
-              -1.66,
-              9.48
+              -1.74,
+              9.4
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 48,
-                "mean_net_pct": 3.48,
+                "mean_net_pct": 3.4,
                 "win_rate_pct": 45.8,
-                "profit_factor": 1.49,
+                "profit_factor": 1.47,
                 "max_sequential_drawdown_pct": -57.62,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -9639,6 +9225,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -9660,10 +9251,10 @@
                   "train_end": "2024-07-03",
                   "validation_start": "2024-07-05",
                   "validation_end": "2025-09-05",
-                  "n": 20,
-                  "mean_net_pct": 5.76,
-                  "win_rate_pct": 50.0,
-                  "profit_factor": 1.92,
+                  "n": 19,
+                  "mean_net_pct": 4.78,
+                  "win_rate_pct": 47.4,
+                  "profit_factor": 1.73,
                   "max_sequential_drawdown_pct": -42.9,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -9672,17 +9263,18 @@
                   "train_end": "2025-09-05",
                   "validation_start": "2025-09-08",
                   "validation_end": "2026-11-05",
-                  "n": 14,
-                  "mean_net_pct": -0.61,
-                  "win_rate_pct": 35.7,
-                  "profit_factor": 0.93,
+                  "n": 15,
+                  "mean_net_pct": 0.78,
+                  "win_rate_pct": 40.0,
+                  "profit_factor": 1.09,
                   "max_sequential_drawdown_pct": -44.79,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 49,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -9690,23 +9282,23 @@
           },
           "20": {
             "n": 44,
-            "mean_net_pct": 4.42,
+            "mean_net_pct": 4.33,
             "win_rate_pct": 47.7,
-            "profit_factor": 1.61,
+            "profit_factor": 1.6,
             "max_sequential_drawdown_pct": -55.79,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 3.64,
+            "mean_excess_spy_pct": 3.59,
             "mean_net_bootstrap_ci95_pct": [
-              -1.52,
-              10.71
+              -1.62,
+              10.69
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 43,
-                "mean_net_pct": 3.97,
+                "mean_net_pct": 3.88,
                 "win_rate_pct": 46.5,
-                "profit_factor": 1.53,
+                "profit_factor": 1.52,
                 "max_sequential_drawdown_pct": -55.79,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -9725,6 +9317,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -9746,10 +9343,10 @@
                   "train_end": "2024-07-03",
                   "validation_start": "2024-07-05",
                   "validation_end": "2025-09-05",
-                  "n": 17,
-                  "mean_net_pct": 6.94,
-                  "win_rate_pct": 58.8,
-                  "profit_factor": 2.11,
+                  "n": 16,
+                  "mean_net_pct": 5.85,
+                  "win_rate_pct": 56.2,
+                  "profit_factor": 1.88,
                   "max_sequential_drawdown_pct": -36.07,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -9758,17 +9355,18 @@
                   "train_end": "2025-09-05",
                   "validation_start": "2025-09-08",
                   "validation_end": "2026-11-05",
-                  "n": 14,
-                  "mean_net_pct": -0.61,
-                  "win_rate_pct": 35.7,
-                  "profit_factor": 0.93,
+                  "n": 15,
+                  "mean_net_pct": 0.78,
+                  "win_rate_pct": 40.0,
+                  "profit_factor": 1.09,
                   "max_sequential_drawdown_pct": -44.79,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 44,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -10170,15 +9768,15 @@
         "backtests": {
           "10": {
             "n": 95,
-            "mean_net_pct": 0.43,
-            "win_rate_pct": 48.4,
-            "profit_factor": 1.06,
-            "max_sequential_drawdown_pct": -92.86,
+            "mean_net_pct": 0.27,
+            "win_rate_pct": 47.4,
+            "profit_factor": 1.04,
+            "max_sequential_drawdown_pct": -93.67,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.2,
+            "mean_excess_spy_pct": -0.35,
             "mean_net_bootstrap_ci95_pct": [
-              -3.31,
-              4.2
+              -3.45,
+              4.05
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
@@ -10192,10 +9790,10 @@
               },
               "SPY下降趨勢": {
                 "n": 10,
-                "mean_net_pct": -1.14,
-                "win_rate_pct": 40.0,
-                "profit_factor": 0.88,
-                "max_sequential_drawdown_pct": -45.08,
+                "mean_net_pct": -2.62,
+                "win_rate_pct": 30.0,
+                "profit_factor": 0.72,
+                "max_sequential_drawdown_pct": -44.3,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "市場狀態未知": {
@@ -10206,6 +9804,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -10214,10 +9817,10 @@
                   "train_end": "2020-06-23",
                   "validation_start": "2020-06-24",
                   "validation_end": "2022-08-05",
-                  "n": 33,
-                  "mean_net_pct": 3.23,
-                  "win_rate_pct": 51.5,
-                  "profit_factor": 1.44,
+                  "n": 32,
+                  "mean_net_pct": 2.88,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.38,
                   "max_sequential_drawdown_pct": -73.32,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10226,9 +9829,9 @@
                   "train_end": "2022-08-05",
                   "validation_start": "2022-08-08",
                   "validation_end": "2024-09-19",
-                  "n": 28,
-                  "mean_net_pct": -1.28,
-                  "win_rate_pct": 42.9,
+                  "n": 29,
+                  "mean_net_pct": -1.24,
+                  "win_rate_pct": 41.4,
                   "profit_factor": 0.85,
                   "max_sequential_drawdown_pct": -68.51,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
@@ -10248,7 +9851,8 @@
               ],
               "total_unique_trades": 95,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -10256,15 +9860,15 @@
           },
           "15": {
             "n": 79,
-            "mean_net_pct": 2.35,
+            "mean_net_pct": 2.49,
             "win_rate_pct": 43.0,
-            "profit_factor": 1.28,
-            "max_sequential_drawdown_pct": -85.17,
+            "profit_factor": 1.3,
+            "max_sequential_drawdown_pct": -83.21,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.48,
+            "mean_excess_spy_pct": 1.59,
             "mean_net_bootstrap_ci95_pct": [
-              -2.59,
-              7.22
+              -2.45,
+              7.36
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
@@ -10278,10 +9882,10 @@
               },
               "SPY下降趨勢": {
                 "n": 10,
-                "mean_net_pct": 0.72,
+                "mean_net_pct": 1.82,
                 "win_rate_pct": 50.0,
-                "profit_factor": 1.08,
-                "max_sequential_drawdown_pct": -41.35,
+                "profit_factor": 1.22,
+                "max_sequential_drawdown_pct": -33.59,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "市場狀態未知": {
@@ -10292,6 +9896,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -10300,10 +9909,10 @@
                   "train_end": "2020-06-23",
                   "validation_start": "2020-06-24",
                   "validation_end": "2022-08-05",
-                  "n": 27,
-                  "mean_net_pct": 5.6,
-                  "win_rate_pct": 44.4,
-                  "profit_factor": 1.58,
+                  "n": 26,
+                  "mean_net_pct": 6.66,
+                  "win_rate_pct": 46.2,
+                  "profit_factor": 1.72,
                   "max_sequential_drawdown_pct": -76.7,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10312,10 +9921,10 @@
                   "train_end": "2022-08-05",
                   "validation_start": "2022-08-08",
                   "validation_end": "2024-09-19",
-                  "n": 24,
-                  "mean_net_pct": 0.62,
-                  "win_rate_pct": 41.7,
-                  "profit_factor": 1.08,
+                  "n": 25,
+                  "mean_net_pct": 0.15,
+                  "win_rate_pct": 40.0,
+                  "profit_factor": 1.02,
                   "max_sequential_drawdown_pct": -47.34,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10334,7 +9943,8 @@
               ],
               "total_unique_trades": 79,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -10342,15 +9952,15 @@
           },
           "20": {
             "n": 68,
-            "mean_net_pct": 3.69,
+            "mean_net_pct": 3.8,
             "win_rate_pct": 48.5,
-            "profit_factor": 1.45,
-            "max_sequential_drawdown_pct": -81.82,
+            "profit_factor": 1.47,
+            "max_sequential_drawdown_pct": -80.09,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.68,
+            "mean_excess_spy_pct": 2.72,
             "mean_net_bootstrap_ci95_pct": [
-              -1.67,
-              9.04
+              -1.56,
+              9.11
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
@@ -10364,10 +9974,10 @@
               },
               "SPY下降趨勢": {
                 "n": 9,
-                "mean_net_pct": -1.0,
+                "mean_net_pct": -0.17,
                 "win_rate_pct": 33.3,
-                "profit_factor": 0.91,
-                "max_sequential_drawdown_pct": -50.58,
+                "profit_factor": 0.98,
+                "max_sequential_drawdown_pct": -45.87,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "市場狀態未知": {
@@ -10378,6 +9988,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -10386,10 +10001,10 @@
                   "train_end": "2020-06-23",
                   "validation_start": "2020-06-24",
                   "validation_end": "2022-08-05",
-                  "n": 25,
-                  "mean_net_pct": 9.29,
-                  "win_rate_pct": 56.0,
-                  "profit_factor": 2.17,
+                  "n": 24,
+                  "mean_net_pct": 10.6,
+                  "win_rate_pct": 58.3,
+                  "profit_factor": 2.45,
                   "max_sequential_drawdown_pct": -63.94,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10398,11 +10013,11 @@
                   "train_end": "2022-08-05",
                   "validation_start": "2022-08-08",
                   "validation_end": "2024-09-19",
-                  "n": 21,
-                  "mean_net_pct": -1.55,
-                  "win_rate_pct": 38.1,
-                  "profit_factor": 0.83,
-                  "max_sequential_drawdown_pct": -50.7,
+                  "n": 22,
+                  "mean_net_pct": -2.14,
+                  "win_rate_pct": 36.4,
+                  "profit_factor": 0.78,
+                  "max_sequential_drawdown_pct": -57.91,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
                 {
@@ -10420,7 +10035,8 @@
               ],
               "total_unique_trades": 68,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -10821,25 +10437,25 @@
         },
         "backtests": {
           "10": {
-            "n": 66,
-            "mean_net_pct": 0.78,
-            "win_rate_pct": 47.0,
-            "profit_factor": 1.14,
-            "max_sequential_drawdown_pct": -66.23,
+            "n": 65,
+            "mean_net_pct": 1.75,
+            "win_rate_pct": 47.7,
+            "profit_factor": 1.33,
+            "max_sequential_drawdown_pct": -59.19,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.48,
+            "mean_excess_spy_pct": 1.49,
             "mean_net_bootstrap_ci95_pct": [
-              -2.97,
-              4.36
+              -2.04,
+              5.41
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 55,
-                "mean_net_pct": 0.98,
-                "win_rate_pct": 47.3,
-                "profit_factor": 1.17,
-                "max_sequential_drawdown_pct": -66.23,
+                "n": 54,
+                "mean_net_pct": 2.15,
+                "win_rate_pct": 48.1,
+                "profit_factor": 1.38,
+                "max_sequential_drawdown_pct": -59.19,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -10858,6 +10474,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -10866,10 +10487,10 @@
                   "train_end": "2022-07-20",
                   "validation_start": "2022-07-21",
                   "validation_end": "2023-12-22",
-                  "n": 21,
-                  "mean_net_pct": -0.76,
-                  "win_rate_pct": 42.9,
-                  "profit_factor": 0.84,
+                  "n": 20,
+                  "mean_net_pct": -0.64,
+                  "win_rate_pct": 45.0,
+                  "profit_factor": 0.86,
                   "max_sequential_drawdown_pct": -37.58,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10878,10 +10499,10 @@
                   "train_end": "2023-12-22",
                   "validation_start": "2023-12-26",
                   "validation_end": "2025-06-02",
-                  "n": 30,
-                  "mean_net_pct": 5.46,
-                  "win_rate_pct": 60.0,
-                  "profit_factor": 2.15,
+                  "n": 29,
+                  "mean_net_pct": 6.9,
+                  "win_rate_pct": 58.6,
+                  "profit_factor": 2.43,
                   "max_sequential_drawdown_pct": -34.18,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10890,42 +10511,43 @@
                   "train_end": "2025-06-02",
                   "validation_start": "2025-06-03",
                   "validation_end": "2026-11-05",
-                  "n": 15,
-                  "mean_net_pct": -6.42,
-                  "win_rate_pct": 26.7,
-                  "profit_factor": 0.25,
-                  "max_sequential_drawdown_pct": -66.23,
+                  "n": 16,
+                  "mean_net_pct": -4.59,
+                  "win_rate_pct": 31.2,
+                  "profit_factor": 0.34,
+                  "max_sequential_drawdown_pct": -59.19,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 66,
+              "total_unique_trades": 65,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 53,
-            "mean_net_pct": 2.07,
-            "win_rate_pct": 49.1,
-            "profit_factor": 1.33,
-            "max_sequential_drawdown_pct": -58.31,
+            "n": 52,
+            "mean_net_pct": 2.55,
+            "win_rate_pct": 48.1,
+            "profit_factor": 1.4,
+            "max_sequential_drawdown_pct": -59.98,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.6,
+            "mean_excess_spy_pct": 2.15,
             "mean_net_bootstrap_ci95_pct": [
-              -2.52,
-              6.72
+              -2.01,
+              7.39
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 45,
-                "mean_net_pct": 1.99,
-                "win_rate_pct": 46.7,
-                "profit_factor": 1.29,
-                "max_sequential_drawdown_pct": -58.31,
+                "n": 44,
+                "mean_net_pct": 2.55,
+                "win_rate_pct": 45.5,
+                "profit_factor": 1.37,
+                "max_sequential_drawdown_pct": -59.98,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -10944,6 +10566,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -10952,10 +10579,10 @@
                   "train_end": "2022-07-20",
                   "validation_start": "2022-07-21",
                   "validation_end": "2023-12-22",
-                  "n": 16,
-                  "mean_net_pct": 2.55,
-                  "win_rate_pct": 56.2,
-                  "profit_factor": 1.64,
+                  "n": 15,
+                  "mean_net_pct": 2.58,
+                  "win_rate_pct": 53.3,
+                  "profit_factor": 1.61,
                   "max_sequential_drawdown_pct": -20.94,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10964,10 +10591,10 @@
                   "train_end": "2023-12-22",
                   "validation_start": "2023-12-26",
                   "validation_end": "2025-06-02",
-                  "n": 26,
-                  "mean_net_pct": 4.21,
-                  "win_rate_pct": 53.8,
-                  "profit_factor": 1.62,
+                  "n": 25,
+                  "mean_net_pct": 6.22,
+                  "win_rate_pct": 56.0,
+                  "profit_factor": 2.03,
                   "max_sequential_drawdown_pct": -34.28,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -10976,42 +10603,43 @@
                   "train_end": "2025-06-02",
                   "validation_start": "2025-06-03",
                   "validation_end": "2026-11-05",
-                  "n": 11,
-                  "mean_net_pct": -3.7,
-                  "win_rate_pct": 27.3,
-                  "profit_factor": 0.57,
-                  "max_sequential_drawdown_pct": -47.57,
+                  "n": 12,
+                  "mean_net_pct": -5.12,
+                  "win_rate_pct": 25.0,
+                  "profit_factor": 0.47,
+                  "max_sequential_drawdown_pct": -58.47,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 53,
+              "total_unique_trades": 52,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 50,
-            "mean_net_pct": 2.37,
-            "win_rate_pct": 44.0,
-            "profit_factor": 1.36,
-            "max_sequential_drawdown_pct": -59.68,
+            "n": 49,
+            "mean_net_pct": 1.97,
+            "win_rate_pct": 40.8,
+            "profit_factor": 1.27,
+            "max_sequential_drawdown_pct": -72.05,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.01,
+            "mean_excess_spy_pct": 1.8,
             "mean_net_bootstrap_ci95_pct": [
-              -2.66,
-              7.34
+              -3.28,
+              7.77
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 42,
-                "mean_net_pct": 2.44,
-                "win_rate_pct": 42.9,
-                "profit_factor": 1.36,
-                "max_sequential_drawdown_pct": -59.68,
+                "n": 41,
+                "mean_net_pct": 1.95,
+                "win_rate_pct": 39.0,
+                "profit_factor": 1.26,
+                "max_sequential_drawdown_pct": -72.05,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
               "SPY下降趨勢": {
@@ -11030,6 +10658,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -11038,10 +10671,10 @@
                   "train_end": "2022-07-20",
                   "validation_start": "2022-07-21",
                   "validation_end": "2023-12-22",
-                  "n": 14,
-                  "mean_net_pct": 2.2,
-                  "win_rate_pct": 50.0,
-                  "profit_factor": 1.5,
+                  "n": 13,
+                  "mean_net_pct": 2.28,
+                  "win_rate_pct": 46.2,
+                  "profit_factor": 1.49,
                   "max_sequential_drawdown_pct": -26.44,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -11051,9 +10684,9 @@
                   "validation_start": "2023-12-26",
                   "validation_end": "2025-06-02",
                   "n": 25,
-                  "mean_net_pct": 6.4,
-                  "win_rate_pct": 52.0,
-                  "profit_factor": 2.06,
+                  "mean_net_pct": 5.6,
+                  "win_rate_pct": 48.0,
+                  "profit_factor": 1.78,
                   "max_sequential_drawdown_pct": -35.29,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -11063,16 +10696,17 @@
                   "validation_start": "2025-06-03",
                   "validation_end": "2026-11-05",
                   "n": 11,
-                  "mean_net_pct": -6.56,
+                  "mean_net_pct": -6.66,
                   "win_rate_pct": 18.2,
                   "profit_factor": 0.36,
-                  "max_sequential_drawdown_pct": -57.81,
+                  "max_sequential_drawdown_pct": -58.4,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 50,
+              "total_unique_trades": 49,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -11474,23 +11108,23 @@
         "backtests": {
           "10": {
             "n": 57,
-            "mean_net_pct": 2.12,
-            "win_rate_pct": 49.1,
-            "profit_factor": 1.41,
+            "mean_net_pct": 1.93,
+            "win_rate_pct": 47.4,
+            "profit_factor": 1.37,
             "max_sequential_drawdown_pct": -57.97,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.45,
+            "mean_excess_spy_pct": 1.24,
             "mean_net_bootstrap_ci95_pct": [
-              -1.75,
-              5.73
+              -1.8,
+              5.52
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
                 "n": 57,
-                "mean_net_pct": 2.12,
-                "win_rate_pct": 49.1,
-                "profit_factor": 1.41,
+                "mean_net_pct": 1.93,
+                "win_rate_pct": 47.4,
+                "profit_factor": 1.37,
                 "max_sequential_drawdown_pct": -57.97,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -11508,6 +11142,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -11529,10 +11168,10 @@
                   "train_end": "2024-07-09",
                   "validation_start": "2024-07-10",
                   "validation_end": "2025-09-08",
-                  "n": 22,
-                  "mean_net_pct": 5.4,
-                  "win_rate_pct": 68.2,
-                  "profit_factor": 2.64,
+                  "n": 21,
+                  "mean_net_pct": 5.28,
+                  "win_rate_pct": 66.7,
+                  "profit_factor": 2.53,
                   "max_sequential_drawdown_pct": -20.3,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -11541,41 +11180,42 @@
                   "train_end": "2025-09-08",
                   "validation_start": "2025-09-09",
                   "validation_end": "2026-11-05",
-                  "n": 16,
-                  "mean_net_pct": -1.95,
-                  "win_rate_pct": 31.2,
-                  "profit_factor": 0.59,
-                  "max_sequential_drawdown_pct": -31.78,
+                  "n": 17,
+                  "mean_net_pct": -2.01,
+                  "win_rate_pct": 29.4,
+                  "profit_factor": 0.57,
+                  "max_sequential_drawdown_pct": -33.54,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 57,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
             "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 47,
-            "mean_net_pct": 1.36,
-            "win_rate_pct": 38.3,
-            "profit_factor": 1.22,
+            "n": 46,
+            "mean_net_pct": 1.32,
+            "win_rate_pct": 39.1,
+            "profit_factor": 1.21,
             "max_sequential_drawdown_pct": -56.29,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.46,
+            "mean_excess_spy_pct": 0.47,
             "mean_net_bootstrap_ci95_pct": [
-              -2.9,
-              5.81
+              -3.05,
+              5.74
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
               "SPY上升趨勢": {
-                "n": 47,
-                "mean_net_pct": 1.36,
-                "win_rate_pct": 38.3,
-                "profit_factor": 1.22,
+                "n": 46,
+                "mean_net_pct": 1.32,
+                "win_rate_pct": 39.1,
+                "profit_factor": 1.21,
                 "max_sequential_drawdown_pct": -56.29,
                 "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
               },
@@ -11593,6 +11233,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -11614,10 +11259,10 @@
                   "train_end": "2024-07-09",
                   "validation_start": "2024-07-10",
                   "validation_end": "2025-09-08",
-                  "n": 18,
-                  "mean_net_pct": 6.48,
-                  "win_rate_pct": 50.0,
-                  "profit_factor": 2.57,
+                  "n": 17,
+                  "mean_net_pct": 6.91,
+                  "win_rate_pct": 52.9,
+                  "profit_factor": 2.59,
                   "max_sequential_drawdown_pct": -35.48,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -11627,16 +11272,17 @@
                   "validation_start": "2025-09-09",
                   "validation_end": "2026-11-05",
                   "n": 14,
-                  "mean_net_pct": -2.91,
+                  "mean_net_pct": -3.2,
                   "win_rate_pct": 28.6,
-                  "profit_factor": 0.52,
-                  "max_sequential_drawdown_pct": -38.41,
+                  "profit_factor": 0.5,
+                  "max_sequential_drawdown_pct": -41.12,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
-              "total_unique_trades": 47,
+              "total_unique_trades": 46,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -11649,10 +11295,10 @@
             "profit_factor": 1.16,
             "max_sequential_drawdown_pct": -58.19,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.23,
+            "mean_excess_spy_pct": 0.3,
             "mean_net_bootstrap_ci95_pct": [
               -4.07,
-              6.4
+              6.41
             ],
             "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
             "regime_results": {
@@ -11679,6 +11325,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -11699,10 +11350,10 @@
                   "train_end": "2024-07-09",
                   "validation_start": "2024-07-10",
                   "validation_end": "2025-09-08",
-                  "n": 17,
-                  "mean_net_pct": 3.71,
-                  "win_rate_pct": 52.9,
-                  "profit_factor": 1.68,
+                  "n": 16,
+                  "mean_net_pct": 4.75,
+                  "win_rate_pct": 56.2,
+                  "profit_factor": 1.95,
                   "max_sequential_drawdown_pct": -32.78,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 },
@@ -11711,17 +11362,18 @@
                   "train_end": "2025-09-08",
                   "validation_start": "2025-09-09",
                   "validation_end": "2026-11-05",
-                  "n": 10,
-                  "mean_net_pct": -1.72,
-                  "win_rate_pct": 30.0,
-                  "profit_factor": 0.66,
-                  "max_sequential_drawdown_pct": -19.72,
+                  "n": 11,
+                  "mean_net_pct": -2.73,
+                  "win_rate_pct": 27.3,
+                  "profit_factor": 0.53,
+                  "max_sequential_drawdown_pct": -30.06,
                   "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
                 }
               ],
               "total_unique_trades": 41,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -12161,6 +11813,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -12203,7 +11860,8 @@
               ],
               "total_unique_trades": 99,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -12247,6 +11905,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -12289,7 +11952,8 @@
               ],
               "total_unique_trades": 83,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -12333,6 +11997,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -12375,7 +12044,8 @@
               ],
               "total_unique_trades": 70,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -12814,6 +12484,11 @@
                 "max_sequential_drawdown_pct": null
               }
             },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
               "folds": [
@@ -12856,7 +12531,8 @@
               ],
               "total_unique_trades": 52,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 10,
@@ -12898,6 +12574,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -12941,7 +12622,8 @@
               ],
               "total_unique_trades": 45,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 15,
@@ -12983,6 +12665,11 @@
                 "profit_factor": null,
                 "max_sequential_drawdown_pct": null
               }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
             },
             "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "walk_forward": {
@@ -13026,7 +12713,8 @@
               ],
               "total_unique_trades": 43,
               "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-              "trade_reuse": false
+              "trade_reuse": false,
+              "no_overlapping_positions": true
             },
             "validation_start_fraction": 0.4,
             "horizon_days": 20,
@@ -13045,7 +12733,9 @@
       "composite_score_12": 25.0
     }
   ],
-  "errors": {},
+  "errors": {
+    "GME": "行情品質檢查不通過：OHLC價格邏輯不一致, 存在單日超過50%價格變動；需核對企業行動"
+  },
   "method": "六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。",
   "model_version": "HVCR-10 rebound v3",
   "model_revision": "v5 swing research preview",
@@ -13079,9 +12769,14 @@
   },
   "coverage": {
     "expected": 20,
-    "validated": 20,
-    "pct": 100.0,
+    "validated": 19,
+    "pct": 95.0,
     "minimum_pct": 90.0,
-    "excluded": []
+    "excluded": [
+      {
+        "ticker": "GME",
+        "reason": "行情品質檢查不通過：OHLC價格邏輯不一致, 存在單日超過50%價格變動；需核對企業行動"
+      }
+    ]
   }
 }
