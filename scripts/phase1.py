@@ -6,6 +6,26 @@ import math
 import pandas as pd
 import numpy as np
 
+def clean_price_history(df, recent_bars=5):
+    """Remove isolated historical incomplete bars; never mask incomplete latest bars.
+    Reject recent gaps and retain audit metadata. No forward filling.
+    """
+    required=["Open","High","Low","Close","Volume"]
+    if df is None or df.empty:raise ValueError("沒有行情資料")
+    if not set(required).issubset(df.columns):raise ValueError("缺少OHLCV欄位")
+    d=df.copy()
+    d[required]=d[required].apply(pd.to_numeric,errors="coerce")
+    finite=pd.DataFrame(np.isfinite(d[required].to_numpy()),index=d.index,columns=required)
+    complete=finite.all(axis=1)
+    if not complete.tail(recent_bars).all():
+        raise ValueError("最近5個交易日存在缺失或非有限OHLCV資料，不可填補")
+    removed=int((~complete).sum())
+    cleaned=d.loc[complete].copy()
+    if len(cleaned)<330:raise ValueError("清理後不足330個交易日")
+    return cleaned,{"historical_incomplete_rows_removed":removed,
+                    "raw_rows":len(d),"validated_rows":len(cleaned),
+                    "cleaning":"僅刪除較舊不完整交易日；最近5個交易日必須完整；不前向填補"}
+
 def validate_prices(df, ticker="", max_age_calendar_days=7, today=None):
     issues=[]
     if df is None or df.empty:return {"status":"blocked","issues":["沒有行情資料"],"latest_date":None}
@@ -27,7 +47,7 @@ def validate_prices(df, ticker="", max_age_calendar_days=7, today=None):
     if age>max_age_calendar_days:issues.append(f"資料過期：{age}個日曆日")
     if age<0:issues.append("行情日期在未來")
     # Major jumps are flagged for review, not automatically rejected (splits/news).
-    jumps=values.Close.pct_change().abs()
+    jumps=values.Close.pct_change(fill_method=None).abs()
     if (jumps>.5).any():issues.append("存在單日超過50%價格變動；需核對企業行動")
     blocked=any(("OHLC" in x or "非有限" in x or "非正" in x or "重複" in x or "過期" in x or "未來" in x) for x in issues)
     return {"status":"blocked" if blocked else "warning" if issues else "ok","issues":issues,
