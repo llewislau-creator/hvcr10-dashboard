@@ -115,6 +115,11 @@ def backtest_plans(df, days=15, benchmark_close=None):
     out["ci_note"]="固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證"
     out["regime_results"]={name:summarize_trades([t for t,g in zip(trades,regimes) if g==name]) for name in ("SPY上升趨勢","SPY下降趨勢","市場狀態未知")}
     out["regime_note"]="以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣"
+    trade_keys=[(t['signal_date'],t['entry_date'],t['exit_date']) for t in trades]
+    unique_trades=len(set(trade_keys))==len(trade_keys)
+    no_overlap=all(pd.Timestamp(a['exit_date'])<pd.Timestamp(b['entry_date']) for a,b in zip(trades,trades[1:]))
+    if not unique_trades or not no_overlap:
+        raise AssertionError('重複交易或持倉重疊')
     fold_results=[]
     for j in range(3):
         a,b=boundaries[j:j+2]
@@ -125,7 +130,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
                              **summarize_trades(subset)})
     out["walk_forward"]={"folds":fold_results,"total_unique_trades":len(trades),
                          "method":"expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
-                         "trade_reuse":False}
+                         "trade_reuse":not unique_trades,"no_overlapping_positions":no_overlap}
     out["validation_start_fraction"]=0.4
     out["horizon_days"]=days
     out["method"]="歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
