@@ -20,7 +20,7 @@ def portfolio_risk(audit, prices, horizon, benchmark=None, capital=100000.0):
     dates=sorted(set().union(*(set(p.loc[first:last].index.strftime("%Y-%m-%d")) for p in prices.values())))
     cash=float(capital); positions={}; daily=[]; executed=[]; skipped=[]
     for day in dates:
-        opening_equity=cash+sum(pos["shares"]*float(prices[ticker].loc[:day,"Close"].iloc[-1]) for ticker,pos in positions.items())
+        opening_equity=cash+sum(pos["shares"]*float(prices[ticker].loc[:day,"Close"].iloc[-2]) for ticker,pos in positions.items())
         # New orders are funded from cash on hand, without assuming intraday exit proceeds.
         for order in (o for o in orders if o["entry_date"]==day):
             ticker=order["ticker"]
