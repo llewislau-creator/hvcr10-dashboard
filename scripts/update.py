@@ -6,6 +6,7 @@ import yfinance as yf
 from rebound_v3 import analyze_frame
 from swing_v5 import swing_research
 from stage2_risk import make_plan, backtest_plans
+from data_diagnostics import diagnose_price_anomalies
 from phase1 import validate_prices, clean_price_history, market_context, earnings_event, risk_context
 
 TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME","APP","CRWD","IONQ","RKLB","HIMS"]
@@ -68,7 +69,7 @@ def require_coverage(validated,expected,minimum=.90):
     return round(validated/expected*100,1)
 
 def main():
-    rows=[];errors={}
+    rows=[];errors={};diagnostics={}
     try:
         spy=yf.download("SPY",start="2016-01-01",auto_adjust=True,progress=False,threads=False)
         if isinstance(spy.columns,pd.MultiIndex):spy.columns=spy.columns.get_level_values(0)
@@ -90,6 +91,13 @@ def main():
             rows.append(analyze(t,spy_close));print("OK",t)
         except Exception as e:
             errors[t]=str(e);print("ERROR",t,e)
+            if "行情品質檢查不通過" in str(e):
+                try:
+                    raw=yf.download(t,start="2016-01-01",auto_adjust=True,progress=False,threads=False)
+                    if isinstance(raw.columns,pd.MultiIndex):raw.columns=raw.columns.get_level_values(0)
+                    diagnostics[t]=diagnose_price_anomalies(raw)
+                except Exception as exc:
+                    diagnostics[t]={"diagnostic_error":str(exc)[:400]}
     if not rows: raise RuntimeError("No successful downloads; existing report preserved")
     # Publish verified rows only; never reuse stale prices as current observations.
     # Fail closed when coverage is too low, rather than masking a systemic outage.
