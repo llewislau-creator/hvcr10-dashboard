@@ -1,0 +1,28 @@
+/* HVCR-10 Professional Quant Terminal Design System v1.0 */
+:root{color-scheme:dark;--bg:#0B1220;--surface:#17263B;--surface-raised:#20324A;--surface-hover:#29415D;--border:#34455E;--border-strong:#4B6380;--text-primary:#F1F5FA;--text-secondary:#B3C2D5;--text-muted:#9BAEC4;--accent:#59A9FF;--positive:#43D6A1;--negative:#FF7185;--warning:#F3C66B;--font-ui:Inter,"Noto Sans TC",system-ui,-apple-system,sans-serif;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px}
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-ui);line-height:1.55}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-6)}
+.stat,.metric,.hero>div{background:var(--surface-raised);border-radius:var(--radius-md);padding:var(--space-4)}
+.stat b,.metric strong,.hero strong{font-variant-numeric:tabular-nums;font-weight:650}
+h1,h2,h3,h4{color:var(--text-primary)}
+small,.muted,th{color:var(--text-secondary)}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:#A8D5FF}
+.good,.yes{color:var(--positive)}
+.warn{color:var(--warning)}
+.is-positive{color:var(--positive)}.is-negative{color:var(--negative)}.is-warning{color:var(--warning)}.is-selected{color:var(--accent)}
+button,select,input{background:var(--surface-raised);color:var(--text-primary);border:1px solid var(--border-strong);border-radius:var(--radius-sm);min-height:40px;padding:9px 12px;font:inherit}
+button{cursor:pointer}
+button:hover,select:hover{background:var(--surface-hover)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+table{font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--border);padding:12px 14px}
+th{font-size:12px;font-weight:600}
+tbody tr:hover{background:var(--surface-raised)}
+.pill,.tag,.chip{border-color:var(--border-strong)}
+.notice{border-left:3px solid var(--warning);background:#302B25;color:var(--text-primary);padding:12px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.bar{background:var(--surface-raised)}.bar i{background:var(--accent)}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:768px){main{padding:12px}.panel{padding:16px}.stat b,.metric strong,.hero strong{font-size:22px}th,td{padding:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
