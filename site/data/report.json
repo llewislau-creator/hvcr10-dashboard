@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-06T04:08:26.764600+00:00",
+  "updated_utc": "2026-11-06T04:09:28.579576+00:00",
   "universe": "20 隻預選觀察股票，並非全美股",
   "rows": [
     {
@@ -4169,7 +4169,7 @@
                     -0.44,
                     1.83
                   ],
-                  "bootstrap_mean_pct": 0.6596,
+                  "bootstrap_mean_pct": 0.6597,
                   "original_mean_pct": 0.689,
                   "center_shift_pct": -0.0294
                 },
@@ -4341,7 +4341,7 @@
                     -0.28,
                     4.02
                   ],
-                  "bootstrap_mean_pct": 1.8331,
+                  "bootstrap_mean_pct": 1.8332,
                   "original_mean_pct": 1.8845,
                   "center_shift_pct": -0.0514
                 },
@@ -4531,7 +4531,7 @@
                     0.0,
                     4.01
                   ],
-                  "bootstrap_mean_pct": 1.9456,
+                  "bootstrap_mean_pct": 1.9457,
                   "original_mean_pct": 1.9777,
                   "center_shift_pct": -0.0321
                 },
