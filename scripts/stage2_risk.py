@@ -179,7 +179,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
     no_overlap=all(pd.Timestamp(a['exit_date'])<pd.Timestamp(b['entry_date']) for a,b in zip(trades,trades[1:]))
     if not unique_trades or not no_overlap:
         raise AssertionError('重複交易或持倉重疊')
-    trade_audit=[{"signal_date":t["signal_date"],"entry_date":t["entry_date"],"exit_date":t["exit_date"],
+    trade_audit=[{**t,
                   "fold":next(j+1 for j,(a,b) in enumerate(zip(boundaries[:-1],boundaries[1:]))
                               if a<=d.index.get_loc(pd.Timestamp(t["signal_date"]))<b)}
                  for t in trades]
