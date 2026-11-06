@@ -129,7 +129,9 @@ def main():
                 "block_positive":{k:(v is not None and v[0]>0) for k,v in ci.items()},
                 "weakens_vs_iid":iid is not None and iid[0]>0 and any(
                     v is None or v[0]<=0 for v in ci.values()),
-                "audit_key":key})
+                "audit_key":key,
+                "moving_diagnostics":mb["moving_diagnostics"],
+                "circular_diagnostics":mb["circular_diagnostics"]})
             wf["audit_file"]="trade_audit.json"
             wf["audit_key"]=key
     summary["by_horizon"]={}
