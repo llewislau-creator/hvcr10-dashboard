@@ -43,6 +43,16 @@ function riskWarnings(r){
  }
  return warnings;
 }
+function robustnessHTML(s){
+ if(!s)return '';
+ const bt=s.backtests||{};
+ const rows=[10,15,20].map(n=>{
+  const b=bt[String(n)]||{},ci=b.mean_net_bootstrap_ci95_pct,reg=b.regime_results||{};
+  const regime=['SPY上升趨勢','SPY下降趨勢'].map(k=>{const x=reg[k]||{};return esc(k)+': '+fmt(x.n)+'筆 / '+fmt(x.mean_net_pct,'%')}).join('；');
+  return '<tr><td>'+n+'日</td><td>'+fmt(b.n)+'</td><td>'+(Array.isArray(ci)?fmt(ci[0])+'% ～ '+fmt(ci[1])+'%':'—')+'</td><td>'+regime+'</td></tr>';
+ }).join('');
+ return '<h4>樣本外穩健性檢查</h4><div class="scroll"><table><thead><tr><th>持有期</th><th>獨立交易數</th><th>平均淨報酬 Bootstrap 95% 區間</th><th>SPY 市場環境分組</th></tr></thead><tbody>'+rows+'</tbody></table></div><p class="muted">逐筆非重疊交易；2000次固定種子bootstrap。區間未校正序列相關及跨股票相關，並非未來獲利信賴區間。市場環境以訊號當日SPY相對200交易日前的價格判定；小樣本僅供診斷。</p>';
+}
 function stage2HTML(s){
  if(!s)return '<p class="muted">第二階段資料待每日更新產生。</p>';
  const p=s.plan||{},bt=s.backtests||{};
