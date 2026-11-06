@@ -82,6 +82,13 @@ def backtest_plans(df, days=15, benchmark_close=None):
         plan=make_plan(d.iloc[:i+1])
         trade=simulate_plan(d,i,plan,days=days)
         if trade is None:continue
+        exit_loc=d.index.get_loc(pd.Timestamp(trade["exit_date"]))
+        last_exit=exit_loc
+        if spy is not None and i>=200 and pd.notna(spy.iloc[i]) and pd.notna(spy.iloc[i-200]):
+            regime="SPY上升趨勢" if spy.iloc[i]>spy.iloc[i-200] else "SPY下降趨勢"
+        else:
+            regime="市場狀態未知"
+        regimes.append(regime)
         trades.append(trade)
         if spy is not None:
             entry_spy=spy.iloc[i+1]
