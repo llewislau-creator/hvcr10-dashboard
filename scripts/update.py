@@ -14,7 +14,20 @@ def analyze(ticker, spy_close=None):
     df=yf.download(ticker,start="2016-01-01",auto_adjust=True,progress=False,threads=False)
     if df.empty: raise ValueError("no data")
     if isinstance(df.columns,pd.MultiIndex): df.columns=df.columns.get_level_values(0)
-    df,cleaning=clean_price_history(df)
+    try:
+        df,cleaning=clean_price_history(df)
+        cleaning["source_attempt"]="start=2016-01-01"
+    except ValueError as first_error:
+        # Re-fetch an independent five-year window; never fill recent missing bars.
+        retry=yf.download(ticker,period="5y",auto_adjust=True,progress=False,threads=False)
+        if isinstance(retry.columns,pd.MultiIndex):
+            retry.columns=retry.columns.get_level_values(0)
+        try:
+            df,cleaning=clean_price_history(retry)
+            cleaning["source_attempt"]="5y retry"
+            cleaning["primary_error"]=str(first_error)[:400]
+        except Exception as second_error:
+            raise ValueError(f"原始行情不合格：{first_error}；5年重新下載仍不合格：{second_error}") from second_error
     quality=validate_prices(df,ticker)
     quality["cleaning"]=cleaning
     removed=cleaning["historical_incomplete_rows_removed"]
