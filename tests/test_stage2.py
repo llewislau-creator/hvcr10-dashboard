@@ -17,6 +17,8 @@ for days in (10,15,20):
     assert x is not None and x["net_return_pct"]<=x["gross_return_pct"]
     y=backtest_plans(df,days=days,benchmark_close=df.Close)
     assert y["n"]>=0
+    assert len(y["walk_forward"]["folds"])==3
+    assert sum(f["n"] for f in y["walk_forward"]["folds"])==y["n"]
     assert "mean_net_bootstrap_ci95_pct" in y
     assert sum(z["n"] for z in y["regime_results"].values())==y["n"]
     if y["n"]>=2:
