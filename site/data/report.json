@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-06T05:39:29.990138+00:00",
+  "updated_utc": "2026-11-06T05:46:58.892946+00:00",
   "universe": "20 隻預選觀察股票，並非全美股",
   "rows": [
     {
@@ -2752,6 +2752,1383 @@
       "composite_score_12": 58.3
     },
     {
+      "ticker": "GME",
+      "close": 24.17,
+      "last_price_date": "2026-11-05",
+      "data_start_date": "2016-01-04",
+      "rv20": 42.4,
+      "z20": -0.86,
+      "atr14": 1.04,
+      "dollar_m": 232.9,
+      "rsi14": 47.4,
+      "matched": 2,
+      "eligible": false,
+      "extra_indicators": {
+        "RSI 多頭背離（5日窗口）": {
+          "value": 47.37,
+          "observed": false,
+          "unit": "RSI"
+        },
+        "布林通道下軌收復": {
+          "value": 22.49,
+          "observed": false,
+          "unit": "美元"
+        },
+        "OBV 資金量能改善": {
+          "value": 6338542300.0,
+          "observed": false,
+          "unit": "累計量"
+        },
+        "ADX 趨勢強度": {
+          "value": 28.45,
+          "observed": false,
+          "unit": "ADX（低於25視為趨勢較弱）"
+        },
+        "20日收盤價成交量加權均價（非盤中VWAP）": {
+          "value": 25.85,
+          "observed": false,
+          "unit": "美元"
+        },
+        "相對 SPY 20日強弱": {
+          "value": 0.9,
+          "observed": true,
+          "unit": "百分點；正值代表跑贏 SPY"
+        }
+      },
+      "composite_score_11": 18.2,
+      "composite_note": "12項等權觀察分數（非反彈機率）；SPY資料不足時不提供12項分數",
+      "conditions": {
+        "RSI14 ≤ 35": false,
+        "Z20 ≤ -1.5": false,
+        "成交量 ≥ 1.3倍": false,
+        "MACD動能連續改善": true,
+        "ATR佔股價 ≥ 3%": true,
+        "收盤突破前日高點": false
+      },
+      "signal": "未達條件",
+      "probability": null,
+      "probability_note": "樣本外事件不足30筆，不提供可用機率",
+      "execution_v4": {
+        "n": 13,
+        "avg_net_pct": -3.351,
+        "win_rate_pct": 15.4,
+        "profit_factor": 0.255,
+        "max_drawdown_pct": 36.69,
+        "note": "單一股票逐筆交易複利序列；非多股票投資組合回撤",
+        "cost_bps_per_side": 15,
+        "slippage_bps_per_side": 10,
+        "research_only": true
+      },
+      "backtest": {
+        "model": "v3",
+        "target_pct": 8,
+        "stop_pct": 5,
+        "horizons": {
+          "5": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 3
+            },
+            "test": {
+              "n": 13,
+              "wins": 2,
+              "prob_pct": 15.4,
+              "ci95_pct": [
+                4.3,
+                42.2
+              ],
+              "stop_first_pct": 53.8,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 24,
+              "wins": 6,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                12.0,
+                44.9
+              ],
+              "stop_first_pct": 54.2,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 2,
+                "prob_pct": 15.4,
+                "ci95_pct": [
+                  4.3,
+                  42.2
+                ],
+                "stop_first_pct": 53.8,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "10": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 3
+            },
+            "test": {
+              "n": 13,
+              "wins": 2,
+              "prob_pct": 15.4,
+              "ci95_pct": [
+                4.3,
+                42.2
+              ],
+              "stop_first_pct": 76.9,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 24,
+              "wins": 6,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                12.0,
+                44.9
+              ],
+              "stop_first_pct": 66.7,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 2,
+                "prob_pct": 15.4,
+                "ci95_pct": [
+                  4.3,
+                  42.2
+                ],
+                "stop_first_pct": 76.9,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          },
+          "20": {
+            "train": {
+              "n": 17,
+              "wins": 8,
+              "prob_pct": 47.1,
+              "ci95_pct": [
+                26.2,
+                69.0
+              ],
+              "stop_first_pct": 52.9,
+              "ambiguous_bars": 3
+            },
+            "test": {
+              "n": 13,
+              "wins": 2,
+              "prob_pct": 15.4,
+              "ci95_pct": [
+                4.3,
+                42.2
+              ],
+              "stop_first_pct": 84.6,
+              "ambiguous_bars": 1
+            },
+            "baseline_test": {
+              "n": 24,
+              "wins": 6,
+              "prob_pct": 25.0,
+              "ci95_pct": [
+                12.0,
+                44.9
+              ],
+              "stop_first_pct": 70.8,
+              "ambiguous_bars": 0
+            },
+            "test_by_score": {
+              "4": {
+                "n": 13,
+                "wins": 2,
+                "prob_pct": 15.4,
+                "ci95_pct": [
+                  4.3,
+                  42.2
+                ],
+                "stop_first_pct": 84.6,
+                "ambiguous_bars": 1
+              },
+              "5": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              },
+              "6": {
+                "n": 0,
+                "wins": 0,
+                "prob_pct": null,
+                "ci95_pct": [
+                  null,
+                  null
+                ],
+                "stop_first_pct": null,
+                "ambiguous_bars": 0
+              }
+            }
+          }
+        },
+        "train_end": "2023-08-02",
+        "test_start": "2023-08-03",
+        "signal_events": 30,
+        "baseline_events": 55,
+        "latest_signal_date": "2026-11-05",
+        "entry_rule": "訊號後下一交易日開盤",
+        "cost_bps_per_side": 15,
+        "method_note": "事件間至少20個交易日；先停損則失敗，同日同時觸及目標與停損保守視為停損；樣本外以時間70/30切分。機率為觸價頻率，不是扣成本淨獲利機率。"
+      },
+      "data_quality": {
+        "status": "warning",
+        "issues": [
+          "存在單日超過50%價格變動；需核對企業行動"
+        ],
+        "latest_date": "2026-11-05",
+        "age_calendar_days": 1,
+        "ticker": "GME",
+        "cleaning": {
+          "historical_incomplete_rows_removed": 0,
+          "raw_rows": 2727,
+          "validated_rows": 2727,
+          "cleaning": "僅刪除較舊不完整交易日；最近5個交易日必須完整；不前向填補",
+          "source_attempt": "start=2016-01-01"
+        }
+      },
+      "swing": {
+        "strategy": "2–4星期波段投資",
+        "holding_trading_days": [
+          10,
+          15,
+          20
+        ],
+        "score": 60.0,
+        "factors": {
+          "中期趨勢": true,
+          "短期動能": false,
+          "相對市場強度": true,
+          "健康回調": true,
+          "量價確認": false
+        },
+        "factor_count": 5,
+        "eligible": true,
+        "signal": "觀察名單",
+        "liquidity_dollar_m": 232.9,
+        "momentum_20d_pct": -4.39,
+        "momentum_60d_pct": 30.37,
+        "relative_spy_20d_pct": 0.9,
+        "ma20": 25.45,
+        "ma50": 23.42,
+        "rsi14": 47.4,
+        "holdout": {
+          "10": {
+            "n": 16,
+            "mean_net_pct": -1.54,
+            "positive_net_pct": 37.5,
+            "mean_excess_spy_pct": -1.3,
+            "min_net_pct": -21.76,
+            "note": "70/30時間切分；測試期每隔持有期抽取非重疊候選日；訊號分數>=60；下一交易日開盤買入、期限末收盤賣出；雙邊假設成本與滑價；不是校準機率"
+          },
+          "15": {
+            "n": 14,
+            "mean_net_pct": -2.65,
+            "positive_net_pct": 42.9,
+            "mean_excess_spy_pct": -4.57,
+            "min_net_pct": -59.33,
+            "note": "70/30時間切分；測試期每隔持有期抽取非重疊候選日；訊號分數>=60；下一交易日開盤買入、期限末收盤賣出；雙邊假設成本與滑價；不是校準機率"
+          },
+          "20": {
+            "n": 9,
+            "mean_net_pct": 1.88,
+            "positive_net_pct": 66.7,
+            "mean_excess_spy_pct": -1.37,
+            "min_net_pct": -24.29,
+            "note": "70/30時間切分；測試期每隔持有期抽取非重疊候選日；訊號分數>=60；下一交易日開盤買入、期限末收盤賣出；雙邊假設成本與滑價；不是校準機率"
+          }
+        },
+        "cost_bps_per_side": 15,
+        "slippage_bps_per_side": 10,
+        "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
+        "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 24.17,
+          "stop": 22.08,
+          "target": 28.34,
+          "atr14": 1.04,
+          "reward_risk": 2.0,
+          "shares": 23,
+          "max_risk_budget": 50.0,
+          "position_capital": 555.91,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 100,
+            "mean_net_pct": 1.47,
+            "win_rate_pct": 41.0,
+            "profit_factor": 1.21,
+            "max_sequential_drawdown_pct": -94.31,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.96,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.69,
+              6.09
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "moving_block_bootstrap": {
+              "method": "moving non-circular contiguous trade blocks; percentile CI of mean net return",
+              "repeats": 2000,
+              "seed": 20261106,
+              "block_lengths": [
+                5,
+                10,
+                20
+              ],
+              "moving_diagnostics": {
+                "5": {
+                  "ci95_pct": [
+                    -1.71,
+                    5.3
+                  ],
+                  "bootstrap_mean_pct": 1.7063,
+                  "original_mean_pct": 1.4714,
+                  "center_shift_pct": 0.2349
+                },
+                "10": {
+                  "ci95_pct": [
+                    -1.56,
+                    5.65
+                  ],
+                  "bootstrap_mean_pct": 1.8214,
+                  "original_mean_pct": 1.4714,
+                  "center_shift_pct": 0.3499
+                },
+                "20": {
+                  "ci95_pct": [
+                    -2.5,
+                    5.52
+                  ],
+                  "bootstrap_mean_pct": 1.2809,
+                  "original_mean_pct": 1.4714,
+                  "center_shift_pct": -0.1906
+                }
+              },
+              "circular_diagnostics": {
+                "5": {
+                  "ci95_pct": [
+                    -1.94,
+                    5.1
+                  ],
+                  "bootstrap_mean_pct": 1.5033,
+                  "original_mean_pct": 1.4714,
+                  "center_shift_pct": 0.0318
+                },
+                "10": {
+                  "ci95_pct": [
+                    -2.05,
+                    5.17
+                  ],
+                  "bootstrap_mean_pct": 1.4612,
+                  "original_mean_pct": 1.4714,
+                  "center_shift_pct": -0.0103
+                },
+                "20": {
+                  "ci95_pct": [
+                    -2.23,
+                    5.62
+                  ],
+                  "bootstrap_mean_pct": 1.4668,
+                  "original_mean_pct": 1.4714,
+                  "center_shift_pct": -0.0046
+                }
+              },
+              "circular_seed_sensitivity": {
+                "5": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -1.94,
+                      5.1
+                    ],
+                    [
+                      -1.9,
+                      5.2
+                    ],
+                    [
+                      -1.94,
+                      4.9
+                    ],
+                    [
+                      -2.04,
+                      5.22
+                    ],
+                    [
+                      -1.92,
+                      5.04
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    7.04,
+                    7.1,
+                    6.84,
+                    7.26,
+                    6.96
+                  ],
+                  "center_shift_pct_by_seed": [
+                    0.0318,
+                    0.002,
+                    -0.019,
+                    0.0065,
+                    0.0334
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 7.04,
+                  "mean_abs_center_shift_pct": 0.0185
+                },
+                "10": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -2.05,
+                      5.17
+                    ],
+                    [
+                      -1.82,
+                      5.25
+                    ],
+                    [
+                      -2.02,
+                      5.04
+                    ],
+                    [
+                      -1.95,
+                      5.15
+                    ],
+                    [
+                      -2.18,
+                      5.65
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    7.22,
+                    7.07,
+                    7.06,
+                    7.1,
+                    7.83
+                  ],
+                  "center_shift_pct_by_seed": [
+                    -0.0103,
+                    -0.0191,
+                    -0.1031,
+                    0.025,
+                    0.0018
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 7.256,
+                  "mean_abs_center_shift_pct": 0.0319
+                },
+                "20": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -2.23,
+                      5.62
+                    ],
+                    [
+                      -2.26,
+                      5.71
+                    ],
+                    [
+                      -2.2,
+                      5.77
+                    ],
+                    [
+                      -2.31,
+                      5.51
+                    ],
+                    [
+                      -2.26,
+                      5.57
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    7.85,
+                    7.97,
+                    7.97,
+                    7.82,
+                    7.83
+                  ],
+                  "center_shift_pct_by_seed": [
+                    -0.0046,
+                    0.0182,
+                    0.0051,
+                    -0.0664,
+                    -0.0175
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 7.888,
+                  "mean_abs_center_shift_pct": 0.0224
+                }
+              },
+              "ci95_pct": {
+                "5": [
+                  -1.71,
+                  5.3
+                ],
+                "10": [
+                  -1.56,
+                  5.65
+                ],
+                "20": [
+                  -2.5,
+                  5.52
+                ]
+              },
+              "iid_ci95_pct": [
+                -2.69,
+                6.09
+              ],
+              "note": "按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較"
+            },
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 88,
+                "mean_net_pct": 2.8,
+                "win_rate_pct": 44.3,
+                "profit_factor": 1.42,
+                "max_sequential_drawdown_pct": -86.31,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 12,
+                "mean_net_pct": -8.26,
+                "win_rate_pct": 16.7,
+                "profit_factor": 0.26,
+                "max_sequential_drawdown_pct": -69.01,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
+            "walk_forward": {
+              "folds": [
+                {
+                  "fold": 1,
+                  "train_end": "2020-05-01",
+                  "validation_start": "2020-05-04",
+                  "validation_end": "2022-07-01",
+                  "n": 41,
+                  "mean_net_pct": 4.58,
+                  "win_rate_pct": 43.9,
+                  "profit_factor": 1.48,
+                  "max_sequential_drawdown_pct": -80.51,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                },
+                {
+                  "fold": 2,
+                  "train_end": "2022-07-01",
+                  "validation_start": "2022-07-05",
+                  "validation_end": "2024-09-03",
+                  "n": 27,
+                  "mean_net_pct": -1.1,
+                  "win_rate_pct": 29.6,
+                  "profit_factor": 0.84,
+                  "max_sequential_drawdown_pct": -79.67,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                },
+                {
+                  "fold": 3,
+                  "train_end": "2024-09-03",
+                  "validation_start": "2024-09-04",
+                  "validation_end": "2026-11-05",
+                  "n": 32,
+                  "mean_net_pct": -0.34,
+                  "win_rate_pct": 46.9,
+                  "profit_factor": 0.92,
+                  "max_sequential_drawdown_pct": -48.63,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                }
+              ],
+              "total_unique_trades": 100,
+              "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
+              "trade_reuse": false,
+              "no_overlapping_positions": true,
+              "audit_file": "trade_audit.json",
+              "audit_key": "GME:10"
+            },
+            "validation_start_fraction": 0.4,
+            "horizon_days": 10,
+            "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 88,
+            "mean_net_pct": 3.06,
+            "win_rate_pct": 40.9,
+            "profit_factor": 1.41,
+            "max_sequential_drawdown_pct": -87.53,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.51,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.94,
+              8.42
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "moving_block_bootstrap": {
+              "method": "moving non-circular contiguous trade blocks; percentile CI of mean net return",
+              "repeats": 2000,
+              "seed": 20261106,
+              "block_lengths": [
+                5,
+                10,
+                20
+              ],
+              "moving_diagnostics": {
+                "5": {
+                  "ci95_pct": [
+                    -1.04,
+                    7.78
+                  ],
+                  "bootstrap_mean_pct": 3.0885,
+                  "original_mean_pct": 3.0609,
+                  "center_shift_pct": 0.0276
+                },
+                "10": {
+                  "ci95_pct": [
+                    -1.53,
+                    8.34
+                  ],
+                  "bootstrap_mean_pct": 3.1944,
+                  "original_mean_pct": 3.0609,
+                  "center_shift_pct": 0.1336
+                },
+                "20": {
+                  "ci95_pct": [
+                    -2.51,
+                    8.65
+                  ],
+                  "bootstrap_mean_pct": 2.683,
+                  "original_mean_pct": 3.0609,
+                  "center_shift_pct": -0.3779
+                }
+              },
+              "circular_diagnostics": {
+                "5": {
+                  "ci95_pct": [
+                    -1.0,
+                    7.35
+                  ],
+                  "bootstrap_mean_pct": 3.0955,
+                  "original_mean_pct": 3.0609,
+                  "center_shift_pct": 0.0346
+                },
+                "10": {
+                  "ci95_pct": [
+                    -1.8,
+                    8.09
+                  ],
+                  "bootstrap_mean_pct": 3.0576,
+                  "original_mean_pct": 3.0609,
+                  "center_shift_pct": -0.0033
+                },
+                "20": {
+                  "ci95_pct": [
+                    -1.83,
+                    8.8
+                  ],
+                  "bootstrap_mean_pct": 3.0837,
+                  "original_mean_pct": 3.0609,
+                  "center_shift_pct": 0.0228
+                }
+              },
+              "circular_seed_sensitivity": {
+                "5": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -1.0,
+                      7.35
+                    ],
+                    [
+                      -0.97,
+                      7.64
+                    ],
+                    [
+                      -1.03,
+                      7.51
+                    ],
+                    [
+                      -1.01,
+                      7.5
+                    ],
+                    [
+                      -0.96,
+                      7.39
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    8.35,
+                    8.61,
+                    8.54,
+                    8.51,
+                    8.35
+                  ],
+                  "center_shift_pct_by_seed": [
+                    0.0346,
+                    -0.0331,
+                    -0.0019,
+                    -0.0048,
+                    0.0115
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 8.472,
+                  "mean_abs_center_shift_pct": 0.0172
+                },
+                "10": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -1.8,
+                      8.09
+                    ],
+                    [
+                      -1.36,
+                      7.85
+                    ],
+                    [
+                      -1.82,
+                      7.87
+                    ],
+                    [
+                      -1.63,
+                      8.24
+                    ],
+                    [
+                      -1.74,
+                      8.37
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    9.89,
+                    9.21,
+                    9.69,
+                    9.87,
+                    10.11
+                  ],
+                  "center_shift_pct_by_seed": [
+                    -0.0033,
+                    -0.022,
+                    -0.1476,
+                    0.0144,
+                    0.0407
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 9.754,
+                  "mean_abs_center_shift_pct": 0.0456
+                },
+                "20": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -1.83,
+                      8.8
+                    ],
+                    [
+                      -2.13,
+                      9.03
+                    ],
+                    [
+                      -1.92,
+                      9.03
+                    ],
+                    [
+                      -2.13,
+                      8.67
+                    ],
+                    [
+                      -1.8,
+                      8.85
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    10.63,
+                    11.16,
+                    10.95,
+                    10.8,
+                    10.65
+                  ],
+                  "center_shift_pct_by_seed": [
+                    0.0228,
+                    0.026,
+                    0.0345,
+                    -0.0963,
+                    -0.0121
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 10.838,
+                  "mean_abs_center_shift_pct": 0.0383
+                }
+              },
+              "ci95_pct": {
+                "5": [
+                  -1.04,
+                  7.78
+                ],
+                "10": [
+                  -1.53,
+                  8.34
+                ],
+                "20": [
+                  -2.51,
+                  8.65
+                ]
+              },
+              "iid_ci95_pct": [
+                -1.94,
+                8.42
+              ],
+              "note": "按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較"
+            },
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 79,
+                "mean_net_pct": 4.21,
+                "win_rate_pct": 41.8,
+                "profit_factor": 1.6,
+                "max_sequential_drawdown_pct": -79.88,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 9,
+                "mean_net_pct": -6.99,
+                "win_rate_pct": 33.3,
+                "profit_factor": 0.35,
+                "max_sequential_drawdown_pct": -54.17,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
+            "walk_forward": {
+              "folds": [
+                {
+                  "fold": 1,
+                  "train_end": "2020-05-01",
+                  "validation_start": "2020-05-04",
+                  "validation_end": "2022-07-01",
+                  "n": 36,
+                  "mean_net_pct": 7.68,
+                  "win_rate_pct": 50.0,
+                  "profit_factor": 1.83,
+                  "max_sequential_drawdown_pct": -55.98,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                },
+                {
+                  "fold": 2,
+                  "train_end": "2022-07-01",
+                  "validation_start": "2022-07-05",
+                  "validation_end": "2024-09-03",
+                  "n": 25,
+                  "mean_net_pct": -0.4,
+                  "win_rate_pct": 32.0,
+                  "profit_factor": 0.95,
+                  "max_sequential_drawdown_pct": -79.81,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                },
+                {
+                  "fold": 3,
+                  "train_end": "2024-09-03",
+                  "validation_start": "2024-09-04",
+                  "validation_end": "2026-11-05",
+                  "n": 27,
+                  "mean_net_pct": 0.1,
+                  "win_rate_pct": 37.0,
+                  "profit_factor": 1.02,
+                  "max_sequential_drawdown_pct": -51.96,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                }
+              ],
+              "total_unique_trades": 88,
+              "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
+              "trade_reuse": false,
+              "no_overlapping_positions": true,
+              "audit_file": "trade_audit.json",
+              "audit_key": "GME:15"
+            },
+            "validation_start_fraction": 0.4,
+            "horizon_days": 15,
+            "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 80,
+            "mean_net_pct": 2.68,
+            "win_rate_pct": 42.5,
+            "profit_factor": 1.32,
+            "max_sequential_drawdown_pct": -90.06,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.1,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.7,
+              8.13
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "moving_block_bootstrap": {
+              "method": "moving non-circular contiguous trade blocks; percentile CI of mean net return",
+              "repeats": 2000,
+              "seed": 20261106,
+              "block_lengths": [
+                5,
+                10,
+                20
+              ],
+              "moving_diagnostics": {
+                "5": {
+                  "ci95_pct": [
+                    -2.1,
+                    7.47
+                  ],
+                  "bootstrap_mean_pct": 2.6324,
+                  "original_mean_pct": 2.679,
+                  "center_shift_pct": -0.0465
+                },
+                "10": {
+                  "ci95_pct": [
+                    -2.32,
+                    8.22
+                  ],
+                  "bootstrap_mean_pct": 2.7307,
+                  "original_mean_pct": 2.679,
+                  "center_shift_pct": 0.0518
+                },
+                "20": {
+                  "ci95_pct": [
+                    -3.02,
+                    7.96
+                  ],
+                  "bootstrap_mean_pct": 2.0842,
+                  "original_mean_pct": 2.679,
+                  "center_shift_pct": -0.5947
+                }
+              },
+              "circular_diagnostics": {
+                "5": {
+                  "ci95_pct": [
+                    -1.78,
+                    7.69
+                  ],
+                  "bootstrap_mean_pct": 2.7233,
+                  "original_mean_pct": 2.679,
+                  "center_shift_pct": 0.0444
+                },
+                "10": {
+                  "ci95_pct": [
+                    -2.38,
+                    8.02
+                  ],
+                  "bootstrap_mean_pct": 2.7258,
+                  "original_mean_pct": 2.679,
+                  "center_shift_pct": 0.0468
+                },
+                "20": {
+                  "ci95_pct": [
+                    -2.53,
+                    8.38
+                  ],
+                  "bootstrap_mean_pct": 2.709,
+                  "original_mean_pct": 2.679,
+                  "center_shift_pct": 0.0301
+                }
+              },
+              "circular_seed_sensitivity": {
+                "5": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -1.78,
+                      7.69
+                    ],
+                    [
+                      -1.8,
+                      7.72
+                    ],
+                    [
+                      -1.73,
+                      7.34
+                    ],
+                    [
+                      -1.92,
+                      7.67
+                    ],
+                    [
+                      -1.68,
+                      7.51
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    9.47,
+                    9.52,
+                    9.07,
+                    9.59,
+                    9.19
+                  ],
+                  "center_shift_pct_by_seed": [
+                    0.0444,
+                    0.0141,
+                    0.0028,
+                    -0.0342,
+                    0.0465
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 9.368,
+                  "mean_abs_center_shift_pct": 0.0284
+                },
+                "10": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -2.38,
+                      8.02
+                    ],
+                    [
+                      -2.37,
+                      8.32
+                    ],
+                    [
+                      -2.5,
+                      8.06
+                    ],
+                    [
+                      -2.35,
+                      8.17
+                    ],
+                    [
+                      -2.72,
+                      8.48
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    10.4,
+                    10.69,
+                    10.56,
+                    10.52,
+                    11.2
+                  ],
+                  "center_shift_pct_by_seed": [
+                    0.0468,
+                    -0.0108,
+                    -0.097,
+                    0.0276,
+                    0.0535
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 10.674,
+                  "mean_abs_center_shift_pct": 0.0471
+                },
+                "20": {
+                  "seeds": [
+                    20261106,
+                    20261107,
+                    20261108,
+                    20261109,
+                    20261110
+                  ],
+                  "ci95_pct_by_seed": [
+                    [
+                      -2.53,
+                      8.38
+                    ],
+                    [
+                      -2.41,
+                      8.36
+                    ],
+                    [
+                      -2.33,
+                      8.55
+                    ],
+                    [
+                      -2.43,
+                      8.2
+                    ],
+                    [
+                      -2.34,
+                      8.51
+                    ]
+                  ],
+                  "ci_width_pct_by_seed": [
+                    10.91,
+                    10.77,
+                    10.88,
+                    10.63,
+                    10.85
+                  ],
+                  "center_shift_pct_by_seed": [
+                    0.0301,
+                    0.0561,
+                    0.0528,
+                    -0.062,
+                    -0.0417
+                  ],
+                  "positive_lower_count": 0,
+                  "mean_width_pct": 10.808,
+                  "mean_abs_center_shift_pct": 0.0485
+                }
+              },
+              "ci95_pct": {
+                "5": [
+                  -2.1,
+                  7.47
+                ],
+                "10": [
+                  -2.32,
+                  8.22
+                ],
+                "20": [
+                  -3.02,
+                  7.96
+                ]
+              },
+              "iid_ci95_pct": [
+                -2.7,
+                8.13
+              ],
+              "note": "按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較"
+            },
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 72,
+                "mean_net_pct": 4.13,
+                "win_rate_pct": 45.8,
+                "profit_factor": 1.54,
+                "max_sequential_drawdown_pct": -79.95,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 8,
+                "mean_net_pct": -10.35,
+                "win_rate_pct": 12.5,
+                "profit_factor": 0.28,
+                "max_sequential_drawdown_pct": -63.03,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "bear_market_robustness": {
+              "sample_threshold": 30,
+              "sample_adequate": false,
+              "label": "熊市穩健性未驗證"
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
+            "walk_forward": {
+              "folds": [
+                {
+                  "fold": 1,
+                  "train_end": "2020-05-01",
+                  "validation_start": "2020-05-04",
+                  "validation_end": "2022-07-01",
+                  "n": 33,
+                  "mean_net_pct": 6.42,
+                  "win_rate_pct": 48.5,
+                  "profit_factor": 1.62,
+                  "max_sequential_drawdown_pct": -65.51,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                },
+                {
+                  "fold": 2,
+                  "train_end": "2022-07-01",
+                  "validation_start": "2022-07-05",
+                  "validation_end": "2024-09-03",
+                  "n": 21,
+                  "mean_net_pct": -0.01,
+                  "win_rate_pct": 38.1,
+                  "profit_factor": 1.0,
+                  "max_sequential_drawdown_pct": -78.28,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                },
+                {
+                  "fold": 3,
+                  "train_end": "2024-09-03",
+                  "validation_start": "2024-09-04",
+                  "validation_end": "2026-11-05",
+                  "n": 26,
+                  "mean_net_pct": 0.1,
+                  "win_rate_pct": 38.5,
+                  "profit_factor": 1.02,
+                  "max_sequential_drawdown_pct": -52.98,
+                  "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+                }
+              ],
+              "total_unique_trades": 80,
+              "method": "expanding-history chronological forward evaluation; fixed predeclared rules, no fitted parameters",
+              "trade_reuse": false,
+              "no_overlapping_positions": true,
+              "audit_file": "trade_audit.json",
+              "audit_key": "GME:20"
+            },
+            "validation_start_fraction": 0.4,
+            "horizon_days": 20,
+            "method": "歷史前40%作為固定規則暖機，後60%逐日驗證（非完整walk-forward）；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
+      "earnings": {
+        "status": "unknown",
+        "date": null,
+        "days_until": null,
+        "note": "未取得可確認的未來30日財報日期；不代表期間沒有財報"
+      },
+      "phase1_risk": "財報日期待確認",
+      "composite_score_12": 25.0
+    },
+    {
       "ticker": "SOFI",
       "close": 16.04,
       "last_price_date": "2026-11-05",
@@ -4544,7 +5921,7 @@
                     -0.44,
                     1.83
                   ],
-                  "bootstrap_mean_pct": 0.6597,
+                  "bootstrap_mean_pct": 0.6596,
                   "original_mean_pct": 0.689,
                   "center_shift_pct": -0.0294
                 },
@@ -26128,9 +27505,7 @@
       "composite_score_12": 25.0
     }
   ],
-  "errors": {
-    "GME": "行情品質檢查不通過：OHLC價格邏輯不一致, 存在單日超過50%價格變動；需核對企業行動"
-  },
+  "errors": {},
   "method": "六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。",
   "model_version": "HVCR-10 rebound v3",
   "model_revision": "v5 swing research preview",
@@ -26164,15 +27539,10 @@
   },
   "coverage": {
     "expected": 20,
-    "validated": 19,
-    "pct": 95.0,
+    "validated": 20,
+    "pct": 100.0,
     "minimum_pct": 90.0,
-    "excluded": [
-      {
-        "ticker": "GME",
-        "reason": "行情品質檢查不通過：OHLC價格邏輯不一致, 存在單日超過50%價格變動；需核對企業行動"
-      }
-    ]
+    "excluded": []
   },
   "portfolio_risk_file": "portfolio_risk.json",
   "bootstrap_summary_file": "bootstrap_summary.json",
