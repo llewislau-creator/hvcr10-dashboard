@@ -17,6 +17,14 @@ for days in (10,15,20):
     assert x is not None and x["net_return_pct"]<=x["gross_return_pct"]
     y=backtest_plans(df,days=days,benchmark_close=df.Close)
     assert y["n"]>=0
+    assert y['walk_forward']['trade_reuse'] is False
+    assert y['walk_forward']['no_overlapping_positions'] is True
+    assert y['bear_market_robustness']['sample_threshold']==30
+    assert y['bear_market_robustness']['sample_adequate'] is False
+    assert y['bear_market_robustness']['label']=='熊市穩健性未驗證'
+    for fold in y['walk_forward']['folds']:
+        assert fold['validation_start']<=fold['validation_end']
+    assert all(y['walk_forward']['folds'][j]['validation_end']<y['walk_forward']['folds'][j+1]['validation_start'] for j in range(2))
     assert len(y["walk_forward"]["folds"])==3
     assert sum(f["n"] for f in y["walk_forward"]["folds"])==y["n"]
     assert "mean_net_bootstrap_ci95_pct" in y
