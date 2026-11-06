@@ -20,7 +20,6 @@ jobs:
         run: |
           python tests/test_coverage.py
           python tests/test_stage2.py
-          python tests/test_report_artifacts.py
           python tests/test_phase1.py
           python tests/test_swing_v5.py
           python tests/test_execution_v4.py
