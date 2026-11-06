@@ -128,7 +128,6 @@ def backtest_plans(df, days=15, benchmark_close=None):
         out["mean_net_bootstrap_ci95_pct"]=None
     out["ci_note"]="固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證"
     out['moving_block_bootstrap']={
-        'diagnostic_pending':True,
         'method':'moving non-circular contiguous trade blocks; percentile CI of mean net return',
         'repeats':2000,'seed':20261106,'block_lengths':[5,10,20],
         'ci95_pct':{str(k):moving_block_bootstrap_ci(vals,k) for k in (5,10,20)},
