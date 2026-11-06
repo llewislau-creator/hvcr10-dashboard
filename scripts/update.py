@@ -39,6 +39,7 @@ def analyze(ticker, spy_close=None):
     result=analyze_frame(df)
     result["data_quality"]=quality
     result['swing']=swing_research(df,spy_close)
+    result['stage2']={'status':'research_only','plan':make_plan(df),'backtests':{str(n):backtest_plans(df,n,spy_close) for n in (10,15,20)},'ranking_influence':False}
     try:
         calendar=yf.Ticker(ticker).calendar
         earnings=earnings_event(calendar)
