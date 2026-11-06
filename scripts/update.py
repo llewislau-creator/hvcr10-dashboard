@@ -144,8 +144,9 @@ def main():
     summary["note"]="描述性信賴區間；Block bootstrap 僅保留單一股票交易序列的局部相依，未校正跨股票相關及策略選擇偏誤"
     payload["bootstrap_summary_file"]="bootstrap_summary.json"
     payload["trade_audit_file"]="trade_audit.json"
+    payload["price_diagnostics_file"]="price_diagnostics.json"
     OUT.parent.mkdir(parents=True,exist_ok=True)
-    for name,doc in (("trade_audit.json",audit),("bootstrap_summary.json",summary)):
+    for name,doc in (("trade_audit.json",audit),("bootstrap_summary.json",summary),("price_diagnostics.json",{"updated_utc":payload["updated_utc"],"excluded_diagnostics":diagnostics})):
         path=OUT.parent/name
         temp=path.with_suffix(".tmp")
         temp.write_text(json.dumps(doc,ensure_ascii=False,separators=(",",":")),encoding="utf-8")
