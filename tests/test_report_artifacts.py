@@ -5,7 +5,8 @@ root=Path(__file__).resolve().parents[1]/'site'/'data'
 report=json.loads((root/'report.json').read_text(encoding='utf-8'))
 audit=json.loads((root/'trade_audit.json').read_text(encoding='utf-8'))
 summary=json.loads((root/'bootstrap_summary.json').read_text(encoding='utf-8'))
-assert report['updated_utc']==audit['updated_utc']==summary['updated_utc']
+diagnostics=json.loads((root/'price_diagnostics.json').read_text(encoding='utf-8'))
+assert report['updated_utc']==audit['updated_utc']==summary['updated_utc']==diagnostics['updated_utc']
 assert len(summary['groups'])==3*len(report['rows'])
 keys=set()
 for row in report['rows']:
@@ -26,6 +27,12 @@ for row in report['rows']:
             assert fold['validation_start']<=t['signal_date']<t['entry_date']<=t['exit_date']<=fold['validation_end']
             if i:assert trades[i-1]['exit_date']<t['entry_date']
         mb=bt['moving_block_bootstrap']
+        for method in ('moving_diagnostics','circular_diagnostics'):
+            assert set(mb[method])=={'5','10','20'}
+            for k,v in mb[method].items():
+                if v is not None:
+                    assert v['ci95_pct'][0]<=v['ci95_pct'][1]
+                    assert abs(v['center_shift_pct']-(v['bootstrap_mean_pct']-v['original_mean_pct']))<.0002
         assert mb['repeats']==2000 and mb['block_lengths']==[5,10,20]
         assert mb['iid_ci95_pct']==bt['mean_net_bootstrap_ci95_pct']
         for k in (5,10,20):
@@ -36,6 +43,7 @@ assert {g['audit_key'] for g in summary['groups']}==keys
 for g in summary['groups']:
     assert g['n']==len(audit['trades'][g['audit_key']]['trades'])
     assert set(g['block_ci95_pct'])=={'5','10','20'}
+    assert set(g['moving_diagnostics'])==set(g['circular_diagnostics'])=={'5','10','20'}
     iid=g['iid_ci95_pct']
     assert g['iid_positive']==(iid is not None and iid[0]>0)
     assert g['weakens_vs_iid']==(g['iid_positive'] and any(v is None or v[0]<=0 for v in g['block_ci95_pct'].values()))
