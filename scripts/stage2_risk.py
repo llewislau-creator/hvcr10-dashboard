@@ -74,6 +74,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
     momentum=close.pct_change(20)
     liquid=(close*d.Volume).rolling(20).mean()>=1e7
     start=max(200,int(len(d)*.4))
+    boundaries=[start,max(start+1,int(len(d)*.6)),max(start+2,int(len(d)*.8)),len(d)]
     trades=[];excess=[];regimes=[];last_exit=-1
     spy=benchmark_close.reindex(d.index).ffill() if benchmark_close is not None else None
     for i in range(start,len(d)-days):
@@ -109,7 +110,6 @@ def backtest_plans(df, days=15, benchmark_close=None):
     out["ci_note"]="固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證"
     out["regime_results"]={name:summarize_trades([t for t,g in zip(trades,regimes) if g==name]) for name in ("SPY上升趨勢","SPY下降趨勢","市場狀態未知")}
     out["regime_note"]="以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣"
-    boundaries=[start,max(start+1,int(len(d)*.6)),max(start+2,int(len(d)*.8)),len(d)]
     fold_results=[]
     for j in range(3):
         a,b=boundaries[j:j+2]
