@@ -1,0 +1,1231 @@
+{
+  "generated_utc": "2026-11-06T06:58:30.024027+00:00",
+  "status": "preliminary_research",
+  "tickers": [
+    "NVDA",
+    "AMD",
+    "TSLA",
+    "PLTR",
+    "COIN",
+    "MSTR",
+    "HOOD",
+    "SOFI",
+    "ROKU",
+    "AFRM",
+    "MARA",
+    "RIOT",
+    "UPST",
+    "SMCI",
+    "GME",
+    "APP",
+    "CRWD",
+    "IONQ",
+    "RKLB",
+    "HIMS"
+  ],
+  "completed": 20,
+  "errors": {},
+  "results": {
+    "NVDA": {
+      "status": "preliminary_research",
+      "start": "2023-08-03",
+      "end": "2026-11-05",
+      "observations": 819,
+      "events": 28,
+      "models": {
+        "early_weakness": {
+          "alerts": 51,
+          "successful_alerts": 21,
+          "false_alerts": 30,
+          "false_alert_rate_pct": 58.82,
+          "independent_events": 28,
+          "events_warned": 21,
+          "event_recall_pct": 75.0,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 41.18
+        },
+        "high_risk_selloff": {
+          "alerts": 13,
+          "successful_alerts": 5,
+          "false_alerts": 8,
+          "false_alert_rate_pct": 61.54,
+          "independent_events": 28,
+          "events_warned": 3,
+          "event_recall_pct": 10.71,
+          "median_lead_sessions": 7.0,
+          "precision_pct": 38.46
+        },
+        "weakness_or_selloff": {
+          "alerts": 49,
+          "successful_alerts": 21,
+          "false_alerts": 28,
+          "false_alert_rate_pct": 57.14,
+          "independent_events": 28,
+          "events_warned": 21,
+          "event_recall_pct": 75.0,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 42.86
+        },
+        "five_factor_below_60": {
+          "alerts": 52,
+          "successful_alerts": 19,
+          "false_alerts": 33,
+          "false_alert_rate_pct": 63.46,
+          "independent_events": 28,
+          "events_warned": 17,
+          "event_recall_pct": 60.71,
+          "median_lead_sessions": 2.0,
+          "precision_pct": 36.54
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "AMD": {
+      "status": "preliminary_research",
+      "start": "2023-08-03",
+      "end": "2026-11-05",
+      "observations": 819,
+      "events": 30,
+      "models": {
+        "early_weakness": {
+          "alerts": 44,
+          "successful_alerts": 12,
+          "false_alerts": 32,
+          "false_alert_rate_pct": 72.73,
+          "independent_events": 30,
+          "events_warned": 11,
+          "event_recall_pct": 36.67,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 27.27
+        },
+        "high_risk_selloff": {
+          "alerts": 12,
+          "successful_alerts": 1,
+          "false_alerts": 11,
+          "false_alert_rate_pct": 91.67,
+          "independent_events": 30,
+          "events_warned": 1,
+          "event_recall_pct": 3.33,
+          "median_lead_sessions": 7.0,
+          "precision_pct": 8.33
+        },
+        "weakness_or_selloff": {
+          "alerts": 39,
+          "successful_alerts": 12,
+          "false_alerts": 27,
+          "false_alert_rate_pct": 69.23,
+          "independent_events": 30,
+          "events_warned": 11,
+          "event_recall_pct": 36.67,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 30.77
+        },
+        "five_factor_below_60": {
+          "alerts": 48,
+          "successful_alerts": 20,
+          "false_alerts": 28,
+          "false_alert_rate_pct": 58.33,
+          "independent_events": 30,
+          "events_warned": 17,
+          "event_recall_pct": 56.67,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 41.67
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "TSLA": {
+      "status": "preliminary_research",
+      "start": "2023-08-03",
+      "end": "2026-11-05",
+      "observations": 819,
+      "events": 29,
+      "models": {
+        "early_weakness": {
+          "alerts": 46,
+          "successful_alerts": 13,
+          "false_alerts": 33,
+          "false_alert_rate_pct": 71.74,
+          "independent_events": 29,
+          "events_warned": 12,
+          "event_recall_pct": 41.38,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 28.26
+        },
+        "high_risk_selloff": {
+          "alerts": 9,
+          "successful_alerts": 0,
+          "false_alerts": 9,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 29,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 44,
+          "successful_alerts": 13,
+          "false_alerts": 31,
+          "false_alert_rate_pct": 70.45,
+          "independent_events": 29,
+          "events_warned": 12,
+          "event_recall_pct": 41.38,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 29.55
+        },
+        "five_factor_below_60": {
+          "alerts": 43,
+          "successful_alerts": 15,
+          "false_alerts": 28,
+          "false_alert_rate_pct": 65.12,
+          "independent_events": 29,
+          "events_warned": 11,
+          "event_recall_pct": 37.93,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 34.88
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "PLTR": {
+      "status": "preliminary_research",
+      "start": "2025-01-07",
+      "end": "2026-11-05",
+      "observations": 460,
+      "events": 15,
+      "models": {
+        "early_weakness": {
+          "alerts": 27,
+          "successful_alerts": 9,
+          "false_alerts": 18,
+          "false_alert_rate_pct": 66.67,
+          "independent_events": 15,
+          "events_warned": 8,
+          "event_recall_pct": 53.33,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 33.33
+        },
+        "high_risk_selloff": {
+          "alerts": 5,
+          "successful_alerts": 0,
+          "false_alerts": 5,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 15,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 25,
+          "successful_alerts": 8,
+          "false_alerts": 17,
+          "false_alert_rate_pct": 68.0,
+          "independent_events": 15,
+          "events_warned": 7,
+          "event_recall_pct": 46.67,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 32.0
+        },
+        "five_factor_below_60": {
+          "alerts": 25,
+          "successful_alerts": 6,
+          "false_alerts": 19,
+          "false_alert_rate_pct": 76.0,
+          "independent_events": 15,
+          "events_warned": 6,
+          "event_recall_pct": 40.0,
+          "median_lead_sessions": 3.5,
+          "precision_pct": 24.0
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "COIN": {
+      "status": "preliminary_research",
+      "start": "2025-03-07",
+      "end": "2026-11-05",
+      "observations": 420,
+      "events": 14,
+      "models": {
+        "early_weakness": {
+          "alerts": 22,
+          "successful_alerts": 5,
+          "false_alerts": 17,
+          "false_alert_rate_pct": 77.27,
+          "independent_events": 14,
+          "events_warned": 4,
+          "event_recall_pct": 28.57,
+          "median_lead_sessions": 2.0,
+          "precision_pct": 22.73
+        },
+        "high_risk_selloff": {
+          "alerts": 11,
+          "successful_alerts": 0,
+          "false_alerts": 11,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 14,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 18,
+          "successful_alerts": 5,
+          "false_alerts": 13,
+          "false_alert_rate_pct": 72.22,
+          "independent_events": 14,
+          "events_warned": 4,
+          "event_recall_pct": 28.57,
+          "median_lead_sessions": 2.0,
+          "precision_pct": 27.78
+        },
+        "five_factor_below_60": {
+          "alerts": 19,
+          "successful_alerts": 12,
+          "false_alerts": 7,
+          "false_alert_rate_pct": 36.84,
+          "independent_events": 14,
+          "events_warned": 9,
+          "event_recall_pct": 64.29,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 63.16
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "MSTR": {
+      "status": "preliminary_research",
+      "start": "2023-08-03",
+      "end": "2026-11-05",
+      "observations": 819,
+      "events": 29,
+      "models": {
+        "early_weakness": {
+          "alerts": 47,
+          "successful_alerts": 11,
+          "false_alerts": 36,
+          "false_alert_rate_pct": 76.6,
+          "independent_events": 29,
+          "events_warned": 9,
+          "event_recall_pct": 31.03,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 23.4
+        },
+        "high_risk_selloff": {
+          "alerts": 18,
+          "successful_alerts": 0,
+          "false_alerts": 18,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 29,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 43,
+          "successful_alerts": 11,
+          "false_alerts": 32,
+          "false_alert_rate_pct": 74.42,
+          "independent_events": 29,
+          "events_warned": 9,
+          "event_recall_pct": 31.03,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 25.58
+        },
+        "five_factor_below_60": {
+          "alerts": 41,
+          "successful_alerts": 20,
+          "false_alerts": 21,
+          "false_alert_rate_pct": 51.22,
+          "independent_events": 29,
+          "events_warned": 18,
+          "event_recall_pct": 62.07,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 48.78
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "HOOD": {
+      "status": "preliminary_research",
+      "start": "2025-04-08",
+      "end": "2026-11-05",
+      "observations": 398,
+      "events": 14,
+      "models": {
+        "early_weakness": {
+          "alerts": 25,
+          "successful_alerts": 7,
+          "false_alerts": 18,
+          "false_alert_rate_pct": 72.0,
+          "independent_events": 14,
+          "events_warned": 7,
+          "event_recall_pct": 50.0,
+          "median_lead_sessions": 6.0,
+          "precision_pct": 28.0
+        },
+        "high_risk_selloff": {
+          "alerts": 6,
+          "successful_alerts": 0,
+          "false_alerts": 6,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 14,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 24,
+          "successful_alerts": 7,
+          "false_alerts": 17,
+          "false_alert_rate_pct": 70.83,
+          "independent_events": 14,
+          "events_warned": 7,
+          "event_recall_pct": 50.0,
+          "median_lead_sessions": 6.0,
+          "precision_pct": 29.17
+        },
+        "five_factor_below_60": {
+          "alerts": 24,
+          "successful_alerts": 11,
+          "false_alerts": 13,
+          "false_alert_rate_pct": 54.17,
+          "independent_events": 14,
+          "events_warned": 9,
+          "event_recall_pct": 64.29,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 45.83
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "SOFI": {
+      "status": "preliminary_research",
+      "start": "2025-02-05",
+      "end": "2026-11-05",
+      "observations": 441,
+      "events": 13,
+      "models": {
+        "early_weakness": {
+          "alerts": 27,
+          "successful_alerts": 7,
+          "false_alerts": 20,
+          "false_alert_rate_pct": 74.07,
+          "independent_events": 13,
+          "events_warned": 7,
+          "event_recall_pct": 53.85,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 25.93
+        },
+        "high_risk_selloff": {
+          "alerts": 9,
+          "successful_alerts": 0,
+          "false_alerts": 9,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 13,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 23,
+          "successful_alerts": 6,
+          "false_alerts": 17,
+          "false_alert_rate_pct": 73.91,
+          "independent_events": 13,
+          "events_warned": 6,
+          "event_recall_pct": 46.15,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 26.09
+        },
+        "five_factor_below_60": {
+          "alerts": 21,
+          "successful_alerts": 9,
+          "false_alerts": 12,
+          "false_alert_rate_pct": 57.14,
+          "independent_events": 13,
+          "events_warned": 8,
+          "event_recall_pct": 61.54,
+          "median_lead_sessions": 4.5,
+          "precision_pct": 42.86
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "ROKU": {
+      "status": "preliminary_research",
+      "start": "2024-02-12",
+      "end": "2026-11-05",
+      "observations": 687,
+      "events": 18,
+      "models": {
+        "early_weakness": {
+          "alerts": 42,
+          "successful_alerts": 14,
+          "false_alerts": 28,
+          "false_alert_rate_pct": 66.67,
+          "independent_events": 18,
+          "events_warned": 12,
+          "event_recall_pct": 66.67,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 33.33
+        },
+        "high_risk_selloff": {
+          "alerts": 10,
+          "successful_alerts": 0,
+          "false_alerts": 10,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 18,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 40,
+          "successful_alerts": 13,
+          "false_alerts": 27,
+          "false_alert_rate_pct": 67.5,
+          "independent_events": 18,
+          "events_warned": 11,
+          "event_recall_pct": 61.11,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 32.5
+        },
+        "five_factor_below_60": {
+          "alerts": 39,
+          "successful_alerts": 12,
+          "false_alerts": 27,
+          "false_alert_rate_pct": 69.23,
+          "independent_events": 18,
+          "events_warned": 10,
+          "event_recall_pct": 55.56,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 30.77
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "AFRM": {
+      "status": "preliminary_research",
+      "start": "2025-02-07",
+      "end": "2026-11-05",
+      "observations": 439,
+      "events": 15,
+      "models": {
+        "early_weakness": {
+          "alerts": 21,
+          "successful_alerts": 7,
+          "false_alerts": 14,
+          "false_alert_rate_pct": 66.67,
+          "independent_events": 15,
+          "events_warned": 5,
+          "event_recall_pct": 33.33,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 33.33
+        },
+        "high_risk_selloff": {
+          "alerts": 9,
+          "successful_alerts": 1,
+          "false_alerts": 8,
+          "false_alert_rate_pct": 88.89,
+          "independent_events": 15,
+          "events_warned": 1,
+          "event_recall_pct": 6.67,
+          "median_lead_sessions": 6.0,
+          "precision_pct": 11.11
+        },
+        "weakness_or_selloff": {
+          "alerts": 20,
+          "successful_alerts": 7,
+          "false_alerts": 13,
+          "false_alert_rate_pct": 65.0,
+          "independent_events": 15,
+          "events_warned": 5,
+          "event_recall_pct": 33.33,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 35.0
+        },
+        "five_factor_below_60": {
+          "alerts": 26,
+          "successful_alerts": 13,
+          "false_alerts": 13,
+          "false_alert_rate_pct": 50.0,
+          "independent_events": 15,
+          "events_warned": 8,
+          "event_recall_pct": 53.33,
+          "median_lead_sessions": 3.5,
+          "precision_pct": 50.0
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "MARA": {
+      "status": "preliminary_research",
+      "start": "2023-08-03",
+      "end": "2026-11-05",
+      "observations": 819,
+      "events": 30,
+      "models": {
+        "early_weakness": {
+          "alerts": 31,
+          "successful_alerts": 7,
+          "false_alerts": 24,
+          "false_alert_rate_pct": 77.42,
+          "independent_events": 30,
+          "events_warned": 5,
+          "event_recall_pct": 16.67,
+          "median_lead_sessions": 2.0,
+          "precision_pct": 22.58
+        },
+        "high_risk_selloff": {
+          "alerts": 3,
+          "successful_alerts": 1,
+          "false_alerts": 2,
+          "false_alert_rate_pct": 66.67,
+          "independent_events": 30,
+          "events_warned": 1,
+          "event_recall_pct": 3.33,
+          "median_lead_sessions": 9.0,
+          "precision_pct": 33.33
+        },
+        "weakness_or_selloff": {
+          "alerts": 30,
+          "successful_alerts": 6,
+          "false_alerts": 24,
+          "false_alert_rate_pct": 80.0,
+          "independent_events": 30,
+          "events_warned": 5,
+          "event_recall_pct": 16.67,
+          "median_lead_sessions": 2.0,
+          "precision_pct": 20.0
+        },
+        "five_factor_below_60": {
+          "alerts": 42,
+          "successful_alerts": 21,
+          "false_alerts": 21,
+          "false_alert_rate_pct": 50.0,
+          "independent_events": 30,
+          "events_warned": 18,
+          "event_recall_pct": 60.0,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 50.0
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "RIOT": {
+      "status": "preliminary_research",
+      "start": "2023-08-29",
+      "end": "2026-11-05",
+      "observations": 801,
+      "events": 29,
+      "models": {
+        "early_weakness": {
+          "alerts": 32,
+          "successful_alerts": 10,
+          "false_alerts": 22,
+          "false_alert_rate_pct": 68.75,
+          "independent_events": 29,
+          "events_warned": 9,
+          "event_recall_pct": 31.03,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 31.25
+        },
+        "high_risk_selloff": {
+          "alerts": 3,
+          "successful_alerts": 1,
+          "false_alerts": 2,
+          "false_alert_rate_pct": 66.67,
+          "independent_events": 29,
+          "events_warned": 1,
+          "event_recall_pct": 3.45,
+          "median_lead_sessions": 10.0,
+          "precision_pct": 33.33
+        },
+        "weakness_or_selloff": {
+          "alerts": 32,
+          "successful_alerts": 10,
+          "false_alerts": 22,
+          "false_alert_rate_pct": 68.75,
+          "independent_events": 29,
+          "events_warned": 9,
+          "event_recall_pct": 31.03,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 31.25
+        },
+        "five_factor_below_60": {
+          "alerts": 41,
+          "successful_alerts": 17,
+          "false_alerts": 24,
+          "false_alert_rate_pct": 58.54,
+          "independent_events": 29,
+          "events_warned": 14,
+          "event_recall_pct": 48.28,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 41.46
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "UPST": {
+      "status": "preliminary_research",
+      "start": "2025-01-31",
+      "end": "2026-11-05",
+      "observations": 444,
+      "events": 16,
+      "models": {
+        "early_weakness": {
+          "alerts": 23,
+          "successful_alerts": 4,
+          "false_alerts": 19,
+          "false_alert_rate_pct": 82.61,
+          "independent_events": 16,
+          "events_warned": 4,
+          "event_recall_pct": 25.0,
+          "median_lead_sessions": 5.5,
+          "precision_pct": 17.39
+        },
+        "high_risk_selloff": {
+          "alerts": 8,
+          "successful_alerts": 0,
+          "false_alerts": 8,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 16,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 19,
+          "successful_alerts": 4,
+          "false_alerts": 15,
+          "false_alert_rate_pct": 78.95,
+          "independent_events": 16,
+          "events_warned": 4,
+          "event_recall_pct": 25.0,
+          "median_lead_sessions": 5.5,
+          "precision_pct": 21.05
+        },
+        "five_factor_below_60": {
+          "alerts": 16,
+          "successful_alerts": 7,
+          "false_alerts": 9,
+          "false_alert_rate_pct": 56.25,
+          "independent_events": 16,
+          "events_warned": 7,
+          "event_recall_pct": 43.75,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 43.75
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "SMCI": {
+      "status": "preliminary_research",
+      "start": "2023-08-03",
+      "end": "2026-11-05",
+      "observations": 819,
+      "events": 30,
+      "models": {
+        "early_weakness": {
+          "alerts": 37,
+          "successful_alerts": 7,
+          "false_alerts": 30,
+          "false_alert_rate_pct": 81.08,
+          "independent_events": 30,
+          "events_warned": 7,
+          "event_recall_pct": 23.33,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 18.92
+        },
+        "high_risk_selloff": {
+          "alerts": 15,
+          "successful_alerts": 0,
+          "false_alerts": 15,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 30,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 30,
+          "successful_alerts": 7,
+          "false_alerts": 23,
+          "false_alert_rate_pct": 76.67,
+          "independent_events": 30,
+          "events_warned": 7,
+          "event_recall_pct": 23.33,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 23.33
+        },
+        "five_factor_below_60": {
+          "alerts": 39,
+          "successful_alerts": 20,
+          "false_alerts": 19,
+          "false_alert_rate_pct": 48.72,
+          "independent_events": 30,
+          "events_warned": 14,
+          "event_recall_pct": 46.67,
+          "median_lead_sessions": 2.5,
+          "precision_pct": 51.28
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "GME": {
+      "status": "preliminary_research",
+      "start": "2023-08-03",
+      "end": "2026-11-05",
+      "observations": 819,
+      "events": 29,
+      "models": {
+        "early_weakness": {
+          "alerts": 34,
+          "successful_alerts": 14,
+          "false_alerts": 20,
+          "false_alert_rate_pct": 58.82,
+          "independent_events": 29,
+          "events_warned": 12,
+          "event_recall_pct": 41.38,
+          "median_lead_sessions": 4.5,
+          "precision_pct": 41.18
+        },
+        "high_risk_selloff": {
+          "alerts": 13,
+          "successful_alerts": 1,
+          "false_alerts": 12,
+          "false_alert_rate_pct": 92.31,
+          "independent_events": 29,
+          "events_warned": 1,
+          "event_recall_pct": 3.45,
+          "median_lead_sessions": 10.0,
+          "precision_pct": 7.69
+        },
+        "weakness_or_selloff": {
+          "alerts": 29,
+          "successful_alerts": 13,
+          "false_alerts": 16,
+          "false_alert_rate_pct": 55.17,
+          "independent_events": 29,
+          "events_warned": 11,
+          "event_recall_pct": 37.93,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 44.83
+        },
+        "five_factor_below_60": {
+          "alerts": 38,
+          "successful_alerts": 14,
+          "false_alerts": 24,
+          "false_alert_rate_pct": 63.16,
+          "independent_events": 29,
+          "events_warned": 13,
+          "event_recall_pct": 44.83,
+          "median_lead_sessions": 6.0,
+          "precision_pct": 36.84
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "APP": {
+      "status": "preliminary_research",
+      "start": "2025-03-07",
+      "end": "2026-11-05",
+      "observations": 420,
+      "events": 12,
+      "models": {
+        "early_weakness": {
+          "alerts": 23,
+          "successful_alerts": 5,
+          "false_alerts": 18,
+          "false_alert_rate_pct": 78.26,
+          "independent_events": 12,
+          "events_warned": 3,
+          "event_recall_pct": 25.0,
+          "median_lead_sessions": 1.0,
+          "precision_pct": 21.74
+        },
+        "high_risk_selloff": {
+          "alerts": 12,
+          "successful_alerts": 1,
+          "false_alerts": 11,
+          "false_alert_rate_pct": 91.67,
+          "independent_events": 12,
+          "events_warned": 1,
+          "event_recall_pct": 8.33,
+          "median_lead_sessions": 10.0,
+          "precision_pct": 8.33
+        },
+        "weakness_or_selloff": {
+          "alerts": 18,
+          "successful_alerts": 3,
+          "false_alerts": 15,
+          "false_alert_rate_pct": 83.33,
+          "independent_events": 12,
+          "events_warned": 3,
+          "event_recall_pct": 25.0,
+          "median_lead_sessions": 2.0,
+          "precision_pct": 16.67
+        },
+        "five_factor_below_60": {
+          "alerts": 21,
+          "successful_alerts": 8,
+          "false_alerts": 13,
+          "false_alert_rate_pct": 61.9,
+          "independent_events": 12,
+          "events_warned": 7,
+          "event_recall_pct": 58.33,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 38.1
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "CRWD": {
+      "status": "preliminary_research",
+      "start": "2024-08-15",
+      "end": "2026-11-05",
+      "observations": 559,
+      "events": 20,
+      "models": {
+        "early_weakness": {
+          "alerts": 31,
+          "successful_alerts": 12,
+          "false_alerts": 19,
+          "false_alert_rate_pct": 61.29,
+          "independent_events": 20,
+          "events_warned": 11,
+          "event_recall_pct": 55.0,
+          "median_lead_sessions": 4.0,
+          "precision_pct": 38.71
+        },
+        "high_risk_selloff": {
+          "alerts": 8,
+          "successful_alerts": 2,
+          "false_alerts": 6,
+          "false_alert_rate_pct": 75.0,
+          "independent_events": 20,
+          "events_warned": 2,
+          "event_recall_pct": 10.0,
+          "median_lead_sessions": 6.0,
+          "precision_pct": 25.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 29,
+          "successful_alerts": 10,
+          "false_alerts": 19,
+          "false_alert_rate_pct": 65.52,
+          "independent_events": 20,
+          "events_warned": 10,
+          "event_recall_pct": 50.0,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 34.48
+        },
+        "five_factor_below_60": {
+          "alerts": 31,
+          "successful_alerts": 11,
+          "false_alerts": 20,
+          "false_alert_rate_pct": 64.52,
+          "independent_events": 20,
+          "events_warned": 10,
+          "event_recall_pct": 50.0,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 35.48
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "IONQ": {
+      "status": "preliminary_research",
+      "start": "2025-02-05",
+      "end": "2026-11-05",
+      "observations": 441,
+      "events": 18,
+      "models": {
+        "early_weakness": {
+          "alerts": 21,
+          "successful_alerts": 5,
+          "false_alerts": 16,
+          "false_alert_rate_pct": 76.19,
+          "independent_events": 18,
+          "events_warned": 5,
+          "event_recall_pct": 27.78,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 23.81
+        },
+        "high_risk_selloff": {
+          "alerts": 6,
+          "successful_alerts": 0,
+          "false_alerts": 6,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 18,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 20,
+          "successful_alerts": 5,
+          "false_alerts": 15,
+          "false_alert_rate_pct": 75.0,
+          "independent_events": 18,
+          "events_warned": 5,
+          "event_recall_pct": 27.78,
+          "median_lead_sessions": 3.0,
+          "precision_pct": 25.0
+        },
+        "five_factor_below_60": {
+          "alerts": 23,
+          "successful_alerts": 13,
+          "false_alerts": 10,
+          "false_alert_rate_pct": 43.48,
+          "independent_events": 18,
+          "events_warned": 12,
+          "event_recall_pct": 66.67,
+          "median_lead_sessions": 4.5,
+          "precision_pct": 56.52
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "RKLB": {
+      "status": "preliminary_research",
+      "start": "2025-01-24",
+      "end": "2026-11-05",
+      "observations": 449,
+      "events": 17,
+      "models": {
+        "early_weakness": {
+          "alerts": 23,
+          "successful_alerts": 11,
+          "false_alerts": 12,
+          "false_alert_rate_pct": 52.17,
+          "independent_events": 17,
+          "events_warned": 8,
+          "event_recall_pct": 47.06,
+          "median_lead_sessions": 3.5,
+          "precision_pct": 47.83
+        },
+        "high_risk_selloff": {
+          "alerts": 8,
+          "successful_alerts": 3,
+          "false_alerts": 5,
+          "false_alert_rate_pct": 62.5,
+          "independent_events": 17,
+          "events_warned": 2,
+          "event_recall_pct": 11.76,
+          "median_lead_sessions": 6.0,
+          "precision_pct": 37.5
+        },
+        "weakness_or_selloff": {
+          "alerts": 22,
+          "successful_alerts": 10,
+          "false_alerts": 12,
+          "false_alert_rate_pct": 54.55,
+          "independent_events": 17,
+          "events_warned": 8,
+          "event_recall_pct": 47.06,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 45.45
+        },
+        "five_factor_below_60": {
+          "alerts": 26,
+          "successful_alerts": 15,
+          "false_alerts": 11,
+          "false_alert_rate_pct": 42.31,
+          "independent_events": 17,
+          "events_warned": 12,
+          "event_recall_pct": 70.59,
+          "median_lead_sessions": 3.5,
+          "precision_pct": 57.69
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    },
+    "HIMS": {
+      "status": "preliminary_research",
+      "start": "2024-09-12",
+      "end": "2026-11-05",
+      "observations": 540,
+      "events": 20,
+      "models": {
+        "early_weakness": {
+          "alerts": 25,
+          "successful_alerts": 5,
+          "false_alerts": 20,
+          "false_alert_rate_pct": 80.0,
+          "independent_events": 20,
+          "events_warned": 5,
+          "event_recall_pct": 25.0,
+          "median_lead_sessions": 1.0,
+          "precision_pct": 20.0
+        },
+        "high_risk_selloff": {
+          "alerts": 10,
+          "successful_alerts": 0,
+          "false_alerts": 10,
+          "false_alert_rate_pct": 100.0,
+          "independent_events": 20,
+          "events_warned": 0,
+          "event_recall_pct": 0.0,
+          "median_lead_sessions": null,
+          "precision_pct": 0.0
+        },
+        "weakness_or_selloff": {
+          "alerts": 25,
+          "successful_alerts": 5,
+          "false_alerts": 20,
+          "false_alert_rate_pct": 80.0,
+          "independent_events": 20,
+          "events_warned": 5,
+          "event_recall_pct": 25.0,
+          "median_lead_sessions": 1.0,
+          "precision_pct": 20.0
+        },
+        "five_factor_below_60": {
+          "alerts": 30,
+          "successful_alerts": 12,
+          "false_alerts": 18,
+          "false_alert_rate_pct": 60.0,
+          "independent_events": 20,
+          "events_warned": 12,
+          "event_recall_pct": 60.0,
+          "median_lead_sessions": 5.0,
+          "precision_pct": 40.0
+        }
+      },
+      "rules": {
+        "event": "First crossing below 92% of previous 20-session closing high; cooldown 10 sessions",
+        "warning": "Only transition into state; signals at close; warning must precede event by 1..10 sessions",
+        "budget": "Each model at most 2 alerts per 21 sessions, not necessarily identical realized alert counts",
+        "split": "Chronological last 30% of each ticker; fixed provisional rules"
+      },
+      "limitations": "Event defined by drawdown from recent high, not future -8% from warning close. Same cap but unequal actual alert counts. Cross-stock dependence and survivorship bias remain. No parameter search or independent prospective validation."
+    }
+  },
+  "note": "Different event definition from round 1. Do not compare headline recall percentages directly."
+}
