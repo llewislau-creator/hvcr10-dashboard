@@ -62,6 +62,20 @@ def summarize_trades(trades):
             "max_sequential_drawdown_pct":round(float(((equity/peaks)-1).min()*100),2),
             "note":"逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"}
 
+def moving_block_bootstrap_ci(values, block_length, repeats=2000, seed=20261106):
+    x=np.asarray(values,dtype=float)
+    if x.ndim!=1 or not np.all(np.isfinite(x)):raise ValueError('報酬序列無效')
+    if block_length<1 or repeats<1:raise ValueError('區塊長度及重抽樣次數必須為正')
+    n=len(x)
+    if n<block_length or n<2:return None
+    rng=np.random.default_rng(seed+block_length)
+    k=int(math.ceil(n/block_length))
+    starts=rng.integers(0,n-block_length+1,size=(repeats,k))
+    offsets=np.arange(block_length)
+    idx=(starts[:,:,None]+offsets).reshape(repeats,-1)[:,:n]
+    means=x[idx].mean(axis=1)
+    return [round(float(v),2) for v in np.percentile(means,[2.5,97.5])]
+
 def backtest_plans(df, days=15, benchmark_close=None):
     """Held-out 30% only; every 'days' trading sessions, no overlapping positions.
     Signal at close: close > 50d MA, 20d return >0, dollar volume >=10m.
@@ -113,6 +127,13 @@ def backtest_plans(df, days=15, benchmark_close=None):
     else:
         out["mean_net_bootstrap_ci95_pct"]=None
     out["ci_note"]="固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證"
+    out['moving_block_bootstrap']={
+        'method':'moving non-circular contiguous trade blocks; percentile CI of mean net return',
+        'repeats':2000,'seed':20261106,'block_lengths':[5,10,20],
+        'ci95_pct':{str(k):moving_block_bootstrap_ci(vals,k) for k in (5,10,20)},
+        'iid_ci95_pct':out['mean_net_bootstrap_ci95_pct'],
+        'note':'按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較'}
+    }
     out["regime_results"]={name:summarize_trades([t for t,g in zip(trades,regimes) if g==name]) for name in ("SPY上升趨勢","SPY下降趨勢","市場狀態未知")}
     bear_n=out["regime_results"]["SPY下降趨勢"]["n"]
     out["bear_market_robustness"]={"sample_threshold":30,"sample_adequate":bear_n>=30,
