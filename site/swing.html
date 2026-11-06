@@ -4,7 +4,7 @@
 <section class="panel"><div id="health">讀取報告中…</div><p class="muted">排名以中期趨勢、動能、相對 SPY 強弱、健康回調、量價確認五個維度計算。波動率不再是必要選股條件。分數不是上升機率。</p></section>
 <div class="grid" id="summary"></div><section class="panel" id="exclusions" hidden></section><section class="panel"><h2>第一階段｜大市環境與事件風險</h2><div class="grid" id="market"></div><p class="muted">SPY／QQQ 趨勢與 VIX 只供風險判斷；財報日期未取得時顯示「待確認」，不代表沒有財報。</p></section>
 <section class="panel"><div class="flex"><h2>投資研究機會排行榜</h2><label>排序 <select id="sort"><option value="score">波段觀察分數（預設）</option><option value="mom">20日動能</option><option value="relative">相對 SPY 強度</option><option value="ticker">股票代號</option></select></label></div><div class="scroll"><table><thead><tr><th>排名</th><th>股票</th><th>價格</th><th>波段分數</th><th>研究狀態</th><th>財報風險</th><th>數據品質</th><th>20日動能</th><th>相對SPY</th><th>10日樣本外平均淨報酬</th><th>樣本數</th><th>行情日</th></tr></thead><tbody id="rows"></tbody></table></div><p><small>樣本外平均淨報酬是歷史測試結果，不是預測回報。排名不以該歷史回報直接排序，以免過度擬合。</small></p></section>
-<section class="panel"><div class="flex"><h2>個股投資研究</h2><label>股票 <select id="ticker"></select></label></div><div id="detail"></div></section>
+<section class="panel"><div class="flex"><h2>個股投資研究</h2><label>股票 <select id="ticker"></select></label></div><div id="detail"></div><div id="stage2"></div></section>
 <section class="panel"><h2>模型限制與方法</h2><p class="notice">目前為規則式研究分數，未經跨股票機率校準；尚未加入財報、估值、業績事件、組合風險及正式 walk-forward 調參驗證。不要將「優先研究」理解為買入建議。</p><p>回測：70/30 時間切分；樣本外每隔持有期抽取非重疊候選日；候選日分數至少60分；訊號後下一交易日開盤入場，10／15／20交易日末收盤出場；單邊假設成本15bps、滑價10bps。這是歷史觀察，不是實際成交績效。</p></section>
 </main><script>
 const $=id=>document.getElementById(id),esc=x=>String(x??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let all=[];
