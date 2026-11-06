@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import numpy as np,pandas as pd
-from stage2_risk import make_plan,simulate_plan,summarize_trades,backtest_plans
+from stage2_risk import make_plan,simulate_plan,summarize_trades,backtest_plans,moving_block_bootstrap_ci
 n=700
 dates=pd.bdate_range("2022-01-03",periods=n)
 close=100+np.arange(n)*.07
@@ -17,6 +17,12 @@ for days in (10,15,20):
     assert x is not None and x["net_return_pct"]<=x["gross_return_pct"]
     y=backtest_plans(df,days=days,benchmark_close=df.Close)
     assert y["n"]>=0
+    mb=y['moving_block_bootstrap']
+    assert mb['repeats']==2000 and mb['block_lengths']==[5,10,20]
+    assert mb['iid_ci95_pct']==y['mean_net_bootstrap_ci95_pct']
+    for k in (5,10,20):
+        ci=mb['ci95_pct'][str(k)]
+        assert (ci is None) if y['n']<k else (len(ci)==2 and ci[0]<=ci[1])
     audit=y['walk_forward']['trade_audit']
     assert len(audit)==y['n']
     assert len({(t['signal_date'],t['entry_date'],t['exit_date']) for t in audit})==len(audit)
@@ -50,4 +56,17 @@ future.iloc[110,future.columns.get_loc("Low")]=p["stop"]-1
 t=simulate_plan(future,109,p,days=10)
 assert t["exit_reason"].startswith("止損優先")
 assert summarize_trades([t])["n"]==1
+# Moving blocks preserve adjacent observations and are reproducible.
+sequence=np.array([0.,0.,0.,0.,0.,10.,10.,10.,10.,10.])
+for k in (5,10):
+    ci=moving_block_bootstrap_ci(sequence,k)
+    assert ci==moving_block_bootstrap_ci(sequence,k)
+    assert ci[0]<=sequence.mean()<=ci[1]
+assert moving_block_bootstrap_ci(sequence,20) is None
+assert moving_block_bootstrap_ci([1.],1) is None
+try:
+    moving_block_bootstrap_ci([1.,float('nan')],1)
+    raise AssertionError('expected invalid sequence rejection')
+except ValueError:
+    pass
 print("stage2 tests passed")
