@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-06T02:26:56.721475+00:00",
+  "updated_utc": "2026-11-06T02:36:08.503713+00:00",
   "universe": "20 隻預選觀察股票，並非全美股",
   "rows": [
     {
@@ -366,6 +366,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 160.37,
+          "stop": 155.27,
+          "target": 170.58,
+          "atr14": 2.55,
+          "reward_risk": 2.0,
+          "shares": 9,
+          "max_risk_budget": 50.0,
+          "position_capital": 1443.33,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 36,
+            "mean_net_pct": -0.09,
+            "win_rate_pct": 41.7,
+            "profit_factor": 0.97,
+            "max_sequential_drawdown_pct": -30.29,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.44,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 26,
+            "mean_net_pct": -1.69,
+            "win_rate_pct": 30.8,
+            "profit_factor": 0.62,
+            "max_sequential_drawdown_pct": -43.76,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -1.88,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 21,
+            "mean_net_pct": 1.23,
+            "win_rate_pct": 47.6,
+            "profit_factor": 1.3,
+            "max_sequential_drawdown_pct": -28.51,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.69,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
@@ -738,6 +793,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 356.1,
+          "stop": 316.41,
+          "target": 435.49,
+          "atr14": 19.85,
+          "reward_risk": 2.0,
+          "shares": 1,
+          "max_risk_budget": 50.0,
+          "position_capital": 356.1,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 17,
+            "mean_net_pct": 1.96,
+            "win_rate_pct": 52.9,
+            "profit_factor": 1.38,
+            "max_sequential_drawdown_pct": -35.88,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.98,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 10,
+            "mean_net_pct": 2.6,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.49,
+            "max_sequential_drawdown_pct": -16.6,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.93,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 9,
+            "mean_net_pct": 4.85,
+            "win_rate_pct": 44.4,
+            "profit_factor": 1.79,
+            "max_sequential_drawdown_pct": -27.56,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.95,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
@@ -1113,6 +1223,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 16.04,
+          "stop": 14.3,
+          "target": 19.52,
+          "atr14": 0.87,
+          "reward_risk": 2.0,
+          "shares": 28,
+          "max_risk_budget": 50.0,
+          "position_capital": 449.12,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 18,
+            "mean_net_pct": 1.47,
+            "win_rate_pct": 61.1,
+            "profit_factor": 1.4,
+            "max_sequential_drawdown_pct": -41.92,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.86,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 15,
+            "mean_net_pct": 1.27,
+            "win_rate_pct": 53.3,
+            "profit_factor": 1.33,
+            "max_sequential_drawdown_pct": -40.51,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.42,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 10,
+            "mean_net_pct": 3.88,
+            "win_rate_pct": 60.0,
+            "profit_factor": 1.89,
+            "max_sequential_drawdown_pct": -35.05,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.94,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "unknown",
         "date": null,
@@ -1485,6 +1650,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 181.6,
+          "stop": 166.91,
+          "target": 210.97,
+          "atr14": 7.34,
+          "reward_risk": 2.0,
+          "shares": 3,
+          "max_risk_budget": 50.0,
+          "position_capital": 544.8,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 49,
+            "mean_net_pct": 0.75,
+            "win_rate_pct": 44.9,
+            "profit_factor": 1.25,
+            "max_sequential_drawdown_pct": -37.0,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.11,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 31,
+            "mean_net_pct": -0.1,
+            "win_rate_pct": 35.5,
+            "profit_factor": 0.97,
+            "max_sequential_drawdown_pct": -24.81,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.88,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 25,
+            "mean_net_pct": 0.44,
+            "win_rate_pct": 40.0,
+            "profit_factor": 1.1,
+            "max_sequential_drawdown_pct": -28.36,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.46,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "upcoming",
         "date": "2026-11-17",
@@ -1856,6 +2076,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 343.69,
+          "stop": 310.81,
+          "target": 409.46,
+          "atr14": 16.44,
+          "reward_risk": 2.0,
+          "shares": 1,
+          "max_risk_budget": 50.0,
+          "position_capital": 343.69,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 34,
+            "mean_net_pct": 0.8,
+            "win_rate_pct": 44.1,
+            "profit_factor": 1.23,
+            "max_sequential_drawdown_pct": -20.16,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.37,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 24,
+            "mean_net_pct": -0.61,
+            "win_rate_pct": 37.5,
+            "profit_factor": 0.87,
+            "max_sequential_drawdown_pct": -31.76,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -1.14,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 16,
+            "mean_net_pct": 2.25,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.6,
+            "max_sequential_drawdown_pct": -19.88,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 1.02,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
@@ -2231,6 +2506,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 404.4,
+          "stop": 334.07,
+          "target": 545.05,
+          "atr14": 35.16,
+          "reward_risk": 2.0,
+          "shares": 0,
+          "max_risk_budget": 50.0,
+          "position_capital": 0.0,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 35,
+            "mean_net_pct": 1.83,
+            "win_rate_pct": 51.4,
+            "profit_factor": 1.54,
+            "max_sequential_drawdown_pct": -26.5,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 1.35,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 23,
+            "mean_net_pct": 0.88,
+            "win_rate_pct": 56.5,
+            "profit_factor": 1.23,
+            "max_sequential_drawdown_pct": -27.73,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.79,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 16,
+            "mean_net_pct": 1.75,
+            "win_rate_pct": 43.8,
+            "profit_factor": 1.37,
+            "max_sequential_drawdown_pct": -24.58,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 1.37,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "unknown",
         "date": null,
@@ -2602,6 +2932,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 154.99,
+          "stop": 135.55,
+          "target": 193.86,
+          "atr14": 9.72,
+          "reward_risk": 2.0,
+          "shares": 2,
+          "max_risk_budget": 50.0,
+          "position_capital": 309.98,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 22,
+            "mean_net_pct": -3.65,
+            "win_rate_pct": 31.8,
+            "profit_factor": 0.36,
+            "max_sequential_drawdown_pct": -60.43,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -3.49,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 12,
+            "mean_net_pct": 0.8,
+            "win_rate_pct": 41.7,
+            "profit_factor": 1.2,
+            "max_sequential_drawdown_pct": -30.67,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.49,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 9,
+            "mean_net_pct": -4.64,
+            "win_rate_pct": 22.2,
+            "profit_factor": 0.29,
+            "max_sequential_drawdown_pct": -36.75,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -4.66,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
@@ -2975,6 +3360,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 129.3,
+          "stop": 109.29,
+          "target": 169.33,
+          "atr14": 10.01,
+          "reward_risk": 2.0,
+          "shares": 2,
+          "max_risk_budget": 50.0,
+          "position_capital": 258.6,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 34,
+            "mean_net_pct": -0.2,
+            "win_rate_pct": 44.1,
+            "profit_factor": 0.97,
+            "max_sequential_drawdown_pct": -67.46,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.95,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 23,
+            "mean_net_pct": 1.42,
+            "win_rate_pct": 47.8,
+            "profit_factor": 1.18,
+            "max_sequential_drawdown_pct": -62.18,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.77,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 16,
+            "mean_net_pct": -1.72,
+            "win_rate_pct": 37.5,
+            "profit_factor": 0.81,
+            "max_sequential_drawdown_pct": -75.13,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -2.0,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "unknown",
         "date": null,
@@ -3346,6 +3786,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 217.2,
+          "stop": 188.75,
+          "target": 274.09,
+          "atr14": 14.22,
+          "reward_risk": 2.0,
+          "shares": 1,
+          "max_risk_budget": 50.0,
+          "position_capital": 217.2,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 32,
+            "mean_net_pct": 1.92,
+            "win_rate_pct": 59.4,
+            "profit_factor": 1.69,
+            "max_sequential_drawdown_pct": -22.83,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 1.61,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 22,
+            "mean_net_pct": 1.56,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.49,
+            "max_sequential_drawdown_pct": -28.69,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 1.23,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 16,
+            "mean_net_pct": 4.08,
+            "win_rate_pct": 56.2,
+            "profit_factor": 2.23,
+            "max_sequential_drawdown_pct": -18.55,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 3.18,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "upcoming",
@@ -3721,6 +4216,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 78.39,
+          "stop": 67.06,
+          "target": 101.05,
+          "atr14": 5.67,
+          "reward_risk": 2.0,
+          "shares": 4,
+          "max_risk_budget": 50.0,
+          "position_capital": 313.56,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 22,
+            "mean_net_pct": 0.97,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.19,
+            "max_sequential_drawdown_pct": -45.79,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.26,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 16,
+            "mean_net_pct": 2.98,
+            "win_rate_pct": 56.2,
+            "profit_factor": 1.64,
+            "max_sequential_drawdown_pct": -32.08,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 1.84,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 9,
+            "mean_net_pct": -0.52,
+            "win_rate_pct": 33.3,
+            "profit_factor": 0.91,
+            "max_sequential_drawdown_pct": -43.38,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -1.77,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "unknown",
         "date": null,
@@ -4092,6 +4642,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 136.82,
+          "stop": 114.71,
+          "target": 181.04,
+          "atr14": 11.06,
+          "reward_risk": 2.0,
+          "shares": 2,
+          "max_risk_budget": 50.0,
+          "position_capital": 273.64,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 15,
+            "mean_net_pct": -3.73,
+            "win_rate_pct": 20.0,
+            "profit_factor": 0.47,
+            "max_sequential_drawdown_pct": -62.86,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -4.23,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 9,
+            "mean_net_pct": -1.0,
+            "win_rate_pct": 33.3,
+            "profit_factor": 0.83,
+            "max_sequential_drawdown_pct": -42.97,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -1.78,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 8,
+            "mean_net_pct": 3.43,
+            "win_rate_pct": 37.5,
+            "profit_factor": 1.69,
+            "max_sequential_drawdown_pct": -34.55,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.56,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
@@ -4465,6 +5070,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 27.08,
+          "stop": 21.93,
+          "target": 37.38,
+          "atr14": 2.57,
+          "reward_risk": 2.0,
+          "shares": 9,
+          "max_risk_budget": 50.0,
+          "position_capital": 243.72,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 34,
+            "mean_net_pct": -2.83,
+            "win_rate_pct": 38.2,
+            "profit_factor": 0.65,
+            "max_sequential_drawdown_pct": -81.46,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -3.12,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 20,
+            "mean_net_pct": -3.76,
+            "win_rate_pct": 35.0,
+            "profit_factor": 0.58,
+            "max_sequential_drawdown_pct": -70.96,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -3.74,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 16,
+            "mean_net_pct": 1.43,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.17,
+            "max_sequential_drawdown_pct": -52.01,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 0.58,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "unknown",
         "date": null,
@@ -4836,6 +5496,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 45.99,
+          "stop": 37.29,
+          "target": 63.4,
+          "atr14": 4.35,
+          "reward_risk": 2.0,
+          "shares": 5,
+          "max_risk_budget": 50.0,
+          "position_capital": 229.95,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 21,
+            "mean_net_pct": 0.13,
+            "win_rate_pct": 42.9,
+            "profit_factor": 1.02,
+            "max_sequential_drawdown_pct": -40.58,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.79,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 17,
+            "mean_net_pct": 3.46,
+            "win_rate_pct": 41.2,
+            "profit_factor": 1.53,
+            "max_sequential_drawdown_pct": -26.93,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.43,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 10,
+            "mean_net_pct": -1.9,
+            "win_rate_pct": 30.0,
+            "profit_factor": 0.8,
+            "max_sequential_drawdown_pct": -46.19,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -2.69,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "upcoming",
@@ -5209,6 +5924,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 26.43,
+          "stop": 21.39,
+          "target": 36.52,
+          "atr14": 2.52,
+          "reward_risk": 2.0,
+          "shares": 9,
+          "max_risk_budget": 50.0,
+          "position_capital": 237.87,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 14,
+            "mean_net_pct": 2.41,
+            "win_rate_pct": 42.9,
+            "profit_factor": 1.34,
+            "max_sequential_drawdown_pct": -39.0,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 1.57,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 9,
+            "mean_net_pct": 3.83,
+            "win_rate_pct": 44.4,
+            "profit_factor": 1.47,
+            "max_sequential_drawdown_pct": -24.91,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.82,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 6,
+            "mean_net_pct": 4.05,
+            "win_rate_pct": 33.3,
+            "profit_factor": 1.54,
+            "max_sequential_drawdown_pct": -25.33,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.72,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "unknown",
         "date": null,
@@ -5580,6 +6350,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 14.76,
+          "stop": 11.77,
+          "target": 20.74,
+          "atr14": 1.49,
+          "reward_risk": 2.0,
+          "shares": 16,
+          "max_risk_budget": 50.0,
+          "position_capital": 236.16,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 38,
+            "mean_net_pct": 0.05,
+            "win_rate_pct": 44.7,
+            "profit_factor": 1.01,
+            "max_sequential_drawdown_pct": -65.56,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.52,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 24,
+            "mean_net_pct": -0.14,
+            "win_rate_pct": 45.8,
+            "profit_factor": 0.98,
+            "max_sequential_drawdown_pct": -61.44,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.6,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 22,
+            "mean_net_pct": 0.81,
+            "win_rate_pct": 45.5,
+            "profit_factor": 1.1,
+            "max_sequential_drawdown_pct": -53.25,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.31,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
@@ -5953,6 +6778,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 24.06,
+          "stop": 19.93,
+          "target": 32.32,
+          "atr14": 2.06,
+          "reward_risk": 2.0,
+          "shares": 12,
+          "max_risk_budget": 50.0,
+          "position_capital": 288.72,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 23,
+            "mean_net_pct": 3.02,
+            "win_rate_pct": 43.5,
+            "profit_factor": 1.41,
+            "max_sequential_drawdown_pct": -54.75,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.94,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 12,
+            "mean_net_pct": -8.71,
+            "win_rate_pct": 16.7,
+            "profit_factor": 0.32,
+            "max_sequential_drawdown_pct": -76.3,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -8.44,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 11,
+            "mean_net_pct": 3.55,
+            "win_rate_pct": 45.5,
+            "profit_factor": 1.43,
+            "max_sequential_drawdown_pct": -48.13,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": 2.93,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "upcoming",
         "date": "2026-11-09",
@@ -6324,6 +7204,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 69.66,
+          "stop": 61.46,
+          "target": 86.05,
+          "atr14": 4.1,
+          "reward_risk": 2.0,
+          "shares": 6,
+          "max_risk_budget": 50.0,
+          "position_capital": 417.96,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 22,
+            "mean_net_pct": -2.76,
+            "win_rate_pct": 36.4,
+            "profit_factor": 0.51,
+            "max_sequential_drawdown_pct": -51.68,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -3.36,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 14,
+            "mean_net_pct": 1.11,
+            "win_rate_pct": 35.7,
+            "profit_factor": 1.31,
+            "max_sequential_drawdown_pct": -30.96,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.35,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 11,
+            "mean_net_pct": -0.39,
+            "win_rate_pct": 45.5,
+            "profit_factor": 0.91,
+            "max_sequential_drawdown_pct": -22.31,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -1.93,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
@@ -6699,6 +7634,61 @@
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
       },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 5.88,
+          "stop": 4.52,
+          "target": 8.6,
+          "atr14": 0.68,
+          "reward_risk": 2.0,
+          "shares": 36,
+          "max_risk_budget": 50.0,
+          "position_capital": 211.68,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 32,
+            "mean_net_pct": -1.63,
+            "win_rate_pct": 40.6,
+            "profit_factor": 0.8,
+            "max_sequential_drawdown_pct": -76.89,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -2.39,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 20,
+            "mean_net_pct": -2.74,
+            "win_rate_pct": 35.0,
+            "profit_factor": 0.72,
+            "max_sequential_drawdown_pct": -70.82,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -3.88,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 17,
+            "mean_net_pct": -4.52,
+            "win_rate_pct": 41.2,
+            "profit_factor": 0.57,
+            "max_sequential_drawdown_pct": -67.58,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -5.36,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
+      },
       "earnings": {
         "status": "upcoming",
         "date": "2026-11-09",
@@ -7072,6 +8062,61 @@
         "slippage_bps_per_side": 10,
         "score_note": "5維等權觀察分數，不是成功機率；未經校準或證實有超額報酬",
         "selection_note": "收盤價>=5美元、20日平均成交金額>=1000萬美元；不以高波動率為必要條件"
+      },
+      "stage2": {
+        "status": "research_only",
+        "plan": {
+          "reference_entry": 22.14,
+          "stop": 19.35,
+          "target": 27.72,
+          "atr14": 1.39,
+          "reward_risk": 2.0,
+          "shares": 17,
+          "max_risk_budget": 50.0,
+          "position_capital": 376.38,
+          "holding_days": [
+            10,
+            15,
+            20
+          ],
+          "note": "收盤價作參考入場價，不保證成交；下一日跳空可能超出預設風險；2 ATR止損、2R目標；單筆風險預算0.5%、持倉上限15%（可調）"
+        },
+        "backtests": {
+          "10": {
+            "n": 13,
+            "mean_net_pct": -1.95,
+            "win_rate_pct": 46.2,
+            "profit_factor": 0.72,
+            "max_sequential_drawdown_pct": -37.46,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -2.73,
+            "horizon_days": 10,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "15": {
+            "n": 10,
+            "mean_net_pct": 0.59,
+            "win_rate_pct": 30.0,
+            "profit_factor": 1.09,
+            "max_sequential_drawdown_pct": -41.85,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -0.23,
+            "horizon_days": 15,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          },
+          "20": {
+            "n": 7,
+            "mean_net_pct": -2.38,
+            "win_rate_pct": 42.9,
+            "profit_factor": 0.66,
+            "max_sequential_drawdown_pct": -34.63,
+            "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
+            "mean_excess_spy_pct": -3.97,
+            "horizon_days": 20,
+            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+          }
+        },
+        "ranking_influence": false
       },
       "earnings": {
         "status": "unknown",
