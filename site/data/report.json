@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-06T02:36:08.503713+00:00",
+  "updated_utc": "2026-11-06T02:45:46.087868+00:00",
   "universe": "20 隻預選觀察股票，並非全美股",
   "rows": [
     {
@@ -387,37 +387,127 @@
         },
         "backtests": {
           "10": {
-            "n": 36,
-            "mean_net_pct": -0.09,
-            "win_rate_pct": 41.7,
-            "profit_factor": 0.97,
-            "max_sequential_drawdown_pct": -30.29,
+            "n": 46,
+            "mean_net_pct": -0.21,
+            "win_rate_pct": 43.5,
+            "profit_factor": 0.93,
+            "max_sequential_drawdown_pct": -35.19,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
             "mean_excess_spy_pct": -0.44,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.55,
+              2.12
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 46,
+                "mean_net_pct": -0.21,
+                "win_rate_pct": 43.5,
+                "profit_factor": 0.93,
+                "max_sequential_drawdown_pct": -35.19,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 26,
-            "mean_net_pct": -1.69,
-            "win_rate_pct": 30.8,
-            "profit_factor": 0.62,
-            "max_sequential_drawdown_pct": -43.76,
+            "n": 38,
+            "mean_net_pct": 0.26,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.08,
+            "max_sequential_drawdown_pct": -24.58,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -1.88,
+            "mean_excess_spy_pct": 0.03,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.45,
+              3.16
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 38,
+                "mean_net_pct": 0.26,
+                "win_rate_pct": 50.0,
+                "profit_factor": 1.08,
+                "max_sequential_drawdown_pct": -24.58,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 21,
-            "mean_net_pct": 1.23,
-            "win_rate_pct": 47.6,
-            "profit_factor": 1.3,
-            "max_sequential_drawdown_pct": -28.51,
+            "n": 28,
+            "mean_net_pct": 0.65,
+            "win_rate_pct": 35.7,
+            "profit_factor": 1.16,
+            "max_sequential_drawdown_pct": -23.58,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.69,
+            "mean_excess_spy_pct": 0.03,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.11,
+              4.92
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 28,
+                "mean_net_pct": 0.65,
+                "win_rate_pct": 35.7,
+                "profit_factor": 1.16,
+                "max_sequential_drawdown_pct": -23.58,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -814,37 +904,127 @@
         },
         "backtests": {
           "10": {
-            "n": 17,
-            "mean_net_pct": 1.96,
-            "win_rate_pct": 52.9,
-            "profit_factor": 1.38,
-            "max_sequential_drawdown_pct": -35.88,
+            "n": 20,
+            "mean_net_pct": 1.15,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.22,
+            "max_sequential_drawdown_pct": -37.84,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.98,
+            "mean_excess_spy_pct": 0.19,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.14,
+              7.07
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 20,
+                "mean_net_pct": 1.15,
+                "win_rate_pct": 50.0,
+                "profit_factor": 1.22,
+                "max_sequential_drawdown_pct": -37.84,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 10,
-            "mean_net_pct": 2.6,
-            "win_rate_pct": 50.0,
-            "profit_factor": 1.49,
-            "max_sequential_drawdown_pct": -16.6,
+            "n": 16,
+            "mean_net_pct": 1.8,
+            "win_rate_pct": 43.8,
+            "profit_factor": 1.34,
+            "max_sequential_drawdown_pct": -33.95,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.93,
+            "mean_excess_spy_pct": 0.95,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.27,
+              8.7
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 16,
+                "mean_net_pct": 1.8,
+                "win_rate_pct": 43.8,
+                "profit_factor": 1.34,
+                "max_sequential_drawdown_pct": -33.95,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 9,
-            "mean_net_pct": 4.85,
-            "win_rate_pct": 44.4,
-            "profit_factor": 1.79,
-            "max_sequential_drawdown_pct": -27.56,
+            "n": 15,
+            "mean_net_pct": 2.63,
+            "win_rate_pct": 46.7,
+            "profit_factor": 1.47,
+            "max_sequential_drawdown_pct": -33.7,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.95,
+            "mean_excess_spy_pct": 1.59,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.58,
+              11.18
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 15,
+                "mean_net_pct": 2.63,
+                "win_rate_pct": 46.7,
+                "profit_factor": 1.47,
+                "max_sequential_drawdown_pct": -33.7,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -1243,37 +1423,127 @@
         },
         "backtests": {
           "10": {
-            "n": 30,
-            "mean_net_pct": 1.86,
-            "win_rate_pct": 43.3,
-            "profit_factor": 1.4,
-            "max_sequential_drawdown_pct": -36.27,
+            "n": 45,
+            "mean_net_pct": 0.65,
+            "win_rate_pct": 42.2,
+            "profit_factor": 1.14,
+            "max_sequential_drawdown_pct": -48.63,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.29,
+            "mean_excess_spy_pct": -0.02,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.13,
+              5.1
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 45,
+                "mean_net_pct": 0.65,
+                "win_rate_pct": 42.2,
+                "profit_factor": 1.14,
+                "max_sequential_drawdown_pct": -48.63,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 20,
-            "mean_net_pct": 0.53,
-            "win_rate_pct": 45.0,
-            "profit_factor": 1.13,
-            "max_sequential_drawdown_pct": -28.62,
+            "n": 39,
+            "mean_net_pct": 1.57,
+            "win_rate_pct": 35.9,
+            "profit_factor": 1.31,
+            "max_sequential_drawdown_pct": -51.96,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.04,
+            "mean_excess_spy_pct": 0.54,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.03,
+              6.9
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 39,
+                "mean_net_pct": 1.57,
+                "win_rate_pct": 35.9,
+                "profit_factor": 1.31,
+                "max_sequential_drawdown_pct": -51.96,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 14,
-            "mean_net_pct": -0.15,
-            "win_rate_pct": 50.0,
-            "profit_factor": 0.98,
-            "max_sequential_drawdown_pct": -28.3,
+            "n": 37,
+            "mean_net_pct": 1.84,
+            "win_rate_pct": 40.5,
+            "profit_factor": 1.32,
+            "max_sequential_drawdown_pct": -53.44,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.3,
+            "mean_excess_spy_pct": 0.84,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.48,
+              7.73
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 37,
+                "mean_net_pct": 1.84,
+                "win_rate_pct": 40.5,
+                "profit_factor": 1.32,
+                "max_sequential_drawdown_pct": -53.44,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -1672,37 +1942,127 @@
         },
         "backtests": {
           "10": {
-            "n": 18,
-            "mean_net_pct": 1.47,
-            "win_rate_pct": 61.1,
-            "profit_factor": 1.4,
-            "max_sequential_drawdown_pct": -41.92,
+            "n": 24,
+            "mean_net_pct": -1.22,
+            "win_rate_pct": 37.5,
+            "profit_factor": 0.76,
+            "max_sequential_drawdown_pct": -63.49,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.86,
+            "mean_excess_spy_pct": -1.56,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.02,
+              2.84
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 24,
+                "mean_net_pct": -1.22,
+                "win_rate_pct": 37.5,
+                "profit_factor": 0.76,
+                "max_sequential_drawdown_pct": -63.49,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 15,
-            "mean_net_pct": 1.27,
-            "win_rate_pct": 53.3,
-            "profit_factor": 1.33,
-            "max_sequential_drawdown_pct": -40.51,
+            "n": 20,
+            "mean_net_pct": -0.74,
+            "win_rate_pct": 45.0,
+            "profit_factor": 0.86,
+            "max_sequential_drawdown_pct": -56.99,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.42,
+            "mean_excess_spy_pct": -1.32,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.6,
+              4.27
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 20,
+                "mean_net_pct": -0.74,
+                "win_rate_pct": 45.0,
+                "profit_factor": 0.86,
+                "max_sequential_drawdown_pct": -56.99,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 10,
-            "mean_net_pct": 3.88,
-            "win_rate_pct": 60.0,
-            "profit_factor": 1.89,
-            "max_sequential_drawdown_pct": -35.05,
+            "n": 18,
+            "mean_net_pct": -0.86,
+            "win_rate_pct": 33.3,
+            "profit_factor": 0.87,
+            "max_sequential_drawdown_pct": -64.75,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.94,
+            "mean_excess_spy_pct": -1.24,
+            "mean_net_bootstrap_ci95_pct": [
+              -6.75,
+              5.4
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 18,
+                "mean_net_pct": -0.86,
+                "win_rate_pct": 33.3,
+                "profit_factor": 0.87,
+                "max_sequential_drawdown_pct": -64.75,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -2099,37 +2459,127 @@
         },
         "backtests": {
           "10": {
-            "n": 49,
-            "mean_net_pct": 0.75,
-            "win_rate_pct": 44.9,
-            "profit_factor": 1.25,
-            "max_sequential_drawdown_pct": -37.0,
+            "n": 64,
+            "mean_net_pct": 0.5,
+            "win_rate_pct": 48.4,
+            "profit_factor": 1.16,
+            "max_sequential_drawdown_pct": -35.8,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.11,
+            "mean_excess_spy_pct": 0.04,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.31,
+              2.54
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 64,
+                "mean_net_pct": 0.5,
+                "win_rate_pct": 48.4,
+                "profit_factor": 1.16,
+                "max_sequential_drawdown_pct": -35.8,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 31,
-            "mean_net_pct": -0.1,
-            "win_rate_pct": 35.5,
-            "profit_factor": 0.97,
-            "max_sequential_drawdown_pct": -24.81,
+            "n": 52,
+            "mean_net_pct": 0.51,
+            "win_rate_pct": 46.2,
+            "profit_factor": 1.14,
+            "max_sequential_drawdown_pct": -42.81,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.88,
+            "mean_excess_spy_pct": -0.13,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.74,
+              2.88
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 52,
+                "mean_net_pct": 0.51,
+                "win_rate_pct": 46.2,
+                "profit_factor": 1.14,
+                "max_sequential_drawdown_pct": -42.81,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 25,
-            "mean_net_pct": 0.44,
-            "win_rate_pct": 40.0,
-            "profit_factor": 1.1,
-            "max_sequential_drawdown_pct": -28.36,
+            "n": 46,
+            "mean_net_pct": 0.99,
+            "win_rate_pct": 47.8,
+            "profit_factor": 1.27,
+            "max_sequential_drawdown_pct": -40.21,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.46,
+            "mean_excess_spy_pct": 0.32,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.73,
+              3.81
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 46,
+                "mean_net_pct": 0.99,
+                "win_rate_pct": 47.8,
+                "profit_factor": 1.27,
+                "max_sequential_drawdown_pct": -40.21,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -2526,37 +2976,127 @@
         },
         "backtests": {
           "10": {
-            "n": 34,
-            "mean_net_pct": 0.8,
-            "win_rate_pct": 44.1,
-            "profit_factor": 1.23,
-            "max_sequential_drawdown_pct": -20.16,
+            "n": 51,
+            "mean_net_pct": -0.0,
+            "win_rate_pct": 49.0,
+            "profit_factor": 1.0,
+            "max_sequential_drawdown_pct": -46.54,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.37,
+            "mean_excess_spy_pct": -0.43,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.26,
+              2.37
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 51,
+                "mean_net_pct": -0.0,
+                "win_rate_pct": 49.0,
+                "profit_factor": 1.0,
+                "max_sequential_drawdown_pct": -46.54,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 24,
-            "mean_net_pct": -0.61,
-            "win_rate_pct": 37.5,
-            "profit_factor": 0.87,
-            "max_sequential_drawdown_pct": -31.76,
+            "n": 42,
+            "mean_net_pct": -0.55,
+            "win_rate_pct": 40.5,
+            "profit_factor": 0.88,
+            "max_sequential_drawdown_pct": -39.51,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -1.14,
+            "mean_excess_spy_pct": -1.29,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.45,
+              2.47
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 42,
+                "mean_net_pct": -0.55,
+                "win_rate_pct": 40.5,
+                "profit_factor": 0.88,
+                "max_sequential_drawdown_pct": -39.51,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 16,
-            "mean_net_pct": 2.25,
-            "win_rate_pct": 50.0,
-            "profit_factor": 1.6,
-            "max_sequential_drawdown_pct": -19.88,
+            "n": 39,
+            "mean_net_pct": -0.94,
+            "win_rate_pct": 35.9,
+            "profit_factor": 0.81,
+            "max_sequential_drawdown_pct": -42.73,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.02,
+            "mean_excess_spy_pct": -1.61,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.01,
+              2.27
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 39,
+                "mean_net_pct": -0.94,
+                "win_rate_pct": 35.9,
+                "profit_factor": 0.81,
+                "max_sequential_drawdown_pct": -42.73,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -2955,37 +3495,127 @@
         },
         "backtests": {
           "10": {
-            "n": 35,
-            "mean_net_pct": 1.83,
-            "win_rate_pct": 51.4,
-            "profit_factor": 1.54,
-            "max_sequential_drawdown_pct": -26.5,
+            "n": 53,
+            "mean_net_pct": 2.78,
+            "win_rate_pct": 52.8,
+            "profit_factor": 1.8,
+            "max_sequential_drawdown_pct": -35.67,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.35,
+            "mean_excess_spy_pct": 2.09,
+            "mean_net_bootstrap_ci95_pct": [
+              -0.04,
+              5.85
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 53,
+                "mean_net_pct": 2.78,
+                "win_rate_pct": 52.8,
+                "profit_factor": 1.8,
+                "max_sequential_drawdown_pct": -35.67,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 23,
-            "mean_net_pct": 0.88,
-            "win_rate_pct": 56.5,
-            "profit_factor": 1.23,
-            "max_sequential_drawdown_pct": -27.73,
+            "n": 44,
+            "mean_net_pct": 2.5,
+            "win_rate_pct": 40.9,
+            "profit_factor": 1.54,
+            "max_sequential_drawdown_pct": -47.55,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.79,
+            "mean_excess_spy_pct": 1.9,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.33,
+              6.6
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 44,
+                "mean_net_pct": 2.5,
+                "win_rate_pct": 40.9,
+                "profit_factor": 1.54,
+                "max_sequential_drawdown_pct": -47.55,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 16,
-            "mean_net_pct": 1.75,
-            "win_rate_pct": 43.8,
-            "profit_factor": 1.37,
-            "max_sequential_drawdown_pct": -24.58,
+            "n": 41,
+            "mean_net_pct": 2.49,
+            "win_rate_pct": 43.9,
+            "profit_factor": 1.49,
+            "max_sequential_drawdown_pct": -46.48,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.37,
+            "mean_excess_spy_pct": 1.9,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.87,
+              6.69
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 41,
+                "mean_net_pct": 2.49,
+                "win_rate_pct": 43.9,
+                "profit_factor": 1.49,
+                "max_sequential_drawdown_pct": -46.48,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -3382,37 +4012,130 @@
         },
         "backtests": {
           "10": {
-            "n": 22,
-            "mean_net_pct": -3.65,
-            "win_rate_pct": 31.8,
-            "profit_factor": 0.36,
-            "max_sequential_drawdown_pct": -60.43,
+            "n": 35,
+            "mean_net_pct": 0.05,
+            "win_rate_pct": 42.9,
+            "profit_factor": 1.01,
+            "max_sequential_drawdown_pct": -57.79,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -3.49,
+            "mean_excess_spy_pct": 0.2,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.66,
+              4.02
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 34,
+                "mean_net_pct": -0.61,
+                "win_rate_pct": 41.2,
+                "profit_factor": 0.88,
+                "max_sequential_drawdown_pct": -64.58,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 22.4,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 12,
-            "mean_net_pct": 0.8,
-            "win_rate_pct": 41.7,
-            "profit_factor": 1.2,
-            "max_sequential_drawdown_pct": -30.67,
+            "n": 27,
+            "mean_net_pct": 0.89,
+            "win_rate_pct": 48.1,
+            "profit_factor": 1.18,
+            "max_sequential_drawdown_pct": -47.94,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.49,
+            "mean_excess_spy_pct": 0.72,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.64,
+              5.86
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 26,
+                "mean_net_pct": 0.38,
+                "win_rate_pct": 46.2,
+                "profit_factor": 1.08,
+                "max_sequential_drawdown_pct": -51.43,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 14.18,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 9,
-            "mean_net_pct": -4.64,
-            "win_rate_pct": 22.2,
-            "profit_factor": 0.29,
-            "max_sequential_drawdown_pct": -36.75,
+            "n": 21,
+            "mean_net_pct": 3.17,
+            "win_rate_pct": 42.9,
+            "profit_factor": 1.81,
+            "max_sequential_drawdown_pct": -44.44,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -4.66,
+            "mean_excess_spy_pct": 2.86,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.51,
+              9.5
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 20,
+                "mean_net_pct": 1.64,
+                "win_rate_pct": 40.0,
+                "profit_factor": 1.4,
+                "max_sequential_drawdown_pct": -44.44,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 33.76,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -3809,37 +4532,130 @@
         },
         "backtests": {
           "10": {
-            "n": 34,
-            "mean_net_pct": -0.2,
-            "win_rate_pct": 44.1,
-            "profit_factor": 0.97,
-            "max_sequential_drawdown_pct": -67.46,
+            "n": 48,
+            "mean_net_pct": 2.22,
+            "win_rate_pct": 54.2,
+            "profit_factor": 1.38,
+            "max_sequential_drawdown_pct": -62.79,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.95,
+            "mean_excess_spy_pct": 2.04,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.44,
+              6.66
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 47,
+                "mean_net_pct": 1.87,
+                "win_rate_pct": 53.2,
+                "profit_factor": 1.32,
+                "max_sequential_drawdown_pct": -63.91,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 18.59,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 23,
-            "mean_net_pct": 1.42,
-            "win_rate_pct": 47.8,
-            "profit_factor": 1.18,
-            "max_sequential_drawdown_pct": -62.18,
+            "n": 41,
+            "mean_net_pct": 2.51,
+            "win_rate_pct": 51.2,
+            "profit_factor": 1.38,
+            "max_sequential_drawdown_pct": -58.05,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.77,
+            "mean_excess_spy_pct": 2.27,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.87,
+              7.88
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 40,
+                "mean_net_pct": 1.97,
+                "win_rate_pct": 50.0,
+                "profit_factor": 1.29,
+                "max_sequential_drawdown_pct": -66.21,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 24.14,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 16,
-            "mean_net_pct": -1.72,
-            "win_rate_pct": 37.5,
-            "profit_factor": 0.81,
-            "max_sequential_drawdown_pct": -75.13,
+            "n": 36,
+            "mean_net_pct": 2.48,
+            "win_rate_pct": 47.2,
+            "profit_factor": 1.33,
+            "max_sequential_drawdown_pct": -68.76,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -2.0,
+            "mean_excess_spy_pct": 2.39,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.47,
+              8.88
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 35,
+                "mean_net_pct": 1.48,
+                "win_rate_pct": 45.7,
+                "profit_factor": 1.19,
+                "max_sequential_drawdown_pct": -77.28,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 37.49,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -4236,37 +5052,130 @@
         },
         "backtests": {
           "10": {
-            "n": 32,
-            "mean_net_pct": 1.92,
-            "win_rate_pct": 59.4,
-            "profit_factor": 1.69,
-            "max_sequential_drawdown_pct": -22.83,
+            "n": 41,
+            "mean_net_pct": 2.1,
+            "win_rate_pct": 53.7,
+            "profit_factor": 1.77,
+            "max_sequential_drawdown_pct": -26.72,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.61,
+            "mean_excess_spy_pct": 1.6,
+            "mean_net_bootstrap_ci95_pct": [
+              -0.52,
+              4.84
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 40,
+                "mean_net_pct": 1.89,
+                "win_rate_pct": 52.5,
+                "profit_factor": 1.68,
+                "max_sequential_drawdown_pct": -26.72,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 10.52,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 22,
-            "mean_net_pct": 1.56,
-            "win_rate_pct": 50.0,
-            "profit_factor": 1.49,
-            "max_sequential_drawdown_pct": -28.69,
+            "n": 33,
+            "mean_net_pct": 1.55,
+            "win_rate_pct": 48.5,
+            "profit_factor": 1.4,
+            "max_sequential_drawdown_pct": -28.46,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.23,
+            "mean_excess_spy_pct": 1.01,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.74,
+              5.0
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 32,
+                "mean_net_pct": 1.32,
+                "win_rate_pct": 46.9,
+                "profit_factor": 1.33,
+                "max_sequential_drawdown_pct": -28.46,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 8.88,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 16,
-            "mean_net_pct": 4.08,
-            "win_rate_pct": 56.2,
-            "profit_factor": 2.23,
-            "max_sequential_drawdown_pct": -18.55,
+            "n": 26,
+            "mean_net_pct": 2.08,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.49,
+            "max_sequential_drawdown_pct": -28.32,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 3.18,
+            "mean_excess_spy_pct": 1.38,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.41,
+              6.45
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 25,
+                "mean_net_pct": 1.67,
+                "win_rate_pct": 48.0,
+                "profit_factor": 1.38,
+                "max_sequential_drawdown_pct": -28.32,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 12.34,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -4665,37 +5574,130 @@
         },
         "backtests": {
           "10": {
-            "n": 22,
-            "mean_net_pct": 0.97,
-            "win_rate_pct": 50.0,
-            "profit_factor": 1.19,
-            "max_sequential_drawdown_pct": -45.79,
+            "n": 26,
+            "mean_net_pct": 1.71,
+            "win_rate_pct": 53.8,
+            "profit_factor": 1.5,
+            "max_sequential_drawdown_pct": -24.44,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.26,
+            "mean_excess_spy_pct": 1.28,
+            "mean_net_bootstrap_ci95_pct": [
+              -1.77,
+              5.27
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 25,
+                "mean_net_pct": 1.38,
+                "win_rate_pct": 52.0,
+                "profit_factor": 1.38,
+                "max_sequential_drawdown_pct": -24.44,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 10.02,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 16,
-            "mean_net_pct": 2.98,
-            "win_rate_pct": 56.2,
-            "profit_factor": 1.64,
-            "max_sequential_drawdown_pct": -32.08,
+            "n": 20,
+            "mean_net_pct": 1.92,
+            "win_rate_pct": 45.0,
+            "profit_factor": 1.39,
+            "max_sequential_drawdown_pct": -47.3,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.84,
+            "mean_excess_spy_pct": 1.01,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.95,
+              8.31
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 19,
+                "mean_net_pct": 0.79,
+                "win_rate_pct": 42.1,
+                "profit_factor": 1.15,
+                "max_sequential_drawdown_pct": -47.3,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 23.47,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 9,
-            "mean_net_pct": -0.52,
-            "win_rate_pct": 33.3,
-            "profit_factor": 0.91,
-            "max_sequential_drawdown_pct": -43.38,
+            "n": 18,
+            "mean_net_pct": 3.07,
+            "win_rate_pct": 44.4,
+            "profit_factor": 1.5,
+            "max_sequential_drawdown_pct": -51.24,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -1.77,
+            "mean_excess_spy_pct": 1.97,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.42,
+              10.56
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 17,
+                "mean_net_pct": 1.49,
+                "win_rate_pct": 41.2,
+                "profit_factor": 1.23,
+                "max_sequential_drawdown_pct": -51.24,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 30.0,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -5092,37 +6094,130 @@
         },
         "backtests": {
           "10": {
-            "n": 15,
-            "mean_net_pct": -3.73,
-            "win_rate_pct": 20.0,
-            "profit_factor": 0.47,
-            "max_sequential_drawdown_pct": -62.86,
+            "n": 23,
+            "mean_net_pct": -1.47,
+            "win_rate_pct": 30.4,
+            "profit_factor": 0.73,
+            "max_sequential_drawdown_pct": -54.4,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -4.23,
+            "mean_excess_spy_pct": -1.7,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.66,
+              3.1
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 22,
+                "mean_net_pct": -1.53,
+                "win_rate_pct": 31.8,
+                "profit_factor": 0.73,
+                "max_sequential_drawdown_pct": -54.4,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": -0.05,
+                "win_rate_pct": 0.0,
+                "profit_factor": 0.0,
+                "max_sequential_drawdown_pct": -0.05,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 9,
-            "mean_net_pct": -1.0,
-            "win_rate_pct": 33.3,
-            "profit_factor": 0.83,
-            "max_sequential_drawdown_pct": -42.97,
+            "n": 20,
+            "mean_net_pct": -1.32,
+            "win_rate_pct": 30.0,
+            "profit_factor": 0.79,
+            "max_sequential_drawdown_pct": -66.59,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -1.78,
+            "mean_excess_spy_pct": -1.59,
+            "mean_net_bootstrap_ci95_pct": [
+              -6.66,
+              4.5
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 19,
+                "mean_net_pct": -2.71,
+                "win_rate_pct": 26.3,
+                "profit_factor": 0.59,
+                "max_sequential_drawdown_pct": -66.59,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 25.18,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 8,
-            "mean_net_pct": 3.43,
-            "win_rate_pct": 37.5,
-            "profit_factor": 1.69,
-            "max_sequential_drawdown_pct": -34.55,
+            "n": 18,
+            "mean_net_pct": -1.73,
+            "win_rate_pct": 27.8,
+            "profit_factor": 0.75,
+            "max_sequential_drawdown_pct": -59.06,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.56,
+            "mean_excess_spy_pct": -2.3,
+            "mean_net_bootstrap_ci95_pct": [
+              -7.55,
+              5.04
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 17,
+                "mean_net_pct": -3.31,
+                "win_rate_pct": 23.5,
+                "profit_factor": 0.54,
+                "max_sequential_drawdown_pct": -59.06,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 25.18,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -5519,37 +6614,127 @@
         },
         "backtests": {
           "10": {
-            "n": 34,
-            "mean_net_pct": -2.83,
-            "win_rate_pct": 38.2,
-            "profit_factor": 0.65,
-            "max_sequential_drawdown_pct": -81.46,
+            "n": 50,
+            "mean_net_pct": -2.95,
+            "win_rate_pct": 38.0,
+            "profit_factor": 0.66,
+            "max_sequential_drawdown_pct": -93.76,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -3.12,
+            "mean_excess_spy_pct": -3.14,
+            "mean_net_bootstrap_ci95_pct": [
+              -7.42,
+              1.79
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 50,
+                "mean_net_pct": -2.95,
+                "win_rate_pct": 38.0,
+                "profit_factor": 0.66,
+                "max_sequential_drawdown_pct": -93.76,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 20,
-            "mean_net_pct": -3.76,
-            "win_rate_pct": 35.0,
-            "profit_factor": 0.58,
-            "max_sequential_drawdown_pct": -70.96,
+            "n": 46,
+            "mean_net_pct": -3.5,
+            "win_rate_pct": 32.6,
+            "profit_factor": 0.62,
+            "max_sequential_drawdown_pct": -93.14,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -3.74,
+            "mean_excess_spy_pct": -3.55,
+            "mean_net_bootstrap_ci95_pct": [
+              -8.09,
+              1.37
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 46,
+                "mean_net_pct": -3.5,
+                "win_rate_pct": 32.6,
+                "profit_factor": 0.62,
+                "max_sequential_drawdown_pct": -93.14,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 16,
-            "mean_net_pct": 1.43,
-            "win_rate_pct": 50.0,
-            "profit_factor": 1.17,
-            "max_sequential_drawdown_pct": -52.01,
+            "n": 43,
+            "mean_net_pct": -4.15,
+            "win_rate_pct": 30.2,
+            "profit_factor": 0.6,
+            "max_sequential_drawdown_pct": -95.12,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 0.58,
+            "mean_excess_spy_pct": -4.11,
+            "mean_net_bootstrap_ci95_pct": [
+              -8.89,
+              1.31
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 43,
+                "mean_net_pct": -4.15,
+                "win_rate_pct": 30.2,
+                "profit_factor": 0.6,
+                "max_sequential_drawdown_pct": -95.12,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -5946,37 +7131,130 @@
         },
         "backtests": {
           "10": {
-            "n": 21,
-            "mean_net_pct": 0.13,
-            "win_rate_pct": 42.9,
-            "profit_factor": 1.02,
-            "max_sequential_drawdown_pct": -40.58,
+            "n": 29,
+            "mean_net_pct": 2.38,
+            "win_rate_pct": 44.8,
+            "profit_factor": 1.43,
+            "max_sequential_drawdown_pct": -31.9,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.79,
+            "mean_excess_spy_pct": 1.69,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.11,
+              8.38
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 28,
+                "mean_net_pct": 2.3,
+                "win_rate_pct": 42.9,
+                "profit_factor": 1.4,
+                "max_sequential_drawdown_pct": -31.9,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 4.52,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 17,
-            "mean_net_pct": 3.46,
-            "win_rate_pct": 41.2,
-            "profit_factor": 1.53,
-            "max_sequential_drawdown_pct": -26.93,
+            "n": 23,
+            "mean_net_pct": 2.35,
+            "win_rate_pct": 43.5,
+            "profit_factor": 1.34,
+            "max_sequential_drawdown_pct": -45.78,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.43,
+            "mean_excess_spy_pct": 1.3,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.68,
+              9.56
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 22,
+                "mean_net_pct": 1.81,
+                "win_rate_pct": 40.9,
+                "profit_factor": 1.25,
+                "max_sequential_drawdown_pct": -45.78,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 14.12,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 10,
-            "mean_net_pct": -1.9,
-            "win_rate_pct": 30.0,
-            "profit_factor": 0.8,
-            "max_sequential_drawdown_pct": -46.19,
+            "n": 20,
+            "mean_net_pct": 3.94,
+            "win_rate_pct": 50.0,
+            "profit_factor": 1.53,
+            "max_sequential_drawdown_pct": -38.52,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -2.69,
+            "mean_excess_spy_pct": 2.81,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.2,
+              12.83
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 19,
+                "mean_net_pct": 3.26,
+                "win_rate_pct": 47.4,
+                "profit_factor": 1.42,
+                "max_sequential_drawdown_pct": -38.52,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 16.83,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -6373,37 +7651,130 @@
         },
         "backtests": {
           "10": {
-            "n": 14,
-            "mean_net_pct": 2.41,
-            "win_rate_pct": 42.9,
-            "profit_factor": 1.34,
-            "max_sequential_drawdown_pct": -39.0,
+            "n": 24,
+            "mean_net_pct": -0.17,
+            "win_rate_pct": 37.5,
+            "profit_factor": 0.98,
+            "max_sequential_drawdown_pct": -38.82,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 1.57,
+            "mean_excess_spy_pct": -0.85,
+            "mean_net_bootstrap_ci95_pct": [
+              -6.54,
+              6.81
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 23,
+                "mean_net_pct": -0.5,
+                "win_rate_pct": 34.8,
+                "profit_factor": 0.93,
+                "max_sequential_drawdown_pct": -38.82,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 7.39,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 9,
-            "mean_net_pct": 3.83,
-            "win_rate_pct": 44.4,
-            "profit_factor": 1.47,
-            "max_sequential_drawdown_pct": -24.91,
+            "n": 23,
+            "mean_net_pct": -0.38,
+            "win_rate_pct": 34.8,
+            "profit_factor": 0.96,
+            "max_sequential_drawdown_pct": -48.43,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.82,
+            "mean_excess_spy_pct": -0.93,
+            "mean_net_bootstrap_ci95_pct": [
+              -7.9,
+              7.54
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 22,
+                "mean_net_pct": -1.45,
+                "win_rate_pct": 31.8,
+                "profit_factor": 0.84,
+                "max_sequential_drawdown_pct": -49.17,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 23.12,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 6,
-            "mean_net_pct": 4.05,
-            "win_rate_pct": 33.3,
-            "profit_factor": 1.54,
-            "max_sequential_drawdown_pct": -25.33,
+            "n": 21,
+            "mean_net_pct": -0.57,
+            "win_rate_pct": 38.1,
+            "profit_factor": 0.94,
+            "max_sequential_drawdown_pct": -44.79,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.72,
+            "mean_excess_spy_pct": -1.44,
+            "mean_net_bootstrap_ci95_pct": [
+              -8.38,
+              7.87
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 20,
+                "mean_net_pct": -1.78,
+                "win_rate_pct": 35.0,
+                "profit_factor": 0.81,
+                "max_sequential_drawdown_pct": -49.57,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 23.6,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -6800,37 +8171,127 @@
         },
         "backtests": {
           "10": {
-            "n": 38,
-            "mean_net_pct": 0.05,
-            "win_rate_pct": 44.7,
-            "profit_factor": 1.01,
-            "max_sequential_drawdown_pct": -65.56,
+            "n": 46,
+            "mean_net_pct": -1.8,
+            "win_rate_pct": 47.8,
+            "profit_factor": 0.78,
+            "max_sequential_drawdown_pct": -84.53,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.52,
+            "mean_excess_spy_pct": -2.35,
+            "mean_net_bootstrap_ci95_pct": [
+              -6.43,
+              2.96
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 46,
+                "mean_net_pct": -1.8,
+                "win_rate_pct": 47.8,
+                "profit_factor": 0.78,
+                "max_sequential_drawdown_pct": -84.53,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 24,
-            "mean_net_pct": -0.14,
-            "win_rate_pct": 45.8,
-            "profit_factor": 0.98,
-            "max_sequential_drawdown_pct": -61.44,
+            "n": 36,
+            "mean_net_pct": 0.46,
+            "win_rate_pct": 38.9,
+            "profit_factor": 1.06,
+            "max_sequential_drawdown_pct": -58.14,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.6,
+            "mean_excess_spy_pct": -0.49,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.39,
+              6.29
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 36,
+                "mean_net_pct": 0.46,
+                "win_rate_pct": 38.9,
+                "profit_factor": 1.06,
+                "max_sequential_drawdown_pct": -58.14,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 22,
-            "mean_net_pct": 0.81,
-            "win_rate_pct": 45.5,
+            "n": 29,
+            "mean_net_pct": 0.78,
+            "win_rate_pct": 48.3,
             "profit_factor": 1.1,
-            "max_sequential_drawdown_pct": -53.25,
+            "max_sequential_drawdown_pct": -60.24,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.31,
+            "mean_excess_spy_pct": -0.46,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.7,
+              7.57
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 29,
+                "mean_net_pct": 0.78,
+                "win_rate_pct": 48.3,
+                "profit_factor": 1.1,
+                "max_sequential_drawdown_pct": -60.24,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -7227,37 +8688,127 @@
         },
         "backtests": {
           "10": {
-            "n": 23,
-            "mean_net_pct": 3.02,
-            "win_rate_pct": 43.5,
-            "profit_factor": 1.41,
-            "max_sequential_drawdown_pct": -54.75,
+            "n": 32,
+            "mean_net_pct": 0.79,
+            "win_rate_pct": 43.8,
+            "profit_factor": 1.11,
+            "max_sequential_drawdown_pct": -66.23,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.94,
+            "mean_excess_spy_pct": 0.62,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.76,
+              7.7
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 32,
+                "mean_net_pct": 0.79,
+                "win_rate_pct": 43.8,
+                "profit_factor": 1.11,
+                "max_sequential_drawdown_pct": -66.23,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 12,
-            "mean_net_pct": -8.71,
-            "win_rate_pct": 16.7,
-            "profit_factor": 0.32,
-            "max_sequential_drawdown_pct": -76.3,
+            "n": 26,
+            "mean_net_pct": 1.6,
+            "win_rate_pct": 42.3,
+            "profit_factor": 1.2,
+            "max_sequential_drawdown_pct": -58.31,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -8.44,
+            "mean_excess_spy_pct": 1.12,
+            "mean_net_bootstrap_ci95_pct": [
+              -6.05,
+              10.09
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 26,
+                "mean_net_pct": 1.6,
+                "win_rate_pct": 42.3,
+                "profit_factor": 1.2,
+                "max_sequential_drawdown_pct": -58.31,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 11,
-            "mean_net_pct": 3.55,
-            "win_rate_pct": 45.5,
-            "profit_factor": 1.43,
-            "max_sequential_drawdown_pct": -48.13,
+            "n": 25,
+            "mean_net_pct": 1.7,
+            "win_rate_pct": 40.0,
+            "profit_factor": 1.2,
+            "max_sequential_drawdown_pct": -59.68,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": 2.93,
+            "mean_excess_spy_pct": 0.97,
+            "mean_net_bootstrap_ci95_pct": [
+              -6.29,
+              10.1
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 25,
+                "mean_net_pct": 1.7,
+                "win_rate_pct": 40.0,
+                "profit_factor": 1.2,
+                "max_sequential_drawdown_pct": -59.68,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -7654,37 +9205,127 @@
         },
         "backtests": {
           "10": {
-            "n": 22,
-            "mean_net_pct": -2.76,
-            "win_rate_pct": 36.4,
-            "profit_factor": 0.51,
-            "max_sequential_drawdown_pct": -51.68,
+            "n": 27,
+            "mean_net_pct": 1.12,
+            "win_rate_pct": 51.9,
+            "profit_factor": 1.31,
+            "max_sequential_drawdown_pct": -31.78,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -3.36,
+            "mean_excess_spy_pct": 0.35,
+            "mean_net_bootstrap_ci95_pct": [
+              -2.31,
+              4.78
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 27,
+                "mean_net_pct": 1.12,
+                "win_rate_pct": 51.9,
+                "profit_factor": 1.31,
+                "max_sequential_drawdown_pct": -31.78,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 14,
-            "mean_net_pct": 1.11,
-            "win_rate_pct": 35.7,
-            "profit_factor": 1.31,
-            "max_sequential_drawdown_pct": -30.96,
+            "n": 22,
+            "mean_net_pct": 1.33,
+            "win_rate_pct": 36.4,
+            "profit_factor": 1.28,
+            "max_sequential_drawdown_pct": -38.85,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.35,
+            "mean_excess_spy_pct": 0.17,
+            "mean_net_bootstrap_ci95_pct": [
+              -3.75,
+              7.22
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 22,
+                "mean_net_pct": 1.33,
+                "win_rate_pct": 36.4,
+                "profit_factor": 1.28,
+                "max_sequential_drawdown_pct": -38.85,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 11,
-            "mean_net_pct": -0.39,
-            "win_rate_pct": 45.5,
-            "profit_factor": 0.91,
-            "max_sequential_drawdown_pct": -22.31,
+            "n": 18,
+            "mean_net_pct": 2.25,
+            "win_rate_pct": 44.4,
+            "profit_factor": 1.47,
+            "max_sequential_drawdown_pct": -30.19,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -1.93,
+            "mean_excess_spy_pct": 0.94,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.03,
+              9.06
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 18,
+                "mean_net_pct": 2.25,
+                "win_rate_pct": 44.4,
+                "profit_factor": 1.47,
+                "max_sequential_drawdown_pct": -30.19,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -8083,37 +9724,130 @@
         },
         "backtests": {
           "10": {
-            "n": 32,
-            "mean_net_pct": -1.63,
-            "win_rate_pct": 40.6,
-            "profit_factor": 0.8,
-            "max_sequential_drawdown_pct": -76.89,
+            "n": 45,
+            "mean_net_pct": -0.51,
+            "win_rate_pct": 44.4,
+            "profit_factor": 0.93,
+            "max_sequential_drawdown_pct": -76.27,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -2.39,
+            "mean_excess_spy_pct": -1.19,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.44,
+              4.36
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 44,
+                "mean_net_pct": -0.51,
+                "win_rate_pct": 45.5,
+                "profit_factor": 0.93,
+                "max_sequential_drawdown_pct": -76.16,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": -0.43,
+                "win_rate_pct": 0.0,
+                "profit_factor": 0.0,
+                "max_sequential_drawdown_pct": -0.43,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 20,
-            "mean_net_pct": -2.74,
-            "win_rate_pct": 35.0,
-            "profit_factor": 0.72,
-            "max_sequential_drawdown_pct": -70.82,
+            "n": 37,
+            "mean_net_pct": 1.95,
+            "win_rate_pct": 45.9,
+            "profit_factor": 1.27,
+            "max_sequential_drawdown_pct": -60.25,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -3.88,
+            "mean_excess_spy_pct": 0.93,
+            "mean_net_bootstrap_ci95_pct": [
+              -4.27,
+              8.15
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 36,
+                "mean_net_pct": 1.75,
+                "win_rate_pct": 44.4,
+                "profit_factor": 1.24,
+                "max_sequential_drawdown_pct": -62.32,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 9.26,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 17,
-            "mean_net_pct": -4.52,
-            "win_rate_pct": 41.2,
-            "profit_factor": 0.57,
-            "max_sequential_drawdown_pct": -67.58,
+            "n": 32,
+            "mean_net_pct": 2.03,
+            "win_rate_pct": 46.9,
+            "profit_factor": 1.24,
+            "max_sequential_drawdown_pct": -49.19,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -5.36,
+            "mean_excess_spy_pct": 0.64,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.34,
+              9.02
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 31,
+                "mean_net_pct": 1.8,
+                "win_rate_pct": 45.2,
+                "profit_factor": 1.21,
+                "max_sequential_drawdown_pct": -53.4,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 1,
+                "mean_net_pct": 9.05,
+                "win_rate_pct": 100.0,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": 0.0,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
@@ -8512,37 +10246,127 @@
         },
         "backtests": {
           "10": {
-            "n": 13,
-            "mean_net_pct": -1.95,
-            "win_rate_pct": 46.2,
-            "profit_factor": 0.72,
-            "max_sequential_drawdown_pct": -37.46,
+            "n": 21,
+            "mean_net_pct": -1.12,
+            "win_rate_pct": 47.6,
+            "profit_factor": 0.79,
+            "max_sequential_drawdown_pct": -48.41,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -2.73,
+            "mean_excess_spy_pct": -1.37,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.6,
+              3.49
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 21,
+                "mean_net_pct": -1.12,
+                "win_rate_pct": 47.6,
+                "profit_factor": 0.79,
+                "max_sequential_drawdown_pct": -48.41,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 10,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "15": {
-            "n": 10,
-            "mean_net_pct": 0.59,
-            "win_rate_pct": 30.0,
-            "profit_factor": 1.09,
-            "max_sequential_drawdown_pct": -41.85,
+            "n": 16,
+            "mean_net_pct": 0.6,
+            "win_rate_pct": 43.8,
+            "profit_factor": 1.12,
+            "max_sequential_drawdown_pct": -32.17,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -0.23,
+            "mean_excess_spy_pct": 0.27,
+            "mean_net_bootstrap_ci95_pct": [
+              -5.31,
+              6.99
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 16,
+                "mean_net_pct": 0.6,
+                "win_rate_pct": 43.8,
+                "profit_factor": 1.12,
+                "max_sequential_drawdown_pct": -32.17,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 15,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           },
           "20": {
-            "n": 7,
-            "mean_net_pct": -2.38,
-            "win_rate_pct": 42.9,
-            "profit_factor": 0.66,
-            "max_sequential_drawdown_pct": -34.63,
+            "n": 15,
+            "mean_net_pct": -2.88,
+            "win_rate_pct": 26.7,
+            "profit_factor": 0.62,
+            "max_sequential_drawdown_pct": -54.75,
             "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價",
-            "mean_excess_spy_pct": -3.97,
+            "mean_excess_spy_pct": -3.38,
+            "mean_net_bootstrap_ci95_pct": [
+              -9.42,
+              4.23
+            ],
+            "ci_note": "固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證",
+            "regime_results": {
+              "SPY上升趨勢": {
+                "n": 15,
+                "mean_net_pct": -2.88,
+                "win_rate_pct": 26.7,
+                "profit_factor": 0.62,
+                "max_sequential_drawdown_pct": -54.75,
+                "note": "逐筆非重疊交易權益曲線，不是多股票組合回撤；含假設交易成本與滑價"
+              },
+              "SPY下降趨勢": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              },
+              "市場狀態未知": {
+                "n": 0,
+                "mean_net_pct": null,
+                "win_rate_pct": null,
+                "profit_factor": null,
+                "max_sequential_drawdown_pct": null
+              }
+            },
+            "regime_note": "以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣",
             "horizon_days": 20,
-            "method": "樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+            "method": "樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
           }
         },
         "ranking_influence": false
