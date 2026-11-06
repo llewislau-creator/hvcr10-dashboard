@@ -145,6 +145,8 @@ def backtest_plans(df, days=15, benchmark_close=None):
     out['moving_block_bootstrap']={
         'method':'moving non-circular contiguous trade blocks; percentile CI of mean net return',
         'repeats':2000,'seed':20261106,'block_lengths':[5,10,20],
+        'moving_diagnostics':{str(k):block_bootstrap_diagnostic(vals,k) for k in (5,10,20)},
+        'circular_diagnostics':{str(k):block_bootstrap_diagnostic(vals,k,circular=True) for k in (5,10,20)},
         'ci95_pct':{str(k):moving_block_bootstrap_ci(vals,k) for k in (5,10,20)},
         'iid_ci95_pct':out['mean_net_bootstrap_ci95_pct'],
         'note':'按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較'
