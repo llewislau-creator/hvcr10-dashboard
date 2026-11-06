@@ -74,9 +74,10 @@ def backtest_plans(df, days=15, benchmark_close=None):
     momentum=close.pct_change(20)
     liquid=(close*d.Volume).rolling(20).mean()>=1e7
     start=max(100,int(len(d)*.7))
-    trades=[];excess=[]
+    trades=[];excess=[];regimes=[];last_exit=-1
     spy=benchmark_close.reindex(d.index).ffill() if benchmark_close is not None else None
-    for i in range(start,len(d)-days,days):
+    for i in range(start,len(d)-days):
+        if i<=last_exit:continue
         if not (close.iloc[i]>ma50.iloc[i] and momentum.iloc[i]>0 and liquid.iloc[i]):continue
         plan=make_plan(d.iloc[:i+1])
         trade=simulate_plan(d,i,plan,days=days)
