@@ -1,0 +1,25 @@
+name: Five-Factor Historical Validation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/five_factor_*.py'
+      - '.github/workflows/five-factor-validation.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy pandas yfinance
+      - run: python -m compileall -q research scripts
+      - run: python research/five_factor_historical_validation.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-factor-historical-validation
+          path: five_factor_validation.json
+          if-no-files-found: warn
