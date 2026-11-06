@@ -17,6 +17,14 @@ for days in (10,15,20):
     assert x is not None and x["net_return_pct"]<=x["gross_return_pct"]
     y=backtest_plans(df,days=days,benchmark_close=df.Close)
     assert y["n"]>=0
+    audit=y['walk_forward']['trade_audit']
+    assert len(audit)==y['n']
+    assert len({(t['signal_date'],t['entry_date'],t['exit_date']) for t in audit})==len(audit)
+    for i,t in enumerate(audit):
+        fold=y['walk_forward']['folds'][t['fold']-1]
+        assert fold['validation_start']<=t['signal_date']<t['entry_date']<=t['exit_date']<=fold['validation_end']
+        if i: assert audit[i-1]['exit_date']<t['entry_date']
+    assert all(sum(t['fold']==j for t in audit)==y['walk_forward']['folds'][j-1]['n'] for j in (1,2,3))
     assert y['walk_forward']['trade_reuse'] is False
     assert y['walk_forward']['no_overlapping_positions'] is True
     assert y['bear_market_robustness']['sample_threshold']==30
