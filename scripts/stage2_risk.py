@@ -114,6 +114,9 @@ def backtest_plans(df, days=15, benchmark_close=None):
         out["mean_net_bootstrap_ci95_pct"]=None
     out["ci_note"]="固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證"
     out["regime_results"]={name:summarize_trades([t for t,g in zip(trades,regimes) if g==name]) for name in ("SPY上升趨勢","SPY下降趨勢","市場狀態未知")}
+    bear_n=out["regime_results"]["SPY下降趨勢"]["n"]
+    out["bear_market_robustness"]={"sample_threshold":30,"sample_adequate":bear_n>=30,
+                                   "label":"熊市樣本數達標（績效仍需驗證）" if bear_n>=30 else "熊市穩健性未驗證"}
     out["regime_note"]="以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣"
     trade_keys=[(t['signal_date'],t['entry_date'],t['exit_date']) for t in trades]
     unique_trades=len(set(trade_keys))==len(trade_keys)
