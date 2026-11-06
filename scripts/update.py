@@ -5,6 +5,7 @@ import pandas as pd
 import yfinance as yf
 from rebound_v3 import analyze_frame
 from swing_v5 import swing_research
+from stage2_risk import make_plan, backtest_plans
 from phase1 import validate_prices, clean_price_history, market_context, earnings_event, risk_context
 
 TICKERS = ["NVDA","AMD","TSLA","PLTR","COIN","MSTR","HOOD","SOFI","ROKU","AFRM","MARA","RIOT","UPST","SMCI","GME","APP","CRWD","IONQ","RKLB","HIMS"]
