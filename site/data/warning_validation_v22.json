@@ -1,0 +1,770 @@
+{
+  "updated_utc": "2026-11-06T06:52:06.500470+00:00",
+  "status": "preliminary_research",
+  "symbols": [
+    "NVDA",
+    "AMD",
+    "TSLA",
+    "PLTR",
+    "COIN",
+    "MSTR",
+    "HOOD",
+    "SOFI",
+    "ROKU",
+    "AFRM",
+    "MARA",
+    "RIOT",
+    "UPST",
+    "SMCI",
+    "GME",
+    "APP",
+    "CRWD",
+    "IONQ",
+    "RKLB",
+    "HIMS"
+  ],
+  "results": {
+    "NVDA": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-03",
+      "end": "2026-10-22",
+      "observations": 809,
+      "downside_events": 157,
+      "risk_classifier": {
+        "alerts": 20,
+        "true_positive": 3,
+        "false_positive": 17,
+        "false_alert_rate_pct": 85.0,
+        "event_recall_pct": 1.91,
+        "precision_pct": 15.0
+      },
+      "five_factor_baseline": {
+        "alerts": 468,
+        "true_positive": 87,
+        "false_positive": 381,
+        "false_alert_rate_pct": 81.41,
+        "event_recall_pct": 55.41,
+        "precision_pct": 18.59
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 5,
+          "mean_advance_sessions": 7.8
+        },
+        "baseline": {
+          "events_with_warning": 31,
+          "mean_advance_sessions": 8.1
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "AMD": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-03",
+      "end": "2026-10-22",
+      "observations": 809,
+      "downside_events": 219,
+      "risk_classifier": {
+        "alerts": 13,
+        "true_positive": 3,
+        "false_positive": 10,
+        "false_alert_rate_pct": 76.92,
+        "event_recall_pct": 1.37,
+        "precision_pct": 23.08
+      },
+      "five_factor_baseline": {
+        "alerts": 577,
+        "true_positive": 152,
+        "false_positive": 425,
+        "false_alert_rate_pct": 73.66,
+        "event_recall_pct": 69.41,
+        "precision_pct": 26.34
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 6,
+          "mean_advance_sessions": 3.83
+        },
+        "baseline": {
+          "events_with_warning": 40,
+          "mean_advance_sessions": 8.7
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "TSLA": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-03",
+      "end": "2026-10-22",
+      "observations": 809,
+      "downside_events": 244,
+      "risk_classifier": {
+        "alerts": 9,
+        "true_positive": 3,
+        "false_positive": 6,
+        "false_alert_rate_pct": 66.67,
+        "event_recall_pct": 1.23,
+        "precision_pct": 33.33
+      },
+      "five_factor_baseline": {
+        "alerts": 596,
+        "true_positive": 178,
+        "false_positive": 418,
+        "false_alert_rate_pct": 70.13,
+        "event_recall_pct": 72.95,
+        "precision_pct": 29.87
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 7,
+          "mean_advance_sessions": 4.86
+        },
+        "baseline": {
+          "events_with_warning": 39,
+          "mean_advance_sessions": 9.05
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "PLTR": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-01-07",
+      "end": "2026-10-22",
+      "observations": 450,
+      "downside_events": 140,
+      "risk_classifier": {
+        "alerts": 10,
+        "true_positive": 3,
+        "false_positive": 7,
+        "false_alert_rate_pct": 70.0,
+        "event_recall_pct": 2.14,
+        "precision_pct": 30.0
+      },
+      "five_factor_baseline": {
+        "alerts": 281,
+        "true_positive": 86,
+        "false_positive": 195,
+        "false_alert_rate_pct": 69.4,
+        "event_recall_pct": 61.43,
+        "precision_pct": 30.6
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 4,
+          "mean_advance_sessions": 5.25
+        },
+        "baseline": {
+          "events_with_warning": 22,
+          "mean_advance_sessions": 8.09
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "COIN": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-03-07",
+      "end": "2026-10-22",
+      "observations": 410,
+      "downside_events": 170,
+      "risk_classifier": {
+        "alerts": 15,
+        "true_positive": 6,
+        "false_positive": 9,
+        "false_alert_rate_pct": 60.0,
+        "event_recall_pct": 3.53,
+        "precision_pct": 40.0
+      },
+      "five_factor_baseline": {
+        "alerts": 348,
+        "true_positive": 136,
+        "false_positive": 212,
+        "false_alert_rate_pct": 60.92,
+        "event_recall_pct": 80.0,
+        "precision_pct": 39.08
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 6,
+          "mean_advance_sessions": 5.5
+        },
+        "baseline": {
+          "events_with_warning": 27,
+          "mean_advance_sessions": 9.37
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "MSTR": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-03",
+      "end": "2026-10-22",
+      "observations": 809,
+      "downside_events": 339,
+      "risk_classifier": {
+        "alerts": 34,
+        "true_positive": 11,
+        "false_positive": 23,
+        "false_alert_rate_pct": 67.65,
+        "event_recall_pct": 3.24,
+        "precision_pct": 32.35
+      },
+      "five_factor_baseline": {
+        "alerts": 621,
+        "true_positive": 248,
+        "false_positive": 373,
+        "false_alert_rate_pct": 60.06,
+        "event_recall_pct": 73.16,
+        "precision_pct": 39.94
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 11,
+          "mean_advance_sessions": 6.18
+        },
+        "baseline": {
+          "events_with_warning": 53,
+          "mean_advance_sessions": 9.4
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "HOOD": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-04-08",
+      "end": "2026-10-22",
+      "observations": 388,
+      "downside_events": 144,
+      "risk_classifier": {
+        "alerts": 10,
+        "true_positive": 7,
+        "false_positive": 3,
+        "false_alert_rate_pct": 30.0,
+        "event_recall_pct": 4.86,
+        "precision_pct": 70.0
+      },
+      "five_factor_baseline": {
+        "alerts": 255,
+        "true_positive": 98,
+        "false_positive": 157,
+        "false_alert_rate_pct": 61.57,
+        "event_recall_pct": 68.06,
+        "precision_pct": 38.43
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 4,
+          "mean_advance_sessions": 2.75
+        },
+        "baseline": {
+          "events_with_warning": 22,
+          "mean_advance_sessions": 8.0
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "SOFI": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-02-05",
+      "end": "2026-10-22",
+      "observations": 431,
+      "downside_events": 144,
+      "risk_classifier": {
+        "alerts": 13,
+        "true_positive": 5,
+        "false_positive": 8,
+        "false_alert_rate_pct": 61.54,
+        "event_recall_pct": 3.47,
+        "precision_pct": 38.46
+      },
+      "five_factor_baseline": {
+        "alerts": 305,
+        "true_positive": 106,
+        "false_positive": 199,
+        "false_alert_rate_pct": 65.25,
+        "event_recall_pct": 73.61,
+        "precision_pct": 34.75
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 5,
+          "mean_advance_sessions": 4.6
+        },
+        "baseline": {
+          "events_with_warning": 23,
+          "mean_advance_sessions": 8.87
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "ROKU": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2024-02-12",
+      "end": "2026-10-22",
+      "observations": 677,
+      "downside_events": 155,
+      "risk_classifier": {
+        "alerts": 27,
+        "true_positive": 3,
+        "false_positive": 24,
+        "false_alert_rate_pct": 88.89,
+        "event_recall_pct": 1.94,
+        "precision_pct": 11.11
+      },
+      "five_factor_baseline": {
+        "alerts": 428,
+        "true_positive": 101,
+        "false_positive": 327,
+        "false_alert_rate_pct": 76.4,
+        "event_recall_pct": 65.16,
+        "precision_pct": 23.6
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 4,
+          "mean_advance_sessions": 2.5
+        },
+        "baseline": {
+          "events_with_warning": 25,
+          "mean_advance_sessions": 8.72
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "AFRM": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-02-07",
+      "end": "2026-10-22",
+      "observations": 429,
+      "downside_events": 154,
+      "risk_classifier": {
+        "alerts": 17,
+        "true_positive": 9,
+        "false_positive": 8,
+        "false_alert_rate_pct": 47.06,
+        "event_recall_pct": 5.84,
+        "precision_pct": 52.94
+      },
+      "five_factor_baseline": {
+        "alerts": 322,
+        "true_positive": 113,
+        "false_positive": 209,
+        "false_alert_rate_pct": 64.91,
+        "event_recall_pct": 73.38,
+        "precision_pct": 35.09
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 7,
+          "mean_advance_sessions": 3.86
+        },
+        "baseline": {
+          "events_with_warning": 21,
+          "mean_advance_sessions": 9.38
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "MARA": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-03",
+      "end": "2026-10-22",
+      "observations": 809,
+      "downside_events": 425,
+      "risk_classifier": {
+        "alerts": 5,
+        "true_positive": 3,
+        "false_positive": 2,
+        "false_alert_rate_pct": 40.0,
+        "event_recall_pct": 0.71,
+        "precision_pct": 60.0
+      },
+      "five_factor_baseline": {
+        "alerts": 631,
+        "true_positive": 323,
+        "false_positive": 308,
+        "false_alert_rate_pct": 48.81,
+        "event_recall_pct": 76.0,
+        "precision_pct": 51.19
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 2,
+          "mean_advance_sessions": 7.5
+        },
+        "baseline": {
+          "events_with_warning": 62,
+          "mean_advance_sessions": 9.23
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "RIOT": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-29",
+      "end": "2026-10-22",
+      "observations": 791,
+      "downside_events": 407,
+      "risk_classifier": {
+        "alerts": 3,
+        "true_positive": 2,
+        "false_positive": 1,
+        "false_alert_rate_pct": 33.33,
+        "event_recall_pct": 0.49,
+        "precision_pct": 66.67
+      },
+      "five_factor_baseline": {
+        "alerts": 610,
+        "true_positive": 318,
+        "false_positive": 292,
+        "false_alert_rate_pct": 47.87,
+        "event_recall_pct": 78.13,
+        "precision_pct": 52.13
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 3,
+          "mean_advance_sessions": 9.0
+        },
+        "baseline": {
+          "events_with_warning": 59,
+          "mean_advance_sessions": 9.19
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "UPST": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-01-31",
+      "end": "2026-10-22",
+      "observations": 434,
+      "downside_events": 200,
+      "risk_classifier": {
+        "alerts": 23,
+        "true_positive": 11,
+        "false_positive": 12,
+        "false_alert_rate_pct": 52.17,
+        "event_recall_pct": 5.5,
+        "precision_pct": 47.83
+      },
+      "five_factor_baseline": {
+        "alerts": 377,
+        "true_positive": 162,
+        "false_positive": 215,
+        "false_alert_rate_pct": 57.03,
+        "event_recall_pct": 81.0,
+        "precision_pct": 42.97
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 5,
+          "mean_advance_sessions": 5.2
+        },
+        "baseline": {
+          "events_with_warning": 30,
+          "mean_advance_sessions": 9.47
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "SMCI": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-03",
+      "end": "2026-10-22",
+      "observations": 809,
+      "downside_events": 371,
+      "risk_classifier": {
+        "alerts": 24,
+        "true_positive": 14,
+        "false_positive": 10,
+        "false_alert_rate_pct": 41.67,
+        "event_recall_pct": 3.77,
+        "precision_pct": 58.33
+      },
+      "five_factor_baseline": {
+        "alerts": 638,
+        "true_positive": 282,
+        "false_positive": 356,
+        "false_alert_rate_pct": 55.8,
+        "event_recall_pct": 76.01,
+        "precision_pct": 44.2
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 13,
+          "mean_advance_sessions": 5.54
+        },
+        "baseline": {
+          "events_with_warning": 60,
+          "mean_advance_sessions": 9.22
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "GME": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2023-08-03",
+      "end": "2026-10-22",
+      "observations": 809,
+      "downside_events": 252,
+      "risk_classifier": {
+        "alerts": 25,
+        "true_positive": 7,
+        "false_positive": 18,
+        "false_alert_rate_pct": 72.0,
+        "event_recall_pct": 2.78,
+        "precision_pct": 28.0
+      },
+      "five_factor_baseline": {
+        "alerts": 656,
+        "true_positive": 185,
+        "false_positive": 471,
+        "false_alert_rate_pct": 71.8,
+        "event_recall_pct": 73.41,
+        "precision_pct": 28.2
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 7,
+          "mean_advance_sessions": 6.29
+        },
+        "baseline": {
+          "events_with_warning": 44,
+          "mean_advance_sessions": 8.73
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "APP": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-03-07",
+      "end": "2026-10-22",
+      "observations": 410,
+      "downside_events": 172,
+      "risk_classifier": {
+        "alerts": 25,
+        "true_positive": 12,
+        "false_positive": 13,
+        "false_alert_rate_pct": 52.0,
+        "event_recall_pct": 6.98,
+        "precision_pct": 48.0
+      },
+      "five_factor_baseline": {
+        "alerts": 323,
+        "true_positive": 135,
+        "false_positive": 188,
+        "false_alert_rate_pct": 58.2,
+        "event_recall_pct": 78.49,
+        "precision_pct": 41.8
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 8,
+          "mean_advance_sessions": 5.38
+        },
+        "baseline": {
+          "events_with_warning": 27,
+          "mean_advance_sessions": 8.63
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "CRWD": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2024-08-15",
+      "end": "2026-10-22",
+      "observations": 549,
+      "downside_events": 118,
+      "risk_classifier": {
+        "alerts": 18,
+        "true_positive": 8,
+        "false_positive": 10,
+        "false_alert_rate_pct": 55.56,
+        "event_recall_pct": 6.78,
+        "precision_pct": 44.44
+      },
+      "five_factor_baseline": {
+        "alerts": 351,
+        "true_positive": 78,
+        "false_positive": 273,
+        "false_alert_rate_pct": 77.78,
+        "event_recall_pct": 66.1,
+        "precision_pct": 22.22
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 5,
+          "mean_advance_sessions": 6.0
+        },
+        "baseline": {
+          "events_with_warning": 19,
+          "mean_advance_sessions": 8.21
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "IONQ": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-02-05",
+      "end": "2026-10-22",
+      "observations": 431,
+      "downside_events": 233,
+      "risk_classifier": {
+        "alerts": 7,
+        "true_positive": 5,
+        "false_positive": 2,
+        "false_alert_rate_pct": 28.57,
+        "event_recall_pct": 2.15,
+        "precision_pct": 71.43
+      },
+      "five_factor_baseline": {
+        "alerts": 338,
+        "true_positive": 179,
+        "false_positive": 159,
+        "false_alert_rate_pct": 47.04,
+        "event_recall_pct": 76.82,
+        "precision_pct": 52.96
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 5,
+          "mean_advance_sessions": 5.6
+        },
+        "baseline": {
+          "events_with_warning": 34,
+          "mean_advance_sessions": 8.97
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "RKLB": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2025-01-24",
+      "end": "2026-10-22",
+      "observations": 439,
+      "downside_events": 204,
+      "risk_classifier": {
+        "alerts": 7,
+        "true_positive": 5,
+        "false_positive": 2,
+        "false_alert_rate_pct": 28.57,
+        "event_recall_pct": 2.45,
+        "precision_pct": 71.43
+      },
+      "five_factor_baseline": {
+        "alerts": 298,
+        "true_positive": 139,
+        "false_positive": 159,
+        "false_alert_rate_pct": 53.36,
+        "event_recall_pct": 68.14,
+        "precision_pct": 46.64
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 3,
+          "mean_advance_sessions": 3.0
+        },
+        "baseline": {
+          "events_with_warning": 29,
+          "mean_advance_sessions": 9.38
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    },
+    "HIMS": {
+      "status": "research_only",
+      "horizon_days": 10,
+      "drop_threshold_pct": 8.0,
+      "start": "2024-09-12",
+      "end": "2026-10-22",
+      "observations": 530,
+      "downside_events": 263,
+      "risk_classifier": {
+        "alerts": 18,
+        "true_positive": 14,
+        "false_positive": 4,
+        "false_alert_rate_pct": 22.22,
+        "event_recall_pct": 5.32,
+        "precision_pct": 77.78
+      },
+      "five_factor_baseline": {
+        "alerts": 405,
+        "true_positive": 200,
+        "false_positive": 205,
+        "false_alert_rate_pct": 50.62,
+        "event_recall_pct": 76.05,
+        "precision_pct": 49.38
+      },
+      "event_lead_time": {
+        "risk": {
+          "events_with_warning": 7,
+          "mean_advance_sessions": 5.86
+        },
+        "baseline": {
+          "events_with_warning": 38,
+          "mean_advance_sessions": 9.11
+        }
+      },
+      "method": "Chronological last 30%; daily close signals; future 10-session minimum close <= -8% from signal close; baseline original five-factor score <60; only liquid/eligible days; overlapping future windows; event lead time exploratory, not causal.",
+      "limitations": "Overlapping daily windows, selected ticker universe, correlated securities, adjusted prices and fixed ex-post thresholds; no statistically validated incremental edge."
+    }
+  },
+  "errors": {},
+  "limitations": "Overlapping forward windows and correlated stocks; not independently validated."
+}
