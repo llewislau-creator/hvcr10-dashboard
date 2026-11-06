@@ -1,0 +1,24 @@
+name: Five-Factor Historical Price Audit
+on:
+  push:
+    paths:
+      - 'research/five_factor_price_jump_audit.py'
+      - '.github/workflows/five-factor-price-audit.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pandas yfinance
+      - run: python research/five_factor_price_jump_audit.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-factor-price-jump-audit
+          path: five_factor_price_jump_audit.json
+          if-no-files-found: warn
