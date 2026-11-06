@@ -99,6 +99,16 @@ def backtest_plans(df, days=15, benchmark_close=None):
                 excess.append(trade["net_return_pct"]-(float(exit_spy/entry_spy)-1)*100)
     out=summarize_trades(trades)
     out["mean_excess_spy_pct"]=round(float(np.mean(excess)),2) if excess else None
+    vals=np.array([t["net_return_pct"] for t in trades],dtype=float)
+    if len(vals)>=2:
+        rng=np.random.default_rng(20261106)
+        sampled=rng.choice(vals,size=(2000,len(vals)),replace=True).mean(axis=1)
+        out["mean_net_bootstrap_ci95_pct"]=[round(float(v),2) for v in np.percentile(sampled,[2.5,97.5])]
+    else:
+        out["mean_net_bootstrap_ci95_pct"]=None
+    out["ci_note"]="固定種子2000次逐筆bootstrap；未校正序列相關及跨股票相關；僅描述性區間，非未來報酬保證"
+    out["regime_results"]={name:summarize_trades([t for t,g in zip(trades,regimes) if g==name]) for name in ("SPY上升趨勢","SPY下降趨勢","市場狀態未知")}
+    out["regime_note"]="以訊號當日SPY相對200交易日前收盤分組；小樣本不應比較優劣"
     out["horizon_days"]=days
-    out["method"]="樣本外後30%歷史；每隔持有期採樣避免重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
+    out["method"]="樣本外後30%歷史；逐日尋找候選並按實際出場日排除重疊；收盤趨勢及流動性篩選；下一日開盤買入；ATR計劃固定於訊號日；假設成本與滑價"
     return out
