@@ -131,7 +131,8 @@ def main():
                     v is None or v[0]<=0 for v in ci.values()),
                 "audit_key":key,
                 "moving_diagnostics":mb["moving_diagnostics"],
-                "circular_diagnostics":mb["circular_diagnostics"]})
+                "circular_diagnostics":mb["circular_diagnostics"],
+                "circular_seed_sensitivity":mb["circular_seed_sensitivity"]})
             wf["audit_file"]="trade_audit.json"
             wf["audit_key"]=key
     summary["by_horizon"]={}
