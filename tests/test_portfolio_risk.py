@@ -23,3 +23,26 @@ for d in p["daily_equity"]:
     assert 0<=d["exposure_pct"]<=100.00001
 assert all(d["positions"]<=2 for d in p["daily_equity"])
 print("portfolio risk tests passed")
+
+# Reproducibility: identical inputs must yield identical research artifacts.
+assert portfolio_risk(audit,prices,10)==p
+# Every fill is traceable and cash movements reconcile to the final NAV.
+assert all(f["shares"]>0 and f["price"]>0 for f in p["fills"])
+assert abs(100000+sum(f["cash_flow"] for f in p["fills"])-p["daily_equity"][-1]["cash"])<0.02
+assert p["daily_equity"][-1]["positions"]==0
+# Invalid audit prices must fail closed rather than generate misleading risk figures.
+bad_trade=trade(205,245)
+bad_trade["entry_price"]=float("nan")
+try:
+    portfolio_risk({"trades":{"AAA:10":{"trades":[bad_trade]}}},prices,10)
+    raise AssertionError("NaN entry was accepted")
+except ValueError:
+    pass
+bad_exit=trade(205,245)
+bad_exit["exit_price"]=-1
+try:
+    portfolio_risk({"trades":{"AAA:10":{"trades":[bad_exit]}}},prices,10)
+    raise AssertionError("Negative exit was accepted")
+except ValueError:
+    pass
+print("v2.1 accounting and deterministic replay checks passed")
