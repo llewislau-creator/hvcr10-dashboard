@@ -64,10 +64,14 @@ def main():
         except Exception as e:
             errors[t]=str(e);print("ERROR",t,e)
     if not rows: raise RuntimeError("No successful downloads; existing report preserved")
-    if len(rows)!=len(TICKERS):
-        raise RuntimeError(f"Partial download ({len(rows)}/{len(TICKERS)}); preserve previous complete report. Errors: {errors}")
+    # Publish verified rows only; never reuse stale prices as current observations.
+    # Fail closed when coverage is too low, rather than masking a systemic outage.
+    minimum_coverage=0.90
+    coverage=len(rows)/len(TICKERS)
+    if coverage<minimum_coverage:
+        raise RuntimeError(f"Insufficient validated coverage ({len(rows)}/{len(TICKERS)}); previous report preserved. Errors: {errors}")
     rows.sort(key=lambda r:(not r["swing"]["eligible"],-(r["swing"]["score"] or 0),-r["swing"]["liquidity_dollar_m"],r["ticker"]))
-    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"20 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v5 swing research preview","investment_horizon":"2–4星期（10/15/20交易日）","ranking_basis":"5維波段投資觀察分數，非預測機率；不以高波動率作硬性篩選","phase1":{"market":market,"earnings_window_days":30,"quality_policy":"blocked資料不寫入報告；缺少財報日期標記unknown"}}
+    payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"20 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v5 swing research preview","investment_horizon":"2–4星期（10/15/20交易日）","ranking_basis":"5維波段投資觀察分數，非預測機率；不以高波動率作硬性篩選","phase1":{"market":market,"earnings_window_days":30,"quality_policy":"blocked股票排除於排行榜；不使用過期數據；缺少財報日期標記unknown"},"coverage":{"expected":len(TICKERS),"validated":len(rows),"pct":round(coverage*100,1),"minimum_pct":minimum_coverage*100,"excluded":[{"ticker":t,"reason":errors[t]} for t in TICKERS if t in errors]}}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     tmp=OUT.with_suffix(".tmp");tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8");tmp.replace(OUT)
 if __name__=="__main__":main()
