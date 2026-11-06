@@ -20,6 +20,7 @@ jobs:
         run: |
           python tests/test_coverage.py
           python tests/test_stage2.py
+          python tests/test_portfolio_risk.py
           python tests/test_data_diagnostics.py
           python tests/test_phase1.py
           python tests/test_swing_v5.py
@@ -34,7 +35,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add site/data/report.json site/data/trade_audit.json site/data/bootstrap_summary.json site/data/price_diagnostics.json
+          git add site/data/report.json site/data/trade_audit.json site/data/bootstrap_summary.json site/data/price_diagnostics.json site/data/portfolio_risk.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update daily HVCR-10 report'
             git pull --rebase -X ours origin main
