@@ -12,6 +12,19 @@ const fmt=(x,suffix='')=>x==null?'—':esc(x)+suffix;
 const stat=(k,v,n)=>'<div class="stat"><small>'+esc(k)+'</small><b>'+esc(v)+'</b><small>'+esc(n)+'</small></div>';
 function rank(){let s=$('sort').value,rows=[...all];rows.sort((a,b)=>{let x=a.swing||{},y=b.swing||{};if(s==='ticker')return a.ticker.localeCompare(b.ticker);if(s==='mom')return (y.momentum_20d_pct??-999)-(x.momentum_20d_pct??-999);if(s==='relative')return (y.relative_spy_20d_pct??-999)-(x.relative_spy_20d_pct??-999);return Number(y.eligible)-Number(x.eligible)||(y.score??-1)-(x.score??-1)||(y.liquidity_dollar_m??0)-(x.liquidity_dollar_m??0)||a.ticker.localeCompare(b.ticker)});
 $('rows').innerHTML=rows.map((r,i)=>{let s=r.swing||{},h=s.holdout?.['10']||{};return '<tr><td>#'+(i+1)+'</td><td><button data-t="'+esc(r.ticker)+'">'+esc(r.ticker)+'</button></td><td>$'+fmt(r.close)+'</td><td>'+fmt(s.score,'/100')+'</td><td class="'+(s.signal==='優先研究'?'good':'muted')+'">'+esc(s.signal||'待更新')+'</td><td>'+esc(r.phase1_risk||'待更新')+'</td><td>'+esc(r.data_quality?.status||'待更新')+'</td><td>'+fmt(s.momentum_20d_pct,'%')+'</td><td>'+fmt(s.relative_spy_20d_pct,'%')+'</td><td>'+fmt(h.mean_net_pct,'%')+'</td><td>'+fmt(h.n)+'</td><td>'+esc(r.last_price_date)+'</td></tr>'}).join('');document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{$('ticker').value=b.dataset.t;detail()})}
+function riskWarnings(r){
+ const bt=r.stage2?.backtests||{},warnings=[];
+ if(r.data_quality?.status!=='ok')warnings.push('行情品質警告：'+(r.data_quality?.issues||[]).join('；'));
+ if(r.earnings?.status==='unknown')warnings.push('財報日期尚未確認');
+ for(const n of [10,15,20]){
+  const b=bt[String(n)];
+  if(!b||!Number.isFinite(b.n)){warnings.push(n+'日回測資料缺失');continue}
+  if(b.n<30)warnings.push(n+'日樣本不足：'+b.n+'筆（最低30筆）');
+  if(b.mean_net_pct==null||b.profit_factor==null)warnings.push(n+'日績效指標不足');
+  else if(b.mean_net_pct<=0||b.profit_factor<1)warnings.push(n+'日樣本外績效偏弱：平均淨報酬不正或Profit Factor低於1');
+ }
+ return warnings;
+}
 function stage2HTML(s){
  if(!s)return '<p class="muted">第二階段資料待每日更新產生。</p>';
  const p=s.plan||{},bt=s.backtests||{};
