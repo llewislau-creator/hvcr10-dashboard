@@ -69,11 +69,19 @@ def portfolio_risk(audit, prices, horizon, benchmark=None, capital=100000.0):
                          "exposure_pct":round(x["exposure_pct"],3),"positions":x["positions"]} for x in daily],
         "assumptions":"Independent horizon, fixed initial cash, integer shares, max 15% NAV per entry, no leverage; entry at modeled open, exit at modeled fill; adjusted daily close marks; no intraday equity path."}
     if result["max_exposure_pct"]>100.00001:raise AssertionError("Excess exposure")
+    close_panel=pd.concat({ticker:price["Close"] for ticker,price in prices.items()},axis=1).sort_index()
+    stock_returns=close_panel.pct_change(fill_method=None).loc[first:last]
+    corr=stock_returns.corr(min_periods=30)
+    pairs=[float(corr.loc[a,b]) for i,a in enumerate(corr.columns) for b in corr.columns[i+1:] if np.isfinite(corr.loc[a,b])]
+    result["stock_correlation"]={"pair_count":len(pairs),"mean_pairwise_daily_return_correlation":round(float(np.mean(pairs)),4) if pairs else None,"max_pairwise_daily_return_correlation":round(float(np.max(pairs)),4) if pairs else None,"method":"Pairwise overlapping adjusted-close daily returns, minimum 30 observations; descriptive, not portfolio P&L correlation."}
     if benchmark is not None:
-        b=benchmark.reindex(pd.to_datetime(frame.date)).ffill()
-        regime=(b>b.shift(200)).to_numpy()
+        spy=benchmark.sort_index().ffill()
+        trend=spy>spy.shift(200)
+        known=spy.shift(200).notna()
+        regime=trend.reindex(pd.to_datetime(frame.date)).ffill().fillna(False).to_numpy()
+        valid=known.reindex(pd.to_datetime(frame.date)).ffill().fillna(False).to_numpy()
         result["market_regime"]={"SPY_above_200d":{},"SPY_not_above_200d":{}}
-        for label,mask in (("SPY_above_200d",regime),("SPY_not_above_200d",~regime)):
+        for label,mask in (("SPY_above_200d",regime & valid),("SPY_not_above_200d",~regime & valid)):
             vals=returns[mask[1:]]
             result["market_regime"][label]={"days":int(len(vals)),"mean_daily_return_pct":round(float(vals.mean()*100),4) if len(vals) else None}
     return result
