@@ -16,11 +16,11 @@ function researchEvidence(r){
  const pass=n=>{const b=bt[String(n)];return b&&Number.isFinite(b.mean_net_pct)&&Number.isFinite(b.profit_factor)&&b.mean_net_pct>0&&b.profit_factor>=1};
  const complete=[10,15,20].every(n=>{const b=bt[String(n)];return b&&Number.isFinite(b.mean_net_pct)&&Number.isFinite(b.profit_factor)&&Number.isFinite(b.n)&&b.n>=30});
  const performance=!complete?'證據不足':([10,15,20].every(pass)?'三期均達門檻':'未全數通過');
- return '<h3>研究證據分項檢視（非買入機率）</h3><div class="grid">'+
+ return '<h3>ATR 策略證據分項檢視（非五維模型驗證）</h3><div class="grid">'+
  stat('行情資料完整性',quality,(q.issues||[]).join('；')||'沒有已知品質警告')+
  stat('樣本充足程度',sample,detail)+
- stat('樣本外績效門檻',performance,'僅在三期均≥30筆時評估；平均淨報酬>0%、Profit Factor≥1')+
- '</div><p class="muted">三個維度分開判讀，不合成分數、不作交易訊號、不影響排行榜；門檻是研究篩選規則，不是統計顯著性或未來獲利保證。</p>';
+ stat('ATR 策略描述性績效門檻',performance,'僅在三期均≥30筆時評估；平均淨報酬>0%、Profit Factor≥1；不代表統計顯著')+
+ '</div><p class="muted">本區交易樣本來自 ATR 策略（收盤>MA50、20日動能>0、成交額達標），與五維分數≥60的持有期研究不同。三個維度不合成分數、不作交易訊號；門檻不是統計顯著性或未來獲利保證。</p>';
 }
 function riskWarnings(r){
  const bt=r.stage2?.backtests||{},warnings=[];
@@ -77,7 +77,7 @@ function stage2HTML(s){
  const b=bt[String(n)]||{};
  return '<tr><td>'+n+'日</td><td>'+fmt(b.n)+'</td><td>'+fmt(b.mean_net_pct,'%')+'</td><td>'+fmt(b.win_rate_pct,'%')+'</td><td>'+fmt(b.profit_factor)+'</td><td>'+fmt(b.mean_excess_spy_pct,'%')+'</td><td>'+fmt(b.max_sequential_drawdown_pct,'%')+'</td></tr>';
  }).join('');
- return '<h3>第二階段｜ATR 風險計劃及樣本外回測</h3><p class="notice">研究參考，非買入訊號；不保證成交。回測不參與排行榜排序。</p><div class="grid">'+cards+'</div><div class="scroll"><table><thead><tr><th>持有期</th><th>交易數</th><th>平均淨報酬</th><th>淨勝率</th><th>Profit Factor</th><th>相對 SPY</th><th>最大序列回撤</th></tr></thead><tbody>'+body+'</tbody></table></div><p class="muted">樣本外後30%歷史；下一日開盤入場，止損優先；每邊成本15bps及滑價10bps。過去績效不代表未來。</p>';
+ return '<h3>第二階段｜ATR 獨立策略風險計劃及歷史回測</h3><p class="notice">研究參考，非買入訊號；不保證成交。回測不參與排行榜排序。</p><div class="grid">'+cards+'</div><div class="scroll"><table><thead><tr><th>持有期</th><th>交易數</th><th>平均淨報酬</th><th>淨勝率</th><th>Profit Factor</th><th>相對 SPY</th><th>最大序列回撤</th></tr></thead><tbody>'+body+'</tbody></table></div><p class="muted">固定規則使用歷史前40%暖機、後60%逐日驗證（非完整 Walk-forward）；進場條件為收盤>MA50、20日動能>0、成交額達標，不等於五維核心訊號。下一日開盤入場，止損優先；每邊成本15bps及滑價10bps。過去績效不代表未來。</p>';
 }
 
 let portfolioData=null;
@@ -135,7 +135,7 @@ function marketStateHTML(r){
 }
 function detail(){let r=all.find(x=>x.ticker===$('ticker').value);if(!r)return;$('research-confidence').innerHTML=marketStateHTML(r)+researchEvidence(r);const warnings=riskWarnings(r);$('risk-warnings').innerHTML=warnings.length?'<div class="notice"><b>風險警示（'+warnings.length+'項）</b>'+warnings.map(w=>'<p>⚠ '+esc(w)+'</p>').join('')+'</div>':'<p class="muted">未觸發預設風險警示；不代表沒有投資風險。</p>';$('stage2').innerHTML=stage2HTML(r.stage2);$('robustness').innerHTML=robustnessHTML(r.stage2);$('forward-evidence').innerHTML=forwardEvidence(r.stage2);let s=r.swing||{},f=s.factors||{};let factors=Object.entries(f).map(([k,v])=>'<span class="pill '+(v?'good':'')+'">'+(v===null?'? ':v?'✓ ':'✕ ')+esc(k)+'</span>').join('');
 let back=[10,15,20].map(n=>{let h=s.holdout?.[n]||{};return '<tr><td>'+n+'日</td><td>'+fmt(h.n)+'</td><td>'+fmt(h.mean_net_pct,'%')+'</td><td>'+fmt(h.positive_net_pct,'%')+'</td><td>'+fmt(h.mean_excess_spy_pct,'%')+'</td><td>'+fmt(h.min_net_pct,'%')+'</td></tr>'}).join('');
-$('detail').innerHTML='<div class="grid">'+stat('財報日期',r.earnings?.date||'待確認',r.earnings?.note||'尚未更新')+stat('數據品質',r.data_quality?.status||'待更新',(r.data_quality?.issues||[]).join('；')||'未偵測到品質問題')+stat('研究分數',fmt(s.score,'/100'),'非成功機率')+stat('研究狀態',s.signal||'待更新','僅供研究')+stat('20日動能',fmt(s.momentum_20d_pct,'%'),'價格變化')+stat('60日動能',fmt(s.momentum_60d_pct,'%'),'中期趨勢')+stat('相對SPY',fmt(s.relative_spy_20d_pct,'%'),'20日相對表現')+stat('20日平均成交額',fmt(s.liquidity_dollar_m,' 百萬美元'),'流動性參考')+'</div><h3>五維因素</h3>'+factors+'<h3>10／15／20 日樣本外持有期研究</h3><div class="scroll"><table><thead><tr><th>持有期</th><th>事件數</th><th>平均淨報酬</th><th>淨報酬為正比例</th><th>平均超越SPY</th><th>最差單筆淨報酬</th></tr></thead><tbody>'+back+'</tbody></table></div><p class="muted">單一股票歷史非重疊事件；樣本少時不應據此推斷未來表現。</p>'}
+$('detail').innerHTML='<div class="grid">'+stat('財報日期',r.earnings?.date||'待確認',r.earnings?.note||'尚未更新')+stat('數據品質',r.data_quality?.status||'待更新',(r.data_quality?.issues||[]).join('；')||'未偵測到品質問題')+stat('研究分數',fmt(s.score,'/100'),'非成功機率')+stat('研究狀態',s.signal||'待更新','僅供研究')+stat('20日動能',fmt(s.momentum_20d_pct,'%'),'價格變化')+stat('60日動能',fmt(s.momentum_60d_pct,'%'),'中期趨勢')+stat('相對SPY',fmt(s.relative_spy_20d_pct,'%'),'20日相對表現')+stat('20日平均成交額',fmt(s.liquidity_dollar_m,' 百萬美元'),'流動性參考')+'</div><h3>五維因素</h3>'+factors+'<h3>五維核心｜10／15／20 日樣本外持有期研究</h3><div class="scroll"><table><thead><tr><th>持有期</th><th>事件數</th><th>平均淨報酬</th><th>淨報酬為正比例</th><th>平均超越SPY</th><th>最差單筆淨報酬</th></tr></thead><tbody>'+back+'</tbody></table></div><p class="muted">單一股票歷史非重疊事件；樣本少時不應據此推斷未來表現。</p>'}
 async function load(){try{let res=await fetch('./data/report.json?x='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);let d=await res.json();all=d.rows||[];let ready=all.length&&all.every(r=>r.swing);let excluded=d.coverage?.excluded||[];let coverage=d.coverage;let ex=$('exclusions');ex.hidden=!excluded.length;if(excluded.length)ex.innerHTML='<h2>已隔離股票（不參與排名）</h2><p class="warn">本次僅發布通過品質檢查的股票；以下股票未使用舊行情填補。</p>'+excluded.map(x=>'<p><b>'+esc(x.ticker)+'</b>：'+esc(x.reason)+'</p>').join('');let m=d.phase1?.market||{};$('market').innerHTML=stat('市場狀態',m.regime||'待更新','SPY／QQQ 均線判斷')+stat('SPY 20日表現',fmt(m.SPY?.return_20d_pct,'%'),m.SPY?.date||'資料待更新')+stat('QQQ 20日表現',fmt(m.QQQ?.return_20d_pct,'%'),m.QQQ?.date||'資料待更新')+stat('VIX',fmt(m.VIX?.value),m.VIX?.date||'資料待更新')+stat('財報日期待確認',all.filter(r=>r.earnings?.status!=='upcoming').length,'不等於沒有財報');$('health').innerHTML='<b>資料狀態：</b>'+(ready?'<span class="good">波段投資研究資料已載入</span>':'<span class="warn">等待新版每日更新產生波段資料</span>')+'　｜<strong class="warn">回測／組合風險：待獨立核對（非實盤）</strong>'+'　｜生成時間：'+esc(d.updated_utc)+'　｜有效股票：'+all.length+(coverage?'／'+esc(coverage.expected)+'（'+esc(coverage.pct)+'%）':'　｜覆蓋率未提供');
 if(!ready){$('rows').innerHTML='<tr><td colspan="12">請執行 GitHub Actions 每日更新以產生新版波段數據。</td></tr>';return}
 $('summary').innerHTML=stat('已驗證股票',all.length,'候選20隻；不合格股票排除')+stat('優先研究',all.filter(r=>r.swing.signal==='優先研究').length,'觀察分數≥80且流動性合格')+stat('觀察名單',all.filter(r=>r.swing.signal==='觀察名單').length,'觀察分數≥60且流動性合格')+stat('投資週期','10／15／20日','約2–4星期')+stat('校準機率','尚未提供','不捏造勝率');
