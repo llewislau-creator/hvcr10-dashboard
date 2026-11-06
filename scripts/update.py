@@ -101,6 +101,36 @@ def main():
         raise RuntimeError(f"{exc}. Errors: {errors}") from exc
     rows.sort(key=lambda r:(not r["swing"]["eligible"],-(r["swing"]["score"] or 0),-r["swing"]["liquidity_dollar_m"],r["ticker"]))
     payload={"updated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"universe":"20 隻預選觀察股票，並非全美股","rows":rows,"errors":errors,"method":"六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。","model_version":"HVCR-10 rebound v3","model_revision":"v5 swing research preview","investment_horizon":"2–4星期（10/15/20交易日）","ranking_basis":"5維波段投資觀察分數，非預測機率；不以高波動率作硬性篩選","phase1":{"market":market,"earnings_window_days":30,"quality_policy":"blocked股票排除於排行榜；不使用過期數據；缺少財報日期標記unknown"},"coverage":{"expected":len(TICKERS),"validated":len(rows),"pct":round(coverage*100,1),"minimum_pct":minimum_coverage*100,"excluded":[{"ticker":t,"reason":errors[t]} for t in TICKERS if t in errors]}}
+    # Keep the public dashboard payload compact; publish complete dated audit separately.
+    audit={"updated_utc":payload["updated_utc"],"trades":{}}
+    summary={"updated_utc":payload["updated_utc"],"groups":[]}
+    for row in rows:
+        for horizon in (10,15,20):
+            bt=row["stage2"]["backtests"][str(horizon)]
+            wf=bt["walk_forward"]
+            key=f'{row["ticker"]}:{horizon}'
+            trades=wf.pop("trade_audit")
+            audit["trades"][key]={"folds":wf["folds"],"trades":trades}
+            mb=bt["moving_block_bootstrap"]
+            iid=bt["mean_net_bootstrap_ci95_pct"]
+            ci=mb["ci95_pct"]
+            summary["groups"].append({
+                "ticker":row["ticker"],"horizon_days":horizon,"n":bt["n"],
+                "iid_ci95_pct":iid,"block_ci95_pct":ci,
+                "iid_positive":iid is not None and iid[0]>0,
+                "block_positive":{k:(v is not None and v[0]>0) for k,v in ci.items()},
+                "weakens_vs_iid":iid is not None and iid[0]>0 and any(
+                    v is None or v[0]<=0 for v in ci.values()),
+                "audit_key":key})
+            wf["audit_file"]="trade_audit.json"
+            wf["audit_key"]=key
+    payload["bootstrap_summary_file"]="bootstrap_summary.json"
+    payload["trade_audit_file"]="trade_audit.json"
     OUT.parent.mkdir(parents=True,exist_ok=True)
+    for name,doc in (("trade_audit.json",audit),("bootstrap_summary.json",summary)):
+        path=OUT.parent/name
+        temp=path.with_suffix(".tmp")
+        temp.write_text(json.dumps(doc,ensure_ascii=False,separators=(",",":")),encoding="utf-8")
+        temp.replace(path)
     tmp=OUT.with_suffix(".tmp");tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8");tmp.replace(OUT)
 if __name__=="__main__":main()
