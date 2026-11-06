@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import numpy as np,pandas as pd
-from stage2_risk import make_plan,simulate_plan,summarize_trades,backtest_plans,moving_block_bootstrap_ci
+from stage2_risk import make_plan,simulate_plan,summarize_trades,backtest_plans,moving_block_bootstrap_ci,block_bootstrap_diagnostic
 n=700
 dates=pd.bdate_range("2022-01-03",periods=n)
 close=100+np.arange(n)*.07
@@ -62,6 +62,15 @@ for k in (5,10):
     ci=moving_block_bootstrap_ci(sequence,k)
     assert ci==moving_block_bootstrap_ci(sequence,k)
     assert ci[0]<=sequence.mean()<=ci[1]
+for k in (5,10):
+    moving=block_bootstrap_diagnostic(sequence,k)
+    circular=block_bootstrap_diagnostic(sequence,k,circular=True)
+    assert moving==block_bootstrap_diagnostic(sequence,k)
+    assert circular==block_bootstrap_diagnostic(sequence,k,circular=True)
+    assert moving["ci95_pct"][0]<=moving["ci95_pct"][1]
+    assert circular["ci95_pct"][0]<=circular["ci95_pct"][1]
+    assert abs(circular["center_shift_pct"])<2
+assert block_bootstrap_diagnostic(sequence,20,circular=True) is None
 assert moving_block_bootstrap_ci(sequence,20) is None
 assert moving_block_bootstrap_ci([1.],1) is None
 try:
