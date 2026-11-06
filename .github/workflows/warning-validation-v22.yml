@@ -1,6 +1,9 @@
 name: AlphaLens Historical Warning Validation
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/warning-validation-v22.yml'
 permissions:
   contents: write
 jobs:
