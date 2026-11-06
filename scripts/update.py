@@ -98,6 +98,13 @@ def main():
                     diagnostics[t]=diagnose_price_anomalies(raw)
                 except Exception as exc:
                     diagnostics[t]={"diagnostic_error":str(exc)[:400]}
+    if "GME" not in diagnostics:
+        try:
+            gme=yf.download("GME",start="2016-01-01",auto_adjust=True,progress=False,threads=False)
+            if isinstance(gme.columns,pd.MultiIndex):gme.columns=gme.columns.get_level_values(0)
+            diagnostics["GME"]=diagnose_price_anomalies(gme)
+        except Exception as exc:
+            diagnostics["GME"]={"diagnostic_error":str(exc)[:400]}
     if not rows: raise RuntimeError("No successful downloads; existing report preserved")
     # Publish verified rows only; never reuse stale prices as current observations.
     # Fail closed when coverage is too low, rather than masking a systemic outage.
