@@ -1,0 +1,33 @@
+name: AlphaLens Historical Warning Validation
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run historical evaluation for 20 stocks
+        run: python scripts/run_warning_validation_v22.py
+      - name: Publish evaluation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: alphalens-warning-validation-v22
+          path: site/data/warning_validation_v22.json
+      - name: Commit validated report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/warning_validation_v22.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish first 20-stock warning validation'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
