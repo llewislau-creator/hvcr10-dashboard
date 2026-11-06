@@ -91,6 +91,23 @@ def block_bootstrap_diagnostic(values, block_length, circular=False, repeats=200
             "original_mean_pct":round(float(x.mean()),4),
             "center_shift_pct":round(float(means.mean()-x.mean()),4)}
 
+def circular_seed_sensitivity(values, block_lengths=(5,10,20), seeds=(20261106,20261107,20261108,20261109,20261110)):
+    result={}
+    for length in block_lengths:
+        runs=[block_bootstrap_diagnostic(values,length,circular=True,seed=seed) for seed in seeds]
+        if any(run is None for run in runs):
+            result[str(length)]=None
+            continue
+        widths=[round(run["ci95_pct"][1]-run["ci95_pct"][0],4) for run in runs]
+        shifts=[run["center_shift_pct"] for run in runs]
+        result[str(length)]={
+            "seeds":list(seeds),"ci95_pct_by_seed":[run["ci95_pct"] for run in runs],
+            "ci_width_pct_by_seed":widths,"center_shift_pct_by_seed":shifts,
+            "positive_lower_count":sum(run["ci95_pct"][0]>0 for run in runs),
+            "mean_width_pct":round(float(np.mean(widths)),4),
+            "mean_abs_center_shift_pct":round(float(np.mean(np.abs(shifts))),4)}
+    return result
+
 def backtest_plans(df, days=15, benchmark_close=None):
     """Held-out 30% only; every 'days' trading sessions, no overlapping positions.
     Signal at close: close > 50d MA, 20d return >0, dollar volume >=10m.
@@ -147,6 +164,7 @@ def backtest_plans(df, days=15, benchmark_close=None):
         'repeats':2000,'seed':20261106,'block_lengths':[5,10,20],
         'moving_diagnostics':{str(k):block_bootstrap_diagnostic(vals,k) for k in (5,10,20)},
         'circular_diagnostics':{str(k):block_bootstrap_diagnostic(vals,k,circular=True) for k in (5,10,20)},
+        'circular_seed_sensitivity':circular_seed_sensitivity(vals),
         'ci95_pct':{str(k):moving_block_bootstrap_ci(vals,k) for k in (5,10,20)},
         'iid_ci95_pct':out['mean_net_bootstrap_ci95_pct'],
         'note':'按單一股票及持有期內的交易時間順序重抽樣；不校正跨股票相關；樣本不足區塊長度時回傳null；區間僅供描述性比較'
