@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T05:18:08.109907+00:00",
+  "updated_utc": "2026-11-27T05:14:07.030254+00:00",
   "universe": "20 隻預選觀察股票，並非全美股",
   "rows": [
     {
@@ -10,7 +10,7 @@
       "rv20": 72.9,
       "z20": -0.12,
       "atr14": 19.58,
-      "dollar_m": 13477.5,
+      "dollar_m": 13479.9,
       "rsi14": 50.3,
       "matched": 2,
       "eligible": true,
@@ -26,7 +26,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 19197145700.0,
+          "value": 19197019800.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -299,7 +299,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "TSLA",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -327,7 +327,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "觀察名單",
-        "liquidity_dollar_m": 13477.5,
+        "liquidity_dollar_m": 13479.9,
         "momentum_20d_pct": -5.96,
         "momentum_60d_pct": 6.75,
         "relative_spy_20d_pct": 1.24,
@@ -380,7 +380,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.977
+          "ratio_to_prior_20d": 0.981
         },
         "relative_5d_pct_points": 0.916,
         "benchmark_available": true,
@@ -1425,7 +1425,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 6378902200.0,
+          "value": 6378879000.0,
           "observed": true,
           "unit": "累計量"
         },
@@ -1700,7 +1700,7 @@
           "存在單日超過50%價格變動；需核對企業行動"
         ],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "GME",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -1781,7 +1781,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.96
+          "ratio_to_prior_20d": 0.963
         },
         "relative_5d_pct_points": 3.507,
         "benchmark_available": true,
@@ -2796,7 +2796,7 @@
       "earnings": {
         "status": "upcoming",
         "date": "2026-12-08",
-        "days_until": 12,
+        "days_until": 11,
         "note": "來源為Yahoo Finance日曆；日期可能變動，應向公司IR核實"
       },
       "phase1_risk": "持有期內可能有財報",
@@ -2810,7 +2810,7 @@
       "rv20": 83.4,
       "z20": -1.4,
       "atr14": 9.02,
-      "dollar_m": 2273.7,
+      "dollar_m": 2275.3,
       "rsi14": 27.0,
       "matched": 4,
       "eligible": true,
@@ -2826,7 +2826,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 97168100.0,
+          "value": 97562000.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -2836,7 +2836,7 @@
           "unit": "ADX（低於25視為趨勢較弱）"
         },
         "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 106.97,
+          "value": 106.94,
           "observed": false,
           "unit": "美元"
         },
@@ -3099,7 +3099,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "MSTR",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -3127,7 +3127,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 2273.7,
+        "liquidity_dollar_m": 2275.3,
         "momentum_20d_pct": -44.92,
         "momentum_60d_pct": -35.97,
         "relative_spy_20d_pct": -37.72,
@@ -3180,7 +3180,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 1,
-          "ratio_to_prior_20d": 1.464
+          "ratio_to_prior_20d": 1.484
         },
         "relative_5d_pct_points": -9.622,
         "benchmark_available": true,
@@ -4500,7 +4500,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "APP",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -5607,7 +5607,7 @@
       "rv20": 76.0,
       "z20": -1.35,
       "atr14": 8.95,
-      "dollar_m": 1236.9,
+      "dollar_m": 1237.2,
       "rsi14": 28.7,
       "matched": 3,
       "eligible": true,
@@ -5623,7 +5623,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": -123081800.0,
+          "value": -123012200.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -5633,7 +5633,7 @@
           "unit": "ADX（低於25視為趨勢較弱）"
         },
         "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 127.34,
+          "value": 127.33,
           "observed": false,
           "unit": "美元"
         },
@@ -5896,7 +5896,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "COIN",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -5924,7 +5924,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 1236.9,
+        "liquidity_dollar_m": 1237.2,
         "momentum_20d_pct": -36.1,
         "momentum_60d_pct": -41.34,
         "relative_spy_20d_pct": -28.9,
@@ -5977,7 +5977,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 1,
-          "ratio_to_prior_20d": 1.041
+          "ratio_to_prior_20d": 1.049
         },
         "relative_5d_pct_points": -4.295,
         "benchmark_available": true,
@@ -7007,7 +7007,7 @@
       "rv20": 117.6,
       "z20": -1.21,
       "atr14": 5.17,
-      "dollar_m": 1054.1,
+      "dollar_m": 1054.6,
       "rsi14": 39.8,
       "matched": 1,
       "eligible": true,
@@ -7023,7 +7023,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 1434026500.0,
+          "value": 1434225800.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -7296,7 +7296,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "RKLB",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -7324,7 +7324,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 1054.1,
+        "liquidity_dollar_m": 1054.6,
         "momentum_20d_pct": -19.76,
         "momentum_60d_pct": -24.82,
         "relative_spy_20d_pct": -12.56,
@@ -7377,7 +7377,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 1.043
+          "ratio_to_prior_20d": 1.053
         },
         "relative_5d_pct_points": -9.551,
         "benchmark_available": true,
@@ -8407,7 +8407,7 @@
       "rv20": 57.8,
       "z20": -1.37,
       "atr14": 0.85,
-      "dollar_m": 807.6,
+      "dollar_m": 807.7,
       "rsi14": 34.9,
       "matched": 3,
       "eligible": true,
@@ -8423,7 +8423,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": -183021100.0,
+          "value": -182798300.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -8698,7 +8698,7 @@
           "存在單日超過50%價格變動；需核對企業行動"
         ],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "SOFI",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -8726,7 +8726,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 807.6,
+        "liquidity_dollar_m": 807.7,
         "momentum_20d_pct": -23.75,
         "momentum_60d_pct": -23.34,
         "relative_spy_20d_pct": -16.55,
@@ -8779,7 +8779,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 1.016
+          "ratio_to_prior_20d": 1.021
         },
         "relative_5d_pct_points": -5.522,
         "benchmark_available": true,
@@ -9807,7 +9807,7 @@
       "rv20": 109.8,
       "z20": 0.21,
       "atr14": 1.66,
-      "dollar_m": 490.5,
+      "dollar_m": 490.6,
       "rsi14": 50.2,
       "matched": 1,
       "eligible": true,
@@ -9823,7 +9823,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 2274821000.0,
+          "value": 2274905900.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -10096,7 +10096,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "RIOT",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -10124,7 +10124,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 490.5,
+        "liquidity_dollar_m": 490.6,
         "momentum_20d_pct": 15.22,
         "momentum_60d_pct": -6.41,
         "relative_spy_20d_pct": 22.43,
@@ -10177,7 +10177,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.801
+          "ratio_to_prior_20d": 0.804
         },
         "relative_5d_pct_points": -6.868,
         "benchmark_available": true,
@@ -11206,7 +11206,7 @@
       "rv20": 127.2,
       "z20": -0.97,
       "atr14": 13.38,
-      "dollar_m": 57470.5,
+      "dollar_m": 57494.4,
       "rsi14": 37.5,
       "matched": 2,
       "eligible": true,
@@ -11222,7 +11222,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 101156997100.0,
+          "value": 101153802500.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -11232,7 +11232,7 @@
           "unit": "ADX（低於25視為趨勢較弱）"
         },
         "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 163.82,
+          "value": 163.81,
           "observed": false,
           "unit": "美元"
         },
@@ -11495,7 +11495,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "NVDA",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -11523,7 +11523,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 57470.5,
+        "liquidity_dollar_m": 57494.4,
         "momentum_20d_pct": -30.68,
         "momentum_60d_pct": -31.26,
         "relative_spy_20d_pct": -23.48,
@@ -11576,7 +11576,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 1,
-          "ratio_to_prior_20d": 1.077
+          "ratio_to_prior_20d": 1.087
         },
         "relative_5d_pct_points": 0.749,
         "benchmark_available": true,
@@ -11632,7 +11632,7 @@
                     -0.5,
                     1.94
                   ],
-                  "bootstrap_mean_pct": 0.71,
+                  "bootstrap_mean_pct": 0.7101,
                   "original_mean_pct": 0.8065,
                   "center_shift_pct": -0.0965
                 },
@@ -12605,7 +12605,7 @@
       "rv20": 136.3,
       "z20": -1.59,
       "atr14": 46.51,
-      "dollar_m": 22741.3,
+      "dollar_m": 22747.2,
       "rsi14": 38.0,
       "matched": 2,
       "eligible": true,
@@ -12621,7 +12621,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 7738504500.0,
+          "value": 7738213300.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -12631,7 +12631,7 @@
           "unit": "ADX（低於25視為趨勢較弱）"
         },
         "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 482.83,
+          "value": 482.81,
           "observed": false,
           "unit": "美元"
         },
@@ -12896,7 +12896,7 @@
           "存在單日超過50%價格變動；需核對企業行動"
         ],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "AMD",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -12924,7 +12924,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 22741.3,
+        "liquidity_dollar_m": 22747.2,
         "momentum_20d_pct": -29.81,
         "momentum_60d_pct": -11.66,
         "relative_spy_20d_pct": -22.61,
@@ -12977,7 +12977,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 2,
-          "ratio_to_prior_20d": 1.129
+          "ratio_to_prior_20d": 1.135
         },
         "relative_5d_pct_points": -21.562,
         "benchmark_available": true,
@@ -14009,7 +14009,7 @@
       "rv20": 71.8,
       "z20": -0.23,
       "atr14": 9.7,
-      "dollar_m": 4289.5,
+      "dollar_m": 4290.1,
       "rsi14": 45.1,
       "matched": 3,
       "eligible": true,
@@ -14025,7 +14025,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 4867211000.0,
+          "value": 4867290000.0,
           "observed": true,
           "unit": "累計量"
         },
@@ -14298,7 +14298,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "PLTR",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -14326,7 +14326,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 4289.5,
+        "liquidity_dollar_m": 4290.1,
         "momentum_20d_pct": -16.88,
         "momentum_60d_pct": -9.08,
         "relative_spy_20d_pct": -9.68,
@@ -14379,7 +14379,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 1,
-          "ratio_to_prior_20d": 0.83
+          "ratio_to_prior_20d": 0.833
         },
         "relative_5d_pct_points": 6.266,
         "benchmark_available": true,
@@ -15408,7 +15408,7 @@
       "rv20": 67.6,
       "z20": -1.44,
       "atr14": 15.19,
-      "dollar_m": 2658.2,
+      "dollar_m": 2658.8,
       "rsi14": 38.3,
       "matched": 1,
       "eligible": true,
@@ -15424,7 +15424,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 1274054000.0,
+          "value": 1273999400.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -15434,7 +15434,7 @@
           "unit": "ADX（低於25視為趨勢較弱）"
         },
         "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 225.7,
+          "value": 225.69,
           "observed": false,
           "unit": "美元"
         },
@@ -15697,7 +15697,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "CRWD",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -15725,7 +15725,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 2658.2,
+        "liquidity_dollar_m": 2658.8,
         "momentum_20d_pct": -21.51,
         "momentum_60d_pct": -2.68,
         "relative_spy_20d_pct": -14.31,
@@ -15778,7 +15778,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 1,
-          "ratio_to_prior_20d": 1.27
+          "ratio_to_prior_20d": 1.275
         },
         "relative_5d_pct_points": -9.85,
         "benchmark_available": true,
@@ -16809,7 +16809,7 @@
       "rv20": 77.4,
       "z20": -1.29,
       "atr14": 5.28,
-      "dollar_m": 1519.2,
+      "dollar_m": 1519.8,
       "rsi14": 30.6,
       "matched": 3,
       "eligible": true,
@@ -16825,7 +16825,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 1607879000.0,
+          "value": 1608065300.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -16835,7 +16835,7 @@
           "unit": "ADX（低於25視為趨勢較弱）"
         },
         "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 76.3,
+          "value": 76.29,
           "observed": false,
           "unit": "美元"
         },
@@ -17100,7 +17100,7 @@
           "存在單日超過50%價格變動；需核對企業行動"
         ],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "HOOD",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -17128,7 +17128,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 1519.2,
+        "liquidity_dollar_m": 1519.8,
         "momentum_20d_pct": -28.05,
         "momentum_60d_pct": -36.45,
         "relative_spy_20d_pct": -20.85,
@@ -17181,7 +17181,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.96
+          "ratio_to_prior_20d": 0.969
         },
         "relative_5d_pct_points": -3.052,
         "benchmark_available": true,
@@ -18211,7 +18211,7 @@
       "rv20": 102.5,
       "z20": -1.1,
       "atr14": 2.55,
-      "dollar_m": 1349.6,
+      "dollar_m": 1349.8,
       "rsi14": 36.7,
       "matched": 2,
       "eligible": true,
@@ -18227,7 +18227,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 1627560300.0,
+          "value": 1627749500.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -18500,7 +18500,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "SMCI",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -18528,7 +18528,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 1349.6,
+        "liquidity_dollar_m": 1349.8,
         "momentum_20d_pct": -34.91,
         "momentum_60d_pct": -36.5,
         "relative_spy_20d_pct": -27.71,
@@ -18581,7 +18581,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.884
+          "ratio_to_prior_20d": 0.888
         },
         "relative_5d_pct_points": -2.501,
         "benchmark_available": true,
@@ -19611,7 +19611,7 @@
       "rv20": 129.9,
       "z20": -0.99,
       "atr14": 2.81,
-      "dollar_m": 671.8,
+      "dollar_m": 672.0,
       "rsi14": 38.3,
       "matched": 3,
       "eligible": true,
@@ -19627,7 +19627,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 277686800.0,
+          "value": 277844900.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -19900,7 +19900,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "IONQ",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -19928,7 +19928,7 @@
         "factor_count": 5,
         "eligible": true,
         "signal": "暫不優先",
-        "liquidity_dollar_m": 671.8,
+        "liquidity_dollar_m": 672.0,
         "momentum_20d_pct": -27.41,
         "momentum_60d_pct": -37.69,
         "relative_spy_20d_pct": -20.21,
@@ -19981,7 +19981,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.968
+          "ratio_to_prior_20d": 0.974
         },
         "relative_5d_pct_points": 2.104,
         "benchmark_available": true,
@@ -21026,7 +21026,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 268996900.0,
+          "value": 268923300.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -21036,7 +21036,7 @@
           "unit": "ADX（低於25視為趨勢較弱）"
         },
         "20日收盤價成交量加權均價（非盤中VWAP）": {
-          "value": 20.62,
+          "value": 20.61,
           "observed": false,
           "unit": "美元"
         },
@@ -21299,7 +21299,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "HIMS",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -21380,7 +21380,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.723
+          "ratio_to_prior_20d": 0.727
         },
         "relative_5d_pct_points": -12.227,
         "benchmark_available": true,
@@ -22699,7 +22699,7 @@
         "status": "ok",
         "issues": [],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "AFRM",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -23822,7 +23822,7 @@
           "unit": "美元"
         },
         "OBV 資金量能改善": {
-          "value": 2592625997.0,
+          "value": 2592766597.0,
           "observed": false,
           "unit": "累計量"
         },
@@ -24097,7 +24097,7 @@
           "存在單日超過50%價格變動；需核對企業行動"
         ],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "MARA",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -24178,7 +24178,7 @@
         "volume": {
           "down_day_1_5x": false,
           "heavy_down_days_5": 0,
-          "ratio_to_prior_20d": 0.869
+          "ratio_to_prior_20d": 0.872
         },
         "relative_5d_pct_points": -15.529,
         "benchmark_available": true,
@@ -25500,7 +25500,7 @@
           "存在單日超過50%價格變動；需核對企業行動"
         ],
         "latest_date": "2026-11-25",
-        "age_calendar_days": 1,
+        "age_calendar_days": 2,
         "ticker": "UPST",
         "cleaning": {
           "historical_incomplete_rows_removed": 0,
@@ -26602,7 +26602,7 @@
     }
   ],
   "errors": {
-    "ROKU": "行情品質檢查不通過：資料過期：20個日曆日, 存在單日超過50%價格變動；需核對企業行動"
+    "ROKU": "行情品質檢查不通過：資料過期：21個日曆日, 存在單日超過50%價格變動；需核對企業行動"
   },
   "method": "六項技術條件至少4項符合；5/10/20交易日內觸及+8%目標；先觸及-5%停損視為失敗；20日非重疊事件；70/30時間切分；Wilson 95%信賴區間。觸價機率不等於實際淨報酬。",
   "model_version": "HVCR-10 rebound v3",
@@ -26627,8 +26627,8 @@
         "date": "2026-11-25"
       },
       "VIX": {
-        "value": 28.29,
-        "date": "2026-11-25"
+        "value": 26.8,
+        "date": "2026-11-26"
       },
       "note": "市場狀態只根據SPY/QQQ均線；VIX顯示風險背景，不直接產生買賣指令"
     },
@@ -26643,7 +26643,7 @@
     "excluded": [
       {
         "ticker": "ROKU",
-        "reason": "行情品質檢查不通過：資料過期：20個日曆日, 存在單日超過50%價格變動；需核對企業行動"
+        "reason": "行情品質檢查不通過：資料過期：21個日曆日, 存在單日超過50%價格變動；需核對企業行動"
       }
     ]
   },
